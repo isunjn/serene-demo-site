@@ -2,6 +2,49 @@
 name = "zola-theme-serene"
 desc = "Serene is a simple yet feature-rich blog theme for Static-Site-Generator Zola."
 links = [
-    {name = "GitHub", url = "https://gitub.com/isunjn/serene"},
+    {name = "GitHub", url = "https://github.com/isunjn/serene"},
     {name = "Docs", url = "https://github.com/isunjn/serene/wiki"},
+]
+
+[[project]]
+name = "Lorem ipsum"
+desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+links = [
+    {name = "HomePage", url = "https://example.com"},
+    {name = "GitHub", url = "https://example.com"},
+    {name = "Docs", url = "https://example.com"},
+]
+
+[[project]]
+name = "Dolor Sit"
+desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+links = [
+    {name = "GitHub", url = "https://example.com"},
+]
+
+[[project]]
+name = "amet"
+desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+links = [
+    {name = "HomePage", url = "https://example.com"},
+    {name = "GitHub", url = "https://example.com"},
+    {name = "Docs", url = "https://example.com"},
+    {name = "Wiki", url = "https://example.com"},
+]
+
+[[project]]
+name = "lorem-ipsum"
+desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+links = [
+    {name = "GitHub", url = "https://example.com"},
+    {name = "Docs", url = "https://example.com"},
+]
+
+[[project]]
+name = "Praesentium"
+desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+links = [
+    {name = "HomePage", url = "https://example.com"},
+    {name = "GitHub", url = "https://example.com"},
+    {name = "Docs", url = "https://example.com"},
 ]
