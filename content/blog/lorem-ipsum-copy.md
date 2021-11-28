@@ -6,9 +6,6 @@ updated = 2020-09-15
 categories = ["Tech"]
 tags = ["serene", "theme"]
 [extra]
-toc = true
-comment = true
-lang = "en"
 +++
 
 

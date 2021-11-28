@@ -6,9 +6,12 @@ updated = 2021-11-02
 categories = ["Tech"]
 tags = ["serene", "theme"]
 [extra]
-toc = true
-comment = true
 lang = "en"
+toc = true
+show_comment = false
+cc_license = true
+outdate_warn = false
+outdate_warn_days = 90
 +++
 
 

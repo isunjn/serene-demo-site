@@ -5,9 +5,6 @@ date = 2021-09-07
 categories = ["Tech"]
 tags = ["serene", "quote"]
 [extra]
-toc = true
-comment = false
-lang = "en"
 +++
 
 

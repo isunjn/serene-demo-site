@@ -6,9 +6,6 @@ updated = 2021-09-15
 categories = ["Thoughts"]
 tags = ["serene", "theme"]
 [extra]
-toc = true
-comment = true
-lang = "en"
 +++
 
 

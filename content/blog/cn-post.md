@@ -6,9 +6,7 @@ updated = 2021-09-15
 categories = ["Tech"]
 tags = ["serene", "post"]
 [extra]
-toc = true
-comment = true
-lang = "zh-CN"
+cc_license = false
 +++
 
 > 《背影》---朱自清
