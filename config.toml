@@ -2,7 +2,7 @@
 #================ Docs: https://github.com/isunjn/serene/wiki ============================
 #=========================================================================================
 
-base_url = "https://example.com" # The domain of your site
+base_url = "https://serene-demo-site.vercel.app/" # The domain of your site
 title = "Serene Theme"
 description = "The demo site of zola theme serene"
 default_language = "en"
