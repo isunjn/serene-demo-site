@@ -8,7 +8,7 @@ tags = ["serene", "quote"]
 +++
 
 
-Serene support some special quote style:
+Serene support some special quote styles:
 
 <!-- more -->
 

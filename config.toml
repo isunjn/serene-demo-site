@@ -35,7 +35,7 @@ include_content = true
 name = "Serene Theme"                    # Your name
 id = "serene"                      # Your id/username/handle
 bio = "A simple yet feature-rich blog theme for zola"                     # Your bio
-avatar = "img/avatar.png"       # Your avatar
+avatar = "img/avatar.webp"       # Your avatar
 
 show_id = true                   # Whether to show your id in homepage
 show_projects = true             # Whether to show projects page
