@@ -1,12 +1,12 @@
 +++
 title = "中文效果展示"
 date = 2021-08-24
-updated = 2021-09-15
 [taxonomies]
 categories = ["Tech"]
-tags = ["serene", "post"]
+tags = ["serene"]
 [extra]
 cc_license = false
+toc = false
 +++
 
 > 《背影》---朱自清

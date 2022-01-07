@@ -7,6 +7,7 @@ tags = ["serene", "post"]
 [extra]
 outdate_warn = true
 outdate_warn_days = 90
+toc = false
 +++
 
 
