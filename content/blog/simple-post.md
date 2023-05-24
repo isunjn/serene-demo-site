@@ -5,8 +5,8 @@ date = 2021-08-25
 categories = ["Tech"]
 tags = ["serene", "post"]
 [extra]
-outdate_warn = true
-outdate_warn_days = 90
+outdate_alert = true
+outdate_alert_days = 90
 toc = false
 +++
 

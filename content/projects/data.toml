@@ -1,9 +1,9 @@
 [[project]]
-name = "zola-theme-serene"
-desc = "Serene is a simple and clean blog theme for Static-Site-Generator Zola."
+name = "Lorem"
+desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
 links = [
-    {name = "GitHub", url = "https://github.com/isunjn/serene"},
-    {name = "Docs", url = "https://github.com/isunjn/serene/wiki"},
+    {name = "GitHub", url = "https://example.com"},
+    {name = "Docs", url = "https://example.com"},
 ]
 
 [[project]]
