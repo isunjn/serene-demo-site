@@ -1,9 +1,9 @@
 +++
-title = "Simple Post"
-date = 2021-08-25
+title = "Outdate Alert"
+date = 2022-08-25
 [taxonomies]
 categories = ["Tech"]
-tags = ["serene", "post"]
+tags = ["serene"]
 [extra]
 outdate_alert = true
 outdate_alert_days = 90
