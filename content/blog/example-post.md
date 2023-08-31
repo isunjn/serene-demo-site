@@ -1,6 +1,7 @@
 +++
 title = "Example Post"
 date = 2023-08-30
+description = "Example post"
 [taxonomies]
 categories = ["Tech"]
 tags = ["serene", "theme"]
@@ -10,7 +11,6 @@ toc = true
 +++
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! 
-<!-- more -->
 
 ## Lorem
 
@@ -58,8 +58,6 @@ Lorem ipsum:
 - Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
-
-![img](/assets/gp_example.webp)
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! sit explicabo sequi ipsa!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 

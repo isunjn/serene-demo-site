@@ -15,6 +15,8 @@ mermaid = true
 
 This is a post showing all supported elements.
 
+<!-- more -->
+
 ## Heading
 
 As you can see in this post.

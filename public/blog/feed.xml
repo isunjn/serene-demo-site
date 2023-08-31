@@ -10,12 +10,10 @@
 		<title>Example Post</title>
 		<published>2023-08-30T00:00:00+00:00</published>
 		<updated>2023-08-30T00:00:00+00:00</updated>
-        <summary>&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
-</summary>
 		<link href="https://serene-demo-site.vercel.app/blog/example-post/" type="text/html"/>
 		<id>https://serene-demo-site.vercel.app/blog/example-post/</id>
 		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;lorem&quot;&gt;Lorem&lt;a class=&quot;zola-anchor&quot; href=&quot;#lorem&quot; aria-label=&quot;Anchor link for: lorem&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;lorem&quot;&gt;Lorem&lt;a class=&quot;zola-anchor&quot; href=&quot;#lorem&quot; aria-label=&quot;Anchor link for: lorem&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
@@ -69,7 +67,6 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;gp_example.webp&quot; alt=&quot;img&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! sit explicabo sequi ipsa!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum:&lt;&#x2F;p&gt;
 &lt;ol&gt;
@@ -120,10 +117,12 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 		<title>Markdown &amp; Extended</title>
 		<published>2023-07-15T00:00:00+00:00</published>
 		<updated>2023-08-30T00:00:00+00:00</updated>
+        <summary>&lt;p&gt;This is a post showing all supported elements.&lt;&#x2F;p&gt;
+</summary>
 		<link href="https://serene-demo-site.vercel.app/blog/markdown/" type="text/html"/>
 		<id>https://serene-demo-site.vercel.app/blog/markdown/</id>
 		<content type="html">&lt;p&gt;This is a post showing all supported elements.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;a class=&quot;zola-anchor&quot; href=&quot;#heading&quot; aria-label=&quot;Anchor link for: heading&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;a class=&quot;zola-anchor&quot; href=&quot;#heading&quot; aria-label=&quot;Anchor link for: heading&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;As you can see in this post.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;paragraph&quot;&gt;Paragraph&lt;a class=&quot;zola-anchor&quot; href=&quot;#paragraph&quot; aria-label=&quot;Anchor link for: paragraph&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;

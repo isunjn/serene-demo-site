@@ -1,6 +1,7 @@
 +++
 title = "Outdate Alert"
 date = 2022-08-25
+description = "Example post showing outdate alert"
 [taxonomies]
 categories = ["Tech"]
 tags = ["serene"]

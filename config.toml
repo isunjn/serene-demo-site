@@ -39,8 +39,8 @@ id = "serene"                           # Your id / username / handle
 bio = "A blog theme for zola, simple and clean"                          # Your bio
 avatar = "img/avatar.webp"            # Your avatar
 links = [                             # Your links
-    { name = "GitHub", icon = "github", url = "https://github.com/<your-username>" },
-    { name = "Twitter", icon = "twitter", url = "https://twitter.com/<your-username>" },
+    { name = "GitHub", icon = "github", url = "https://github.com/isunjn/serene" },
+    # { name = "Twitter", icon = "twitter", url = "https://twitter.com/<your-username>" },
     { name = "Email", icon = "email", url = "mailto:<your-email-address>" },
 ]
 
