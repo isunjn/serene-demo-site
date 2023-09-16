@@ -77,3 +77,7 @@ outdate_alert_text_after = " days ago and may be out of date."
 
 footer_copyright = "© 2023 serene"
 footer_credits = true                 # Whether to show "Powered by Zola and Serene" in footer
+
+not_found_title = "404"
+not_found_error_text = "Not Found"
+not_found_recover_text = "« back to home »"
