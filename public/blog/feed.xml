@@ -13,7 +13,7 @@
 		<link href="https://serene-demo-site.vercel.app/blog/example-post/" type="text/html"/>
 		<id>https://serene-demo-site.vercel.app/blog/example-post/</id>
 		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
-&lt;h2 id=&quot;lorem&quot;&gt;Lorem&lt;a class=&quot;zola-anchor&quot; href=&quot;#lorem&quot; aria-label=&quot;Anchor link for: lorem&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;lorem&quot;&gt;Lorem&lt;a class=&quot;zola-anchor&quot; href=&quot;#lorem&quot; aria-label=&quot;Anchor link for: lorem&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
@@ -40,7 +40,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;example.com&quot;&gt;consectetur adipisicing elit&lt;&#x2F;a&gt;. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;praesentium&quot;&gt;Praesentium&lt;a class=&quot;zola-anchor&quot; href=&quot;#praesentium&quot; aria-label=&quot;Anchor link for: praesentium&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;praesentium&quot;&gt;Praesentium&lt;a class=&quot;zola-anchor&quot; href=&quot;#praesentium&quot; aria-label=&quot;Anchor link for: praesentium&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;example.com&quot;&gt;consectetur adipisicing elit&lt;&#x2F;a&gt;. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. &lt;&#x2F;p&gt;
@@ -53,7 +53,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
     
 &lt;&#x2F;figure&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;atque&quot;&gt;Atque&lt;a class=&quot;zola-anchor&quot; href=&quot;#atque&quot; aria-label=&quot;Anchor link for: atque&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;atque&quot;&gt;Atque&lt;a class=&quot;zola-anchor&quot; href=&quot;#atque&quot; aria-label=&quot;Anchor link for: atque&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -90,7 +90,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;laudantium&quot;&gt;Laudantium&lt;a class=&quot;zola-anchor&quot; href=&quot;#laudantium&quot; aria-label=&quot;Anchor link for: laudantium&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;laudantium&quot;&gt;Laudantium&lt;a class=&quot;zola-anchor&quot; href=&quot;#laudantium&quot; aria-label=&quot;Anchor link for: laudantium&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, &lt;code&gt;nisi&lt;&#x2F;code&gt; saepe dolor unde iusto dolore nam, vero optio &lt;code&gt;consequuntur&lt;&#x2F;code&gt; repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!  Atque libero &lt;code&gt;expedita laudantium cupiditate&lt;&#x2F;code&gt;, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
@@ -107,7 +107,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;cupiditate&quot;&gt;Cupiditate&lt;a class=&quot;zola-anchor&quot; href=&quot;#cupiditate&quot; aria-label=&quot;Anchor link for: cupiditate&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;cupiditate&quot;&gt;Cupiditate&lt;a class=&quot;zola-anchor&quot; href=&quot;#cupiditate&quot; aria-label=&quot;Anchor link for: cupiditate&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
@@ -122,14 +122,14 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 		<link href="https://serene-demo-site.vercel.app/blog/markdown/" type="text/html"/>
 		<id>https://serene-demo-site.vercel.app/blog/markdown/</id>
 		<content type="html">&lt;p&gt;This is a post showing all supported elements.&lt;&#x2F;p&gt;
-&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;a class=&quot;zola-anchor&quot; href=&quot;#heading&quot; aria-label=&quot;Anchor link for: heading&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;a class=&quot;zola-anchor&quot; href=&quot;#heading&quot; aria-label=&quot;Anchor link for: heading&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;As you can see in this post.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;paragraph&quot;&gt;Paragraph&lt;a class=&quot;zola-anchor&quot; href=&quot;#paragraph&quot; aria-label=&quot;Anchor link for: paragraph&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;paragraph&quot;&gt;Paragraph&lt;a class=&quot;zola-anchor&quot; href=&quot;#paragraph&quot; aria-label=&quot;Anchor link for: paragraph&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
 &lt;p&gt;Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
-&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;a class=&quot;zola-anchor&quot; href=&quot;#emphasis&quot; aria-label=&quot;Anchor link for: emphasis&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;a class=&quot;zola-anchor&quot; href=&quot;#emphasis&quot; aria-label=&quot;Anchor link for: emphasis&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;normal text, &lt;strong&gt;bold text&lt;&#x2F;strong&gt;, &lt;em&gt;ltalic text&lt;&#x2F;em&gt;, &lt;em&gt;&lt;strong&gt;bold and ltalic text&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;a class=&quot;zola-anchor&quot; href=&quot;#blockquotes&quot; aria-label=&quot;Anchor link for: blockquotes&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;a class=&quot;zola-anchor&quot; href=&quot;#blockquotes&quot; aria-label=&quot;Anchor link for: blockquotes&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -139,7 +139,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;h2 id=&quot;list&quot;&gt;List&lt;a class=&quot;zola-anchor&quot; href=&quot;#list&quot; aria-label=&quot;Anchor link for: list&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;list&quot;&gt;List&lt;a class=&quot;zola-anchor&quot; href=&quot;#list&quot; aria-label=&quot;Anchor link for: list&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;unordered:&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -172,9 +172,9 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;p&gt;Third item&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;h2 id=&quot;link&quot;&gt;Link&lt;a class=&quot;zola-anchor&quot; href=&quot;#link&quot; aria-label=&quot;Anchor link for: link&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;link&quot;&gt;Link&lt;a class=&quot;zola-anchor&quot; href=&quot;#link&quot; aria-label=&quot;Anchor link for: link&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;There is a &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;example.com&quot;&gt;link&lt;&#x2F;a&gt; and &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;example.com&quot;&gt;another link to example.com&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;table&quot;&gt;Table&lt;a class=&quot;zola-anchor&quot; href=&quot;#table&quot; aria-label=&quot;Anchor link for: table&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;table&quot;&gt;Table&lt;a class=&quot;zola-anchor&quot; href=&quot;#table&quot; aria-label=&quot;Anchor link for: table&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Syntax&lt;&#x2F;th&gt;&lt;th&gt;Description&lt;&#x2F;th&gt;&lt;th&gt;Test Text&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
 &lt;tr&gt;&lt;td&gt;Header&lt;&#x2F;td&gt;&lt;td&gt;Title&lt;&#x2F;td&gt;&lt;td&gt;Here&#x27;s this&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td&gt;Paragraph&lt;&#x2F;td&gt;&lt;td&gt;Text&lt;&#x2F;td&gt;&lt;td&gt;And more&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
@@ -184,13 +184,13 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Header&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;Title&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;Here&#x27;s this&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;tr&gt;&lt;td style=&quot;text-align: left&quot;&gt;Paragraph&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: center&quot;&gt;Text&lt;&#x2F;td&gt;&lt;td style=&quot;text-align: right&quot;&gt;And more&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
 &lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
-&lt;h2 id=&quot;footnote&quot;&gt;Footnote&lt;a class=&quot;zola-anchor&quot; href=&quot;#footnote&quot; aria-label=&quot;Anchor link for: footnote&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;footnote&quot;&gt;Footnote&lt;a class=&quot;zola-anchor&quot; href=&quot;#footnote&quot; aria-label=&quot;Anchor link for: footnote&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; words consectetur&lt;sup class=&quot;footnote-reference&quot;&gt;&lt;a href=&quot;#2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt; adipisicing elit.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;strikethrough&quot;&gt;Strikethrough&lt;a class=&quot;zola-anchor&quot; href=&quot;#strikethrough&quot; aria-label=&quot;Anchor link for: strikethrough&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;strikethrough&quot;&gt;Strikethrough&lt;a class=&quot;zola-anchor&quot; href=&quot;#strikethrough&quot; aria-label=&quot;Anchor link for: strikethrough&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;del&gt;The world is flat.&lt;&#x2F;del&gt; We now know that the world is round.&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;horizontal-rule&quot;&gt;Horizontal Rule&lt;a class=&quot;zola-anchor&quot; href=&quot;#horizontal-rule&quot; aria-label=&quot;Anchor link for: horizontal-rule&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;horizontal-rule&quot;&gt;Horizontal Rule&lt;a class=&quot;zola-anchor&quot; href=&quot;#horizontal-rule&quot; aria-label=&quot;Anchor link for: horizontal-rule&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;hr &#x2F;&gt;
-&lt;h2 id=&quot;image&quot;&gt;Image&lt;a class=&quot;zola-anchor&quot; href=&quot;#image&quot; aria-label=&quot;Anchor link for: image&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;image&quot;&gt;Image&lt;a class=&quot;zola-anchor&quot; href=&quot;#image&quot; aria-label=&quot;Anchor link for: image&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;typical-app.webp&quot; alt=&quot;img&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;with caption:&lt;&#x2F;p&gt;
 &lt;figure&gt;
@@ -205,7 +205,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
     
     &lt;figcaption&gt;&lt;a href=&quot;https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;tyrchen&amp;#x2F;rust-training&quot;&gt;via&lt;&#x2F;a&gt;&lt;&#x2F;figcaption&gt;
     
-&lt;&#x2F;figure&gt;&lt;h2 id=&quot;code&quot;&gt;Code&lt;a class=&quot;zola-anchor&quot; href=&quot;#code&quot; aria-label=&quot;Anchor link for: code&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;&#x2F;figure&gt;&lt;h2 id=&quot;code&quot;&gt;Code&lt;a class=&quot;zola-anchor&quot; href=&quot;#code&quot; aria-label=&quot;Anchor link for: code&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;inline &lt;code&gt;code&lt;&#x2F;code&gt; and more &lt;code&gt;inline code&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;block level code:&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;rs&quot; class=&quot;language-rs z-code&quot;&gt;&lt;code class=&quot;language-rs&quot; data-lang=&quot;rs&quot;&gt;&lt;span class=&quot;z-source z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-storage z-type z-function z-rust&quot;&gt;fn&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-entity z-name z-function z-rust&quot;&gt;plus_one&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-parameters z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-parameters z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-variable z-parameter z-rust&quot;&gt;x&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-rust&quot;&gt;:&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-generic z-rust&quot;&gt;&lt;span class=&quot;z-support z-type z-rust&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-generic z-begin z-rust&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-rust&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-generic z-end z-rust&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-function z-parameters z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-parameters z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt; &lt;span class=&quot;z-meta z-function z-return-type z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-rust&quot;&gt;-&amp;gt;&lt;&#x2F;span&gt; &lt;span class=&quot;z-meta z-generic z-rust&quot;&gt;&lt;span class=&quot;z-support z-type z-rust&quot;&gt;Option&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-generic z-begin z-rust&quot;&gt;&amp;lt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-storage z-type z-rust&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-definition z-generic z-end z-rust&quot;&gt;&amp;gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function z-rust&quot;&gt;&lt;span class=&quot;z-meta z-block z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-block z-begin z-rust&quot;&gt;{&lt;&#x2F;span&gt;
@@ -285,7 +285,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;tr&gt;&lt;td&gt;10&lt;&#x2F;td&gt;&lt;td&gt;&lt;span class=&quot;z-storage z-type z-rust&quot;&gt;let&lt;&#x2F;span&gt; none &lt;span class=&quot;z-keyword z-operator z-assignment z-rust&quot;&gt;=&lt;&#x2F;span&gt; &lt;span class=&quot;z-support z-function z-rust&quot;&gt;plus_one&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-begin z-rust&quot;&gt;(&lt;&#x2F;span&gt;&lt;span class=&quot;z-support z-type z-rust&quot;&gt;None&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-group z-rust&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-group z-end z-rust&quot;&gt;)&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-terminator z-rust&quot;&gt;;&lt;&#x2F;span&gt;
 &lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;span&gt;&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
   
-&lt;&#x2F;div&gt;&lt;h2 id=&quot;callout&quot;&gt;Callout&lt;a class=&quot;zola-anchor&quot; href=&quot;#callout&quot; aria-label=&quot;Anchor link for: callout&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;&#x2F;div&gt;&lt;h2 id=&quot;callout&quot;&gt;Callout&lt;a class=&quot;zola-anchor&quot; href=&quot;#callout&quot; aria-label=&quot;Anchor link for: callout&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;blockquote class=&quot;callout note&quot;&gt;
     
     &lt;div class=&quot;icon&quot;&gt;
@@ -372,7 +372,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
         &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;p&gt;
 
     &lt;&#x2F;div&gt;
-&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;math-katex&quot;&gt;Math (KaTex)&lt;a class=&quot;zola-anchor&quot; href=&quot;#math-katex&quot; aria-label=&quot;Anchor link for: math-katex&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;math-katex&quot;&gt;Math (KaTex)&lt;a class=&quot;zola-anchor&quot; href=&quot;#math-katex&quot; aria-label=&quot;Anchor link for: math-katex&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;$$
 f(x) = \int_{-\infty}^\infin \hat f(\xi) e^{2 \pi i \xi x}\ d\xi
 $$&lt;&#x2F;p&gt;
@@ -380,7 +380,7 @@ $$&lt;&#x2F;p&gt;
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;The Cauchy-Schwarz Inequality&lt;&#x2F;p&gt;
 &lt;p&gt;$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;chart-mermaid&quot;&gt;Chart (Mermaid)&lt;a class=&quot;zola-anchor&quot; href=&quot;#chart-mermaid&quot; aria-label=&quot;Anchor link for: chart-mermaid&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;chart-mermaid&quot;&gt;Chart (Mermaid)&lt;a class=&quot;zola-anchor&quot; href=&quot;#chart-mermaid&quot; aria-label=&quot;Anchor link for: chart-mermaid&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;pre class=&quot;mermaid&quot;&gt;
   sequenceDiagram
     Alice -&amp;gt;&amp;gt; Bob: Hello Bob, how are you?
@@ -391,7 +391,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 
     Bob--&amp;gt;Alice: Checking with John...
     Alice-&amp;gt;John: Yes... John, how are you?
-&lt;&#x2F;pre&gt;&lt;h2 id=&quot;comment-giscus&quot;&gt;Comment (Giscus)&lt;a class=&quot;zola-anchor&quot; href=&quot;#comment-giscus&quot; aria-label=&quot;Anchor link for: comment-giscus&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;&#x2F;pre&gt;&lt;h2 id=&quot;comment-giscus&quot;&gt;Comment (Giscus)&lt;a class=&quot;zola-anchor&quot; href=&quot;#comment-giscus&quot; aria-label=&quot;Anchor link for: comment-giscus&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;As you can see in this post.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
