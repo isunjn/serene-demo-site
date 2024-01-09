@@ -1,6 +1,6 @@
 +++
 title = "Example Post"
-date = 2023-08-30
+date = 2023-08-31
 description = "Example post"
 [taxonomies]
 categories = ["Tech"]
@@ -18,7 +18,7 @@ Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur rep
 
 > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-Lorem ipsum dolor sit, **amet consectetur adipisicing elit**. Atque `libero` expedita laudantium [cupiditate](https://example.com), sit explicabo sequi ipsa! Praesentium, *nisi saepe dolor unde iusto dolore nam*, vero optio `consequuntur` repudiandae et! Atque libero [expedita laudantium cupiditate](https://example.com), sit explicabo sequi ipsa!
+Lorem ipsum dolor sit, **amet consectetur adipisicing elit**. Atque `libero` expedita laudantium cupiditate, sit explicabo sequi ipsa! Praesentium, *nisi saepe dolor unde iusto dolore nam*, vero optio `consequuntur` repudiandae et! Atque libero [expedita laudantium cupiditate](https://example.com), sit explicabo sequi ipsa!
 
 {% note() %}
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero

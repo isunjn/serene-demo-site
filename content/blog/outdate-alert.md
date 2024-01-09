@@ -1,6 +1,6 @@
 +++
 title = "Outdate Alert"
-date = 2022-08-25
+date = 2022-08-21
 description = "Example post showing outdate alert"
 [taxonomies]
 categories = ["Tech"]

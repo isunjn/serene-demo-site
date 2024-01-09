@@ -4,12 +4,12 @@
 	<subtitle>The demo blog page for zola theme serene.</subtitle>
 	<link href="https://serene-demo-site.vercel.app/blog/feed.xml" rel="self" type="application/atom+xml"/>
     <link href="https://serene-demo-site.vercel.app/blog/"/>
-	<updated>2023-08-30T00:00:00+00:00</updated>
+	<updated>2023-08-31T00:00:00+00:00</updated>
 	<id>https://serene-demo-site.vercel.app/blog/feed.xml</id>
 	<entry xml:lang="en">
 		<title>Example Post</title>
-		<published>2023-08-30T00:00:00+00:00</published>
-		<updated>2023-08-30T00:00:00+00:00</updated>
+		<published>2023-08-31T00:00:00+00:00</published>
+		<updated>2023-08-31T00:00:00+00:00</updated>
 		<link href="https://serene-demo-site.vercel.app/blog/example-post/" type="text/html"/>
 		<id>https://serene-demo-site.vercel.app/blog/example-post/</id>
 		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
@@ -18,7 +18,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit, &lt;strong&gt;amet consectetur adipisicing elit&lt;&#x2F;strong&gt;. Atque &lt;code&gt;libero&lt;&#x2F;code&gt; expedita laudantium &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;example.com&quot;&gt;cupiditate&lt;&#x2F;a&gt;, sit explicabo sequi ipsa! Praesentium, &lt;em&gt;nisi saepe dolor unde iusto dolore nam&lt;&#x2F;em&gt;, vero optio &lt;code&gt;consequuntur&lt;&#x2F;code&gt; repudiandae et! Atque libero &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;example.com&quot;&gt;expedita laudantium cupiditate&lt;&#x2F;a&gt;, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, &lt;strong&gt;amet consectetur adipisicing elit&lt;&#x2F;strong&gt;. Atque &lt;code&gt;libero&lt;&#x2F;code&gt; expedita laudantium cupiditate, sit explicabo sequi ipsa! Praesentium, &lt;em&gt;nisi saepe dolor unde iusto dolore nam&lt;&#x2F;em&gt;, vero optio &lt;code&gt;consequuntur&lt;&#x2F;code&gt; repudiandae et! Atque libero &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;example.com&quot;&gt;expedita laudantium cupiditate&lt;&#x2F;a&gt;, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;blockquote class=&quot;callout note&quot;&gt;
     
     &lt;div class=&quot;icon&quot;&gt;
@@ -404,8 +404,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 	</entry>
 	<entry xml:lang="en">
 		<title>Callouts</title>
-		<published>2023-05-07T00:00:00+00:00</published>
-		<updated>2023-05-07T00:00:00+00:00</updated>
+		<published>2023-05-17T00:00:00+00:00</published>
+		<updated>2023-05-17T00:00:00+00:00</updated>
 		<link href="https://serene-demo-site.vercel.app/blog/callouts/" type="text/html"/>
 		<id>https://serene-demo-site.vercel.app/blog/callouts/</id>
 		<content type="html">&lt;blockquote class=&quot;callout note&quot;&gt;
@@ -484,8 +484,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 	</entry>
 	<entry xml:lang="en">
 		<title>Outdate Alert</title>
-		<published>2022-08-25T00:00:00+00:00</published>
-		<updated>2022-08-25T00:00:00+00:00</updated>
+		<published>2022-08-21T00:00:00+00:00</published>
+		<updated>2022-08-21T00:00:00+00:00</updated>
         <summary>&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 </summary>
 		<link href="https://serene-demo-site.vercel.app/blog/outdate-alert/" type="text/html"/>
