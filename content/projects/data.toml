@@ -9,7 +9,7 @@ links = [
 
 [[project]]
 name = "ipsum"
-desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit."
 tags = ["lorem", "ipsum"]
 links = [
     {name = "homepage", url = "https://example.com"},
@@ -47,8 +47,9 @@ links = [
 
 [[project]]
 name = "praesentium"
-desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!"
+desc = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam."
 tags = ["lorem", "ipsum"]
+img = "https://placehold.co/600x400"
 links = [
     {name = "homepage", url = "https://example.com"},
     {name = "github", url = "https://example.com"},
