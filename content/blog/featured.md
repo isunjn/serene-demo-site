@@ -1,6 +1,6 @@
 +++
 title = "Featured Post"
-date = 2022-01-31
+date = 2022-02-21
 description = "Featured post"
 [taxonomies]
 categories = ["Thoughts"]

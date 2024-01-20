@@ -19,7 +19,7 @@
     </url>
     <url>
         <loc>https://serene-demo-site.vercel.app/blog/featured/</loc>
-        <lastmod>2022-01-31</lastmod>
+        <lastmod>2022-02-21</lastmod>
     </url>
     <url>
         <loc>https://serene-demo-site.vercel.app/blog/layout/</loc>
@@ -34,8 +34,12 @@
         <lastmod>2022-08-21</lastmod>
     </url>
     <url>
+        <loc>https://serene-demo-site.vercel.app/blog/quote/</loc>
+        <lastmod>2023-05-16</lastmod>
+    </url>
+    <url>
         <loc>https://serene-demo-site.vercel.app/blog/usage/</loc>
-        <lastmod>2022-01-21</lastmod>
+        <lastmod>2022-02-15</lastmod>
     </url>
     <url>
         <loc>https://serene-demo-site.vercel.app/categories/</loc>
@@ -63,6 +67,9 @@
     </url>
     <url>
         <loc>https://serene-demo-site.vercel.app/tags/markdown/</loc>
+    </url>
+    <url>
+        <loc>https://serene-demo-site.vercel.app/tags/quote/</loc>
     </url>
     <url>
         <loc>https://serene-demo-site.vercel.app/tags/serene/</loc>

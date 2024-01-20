@@ -26,7 +26,7 @@
     --primary-color: #5871a2;
     --primary-pale-color: #5871a210;
     --text-color: #3C4043;
-    --text-pale-color: #9b9faa;
+    --text-pale-color: #94969f;
     --bg-color: #ffffff; 
     --highlight-mark-color: #5f75b045;
   
@@ -43,7 +43,7 @@
     --primary-color: #5d77ac;
     --primary-pale-color: #5d77ac20;
     --text-color: #9197a5;
-    --text-pale-color: #626975;
+    --text-pale-color: #747983;
     --bg-color: #202124;
     --highlight-mark-color: #5f75b045;
 
@@ -73,6 +73,7 @@
     --inline-code-bg-color: var(--primary-pale-color);
     --block-code-border-radius: 0px;
     --block-code-border-color: var(--primary-color);
+    --detail-border-color: var(--primary-color);
   }
 
 </style>
@@ -316,7 +317,7 @@
         <h1>Documentation</h1>
         <div id="post-info">
           <div id="date">
-            <span id="publish">2022-01-21</span>
+            <span id="publish">2022-02-15</span>
             </div>
 
           
@@ -655,6 +656,20 @@ featured = false
 <p>This will be displayed as <code>&lt;figure&gt;&lt;/figure&gt;</code> in HTML on the web page instead of <code>&lt;img&gt;</code>, and the content of the caption will be centered below the image. The alt attribute is optional but recommended to help enhance accessibility</p>
 <p>Adding attribution information to a image is very common, you can directly use the <code>via</code> attribute, which will display a link named via below the image:</p>
 <pre class="z-code"><code><span class="z-text z-plain">{{ figure(src=&quot;/path/to/img&quot;, alt=&quot;some alt text&quot;, via=&quot;https://example.com&quot;) }}
+</span></code></pre>
+</li>
+<li>
+<p>Special quote, <code>cite</code> is optional:</p>
+<pre class="z-code"><code><span class="z-text z-plain">{% quote(cite=&quot;&quot;) %}
+// content...
+{% end %}
+</span></code></pre>
+</li>
+<li>
+<p>Expandable detail, <code>default_open</code> is optional:</p>
+<pre class="z-code"><code><span class="z-text z-plain">{% detail(title=&quot;&quot;, default_open=false) %}
+// content...
+{% end %}
 </span></code></pre>
 </li>
 </ul>

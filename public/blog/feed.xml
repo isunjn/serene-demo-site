@@ -129,7 +129,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;p&gt;Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
 &lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;a class=&quot;zola-anchor&quot; href=&quot;#emphasis&quot; aria-label=&quot;Anchor link for: emphasis&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;normal text, &lt;strong&gt;bold text&lt;&#x2F;strong&gt;, &lt;em&gt;ltalic text&lt;&#x2F;em&gt;, &lt;em&gt;&lt;strong&gt;bold and ltalic text&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;a class=&quot;zola-anchor&quot; href=&quot;#blockquotes&quot; aria-label=&quot;Anchor link for: blockquotes&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;blockquote&quot;&gt;Blockquote&lt;a class=&quot;zola-anchor&quot; href=&quot;#blockquote&quot; aria-label=&quot;Anchor link for: blockquote&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -347,7 +347,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 
     &lt;&#x2F;div&gt;
 &lt;&#x2F;blockquote&gt;
-&lt;p&gt;wiht header:&lt;&#x2F;p&gt;
+&lt;p&gt;with header:&lt;&#x2F;p&gt;
 &lt;blockquote class=&quot;callout note&quot;&gt;
     
     &lt;div class=&quot;icon&quot;&gt;
@@ -372,7 +372,35 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
         &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;p&gt;
 
     &lt;&#x2F;div&gt;
-&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;math-katex&quot;&gt;Math (KaTex)&lt;a class=&quot;zola-anchor&quot; href=&quot;#math-katex&quot; aria-label=&quot;Anchor link for: math-katex&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;special-quote&quot;&gt;Special quote&lt;a class=&quot;zola-anchor&quot; href=&quot;#special-quote&quot; aria-label=&quot;Anchor link for: special-quote&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;blockquote class=&quot;quote&quot;&gt;
+  
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
+  width=&quot;20&quot;
+  height=&quot;20&quot;
+  viewBox=&quot;0 0 24 24&quot;
+  fill=&quot;none&quot;
+  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
+&gt;
+  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;content&quot;&gt;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  
+  &lt;div class=&quot;from&quot;&gt;
+    &lt;p&gt;— Lorem Ipsum&lt;&#x2F;p&gt;
+
+  &lt;&#x2F;div&gt;
+  
+&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;expandable-detail&quot;&gt;Expandable Detail&lt;a class=&quot;zola-anchor&quot; href=&quot;#expandable-detail&quot; aria-label=&quot;Anchor link for: expandable-detail&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;details &gt;
+  &lt;summary&gt;&lt;span&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
+  &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+
+&lt;&#x2F;details&gt;
+&lt;h2 id=&quot;math-katex&quot;&gt;Math (KaTex)&lt;a class=&quot;zola-anchor&quot; href=&quot;#math-katex&quot; aria-label=&quot;Anchor link for: math-katex&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;$$
 f(x) = \int_{-\infty}^\infin \hat f(\xi) e^{2 \pi i \xi x}\ d\xi
 $$&lt;&#x2F;p&gt;
@@ -504,6 +532,85 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;</content>
 	</entry>
 	<entry xml:lang="en">
+		<title>Special Quote</title>
+		<published>2023-05-16T00:00:00+00:00</published>
+		<updated>2023-05-16T00:00:00+00:00</updated>
+		<link href="https://serene-demo-site.vercel.app/blog/quote/" type="text/html"/>
+		<id>https://serene-demo-site.vercel.app/blog/quote/</id>
+		<content type="html">&lt;blockquote class=&quot;quote&quot;&gt;
+  
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
+  width=&quot;20&quot;
+  height=&quot;20&quot;
+  viewBox=&quot;0 0 24 24&quot;
+  fill=&quot;none&quot;
+  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
+&gt;
+  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;content&quot;&gt;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  
+&lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;quote&quot;&gt;
+  
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
+  width=&quot;20&quot;
+  height=&quot;20&quot;
+  viewBox=&quot;0 0 24 24&quot;
+  fill=&quot;none&quot;
+  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
+&gt;
+  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;content&quot;&gt;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  
+  &lt;div class=&quot;from&quot;&gt;
+    &lt;p&gt;— Lorem Ipsum&lt;&#x2F;p&gt;
+
+  &lt;&#x2F;div&gt;
+  
+&lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;quote&quot;&gt;
+  
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
+  width=&quot;20&quot;
+  height=&quot;20&quot;
+  viewBox=&quot;0 0 24 24&quot;
+  fill=&quot;none&quot;
+  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
+&gt;
+  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;content&quot;&gt;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  
+&lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;quote&quot;&gt;
+  
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
+  width=&quot;20&quot;
+  height=&quot;20&quot;
+  viewBox=&quot;0 0 24 24&quot;
+  fill=&quot;none&quot;
+  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
+&gt;
+  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
+&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;content&quot;&gt;&lt;p&gt;&lt;em&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;div&gt;
+  
+  &lt;div class=&quot;from&quot;&gt;
+    &lt;p&gt;— &lt;em&gt;Lorem Ipsum&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+
+  &lt;&#x2F;div&gt;
+  
+&lt;&#x2F;blockquote&gt;</content>
+	</entry>
+	<entry xml:lang="en">
 		<title>Outdate Alert</title>
 		<published>2022-08-21T00:00:00+00:00</published>
 		<updated>2022-08-21T00:00:00+00:00</updated>
@@ -526,8 +633,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 	</entry>
 	<entry xml:lang="en">
 		<title>Featured Post</title>
-		<published>2022-01-31T00:00:00+00:00</published>
-		<updated>2022-01-31T00:00:00+00:00</updated>
+		<published>2022-02-21T00:00:00+00:00</published>
+		<updated>2022-02-21T00:00:00+00:00</updated>
 		<link href="https://serene-demo-site.vercel.app/blog/featured/" type="text/html"/>
 		<id>https://serene-demo-site.vercel.app/blog/featured/</id>
 		<content type="html">&lt;p&gt;Set &lt;code&gt;featured = true&lt;&#x2F;code&gt; will add a &lt;code&gt;*&lt;&#x2F;code&gt; mark in front of the post title.&lt;&#x2F;p&gt;
@@ -535,8 +642,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 	</entry>
 	<entry xml:lang="en">
 		<title>Documentation</title>
-		<published>2022-01-21T00:00:00+00:00</published>
-		<updated>2022-01-21T00:00:00+00:00</updated>
+		<published>2022-02-15T00:00:00+00:00</published>
+		<updated>2022-02-15T00:00:00+00:00</updated>
 		<link href="https://serene-demo-site.vercel.app/blog/usage/" type="text/html"/>
 		<id>https://serene-demo-site.vercel.app/blog/usage/</id>
 		<content type="html">&lt;p&gt;If you haven&#x27;t created a zola site yet, create a new zola site with the following command (assuming your site is called &lt;code&gt;myblog&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
@@ -858,6 +965,20 @@ featured = false
 &lt;p&gt;This will be displayed as &lt;code&gt;&amp;lt;figure&amp;gt;&amp;lt;&#x2F;figure&amp;gt;&lt;&#x2F;code&gt; in HTML on the web page instead of &lt;code&gt;&amp;lt;img&amp;gt;&lt;&#x2F;code&gt;, and the content of the caption will be centered below the image. The alt attribute is optional but recommended to help enhance accessibility&lt;&#x2F;p&gt;
 &lt;p&gt;Adding attribution information to a image is very common, you can directly use the &lt;code&gt;via&lt;&#x2F;code&gt; attribute, which will display a link named via below the image:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;{{ figure(src=&amp;quot;&#x2F;path&#x2F;to&#x2F;img&amp;quot;, alt=&amp;quot;some alt text&amp;quot;, via=&amp;quot;https:&#x2F;&#x2F;example.com&amp;quot;) }}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Special quote, &lt;code&gt;cite&lt;&#x2F;code&gt; is optional:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;{% quote(cite=&amp;quot;&amp;quot;) %}
+&#x2F;&#x2F; content...
+{% end %}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Expandable detail, &lt;code&gt;default_open&lt;&#x2F;code&gt; is optional:&lt;&#x2F;p&gt;
+&lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;{% detail(title=&amp;quot;&amp;quot;, default_open=false) %}
+&#x2F;&#x2F; content...
+{% end %}
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;

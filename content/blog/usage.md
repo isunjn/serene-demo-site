@@ -1,6 +1,6 @@
 +++
 title = "Documentation"
-date = 2022-01-21
+date = 2022-02-15
 description = "Documentation of serene theme usage"
 [taxonomies]
 categories = ["Thoughts"]
@@ -329,6 +329,18 @@ Now the myblog directory may looks like this:
 
   ```
   {{ rawfigurevia() }}
+  ```
+
+- Special quote, `cite` is optional:
+
+  ```
+  {{ rawquote() }}
+  ```
+
+- Expandable detail, `default_open` is optional:
+
+  ```
+  {{ rawdetail() }}
   ```
 
 ### Callout
