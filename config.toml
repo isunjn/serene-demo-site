@@ -1,4 +1,4 @@
-base_url = "https://serene-demo-site.vercel.app"      # Domain name of your website
+base_url = "https://serene-demo.pages.dev"      # Domain name of your website
 title = "serene"
 description = "The demo site of zola theme serene"
 default_language = "en"
