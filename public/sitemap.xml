@@ -1,83 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://serene-demo-site.vercel.app/</loc>
+        <loc>https://serene-demo.pages.dev/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/about/</loc>
+        <loc>https://serene-demo.pages.dev/about/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/</loc>
+        <loc>https://serene-demo.pages.dev/blog/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/callouts/</loc>
+        <loc>https://serene-demo.pages.dev/blog/callouts/</loc>
         <lastmod>2023-05-17</lastmod>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/example-post/</loc>
+        <loc>https://serene-demo.pages.dev/blog/example-post/</loc>
         <lastmod>2023-08-31</lastmod>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/featured/</loc>
+        <loc>https://serene-demo.pages.dev/blog/featured/</loc>
         <lastmod>2022-02-21</lastmod>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/layout/</loc>
+        <loc>https://serene-demo.pages.dev/blog/layout/</loc>
         <lastmod>2023-06-13</lastmod>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/markdown/</loc>
+        <loc>https://serene-demo.pages.dev/blog/markdown/</loc>
         <lastmod>2023-08-30</lastmod>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/outdate-alert/</loc>
+        <loc>https://serene-demo.pages.dev/blog/outdate-alert/</loc>
         <lastmod>2022-08-21</lastmod>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/quote/</loc>
+        <loc>https://serene-demo.pages.dev/blog/quote/</loc>
         <lastmod>2023-05-16</lastmod>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/blog/usage/</loc>
+        <loc>https://serene-demo.pages.dev/blog/usage/</loc>
         <lastmod>2022-02-15</lastmod>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/categories/</loc>
+        <loc>https://serene-demo.pages.dev/categories/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/categories/tech/</loc>
+        <loc>https://serene-demo.pages.dev/categories/tech/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/categories/thoughts/</loc>
+        <loc>https://serene-demo.pages.dev/categories/thoughts/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/projects/</loc>
+        <loc>https://serene-demo.pages.dev/projects/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/</loc>
+        <loc>https://serene-demo.pages.dev/tags/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/callout/</loc>
+        <loc>https://serene-demo.pages.dev/tags/callout/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/featured/</loc>
+        <loc>https://serene-demo.pages.dev/tags/featured/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/layout/</loc>
+        <loc>https://serene-demo.pages.dev/tags/layout/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/markdown/</loc>
+        <loc>https://serene-demo.pages.dev/tags/markdown/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/quote/</loc>
+        <loc>https://serene-demo.pages.dev/tags/quote/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/serene/</loc>
+        <loc>https://serene-demo.pages.dev/tags/serene/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/theme/</loc>
+        <loc>https://serene-demo.pages.dev/tags/theme/</loc>
     </url>
     <url>
-        <loc>https://serene-demo-site.vercel.app/tags/usage/</loc>
+        <loc>https://serene-demo.pages.dev/tags/usage/</loc>
     </url>
 </urlset>

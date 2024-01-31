@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 Allow: /
-Sitemap: https://serene-demo-site.vercel.app/sitemap.xml
+Sitemap: https://serene-demo.pages.dev/sitemap.xml

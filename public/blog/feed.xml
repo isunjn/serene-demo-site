@@ -2,16 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>serene::blog</title>
 	<subtitle>The demo blog page for zola theme serene</subtitle>
-	<link href="https://serene-demo-site.vercel.app/blog/feed.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://serene-demo-site.vercel.app/blog/"/>
+	<link href="https://serene-demo.pages.dev/blog/feed.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://serene-demo.pages.dev/blog/"/>
 	<updated>2023-08-31T00:00:00+00:00</updated>
-	<id>https://serene-demo-site.vercel.app/blog/feed.xml</id>
+	<id>https://serene-demo.pages.dev/blog/feed.xml</id>
 	<entry xml:lang="en">
 		<title>Example Post</title>
 		<published>2023-08-31T00:00:00+00:00</published>
 		<updated>2023-08-31T00:00:00+00:00</updated>
-		<link href="https://serene-demo-site.vercel.app/blog/example-post/" type="text/html"/>
-		<id>https://serene-demo-site.vercel.app/blog/example-post/</id>
+		<link href="https://serene-demo.pages.dev/blog/example-post/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/blog/example-post/</id>
 		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
 &lt;h2 id=&quot;lorem&quot;&gt;Lorem&lt;a class=&quot;zola-anchor&quot; href=&quot;#lorem&quot; aria-label=&quot;Anchor link for: lorem&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
@@ -119,8 +119,8 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 		<updated>2023-08-30T00:00:00+00:00</updated>
         <summary>&lt;p&gt;This is a post showing all supported elements.&lt;&#x2F;p&gt;
 </summary>
-		<link href="https://serene-demo-site.vercel.app/blog/markdown/" type="text/html"/>
-		<id>https://serene-demo-site.vercel.app/blog/markdown/</id>
+		<link href="https://serene-demo.pages.dev/blog/markdown/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/blog/markdown/</id>
 		<content type="html">&lt;p&gt;This is a post showing all supported elements.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;a class=&quot;zola-anchor&quot; href=&quot;#heading&quot; aria-label=&quot;Anchor link for: heading&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;As you can see in this post.&lt;&#x2F;p&gt;
@@ -434,8 +434,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<title>Home Layout</title>
 		<published>2023-06-13T00:00:00+00:00</published>
 		<updated>2023-06-13T00:00:00+00:00</updated>
-		<link href="https://serene-demo-site.vercel.app/blog/layout/" type="text/html"/>
-		<id>https://serene-demo-site.vercel.app/blog/layout/</id>
+		<link href="https://serene-demo.pages.dev/blog/layout/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/blog/layout/</id>
 		<content type="html">&lt;p&gt;The &lt;code&gt;homepage_layout&lt;&#x2F;code&gt; option can be set to &lt;code&gt;about&lt;&#x2F;code&gt;, &lt;code&gt;list&lt;&#x2F;code&gt; or &lt;code&gt;recent&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;about&lt;&#x2F;code&gt;: Displays markdown content of your &lt;code&gt;myblog&#x2F;content&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
@@ -455,8 +455,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<title>Callouts</title>
 		<published>2023-05-17T00:00:00+00:00</published>
 		<updated>2023-05-17T00:00:00+00:00</updated>
-		<link href="https://serene-demo-site.vercel.app/blog/callouts/" type="text/html"/>
-		<id>https://serene-demo-site.vercel.app/blog/callouts/</id>
+		<link href="https://serene-demo.pages.dev/blog/callouts/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/blog/callouts/</id>
 		<content type="html">&lt;blockquote class=&quot;callout note&quot;&gt;
     
     &lt;div class=&quot;icon&quot;&gt;
@@ -535,8 +535,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<title>Special Quote</title>
 		<published>2023-05-16T00:00:00+00:00</published>
 		<updated>2023-05-16T00:00:00+00:00</updated>
-		<link href="https://serene-demo-site.vercel.app/blog/quote/" type="text/html"/>
-		<id>https://serene-demo-site.vercel.app/blog/quote/</id>
+		<link href="https://serene-demo.pages.dev/blog/quote/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/blog/quote/</id>
 		<content type="html">&lt;blockquote class=&quot;quote&quot;&gt;
   
   &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
@@ -616,8 +616,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<updated>2022-08-21T00:00:00+00:00</updated>
         <summary>&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 </summary>
-		<link href="https://serene-demo-site.vercel.app/blog/outdate-alert/" type="text/html"/>
-		<id>https://serene-demo-site.vercel.app/blog/outdate-alert/</id>
+		<link href="https://serene-demo.pages.dev/blog/outdate-alert/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/blog/outdate-alert/</id>
 		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
@@ -635,8 +635,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<title>Featured Post</title>
 		<published>2022-02-21T00:00:00+00:00</published>
 		<updated>2022-02-21T00:00:00+00:00</updated>
-		<link href="https://serene-demo-site.vercel.app/blog/featured/" type="text/html"/>
-		<id>https://serene-demo-site.vercel.app/blog/featured/</id>
+		<link href="https://serene-demo.pages.dev/blog/featured/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/blog/featured/</id>
 		<content type="html">&lt;p&gt;Set &lt;code&gt;featured = true&lt;&#x2F;code&gt; will add a &lt;code&gt;*&lt;&#x2F;code&gt; mark in front of the post title.&lt;&#x2F;p&gt;
 </content>
 	</entry>
@@ -644,8 +644,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<title>Documentation</title>
 		<published>2022-02-15T00:00:00+00:00</published>
 		<updated>2022-02-15T00:00:00+00:00</updated>
-		<link href="https://serene-demo-site.vercel.app/blog/usage/" type="text/html"/>
-		<id>https://serene-demo-site.vercel.app/blog/usage/</id>
+		<link href="https://serene-demo.pages.dev/blog/usage/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/blog/usage/</id>
 		<content type="html">&lt;p&gt;If you haven&#x27;t created a zola site yet, create a new zola site with the following command (assuming your site is called &lt;code&gt;myblog&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; class=&quot;language-sh z-code&quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;zola&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; init myblog&lt;&#x2F;span&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
