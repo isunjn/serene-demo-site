@@ -375,16 +375,14 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;special-quote&quot;&gt;Special quote&lt;a class=&quot;zola-anchor&quot; href=&quot;#special-quote&quot; aria-label=&quot;Anchor link for: special-quote&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;blockquote class=&quot;quote&quot;&gt;
   
-  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
-  width=&quot;20&quot;
-  height=&quot;20&quot;
-  viewBox=&quot;0 0 24 24&quot;
-  fill=&quot;none&quot;
-  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
-&gt;
-  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;  width=&quot;12&quot; height=&quot;12&quot; viewBox=&quot;796 698 200 200&quot;&gt;
+  &lt;g&gt;
+    &lt;path d=&quot;M885.208,749.739v-40.948C836.019,708.791,796,748.81,796,798v89.209h89.208V798h-48.26
+      C836.948,771.39,858.598,749.739,885.208,749.739z&quot;&#x2F;&gt;
+    &lt;path d=&quot;M996,749.739v-40.948c-49.19,0-89.209,40.019-89.209,89.209v89.209H996V798h-48.26
+      C947.74,771.39,969.39,749.739,996,749.739z&quot;&#x2F;&gt;
+  &lt;&#x2F;g&gt;
+  &lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
   &lt;div class=&quot;content&quot;&gt;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
   
@@ -539,31 +537,27 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<id>https://serene-demo.pages.dev/blog/quote/</id>
 		<content type="html">&lt;blockquote class=&quot;quote&quot;&gt;
   
-  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
-  width=&quot;20&quot;
-  height=&quot;20&quot;
-  viewBox=&quot;0 0 24 24&quot;
-  fill=&quot;none&quot;
-  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
-&gt;
-  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;  width=&quot;12&quot; height=&quot;12&quot; viewBox=&quot;796 698 200 200&quot;&gt;
+  &lt;g&gt;
+    &lt;path d=&quot;M885.208,749.739v-40.948C836.019,708.791,796,748.81,796,798v89.209h89.208V798h-48.26
+      C836.948,771.39,858.598,749.739,885.208,749.739z&quot;&#x2F;&gt;
+    &lt;path d=&quot;M996,749.739v-40.948c-49.19,0-89.209,40.019-89.209,89.209v89.209H996V798h-48.26
+      C947.74,771.39,969.39,749.739,996,749.739z&quot;&#x2F;&gt;
+  &lt;&#x2F;g&gt;
+  &lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
   &lt;div class=&quot;content&quot;&gt;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
   
 &lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;quote&quot;&gt;
   
-  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
-  width=&quot;20&quot;
-  height=&quot;20&quot;
-  viewBox=&quot;0 0 24 24&quot;
-  fill=&quot;none&quot;
-  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
-&gt;
-  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;  width=&quot;12&quot; height=&quot;12&quot; viewBox=&quot;796 698 200 200&quot;&gt;
+  &lt;g&gt;
+    &lt;path d=&quot;M885.208,749.739v-40.948C836.019,708.791,796,748.81,796,798v89.209h89.208V798h-48.26
+      C836.948,771.39,858.598,749.739,885.208,749.739z&quot;&#x2F;&gt;
+    &lt;path d=&quot;M996,749.739v-40.948c-49.19,0-89.209,40.019-89.209,89.209v89.209H996V798h-48.26
+      C947.74,771.39,969.39,749.739,996,749.739z&quot;&#x2F;&gt;
+  &lt;&#x2F;g&gt;
+  &lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
   &lt;div class=&quot;content&quot;&gt;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
   
@@ -574,32 +568,28 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
   
 &lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;quote&quot;&gt;
   
-  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
-  width=&quot;20&quot;
-  height=&quot;20&quot;
-  viewBox=&quot;0 0 24 24&quot;
-  fill=&quot;none&quot;
-  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
-&gt;
-  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;  width=&quot;12&quot; height=&quot;12&quot; viewBox=&quot;796 698 200 200&quot;&gt;
+  &lt;g&gt;
+    &lt;path d=&quot;M885.208,749.739v-40.948C836.019,708.791,796,748.81,796,798v89.209h89.208V798h-48.26
+      C836.948,771.39,858.598,749.739,885.208,749.739z&quot;&#x2F;&gt;
+    &lt;path d=&quot;M996,749.739v-40.948c-49.19,0-89.209,40.019-89.209,89.209v89.209H996V798h-48.26
+      C947.74,771.39,969.39,749.739,996,749.739z&quot;&#x2F;&gt;
+  &lt;&#x2F;g&gt;
+  &lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
   &lt;div class=&quot;content&quot;&gt;&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
   
 &lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;quote&quot;&gt;
   
-  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg
-  width=&quot;20&quot;
-  height=&quot;20&quot;
-  viewBox=&quot;0 0 24 24&quot;
-  fill=&quot;none&quot;
-  xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;
-&gt;
-  &lt;path d=&quot;M9.13456 9H12.1346L10 14.6075H7L9.13456 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-  &lt;path d=&quot;M14.1346 9H17.1346L15 14.6075H12L14.1346 9Z&quot; fill=&quot;currentColor&quot; &#x2F;&gt;
-&lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
+  &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;  width=&quot;12&quot; height=&quot;12&quot; viewBox=&quot;796 698 200 200&quot;&gt;
+  &lt;g&gt;
+    &lt;path d=&quot;M885.208,749.739v-40.948C836.019,708.791,796,748.81,796,798v89.209h89.208V798h-48.26
+      C836.948,771.39,858.598,749.739,885.208,749.739z&quot;&#x2F;&gt;
+    &lt;path d=&quot;M996,749.739v-40.948c-49.19,0-89.209,40.019-89.209,89.209v89.209H996V798h-48.26
+      C947.74,771.39,969.39,749.739,996,749.739z&quot;&#x2F;&gt;
+  &lt;&#x2F;g&gt;
+  &lt;&#x2F;svg&gt;&lt;&#x2F;div&gt;
   &lt;div class=&quot;content&quot;&gt;&lt;p&gt;&lt;em&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;div&gt;
   
