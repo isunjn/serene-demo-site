@@ -45,18 +45,14 @@
  color: #ffffff;
  background-color: #8959a8;
 }
-.z-markup.z-inserted.z-diff, .z-markup.z-deleted.z-diff, .z-meta.z-diff.z-header.z-to-file, .z-meta.z-diff.z-header.z-from-file {
- color: #ffffff;
-}
 .z-markup.z-inserted.z-diff, .z-meta.z-diff.z-header.z-to-file {
- background-color: #65c23a;
+ color: #229545;
 }
 .z-markup.z-deleted.z-diff, .z-meta.z-diff.z-header.z-from-file {
- background-color: #c82829;
+ color: #c82829;
 }
 .z-meta.z-diff.z-header.z-from-file, .z-meta.z-diff.z-header.z-to-file {
- color: #ffffff;
- background-color: #4271ae;
+ color: #4271ae;
 }
 .z-meta.z-diff.z-range {
  color: #3e999f;

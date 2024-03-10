@@ -19,13 +19,13 @@
  color: #e08355;
 }
 .z-type, .z-entity.z-name.z-class, .z-entity.z-name.z-type.z-class, .z-support.z-type, .z-support.z-class {
- color: #6a8f8a;
+ color: #83aaa5;
 }
 .z-string, .z-constant.z-other.z-symbol, .z-entity.z-other.z-inherited-class, .z-markup.z-heading {
  color: #85ad74;
 }
 .z-keyword.z-operator, .z-constant.z-other.z-color {
- color: #6a8f8a;
+ color: #83aaa5;
 }
 .z-entity.z-name.z-function, .z-meta.z-function-call, .z-support.z-function, .z-keyword.z-other.z-special-method, .z-meta.z-block-level {
  color: #81a2be;
@@ -49,15 +49,13 @@
  color: #ffffff;
 }
 .z-markup.z-inserted.z-diff, .z-meta.z-diff.z-header.z-to-file {
- color: #5fe375;
- background-color: #000000;
+ color: #4baf5c;
 }
 .z-markup.z-deleted.z-diff, .z-meta.z-diff.z-header.z-from-file {
  color: #d46565;
 }
 .z-meta.z-diff.z-header.z-from-file, .z-meta.z-diff.z-header.z-to-file {
- color: #ffffff;
- background-color: #4271ae;
+ color: #4271ae;
 }
 .z-meta.z-diff.z-range {
  color: #3e999f;
