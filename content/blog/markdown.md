@@ -251,7 +251,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saep
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
 {% end %}
 
-## Math (KaTex)
+## Math (KaTex / Typst)
 
 $$
 f(x) = \int_{-\infty}^\infin \hat f(\xi) e^{2 \pi i \xi x}\ d\xi

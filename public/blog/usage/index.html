@@ -277,7 +277,7 @@
             </li>
             
             <li>
-              <a class="h3" href="#katex">KaTeX</a>
+              <a class="h3" href="#math">Math</a>
             </li>
             
             <li>
@@ -355,86 +355,86 @@
 <p>There is a <code>sections</code> config item in your <code>config.toml</code>, which enumerates the sections your website has. You should have at least one <code>blog</code> section. The name and path can be changed, be noticed that if you changed the blog section path (e.g. from <code>/blog</code> to <code>/posts</code>), then you should also change <code>blog_section_path</code> config item.</p>
 <p>The myblog directory now looks like this:</p>
 <pre class="z-code"><code><span class="z-text z-plain">├── config.toml
-├── content/
-├── sass/
-├── static/
-├── templates/
-└── themes/
-    └── serene/
+</span><span class="z-text z-plain">├── content/
+</span><span class="z-text z-plain">├── sass/
+</span><span class="z-text z-plain">├── static/
+</span><span class="z-text z-plain">├── templates/
+</span><span class="z-text z-plain">└── themes/
+</span><span class="z-text z-plain">    └── serene/
 </span></code></pre>
 <p>Create <code>myblog/content/_index.md</code> and <code>myblog/content/blog/_index.md</code> with the following content:</p>
 <p><code>myblog/content/_index.md</code>:</p>
 <pre class="z-code"><code><span class="z-text z-plain">+++
-template = &#39;home.html&#39;
-
-[extra]
-lang = &#39;en&#39;
-+++
-
-Words about you
+</span><span class="z-text z-plain">template = &#39;home.html&#39;
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">[extra]
+</span><span class="z-text z-plain">lang = &#39;en&#39;
+</span><span class="z-text z-plain">+++
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">Words about you
 </span></code></pre>
 <p><code>myblog/content/blog/_index.md</code>:</p>
 <pre class="z-code"><code><span class="z-text z-plain">+++
-title = &quot;My Blog&quot;
-description = &quot;My blog site.&quot;
-sort_by = &quot;date&quot;
-template = &quot;blog.html&quot;
-page_template = &quot;post.html&quot;
-insert_anchor_links = &quot;right&quot;
-generate_feed = true
-
-[extra]
-lang = &#39;en&#39;
-+++
+</span><span class="z-text z-plain">title = &quot;My Blog&quot;
+</span><span class="z-text z-plain">description = &quot;My blog site.&quot;
+</span><span class="z-text z-plain">sort_by = &quot;date&quot;
+</span><span class="z-text z-plain">template = &quot;blog.html&quot;
+</span><span class="z-text z-plain">page_template = &quot;post.html&quot;
+</span><span class="z-text z-plain">insert_anchor_links = &quot;right&quot;
+</span><span class="z-text z-plain">generate_feed = true
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">[extra]
+</span><span class="z-text z-plain">lang = &#39;en&#39;
+</span><span class="z-text z-plain">+++
 </span></code></pre>
 <p>The path and the directory should match. If you changed the blog section path to <code>/posts</code>, then you create <code>myblog/content/posts/_index.md</code>, rather than <code>myblog/content/blog/_index.md</code>. The same goes for the others.</p>
 <p>If you want to display a projects page (as you see in the demo site), also create <code>myblog/content/projects/_index.md</code>:</p>
 <pre class="z-code"><code><span class="z-text z-plain">+++
-title = &quot;My Projects&quot;
-description = &quot;My projects page.&quot;
-template = &quot;projects.html&quot;
-
-[extra]
-lang = &#39;en&#39;
-+++
+</span><span class="z-text z-plain">title = &quot;My Projects&quot;
+</span><span class="z-text z-plain">description = &quot;My projects page.&quot;
+</span><span class="z-text z-plain">template = &quot;projects.html&quot;
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">[extra]
+</span><span class="z-text z-plain">lang = &#39;en&#39;
+</span><span class="z-text z-plain">+++
 </span></code></pre>
 <p>The <code>blog</code> and <code>projects</code> are two sections that serene supports by default, they have specific structures and styles, defined in template <code>blog.html</code> and <code>projects.html</code>.</p>
 <p>Serene also support a special template called <code>prose.html</code>, it applies the same styles of blog post page and you can use it as a section template for a custom section page, for example if you want a separate <code>about</code> page, you can add a <code>{ name = &quot;about&quot;, path = &quot;/about&quot;, is_external = false }</code> to the <code>sections</code> config item and create a <code>myblog/content/about/_index.md</code> with the following content:</p>
 <pre class="z-code"><code><span class="z-text z-plain">+++
-title = &quot;About me&quot;
-description = &quot;A about page of ...&quot;
-template = &quot;prose.html&quot;
-insert_anchor_links = &quot;none&quot;
-
-[extra]
-lang = &#39;en&#39;
-math = false
-mermaid = false
-copy = false
-comment = false
-+++
-
-Hi, My name is ....
-
-(more markdown content goes here)
-
+</span><span class="z-text z-plain">title = &quot;About me&quot;
+</span><span class="z-text z-plain">description = &quot;A about page of ...&quot;
+</span><span class="z-text z-plain">template = &quot;prose.html&quot;
+</span><span class="z-text z-plain">insert_anchor_links = &quot;none&quot;
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">[extra]
+</span><span class="z-text z-plain">lang = &#39;en&#39;
+</span><span class="z-text z-plain">math = false
+</span><span class="z-text z-plain">mermaid = false
+</span><span class="z-text z-plain">copy = false
+</span><span class="z-text z-plain">comment = false
+</span><span class="z-text z-plain">+++
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">Hi, My name is ....
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">(more markdown content goes here)
+</span><span class="z-text z-plain">
 </span></code></pre>
 <p>You may also create a <code>friends</code> page to list all your friends on the internet, a <code>collections/bookmarks</code> page to list your considered valuable bookmarks, a <code>cat</code> page to post a few pics of your lovely cat... In the future, serene may add more specific templates.</p>
 <p>Now the myblog directory may looks like this:</p>
 <pre class="z-code"><code><span class="z-text z-plain">├── config.toml
-├── content/
-│   ├── blog/
-│   │   └── _index.md
-│   ├── projects/
-│   │   └── _index.md
-│   ├── about/
-│   │   └── _index.md
-│   └── _index.md
-├── sass/
-├── static/
-├── templates/
-└── themes/
-    └── serene/
+</span><span class="z-text z-plain">├── content/
+</span><span class="z-text z-plain">│   ├── blog/
+</span><span class="z-text z-plain">│   │   └── _index.md
+</span><span class="z-text z-plain">│   ├── projects/
+</span><span class="z-text z-plain">│   │   └── _index.md
+</span><span class="z-text z-plain">│   ├── about/
+</span><span class="z-text z-plain">│   │   └── _index.md
+</span><span class="z-text z-plain">│   └── _index.md
+</span><span class="z-text z-plain">├── sass/
+</span><span class="z-text z-plain">├── static/
+</span><span class="z-text z-plain">├── templates/
+</span><span class="z-text z-plain">└── themes/
+</span><span class="z-text z-plain">    └── serene/
 </span></code></pre>
 <h2 id="configuration">Configuration<a class="zola-anchor" href="#configuration" aria-label="Anchor link for: configuration" style="visibility: hidden;">#</a></h2>
 <h3 id="favicon">Favicon<a class="zola-anchor" href="#favicon" aria-label="Anchor link for: favicon" style="visibility: hidden;">#</a></h3>
@@ -445,13 +445,13 @@ Hi, My name is ....
 <li>
 <p>Also put your avatar picture file <code>avatar.webp</code> here, webp format is recommended</p>
 <pre class="z-code"><code><span class="z-text z-plain">...
-├── static/
-│   └── img/
-│       ├── favicon-16x16.png
-│       ├── favicon-32x32.png
-│       ├── apple-touch-icon.png
-│       └── avatar.webp
-...
+</span><span class="z-text z-plain">├── static/
+</span><span class="z-text z-plain">│   └── img/
+</span><span class="z-text z-plain">│       ├── favicon-16x16.png
+</span><span class="z-text z-plain">│       ├── favicon-32x32.png
+</span><span class="z-text z-plain">│       ├── apple-touch-icon.png
+</span><span class="z-text z-plain">│       └── avatar.webp
+</span><span class="z-text z-plain">...
 </span></code></pre>
 </li>
 </ul>
@@ -506,24 +506,24 @@ Hi, My name is ....
 <li>
 <p>Create a new <code>data.toml</code> under <code>myblog/content/projects/</code>, add projects information in it, the format is as follows, <code>img</code> is optional:</p>
 <pre data-lang="toml" class="language-toml z-code"><code class="language-toml" data-lang="toml"><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-array z-begin z-toml">[[</span><span class="z-meta z-tag z-table z-array z-toml"><span class="z-entity z-name z-table z-toml">project</span></span><span class="z-punctuation z-definition z-table z-array z-end z-toml">]]</span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">desc</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">tags</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span><span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-array z-toml">,</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-definition z-array z-end z-toml">]</span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">img</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">links</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span>
-  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span><span class="z-punctuation z-separator z-array z-toml">,</span>
-  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span><span class="z-punctuation z-separator z-array z-toml">,</span>
-<span class="z-punctuation z-definition z-array z-end z-toml">]</span>
-
-<span class="z-punctuation z-definition z-table z-array z-begin z-toml">[[</span><span class="z-meta z-tag z-table z-array z-toml"><span class="z-entity z-name z-table z-toml">project</span></span><span class="z-punctuation z-definition z-table z-array z-end z-toml">]]</span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">desc</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">tags</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span><span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-array z-toml">,</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-definition z-array z-end z-toml">]</span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">img</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
-<span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">links</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span>
-  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span><span class="z-punctuation z-separator z-array z-toml">,</span>
-  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span><span class="z-punctuation z-separator z-array z-toml">,</span>
-<span class="z-punctuation z-definition z-array z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">desc</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">tags</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span><span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-array z-toml">,</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-definition z-array z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">img</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">links</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span>
+</span><span class="z-source z-toml">  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span><span class="z-punctuation z-separator z-array z-toml">,</span>
+</span><span class="z-source z-toml">  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span><span class="z-punctuation z-separator z-array z-toml">,</span>
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-array z-end z-toml">]</span>
+</span><span class="z-source z-toml">
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-table z-array z-begin z-toml">[[</span><span class="z-meta z-tag z-table z-array z-toml"><span class="z-entity z-name z-table z-toml">project</span></span><span class="z-punctuation z-definition z-table z-array z-end z-toml">]]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">desc</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">tags</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span><span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-array z-toml">,</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-definition z-array z-end z-toml">]</span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">img</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span>
+</span><span class="z-source z-toml"><span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">links</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-punctuation z-definition z-array z-begin z-toml">[</span>
+</span><span class="z-source z-toml">  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span><span class="z-punctuation z-separator z-array z-toml">,</span>
+</span><span class="z-source z-toml">  <span class="z-punctuation z-definition z-inline-table z-begin z-toml">{</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">name</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span><span class="z-punctuation z-separator z-inline-table z-toml">,</span> <span class="z-meta z-tag z-key z-toml"><span class="z-entity z-name z-tag z-toml">url</span></span> <span class="z-punctuation z-definition z-key-value z-toml">=</span> <span class="z-string z-quoted z-double z-basic z-toml"><span class="z-punctuation z-definition z-string z-begin z-toml">&quot;</span><span class="z-punctuation z-definition z-string z-end z-toml">&quot;</span></span> <span class="z-punctuation z-definition z-inline-table z-end z-toml">}</span><span class="z-punctuation z-separator z-array z-toml">,</span>
+</span><span class="z-source z-toml"><span class="z-punctuation z-definition z-array z-end z-toml">]</span>
 </span></code></pre>
 </li>
 </ul>
@@ -596,33 +596,33 @@ Hi, My name is ....
 <li>
 <p>The content inside the two <code>+++</code> at the top of the post markdown file is called front matter, and the supported configuration items are as follows:</p>
 <pre data-lang="md" class="language-md z-code"><code class="language-md" data-lang="md"><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">+++
-title = &quot;&quot;
-date = 2022-01-01
-draft = true
-
-</span><span class="z-meta z-paragraph z-markdown">[taxonomies]
-categories = [&quot;one&quot;]
-tags = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]
-
-</span><span class="z-meta z-paragraph z-markdown">[extra]
-lang = &quot;en&quot;
-toc = true
-comment = true
-copy = true
-math = false
-mermaid = false
-outdate_alert = true
-outdate_alert_days = 120
-display_tags = true
-truncate_summary = false
-featured = false
-+++
-
-</span><span class="z-meta z-paragraph z-markdown">new post about something...
-
-</span><span class="z-meta z-disable-markdown"><span class="z-comment z-block z-html"><span class="z-punctuation z-definition z-comment z-begin z-html">&lt;!--</span> more <span class="z-punctuation z-definition z-comment z-end z-html">--&gt;</span></span></span><span class="z-meta z-disable-markdown">
-</span>
-<span class="z-meta z-paragraph z-markdown">more post content...
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">title = &quot;&quot;
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">date = 2022-01-01
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">draft = true
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">[taxonomies]
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">categories = [&quot;one&quot;]
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">tags = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;]
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">[extra]
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">lang = &quot;en&quot;
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">toc = true
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">comment = true
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">copy = true
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">math = false
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">mermaid = false
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">outdate_alert = true
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">outdate_alert_days = 120
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">display_tags = true
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">truncate_summary = false
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">featured = false
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">+++
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">new post about something...
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-disable-markdown"><span class="z-comment z-block z-html"><span class="z-punctuation z-definition z-comment z-begin z-html">&lt;!--</span> more <span class="z-punctuation z-definition z-comment z-end z-html">--&gt;</span></span></span><span class="z-meta z-disable-markdown">
+</span></span><span class="z-text z-html z-markdown">
+</span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">more post content...
 </span></span></code></pre>
 </li>
 <li>
@@ -646,16 +646,16 @@ featured = false
 <li>
 <p>Zola support some <a rel="nofollow noreferrer" href="https://www.getzola.org/documentation/content/syntax-highlighting/#annotations">annotations for code blocks</a>. Serene add another one to display the file name: <code>codeblock</code>, use it like this:</p>
 <pre class="z-code"><code><span class="z-text z-plain">{% codeblock(name=&quot;path/to/file&quot;) %}
-// a markdown code block ...
-{% end %}
-
+</span><span class="z-text z-plain">// a markdown code block ...
+</span><span class="z-text z-plain">{% end %}
+</span><span class="z-text z-plain">
 </span></code></pre>
 </li>
 <li>
 <p>In addition to <code>![img](/path/to/img)</code> of standard markdown, serene also supports a <code>figure</code> shortcode to add some explanatory text to the image:</p>
 <pre class="z-code"><code><span class="z-text z-plain">{{ figure(src=&quot;/path/to/img&quot;, alt=&quot;alt text&quot;, caption=&quot;caption text&quot;) }}
-
-
+</span><span class="z-text z-plain">
+</span><span class="z-text z-plain">
 </span></code></pre>
 <p>This will be displayed as <code>&lt;figure&gt;&lt;/figure&gt;</code> in HTML on the web page instead of <code>&lt;img&gt;</code>, and the content of the caption will be centered below the image. The alt attribute is optional but recommended to help enhance accessibility</p>
 <p>Adding attribution information to a image is very common, you can directly use the <code>via</code> attribute, which will display a link named via below the image:</p>
@@ -665,15 +665,15 @@ featured = false
 <li>
 <p>Special quote, <code>cite</code> is optional:</p>
 <pre class="z-code"><code><span class="z-text z-plain">{% quote(cite=&quot;&quot;) %}
-// content...
-{% end %}
+</span><span class="z-text z-plain">// content...
+</span><span class="z-text z-plain">{% end %}
 </span></code></pre>
 </li>
 <li>
 <p>Expandable detail, <code>default_open</code> is optional:</p>
 <pre class="z-code"><code><span class="z-text z-plain">{% detail(title=&quot;&quot;, default_open=false) %}
-// content...
-{% end %}
+</span><span class="z-text z-plain">// content...
+</span><span class="z-text z-plain">{% end %}
 </span></code></pre>
 </li>
 </ul>
@@ -682,21 +682,21 @@ featured = false
 <li>
 <p>Serene also uses shortcodes to implement callouts, the effect is shown in <a rel="nofollow noreferrer" href="https://serene-demo-site.vercel.app/blog/callouts">this page</a> of the demo site, there are currently 6 types: <code>note</code> <code>important </code> <code>warning</code> <code>alert</code> <code>question</code> <code>tip</code>, the format is as follows, the header attribute is optional:</p>
 <pre class="z-code"><code><span class="z-text z-plain">{% note(header=&quot;Note&quot;) %}
-note text
-{% end %}
+</span><span class="z-text z-plain">note text
+</span><span class="z-text z-plain">{% end %}
 </span></code></pre>
 </li>
 <li>
 <p>If people read your posts via rss reader, these callouts will appear as normal <code>&lt;blockquote&gt;</code></p>
 </li>
 </ul>
-<h3 id="katex">KaTeX<a class="zola-anchor" href="#katex" aria-label="Anchor link for: katex" style="visibility: hidden;">#</a></h3>
+<h3 id="math">Math<a class="zola-anchor" href="#math" aria-label="Anchor link for: math" style="visibility: hidden;">#</a></h3>
 <ul>
 <li>
-<p>Set <code>math = true</code> in the front matter to enable <a rel="nofollow noreferrer" href="https://katex.org/">KaTeX</a> support</p>
+<p>Set <code>math = true</code> or <code>math = &quot;katex&quot;</code>in the front matter to enable formula rending with <a rel="nofollow noreferrer" href="https://katex.org/">KaTeX</a>: <code>$...$</code> for inline formula, <code>$$...$$</code> for block-level formula.</p>
 </li>
 <li>
-<p>Inline formula <code>$...$</code>, block-level formula <code>$$...$$</code></p>
+<p>Set <code>math = &quot;typst&quot;</code> to enable formula rendering with <a rel="nofollow noreferrer" href="https://typst.app/">Typst</a>: <code>$...$</code> for inline formula, <code>$ ... $</code> (insert space at start and end) for block-level formula.</p>
 </li>
 </ul>
 <h3 id="mermaid">Mermaid<a class="zola-anchor" href="#mermaid" aria-label="Anchor link for: mermaid" style="visibility: hidden;">#</a></h3>
@@ -704,12 +704,12 @@ note text
 <li>
 <p>Set <code>mermaid = true</code> in the front matter to enable <a rel="nofollow noreferrer" href="https://github.com/mermaid-js/mermaid">Mermaid</a> support, and then insert a chart in the following format:</p>
 <pre class="z-code"><code><span class="z-text z-plain">{% mermaid() %}
-flowchart LR
-A[Hard] --&gt;|Text| B(Round)
-B --&gt; C{Decision}
-C --&gt;|One| D[Result 1]
-C --&gt;|Two| E[Result 2]
-{% end %}
+</span><span class="z-text z-plain">flowchart LR
+</span><span class="z-text z-plain">A[Hard] --&gt;|Text| B(Round)
+</span><span class="z-text z-plain">B --&gt; C{Decision}
+</span><span class="z-text z-plain">C --&gt;|One| D[Result 1]
+</span><span class="z-text z-plain">C --&gt;|Two| E[Result 2]
+</span><span class="z-text z-plain">{% end %}
 </span></code></pre>
 </li>
 </ul>
