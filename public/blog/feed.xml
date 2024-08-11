@@ -12,9 +12,9 @@
 		<updated>2023-08-31T00:00:00+00:00</updated>
 		<link href="https://serene-demo.pages.dev/blog/example-post/" type="text/html"/>
 		<id>https://serene-demo.pages.dev/blog/example-post/</id>
-		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
+		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;lorem&quot;&gt;Lorem&lt;a class=&quot;zola-anchor&quot; href=&quot;#lorem&quot; aria-label=&quot;Anchor link for: lorem&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! &lt;&#x2F;p&gt;
+&lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -33,7 +33,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. &lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
@@ -43,7 +43,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;h2 id=&quot;praesentium&quot;&gt;Praesentium&lt;a class=&quot;zola-anchor&quot; href=&quot;#praesentium&quot; aria-label=&quot;Anchor link for: praesentium&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;example.com&quot;&gt;consectetur adipisicing elit&lt;&#x2F;a&gt;. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. &lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;figure&gt;
@@ -125,18 +125,18 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;a class=&quot;zola-anchor&quot; href=&quot;#heading&quot; aria-label=&quot;Anchor link for: heading&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;As you can see in this post.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;paragraph&quot;&gt;Paragraph&lt;a class=&quot;zola-anchor&quot; href=&quot;#paragraph&quot; aria-label=&quot;Anchor link for: paragraph&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
-&lt;p&gt;Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+&lt;p&gt;Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;emphasis&quot;&gt;Emphasis&lt;a class=&quot;zola-anchor&quot; href=&quot;#emphasis&quot; aria-label=&quot;Anchor link for: emphasis&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;normal text, &lt;strong&gt;bold text&lt;&#x2F;strong&gt;, &lt;em&gt;ltalic text&lt;&#x2F;em&gt;, &lt;em&gt;&lt;strong&gt;bold and ltalic text&lt;&#x2F;strong&gt;&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;blockquote&quot;&gt;Blockquote&lt;a class=&quot;zola-anchor&quot; href=&quot;#blockquote&quot; aria-label=&quot;Anchor link for: blockquote&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. &lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
+&lt;p&gt;Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;h2 id=&quot;list&quot;&gt;List&lt;a class=&quot;zola-anchor&quot; href=&quot;#list&quot; aria-label=&quot;Anchor link for: list&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
@@ -394,7 +394,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;expandable-detail&quot;&gt;Expandable Detail&lt;a class=&quot;zola-anchor&quot; href=&quot;#expandable-detail&quot; aria-label=&quot;Anchor link for: expandable-detail&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;details &gt;
   &lt;summary&gt;&lt;span&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;span&gt;&lt;&#x2F;summary&gt;
-  &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! &lt;&#x2F;p&gt;
+  &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 
 &lt;&#x2F;details&gt;
@@ -402,7 +402,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 &lt;p&gt;$$
 f(x) = \int_{-\infty}^\infin \hat f(\xi) e^{2 \pi i \xi x}\ d\xi
 $$&lt;&#x2F;p&gt;
-&lt;p&gt;When $ a \ne 0 $, there are two solutions to $ (ax^2 + bx + c = 0) $ and they are 
+&lt;p&gt;When $ a \ne 0 $, there are two solutions to $ (ax^2 + bx + c = 0) $ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;The Cauchy-Schwarz Inequality&lt;&#x2F;p&gt;
 &lt;p&gt;$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$&lt;&#x2F;p&gt;
@@ -615,7 +615,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
-&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque &lt;&#x2F;p&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
@@ -694,7 +694,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;The &lt;code&gt;blog&lt;&#x2F;code&gt; and &lt;code&gt;projects&lt;&#x2F;code&gt; are two sections that serene supports by default, they have specific structures and styles, defined in template &lt;code&gt;blog.html&lt;&#x2F;code&gt; and &lt;code&gt;projects.html&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
-&lt;p&gt;Serene also support a special template called &lt;code&gt;prose.html&lt;&#x2F;code&gt;, it applies the same styles of blog post page and you can use it as a section template for a custom section page, for example if you want a separate &lt;code&gt;about&lt;&#x2F;code&gt; page, you can add a &lt;code&gt;{ name = &amp;quot;about&amp;quot;, path = &amp;quot;&#x2F;about&amp;quot;, is_external = false }&lt;&#x2F;code&gt; to the &lt;code&gt;sections&lt;&#x2F;code&gt; config item and create a &lt;code&gt;myblog&#x2F;content&#x2F;about&#x2F;_index.md&lt;&#x2F;code&gt; with the following content:&lt;&#x2F;p&gt;
+&lt;p&gt;Serene also support a special template called &lt;code&gt;prose.html&lt;&#x2F;code&gt;, it applies the same styles of blog post page and you can use it as a section template for a custom section page, for example if you want a separate &lt;code&gt;about&lt;&#x2F;code&gt; page, you can add a &lt;code&gt;{ name = &quot;about&quot;, path = &quot;&#x2F;about&quot;, is_external = false }&lt;&#x2F;code&gt; to the &lt;code&gt;sections&lt;&#x2F;code&gt; config item and create a &lt;code&gt;myblog&#x2F;content&#x2F;about&#x2F;_index.md&lt;&#x2F;code&gt; with the following content:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;+++
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;title = &amp;quot;About me&amp;quot;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;description = &amp;quot;A about page of ...&amp;quot;
@@ -757,7 +757,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Find the svg file of the icon you want, modify its width and height to 20, and the color to &lt;code&gt;currentColor&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;code&gt;... width=&amp;quot;20&amp;quot; height=&amp;quot;20&amp;quot; ... fill=&amp;quot;currentColor&amp;quot; ...&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;... width=&quot;20&quot; height=&quot;20&quot; ... fill=&quot;currentColor&quot; ...&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;The default icons came from &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;remixicon.com&#x2F;&quot;&gt;Remix Icon&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
@@ -784,10 +784,10 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;rss&quot;&gt;RSS&lt;a class=&quot;zola-anchor&quot; href=&quot;#rss&quot; aria-label=&quot;Anchor link for: rss&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;You can add rss to your site, Zola&#x27;s default feed file is located in the root directory of the site, set &lt;code&gt;generate_feed = true&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;, &lt;code&gt;feed_filename&lt;&#x2F;code&gt; can be set to &lt;code&gt;atom.xml&lt;&#x2F;code&gt; or &lt;code&gt;rss.xml &lt;&#x2F;code&gt; , corresponding to two different rss file standards, you should also set &lt;code&gt;generate_feed = false&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can add rss to your site, Zola&#x27;s default feed file is located in the root directory of the site, set &lt;code&gt;generate_feeds = true&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;, &lt;code&gt;feed_filenames&lt;&#x2F;code&gt; can be set to &lt;code&gt;[&quot;atom.xml&quot;]&lt;&#x2F;code&gt; or &lt;code&gt;[&quot;rss.xml&quot;]&lt;&#x2F;code&gt; , corresponding to two different rss file standards, you should also set &lt;code&gt;generate_feeds = false&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;The serene theme looks more like a personal website, the posts are in the &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt; directory, you may want the feed file to be in the &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt; directory instead of the root directory, this requires you to set &lt;code&gt;generate_feed = false &lt;&#x2F;code&gt; &lt;code&gt;feed_filename = &amp;quot;feed.xml&amp;quot;&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;, and set &lt;code&gt;generate_feed = true&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The serene theme looks more like a personal website, the posts are in the &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt; directory, you may want the feed file to be in the &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt; directory instead of the root directory, this requires you to set &lt;code&gt;generate_feeds = false &lt;&#x2F;code&gt; &lt;code&gt;feed_filenames = [&quot;feed.xml&quot;]&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;, and set &lt;code&gt;generate_feeds = true&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;feed.xml&lt;&#x2F;code&gt; uses &lt;code&gt;title&lt;&#x2F;code&gt; and &lt;code&gt;description&lt;&#x2F;code&gt; from &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;, the other two use &lt;code&gt;config.toml&lt;&#x2F;code&gt;&#x27;s&lt;&#x2F;p&gt;
@@ -853,10 +853,10 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;fonts&quot;&gt;Fonts&lt;a class=&quot;zola-anchor&quot; href=&quot;#fonts&quot; aria-label=&quot;Anchor link for: fonts&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;del&gt;Serene uses the Signika font of &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;fonts.google.com&#x2F;&quot;&gt;Google Fonts&lt;&#x2F;a&gt; by default.&lt;&#x2F;del&gt; If you want a different font, create a new &lt;code&gt;myblog&#x2F;templates&#x2F;_custom_font.html&lt;&#x2F;code&gt; and put the font link tags you copied from google fonts website into it, and then modify &lt;code&gt;--main-font&lt;&#x2F;code&gt; or &lt;code&gt;--code-font&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;sass&#x2F;main.scss&lt;&#x2F;code&gt;. &lt;&#x2F;p&gt;
+&lt;p&gt;&lt;del&gt;Serene uses the Signika font of &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;fonts.google.com&#x2F;&quot;&gt;Google Fonts&lt;&#x2F;a&gt; by default.&lt;&#x2F;del&gt; If you want a different font, create a new &lt;code&gt;myblog&#x2F;templates&#x2F;_custom_font.html&lt;&#x2F;code&gt; and put the font link tags you copied from google fonts website into it, and then modify &lt;code&gt;--main-font&lt;&#x2F;code&gt; or &lt;code&gt;--code-font&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;sass&#x2F;main.scss&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;For performance reason, you may want to self-host font files (optional): &lt;&#x2F;p&gt;
+&lt;p&gt;For performance reason, you may want to self-host font files (optional):&lt;&#x2F;p&gt;
 &lt;ol&gt;
 &lt;li&gt;Open &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;gwfh.mranftl.com&quot;&gt;google-webfonts-helper&lt;&#x2F;a&gt; and choose your font&lt;&#x2F;li&gt;
 &lt;li&gt;Modify &lt;code&gt;Customize folder prefix&lt;&#x2F;code&gt; of step 3 to &lt;code&gt;&#x2F;font&#x2F;&lt;&#x2F;code&gt; and then copy the css&lt;&#x2F;li&gt;
@@ -924,10 +924,10 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;You can add a &lt;code&gt;&amp;lt;!-- more --&amp;gt;&lt;&#x2F;code&gt; line, the content before it will become the summary&#x2F;description of the post. You can set &lt;code&gt;truncate_summary = true&lt;&#x2F;code&gt; to remove the summary from the post webpage.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;A post marked &lt;code&gt;featured = true&lt;&#x2F;code&gt; will display a &lt;code&gt;*&lt;&#x2F;code&gt; mark in front of it in list, you can use this to mark a post as &amp;quot;most worthy to read&amp;quot;&lt;&#x2F;p&gt;
+&lt;p&gt;A post marked &lt;code&gt;featured = true&lt;&#x2F;code&gt; will display a &lt;code&gt;*&lt;&#x2F;code&gt; mark in front of it in list, you can use this to mark a post as &quot;most worthy to read&quot;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;If you set &lt;code&gt;blog_categorized = true&lt;&#x2F;code&gt;, posts will be sorted alphabetically by default, you can manually set the order by adding the prefix of &lt;code&gt;__[0-9]{2}__&lt;&#x2F;code&gt; in front of the category name, for example, &lt;code&gt;categories = [&amp;quot;__01__Balabala&amp;quot;]&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;If you set &lt;code&gt;blog_categorized = true&lt;&#x2F;code&gt;, posts will be sorted alphabetically by default, you can manually set the order by adding the prefix of &lt;code&gt;__[0-9]{2}__&lt;&#x2F;code&gt; in front of the category name, for example, &lt;code&gt;categories = [&quot;__01__Balabala&quot;]&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;Post files are created under &lt;code&gt;myblog&#x2F;content&#x2F;blog&lt;&#x2F;code&gt;, after done writing, change &lt;code&gt;draft&lt;&#x2F;code&gt; to false&lt;&#x2F;p&gt;
@@ -988,10 +988,10 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;math&quot;&gt;Math&lt;a class=&quot;zola-anchor&quot; href=&quot;#math&quot; aria-label=&quot;Anchor link for: math&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Set &lt;code&gt;math = true&lt;&#x2F;code&gt; or &lt;code&gt;math = &amp;quot;katex&amp;quot;&lt;&#x2F;code&gt;in the front matter to enable formula rending with &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;: &lt;code&gt;$...$&lt;&#x2F;code&gt; for inline formula, &lt;code&gt;$$...$$&lt;&#x2F;code&gt; for block-level formula.&lt;&#x2F;p&gt;
+&lt;p&gt;Set &lt;code&gt;math = true&lt;&#x2F;code&gt; or &lt;code&gt;math = &quot;katex&quot;&lt;&#x2F;code&gt;in the front matter to enable formula rending with &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;katex.org&#x2F;&quot;&gt;KaTeX&lt;&#x2F;a&gt;: &lt;code&gt;$...$&lt;&#x2F;code&gt; for inline formula, &lt;code&gt;$$...$$&lt;&#x2F;code&gt; for block-level formula.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Set &lt;code&gt;math = &amp;quot;typst&amp;quot;&lt;&#x2F;code&gt; to enable formula rendering with &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;typst.app&#x2F;&quot;&gt;Typst&lt;&#x2F;a&gt;: &lt;code&gt;$...$&lt;&#x2F;code&gt; for inline formula, &lt;code&gt;$ ... $&lt;&#x2F;code&gt; (insert space at start and end) for block-level formula.&lt;&#x2F;p&gt;
+&lt;p&gt;Set &lt;code&gt;math = &quot;typst&quot;&lt;&#x2F;code&gt; to enable formula rendering with &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;typst.app&#x2F;&quot;&gt;Typst&lt;&#x2F;a&gt;: &lt;code&gt;$...$&lt;&#x2F;code&gt; for inline formula, &lt;code&gt;$ ... $&lt;&#x2F;code&gt; (insert space at start and end) for block-level formula.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;mermaid&quot;&gt;Mermaid&lt;a class=&quot;zola-anchor&quot; href=&quot;#mermaid&quot; aria-label=&quot;Anchor link for: mermaid&quot; style=&quot;visibility: hidden;&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;

@@ -151,7 +151,6 @@
       
       
         
-      <!-- <a href="&#x2F;blog/feed.xml" aria-label="rss feed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M3 17C5.20914 17 7 18.7909 7 21H3V17ZM3 10C9.07513 10 14 14.9249 14 21H12C12 16.0294 7.97056 12 3 12V10ZM3 3C12.9411 3 21 11.0589 21 21H19C19 12.1634 11.8366 5 3 5V3Z" fill="currentColor"></path></svg></a> -->
       
       
       <a id="rss-btn" href="&#x2F;blog&#x2F;feed.xml" aria-label="rss feed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M3 17C5.20914 17 7 18.7909 7 21H3V17ZM3 10C9.07513 10 14 14.9249 14 21H12C12 16.0294 7.97056 12 3 12V10ZM3 3C12.9411 3 21 11.0589 21 21H19C19 12.1634 11.8366 5 3 5V3Z" fill="currentColor"></path></svg></a>
@@ -399,7 +398,7 @@
 </span><span class="z-text z-plain">+++
 </span></code></pre>
 <p>The <code>blog</code> and <code>projects</code> are two sections that serene supports by default, they have specific structures and styles, defined in template <code>blog.html</code> and <code>projects.html</code>.</p>
-<p>Serene also support a special template called <code>prose.html</code>, it applies the same styles of blog post page and you can use it as a section template for a custom section page, for example if you want a separate <code>about</code> page, you can add a <code>{ name = &quot;about&quot;, path = &quot;/about&quot;, is_external = false }</code> to the <code>sections</code> config item and create a <code>myblog/content/about/_index.md</code> with the following content:</p>
+<p>Serene also support a special template called <code>prose.html</code>, it applies the same styles of blog post page and you can use it as a section template for a custom section page, for example if you want a separate <code>about</code> page, you can add a <code>{ name = "about", path = "/about", is_external = false }</code> to the <code>sections</code> config item and create a <code>myblog/content/about/_index.md</code> with the following content:</p>
 <pre class="z-code"><code><span class="z-text z-plain">+++
 </span><span class="z-text z-plain">title = &quot;About me&quot;
 </span><span class="z-text z-plain">description = &quot;A about page of ...&quot;
@@ -462,7 +461,7 @@
 </li>
 <li>
 <p>Find the svg file of the icon you want, modify its width and height to 20, and the color to <code>currentColor</code>:</p>
-<p><code>... width=&quot;20&quot; height=&quot;20&quot; ... fill=&quot;currentColor&quot; ...</code></p>
+<p><code>... width="20" height="20" ... fill="currentColor" ...</code></p>
 </li>
 <li>
 <p>The default icons came from <a rel="nofollow noreferrer" href="https://remixicon.com/">Remix Icon</a></p>
@@ -489,10 +488,10 @@
 <h3 id="rss">RSS<a class="zola-anchor" href="#rss" aria-label="Anchor link for: rss" style="visibility: hidden;">#</a></h3>
 <ul>
 <li>
-<p>You can add rss to your site, Zola's default feed file is located in the root directory of the site, set <code>generate_feed = true</code> in <code>config.toml</code>, <code>feed_filename</code> can be set to <code>atom.xml</code> or <code>rss.xml </code> , corresponding to two different rss file standards, you should also set <code>generate_feed = false</code> in <code>myblog/content/blog/_index.md</code></p>
+<p>You can add rss to your site, Zola's default feed file is located in the root directory of the site, set <code>generate_feeds = true</code> in <code>config.toml</code>, <code>feed_filenames</code> can be set to <code>["atom.xml"]</code> or <code>["rss.xml"]</code> , corresponding to two different rss file standards, you should also set <code>generate_feeds = false</code> in <code>myblog/content/blog/_index.md</code></p>
 </li>
 <li>
-<p>The serene theme looks more like a personal website, the posts are in the <code>/blog</code> directory, you may want the feed file to be in the <code>/blog</code> directory instead of the root directory, this requires you to set <code>generate_feed = false </code> <code>feed_filename = &quot;feed.xml&quot;</code> in <code>config.toml</code>, and set <code>generate_feed = true</code> in <code>myblog/content/blog/_index.md</code></p>
+<p>The serene theme looks more like a personal website, the posts are in the <code>/blog</code> directory, you may want the feed file to be in the <code>/blog</code> directory instead of the root directory, this requires you to set <code>generate_feeds = false </code> <code>feed_filenames = ["feed.xml"]</code> in <code>config.toml</code>, and set <code>generate_feeds = true</code> in <code>myblog/content/blog/_index.md</code></p>
 </li>
 <li>
 <p><code>feed.xml</code> uses <code>title</code> and <code>description</code> from <code>myblog/content/blog/_index.md</code>, the other two use <code>config.toml</code>'s</p>
@@ -558,10 +557,10 @@
 <h3 id="fonts">Fonts<a class="zola-anchor" href="#fonts" aria-label="Anchor link for: fonts" style="visibility: hidden;">#</a></h3>
 <ul>
 <li>
-<p><del>Serene uses the Signika font of <a rel="nofollow noreferrer" href="https://fonts.google.com/">Google Fonts</a> by default.</del> If you want a different font, create a new <code>myblog/templates/_custom_font.html</code> and put the font link tags you copied from google fonts website into it, and then modify <code>--main-font</code> or <code>--code-font</code> in <code>myblog/sass/main.scss</code>. </p>
+<p><del>Serene uses the Signika font of <a rel="nofollow noreferrer" href="https://fonts.google.com/">Google Fonts</a> by default.</del> If you want a different font, create a new <code>myblog/templates/_custom_font.html</code> and put the font link tags you copied from google fonts website into it, and then modify <code>--main-font</code> or <code>--code-font</code> in <code>myblog/sass/main.scss</code>.</p>
 </li>
 <li>
-<p>For performance reason, you may want to self-host font files (optional): </p>
+<p>For performance reason, you may want to self-host font files (optional):</p>
 <ol>
 <li>Open <a rel="nofollow noreferrer" href="https://gwfh.mranftl.com">google-webfonts-helper</a> and choose your font</li>
 <li>Modify <code>Customize folder prefix</code> of step 3 to <code>/font/</code> and then copy the css</li>
@@ -629,10 +628,10 @@
 <p>You can add a <code>&lt;!-- more --&gt;</code> line, the content before it will become the summary/description of the post. You can set <code>truncate_summary = true</code> to remove the summary from the post webpage.</p>
 </li>
 <li>
-<p>A post marked <code>featured = true</code> will display a <code>*</code> mark in front of it in list, you can use this to mark a post as &quot;most worthy to read&quot;</p>
+<p>A post marked <code>featured = true</code> will display a <code>*</code> mark in front of it in list, you can use this to mark a post as "most worthy to read"</p>
 </li>
 <li>
-<p>If you set <code>blog_categorized = true</code>, posts will be sorted alphabetically by default, you can manually set the order by adding the prefix of <code>__[0-9]{2}__</code> in front of the category name, for example, <code>categories = [&quot;__01__Balabala&quot;]</code></p>
+<p>If you set <code>blog_categorized = true</code>, posts will be sorted alphabetically by default, you can manually set the order by adding the prefix of <code>__[0-9]{2}__</code> in front of the category name, for example, <code>categories = ["__01__Balabala"]</code></p>
 </li>
 <li>
 <p>Post files are created under <code>myblog/content/blog</code>, after done writing, change <code>draft</code> to false</p>
@@ -693,10 +692,10 @@
 <h3 id="math">Math<a class="zola-anchor" href="#math" aria-label="Anchor link for: math" style="visibility: hidden;">#</a></h3>
 <ul>
 <li>
-<p>Set <code>math = true</code> or <code>math = &quot;katex&quot;</code>in the front matter to enable formula rending with <a rel="nofollow noreferrer" href="https://katex.org/">KaTeX</a>: <code>$...$</code> for inline formula, <code>$$...$$</code> for block-level formula.</p>
+<p>Set <code>math = true</code> or <code>math = "katex"</code>in the front matter to enable formula rending with <a rel="nofollow noreferrer" href="https://katex.org/">KaTeX</a>: <code>$...$</code> for inline formula, <code>$$...$$</code> for block-level formula.</p>
 </li>
 <li>
-<p>Set <code>math = &quot;typst&quot;</code> to enable formula rendering with <a rel="nofollow noreferrer" href="https://typst.app/">Typst</a>: <code>$...$</code> for inline formula, <code>$ ... $</code> (insert space at start and end) for block-level formula.</p>
+<p>Set <code>math = "typst"</code> to enable formula rendering with <a rel="nofollow noreferrer" href="https://typst.app/">Typst</a>: <code>$...$</code> for inline formula, <code>$ ... $</code> (insert space at start and end) for block-level formula.</p>
 </li>
 </ul>
 <h3 id="mermaid">Mermaid<a class="zola-anchor" href="#mermaid" aria-label="Anchor link for: mermaid" style="visibility: hidden;">#</a></h3>
