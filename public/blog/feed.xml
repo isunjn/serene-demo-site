@@ -676,7 +676,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;template = &amp;quot;blog.html&amp;quot;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;page_template = &amp;quot;post.html&amp;quot;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;insert_anchor_links = &amp;quot;right&amp;quot;
-&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;generate_feed = true
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;generate_feeds = true
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;[extra]
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;lang = &amp;#39;en&amp;#39;
