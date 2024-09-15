@@ -181,6 +181,10 @@ Now the myblog directory may looks like this:
 
 - You can find some TextMate themes on [this website](https://tmtheme-editor.glitch.me/).
 
+### Force light or dark
+
+- By default there is theme toggle button to switch between light and dark theme, you can set `force_theme` in `config.toml` to force a specific theme
+
 ### RSS
 
 - You can add rss to your site, Zola's default feed file is located in the root directory of the site, set `generate_feeds = true` in `config.toml`, `feed_filenames` can be set to `["atom.xml"]` or `["rss.xml"]` , corresponding to two different rss file standards, you should also set `generate_feeds = false` in `myblog/content/blog/_index.md`
@@ -229,7 +233,7 @@ Now the myblog directory may looks like this:
 
 - Serene supports using [giscus](https://giscus.app) as the comment system
 
-- To enable it, you need to create `myblog/templates/_giscus_script.html` and put the script configured on the giscus website into it, then change the value of `data-theme` to `https://<your-domain-name>/giscus_light.css`, replace `<your-domain-name>` with you domain name, same as `base_url` in `config.toml`
+- To enable it, you need to create `myblog/templates/_giscus_script.html` and put the script configured on the giscus website into it, then change the value of `data-theme` to `https://<your-domain-name>/giscus_light.css`, replace `<your-domain-name>` with you domain name, same as `base_url` in `config.toml`, if you set `force_theme` to `dark`, replace `giscus_light.css` with `giscus_dark.css`
 
 - `comment = true` in `config.toml` sets all posts to enable comments, you can set `comment = false` under `[extra]` in the front matter of the post to control whether a specific post displays comments
 
@@ -239,9 +243,9 @@ Now the myblog directory may looks like this:
 
 ### Fonts
 
-- <del>Serene uses the Signika font of [Google Fonts](https://fonts.google.com/) by default.</del> If you want a different font, create a new `myblog/templates/_custom_font.html` and put the font link tags you copied from google fonts website into it, and then modify `--main-font` or `--code-font` in `myblog/sass/main.scss`. 
+- <del>Serene uses the Signika font of [Google Fonts](https://fonts.google.com/) by default.</del> If you want a different font, create a new `myblog/templates/_custom_font.html` and put the font link tags you copied from google fonts website into it, and then modify `--main-font` or `--code-font` in `myblog/sass/main.scss`.
 
-- For performance reason, you may want to self-host font files (optional): 
+- For performance reason, you may want to self-host font files (optional):
   1. Open [google-webfonts-helper](https://gwfh.mranftl.com) and choose your font
   2. Modify `Customize folder prefix` of step 3 to `/font/` and then copy the css
   3. Replace the content of `myblog/templates/_custom_font.html` with a `<style> </style>` tag, with the css you just copied in it.
@@ -273,11 +277,11 @@ Now the myblog directory may looks like this:
   title = ""
   date = 2022-01-01
   draft = true
-  
+
   [taxonomies]
   categories = ["one"]
   tags = ["one", "two", "three"]
-  
+
   [extra]
   lang = "en"
   toc = true
@@ -301,7 +305,7 @@ Now the myblog directory may looks like this:
 
 - You can add a `<!-- more -->` line, the content before it will become the summary/description of the post. You can set `truncate_summary = true` to remove the summary from the post webpage.
 
-- A post marked `featured = true` will display a `*` mark in front of it in list, you can use this to mark a post as "most worthy to read"  
+- A post marked `featured = true` will display a `*` mark in front of it in list, you can use this to mark a post as "most worthy to read"
 
 - If you set `blog_categorized = true`, posts will be sorted alphabetically by default, you can manually set the order by adding the prefix of `__[0-9]{2}__` in front of the category name, for example, `categories = ["__01__Balabala"]`
 
