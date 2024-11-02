@@ -21,10 +21,11 @@
     --primary-color: #5871a2;
     --primary-pale-color: #5871a210;
     --text-color: #3C4043;
-    --text-pale-color: #94969f;
-    --bg-color: #ffffff; 
+    --text-pale-color: #a3a5a9;
+    --bg-color: #ffffff;
     --highlight-mark-color: #5f75b035;
-  
+    --blockquote-color: #8e8d91;
+
     --callout-note-color: #5871a2;
     --callout-important-color: #8062b0;
     --callout-warning-color: #936e51;
@@ -38,9 +39,10 @@
     --primary-color: #5d77ac;
     --primary-pale-color: #5d77ac20;
     --text-color: #9197a5;
-    --text-pale-color: #747983;
-    --bg-color: #202124;
+    --text-pale-color: #50555f;
+    --bg-color: #18191b;
     --highlight-mark-color: #5f75b035;
+    --blockquote-color: #747983;
 
     --callout-note-color: #5d77ac;
     --callout-important-color: #8062b0;
@@ -56,15 +58,13 @@
     --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --homepage-max-width: 768px;
     --main-max-width: 768px;
-    --avatar-size: 60px;
-    --icon-size: 20px;
+    --avatar-size: 56px;
     --homepage-font-size: 16px;
     --homepage-line-height: 1.75;
     --paragraph-font-size: 16px;
     --paragraph-line-height: 1.75;
     --aside-font-size: 15px;
     --img-border-radius: 0px;
-    --callout-border-radius: 0px;
     --detail-border-radius: 0px;
     --dark-mode-img-brightness: 0.75;
     --dark-mode-chart-brightness: 0.75;
@@ -116,7 +116,7 @@
           
             
           
-          <a class="instant fold" href="&#x2F;blog">blog</a>
+          <a class="instant fold" href="&#x2F;posts">posts</a>
           <span class="wrap-separator fold">,</span>
         
           
@@ -161,15 +161,8 @@
     
     
     <div class="proj">
-      <div class="content">
-        <div>
-          <p class="name">lorem</p>
-          <div class="desc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!</p>
-</div>
-        </div>
-        
-      </div>
-      <div class="more">
+      <div class="meta">
+        <div class="name">lorem</div>
         <div class="tags">
           
           <div><span>#</span>nisi</div>
@@ -178,49 +171,32 @@
           
         </div>
         <div class="links">
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>github</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>docs</a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>github<span>]</span>
+          </a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>docs<span>]</span>
+          </a>
           
         </div>
-      </div>  
+      </div>
+      <div class="tags-narrow">
+        
+        <div><span>#</span>nisi</div>
+        
+        <div><span>#</span>saepe</div>
+        
+      </div>
+      <div class="content">
+        <div class="desc"><p>Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!</p>
+</div>
+        
+      </div>
     </div>
     
     <div class="proj">
-      <div class="content">
-        <div>
-          <p class="name">ipsum</p>
-          <div class="desc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-</div>
-        </div>
-        
-      </div>
-      <div class="more">
-        <div class="tags">
-          
-          <div><span>#</span>lorem</div>
-          
-          <div><span>#</span>ipsum</div>
-          
-        </div>
-        <div class="links">
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>homepage</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>source</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>docs</a>
-          
-        </div>
-      </div>  
-    </div>
-    
-    <div class="proj">
-      <div class="content">
-        <div>
-          <p class="name">dolor sit</p>
-          <div class="desc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!</p>
-</div>
-        </div>
-        
-      </div>
-      <div class="more">
+      <div class="meta">
+        <div class="name">dolor sit</div>
         <div class="tags">
           
           <div><span>#</span>amet</div>
@@ -233,22 +209,33 @@
           
         </div>
         <div class="links">
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>github</a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>github<span>]</span>
+          </a>
           
         </div>
-      </div>  
+      </div>
+      <div class="tags-narrow">
+        
+        <div><span>#</span>amet</div>
+        
+        <div><span>#</span>ipsum</div>
+        
+        <div><span>#</span>vero</div>
+        
+        <div><span>#</span>optio</div>
+        
+      </div>
+      <div class="content">
+        <div class="desc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!</p>
+</div>
+        
+      </div>
     </div>
     
     <div class="proj">
-      <div class="content">
-        <div>
-          <p class="name">amet</p>
-          <div class="desc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!</p>
-</div>
-        </div>
-        
-      </div>
-      <div class="more">
+      <div class="meta">
+        <div class="name">ipsum</div>
         <div class="tags">
           
           <div><span>#</span>lorem</div>
@@ -257,70 +244,108 @@
           
         </div>
         <div class="links">
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>website</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>github</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>docs</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>wiki</a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>source<span>]</span>
+          </a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>docs<span>]</span>
+          </a>
           
         </div>
-      </div>  
+      </div>
+      <div class="tags-narrow">
+        
+        <div><span>#</span>lorem</div>
+        
+        <div><span>#</span>ipsum</div>
+        
+      </div>
+      <div class="content">
+        <div class="desc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+</div>
+        
+      </div>
     </div>
     
     <div class="proj">
-      <div class="content">
-        <div>
-          <p class="name">lorem-ipsum</p>
-          <div class="desc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!</p>
-</div>
-        </div>
-        
-      </div>
-      <div class="more">
+      <div class="meta">
+        <div class="name">amet</div>
         <div class="tags">
           
-          <div><span>#</span>dolor</div>
+          <div><span>#</span>lorem</div>
+          
+          <div><span>#</span>vero</div>
+          
+        </div>
+        <div class="links">
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>website<span>]</span>
+          </a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>github<span>]</span>
+          </a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>docs<span>]</span>
+          </a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>wiki<span>]</span>
+          </a>
+          
+        </div>
+      </div>
+      <div class="tags-narrow">
+        
+        <div><span>#</span>lorem</div>
+        
+        <div><span>#</span>vero</div>
+        
+      </div>
+      <div class="content">
+        <div class="desc"><p>Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!</p>
+<p>Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!</p>
+</div>
+        
+      </div>
+    </div>
+    
+    <div class="proj">
+      <div class="meta">
+        <div class="name">praesentium</div>
+        <div class="tags">
           
           <div><span>#</span>lorem</div>
           
           <div><span>#</span>ipsum</div>
           
-          <div><span>#</span>amet</div>
-          
         </div>
         <div class="links">
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>github</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>docs</a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>homepage<span>]</span>
+          </a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>github<span>]</span>
+          </a>
+          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>
+            <span>[</span>docs<span>]</span>
+          </a>
           
         </div>
-      </div>  
-    </div>
-    
-    <div class="proj">
+      </div>
+      <div class="tags-narrow">
+        
+        <div><span>#</span>lorem</div>
+        
+        <div><span>#</span>ipsum</div>
+        
+      </div>
       <div class="content">
-        <div>
-          <p class="name">praesentium</p>
-          <div class="desc"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam.</p>
+        <div class="desc"><p>Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!</p>
+<p>Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!</p>
 </div>
-        </div>
         
         <img src="https:&#x2F;&#x2F;placehold.co&#x2F;600x400" alt="praesentium" />
         
       </div>
-      <div class="more">
-        <div class="tags">
-          
-          <div><span>#</span>lorem</div>
-          
-          <div><span>#</span>ipsum</div>
-          
-        </div>
-        <div class="links">
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>homepage</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>github</a>
-          <a href="https:&#x2F;&#x2F;example.com" target="_blank" rel='noreferrer noopener'>docs</a>
-          
-        </div>
-      </div>  
     </div>
     
   </main>

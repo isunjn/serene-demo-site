@@ -7,41 +7,6 @@
         <loc>https://serene-demo.pages.dev/about/</loc>
     </url>
     <url>
-        <loc>https://serene-demo.pages.dev/blog/</loc>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/blog/callouts/</loc>
-        <lastmod>2023-05-17</lastmod>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/blog/example-post/</loc>
-        <lastmod>2023-08-31</lastmod>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/blog/featured/</loc>
-        <lastmod>2022-02-21</lastmod>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/blog/layout/</loc>
-        <lastmod>2023-06-13</lastmod>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/blog/markdown/</loc>
-        <lastmod>2023-08-30</lastmod>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/blog/outdate-alert/</loc>
-        <lastmod>2022-08-21</lastmod>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/blog/quote/</loc>
-        <lastmod>2023-05-16</lastmod>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/blog/usage/</loc>
-        <lastmod>2022-02-15</lastmod>
-    </url>
-    <url>
         <loc>https://serene-demo.pages.dev/categories/</loc>
     </url>
     <url>
@@ -49,6 +14,37 @@
     </url>
     <url>
         <loc>https://serene-demo.pages.dev/categories/thoughts/</loc>
+    </url>
+    <url>
+        <loc>https://serene-demo.pages.dev/posts/</loc>
+    </url>
+    <url>
+        <loc>https://serene-demo.pages.dev/posts/callouts/</loc>
+        <lastmod>2023-05-17</lastmod>
+    </url>
+    <url>
+        <loc>https://serene-demo.pages.dev/posts/example-post/</loc>
+        <lastmod>2023-08-31</lastmod>
+    </url>
+    <url>
+        <loc>https://serene-demo.pages.dev/posts/featured/</loc>
+        <lastmod>2022-02-21</lastmod>
+    </url>
+    <url>
+        <loc>https://serene-demo.pages.dev/posts/markdown/</loc>
+        <lastmod>2023-08-30</lastmod>
+    </url>
+    <url>
+        <loc>https://serene-demo.pages.dev/posts/outdate-alert/</loc>
+        <lastmod>2022-08-21</lastmod>
+    </url>
+    <url>
+        <loc>https://serene-demo.pages.dev/posts/quote/</loc>
+        <lastmod>2023-05-16</lastmod>
+    </url>
+    <url>
+        <loc>https://serene-demo.pages.dev/posts/usage/</loc>
+        <lastmod>2022-02-15</lastmod>
     </url>
     <url>
         <loc>https://serene-demo.pages.dev/projects/</loc>
@@ -61,9 +57,6 @@
     </url>
     <url>
         <loc>https://serene-demo.pages.dev/tags/featured/</loc>
-    </url>
-    <url>
-        <loc>https://serene-demo.pages.dev/tags/layout/</loc>
     </url>
     <url>
         <loc>https://serene-demo.pages.dev/tags/markdown/</loc>

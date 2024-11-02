@@ -26,10 +26,11 @@
     --primary-color: #5871a2;
     --primary-pale-color: #5871a210;
     --text-color: #3C4043;
-    --text-pale-color: #94969f;
-    --bg-color: #ffffff; 
+    --text-pale-color: #a3a5a9;
+    --bg-color: #ffffff;
     --highlight-mark-color: #5f75b035;
-  
+    --blockquote-color: #8e8d91;
+
     --callout-note-color: #5871a2;
     --callout-important-color: #8062b0;
     --callout-warning-color: #936e51;
@@ -43,9 +44,10 @@
     --primary-color: #5d77ac;
     --primary-pale-color: #5d77ac20;
     --text-color: #9197a5;
-    --text-pale-color: #747983;
-    --bg-color: #202124;
+    --text-pale-color: #50555f;
+    --bg-color: #18191b;
     --highlight-mark-color: #5f75b035;
+    --blockquote-color: #747983;
 
     --callout-note-color: #5d77ac;
     --callout-important-color: #8062b0;
@@ -61,15 +63,13 @@
     --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     --homepage-max-width: 768px;
     --main-max-width: 768px;
-    --avatar-size: 60px;
-    --icon-size: 20px;
+    --avatar-size: 56px;
     --homepage-font-size: 16px;
     --homepage-line-height: 1.75;
     --paragraph-font-size: 16px;
     --paragraph-line-height: 1.75;
     --aside-font-size: 15px;
     --img-border-radius: 0px;
-    --callout-border-radius: 0px;
     --detail-border-radius: 0px;
     --dark-mode-img-brightness: 0.75;
     --dark-mode-chart-brightness: 0.75;
@@ -124,7 +124,7 @@
         
           
           
-          <a class="instant " href="&#x2F;blog">blog</a>
+          <a class="instant " href="&#x2F;posts">posts</a>
           <span class="wrap-separator fold">,</span>
         
           
@@ -155,7 +155,7 @@
         
       
       
-      <a id="rss-btn" href="&#x2F;blog&#x2F;feed.xml" aria-label="rss feed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M3 17C5.20914 17 7 18.7909 7 21H3V17ZM3 10C9.07513 10 14 14.9249 14 21H12C12 16.0294 7.97056 12 3 12V10ZM3 3C12.9411 3 21 11.0589 21 21H19C19 12.1634 11.8366 5 3 5V3Z" fill="currentColor"></path></svg></a>
+      <a id="rss-btn" href="&#x2F;posts&#x2F;feed.xml" aria-label="rss feed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M3 17C5.20914 17 7 18.7909 7 21H3V17ZM3 10C9.07513 10 14 14.9249 14 21H12C12 16.0294 7.97056 12 3 12V10ZM3 3C12.9411 3 21 11.0589 21 21H19C19 12.1634 11.8366 5 3 5V3Z" fill="currentColor"></path></svg></a>
       
       
 
@@ -185,10 +185,10 @@
 
 <dialog id="rss-mask">
   <div>
-    <a href="https:&#x2F;&#x2F;serene-demo.pages.dev&#x2F;blog&#x2F;feed.xml">https:&#x2F;&#x2F;serene-demo.pages.dev&#x2F;blog&#x2F;feed.xml</a>
+    <a href="https:&#x2F;&#x2F;serene-demo.pages.dev&#x2F;posts&#x2F;feed.xml">https:&#x2F;&#x2F;serene-demo.pages.dev&#x2F;posts&#x2F;feed.xml</a>
     
     
-    <button autofocus aria-label="copy" data-link="https:&#x2F;&#x2F;serene-demo.pages.dev&#x2F;blog&#x2F;feed.xml" data-copy-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;" data-check-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;" >
+    <button autofocus aria-label="copy" data-link="https:&#x2F;&#x2F;serene-demo.pages.dev&#x2F;posts&#x2F;feed.xml" data-copy-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;" data-check-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;" >
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20"><path d="M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z" fill="currentColor"></path></svg>
     </button>
   </div>
@@ -247,6 +247,10 @@
             </li>
             
             <li>
+              <a class="h3" href="#anonymous-reactions">Anonymous reactions</a>
+            </li>
+            
+            <li>
               <a class="h3" href="#analytics">Analytics</a>
             </li>
             
@@ -259,7 +263,7 @@
             </li>
             
             <li>
-              <a class="h3" href="#homepage-layout">Homepage layout</a>
+              <a class="h3" href="#show-recent-posts-on-homepage">Show recent posts on homepage</a>
             </li>
             
           </ul>
@@ -360,7 +364,7 @@
 <p>Copy the content of <code>myblog/themes/serene/config.example.toml</code> to <code>myblog/config.toml</code>, refer to the comments in the file and Zola's <a rel="nofollow noreferrer" href="https://www.getzola.org/documentation/getting-started/overview/">documentation</a> to modify accordingly</p>
 <h2 id="sections-and-pages">Sections and pages<a class="zola-anchor" href="#sections-and-pages" aria-label="Anchor link for: sections-and-pages" style="visibility: hidden;"></a>
 </h2>
-<p>There is a <code>sections</code> config item in your <code>config.toml</code>, which enumerates the sections your website has. You should have at least one <code>blog</code> section. The name and path can be changed, be noticed that if you changed the blog section path (e.g. from <code>/blog</code> to <code>/posts</code>), then you should also change <code>blog_section_path</code> config item.</p>
+<p>There is a <code>sections</code> config item in your <code>config.toml</code>, which enumerates the sections your website has. You should have at least one <code>blog</code> section. The name and path can be changed, be noticed that if you changed the blog section path (e.g. from <code>/posts</code> to <code>/blog</code>), then you should also change <code>blog_section_path</code> config item.</p>
 <p>The myblog directory now looks like this:</p>
 <pre class="z-code"><code><span class="z-text z-plain">├── config.toml
 </span><span class="z-text z-plain">├── content/
@@ -370,7 +374,7 @@
 </span><span class="z-text z-plain">└── themes/
 </span><span class="z-text z-plain">    └── serene/
 </span></code></pre>
-<p>Create <code>myblog/content/_index.md</code> and <code>myblog/content/blog/_index.md</code> with the following content:</p>
+<p>Create <code>myblog/content/_index.md</code> and <code>myblog/content/posts/_index.md</code> with the following content:</p>
 <p><code>myblog/content/_index.md</code>:</p>
 <pre class="z-code"><code><span class="z-text z-plain">+++
 </span><span class="z-text z-plain">template = &#39;home.html&#39;
@@ -381,7 +385,7 @@
 </span><span class="z-text z-plain">
 </span><span class="z-text z-plain">Words about you
 </span></code></pre>
-<p><code>myblog/content/blog/_index.md</code>:</p>
+<p><code>myblog/content/posts/_index.md</code>:</p>
 <pre class="z-code"><code><span class="z-text z-plain">+++
 </span><span class="z-text z-plain">title = &quot;My Blog&quot;
 </span><span class="z-text z-plain">description = &quot;My blog site.&quot;
@@ -395,8 +399,8 @@
 </span><span class="z-text z-plain">lang = &#39;en&#39;
 </span><span class="z-text z-plain">+++
 </span></code></pre>
-<p>The path and the directory should match. If you changed the blog section path to <code>/posts</code>, then you create <code>myblog/content/posts/_index.md</code>, rather than <code>myblog/content/blog/_index.md</code>. The same goes for the others.</p>
-<p>If you want to display a projects page (as you see in the demo site), also create <code>myblog/content/projects/_index.md</code>:</p>
+<p>The path and the directory should match. If you changed the blog section path to <code>/blog</code>, then you create <code>myblog/content/blog/_index.md</code>, rather than <code>myblog/content/posts/_index.md</code>. The same goes for the others.</p>
+<p>If you want to display a projects page (as you see in the demo site), create <code>myblog/content/projects/_index.md</code>:</p>
 <pre class="z-code"><code><span class="z-text z-plain">+++
 </span><span class="z-text z-plain">title = &quot;My Projects&quot;
 </span><span class="z-text z-plain">description = &quot;My projects page.&quot;
@@ -420,6 +424,7 @@
 </span><span class="z-text z-plain">mermaid = false
 </span><span class="z-text z-plain">copy = false
 </span><span class="z-text z-plain">comment = false
+</span><span class="z-text z-plain">reaction = false
 </span><span class="z-text z-plain">+++
 </span><span class="z-text z-plain">
 </span><span class="z-text z-plain">Hi, My name is ....
@@ -427,11 +432,10 @@
 </span><span class="z-text z-plain">(more markdown content goes here)
 </span><span class="z-text z-plain">
 </span></code></pre>
-<p>You may also create a <code>friends</code> page to list all your friends on the internet, a <code>collections/bookmarks</code> page to list your considered valuable bookmarks, a <code>cat</code> page to post a few pics of your lovely cat... In the future, serene may add more specific templates.</p>
 <p>Now the myblog directory may looks like this:</p>
 <pre class="z-code"><code><span class="z-text z-plain">├── config.toml
 </span><span class="z-text z-plain">├── content/
-</span><span class="z-text z-plain">│   ├── blog/
+</span><span class="z-text z-plain">│   ├── posts/
 </span><span class="z-text z-plain">│   │   └── _index.md
 </span><span class="z-text z-plain">│   ├── projects/
 </span><span class="z-text z-plain">│   │   └── _index.md
@@ -472,7 +476,7 @@
 <p>Copy <code>myblog/themes/serene/static/icon</code> directory to <code>myblog/static/icon</code>, the icon value in <code>links</code> is the file name of the svg file in it, without the <code>.svg</code> suffix</p>
 </li>
 <li>
-<p>Find the svg file of the icon you want, modify its width and height to 20, and the color to <code>currentColor</code>:</p>
+<p>Find the svg file of the icon you want, modify (in case you don't kown, svg is just a plian text files) its width and height to 20, and the color to <code>currentColor</code>:</p>
 <p><code>... width="20" height="20" ... fill="currentColor" ...</code></p>
 </li>
 <li>
@@ -507,13 +511,13 @@
 </h3>
 <ul>
 <li>
-<p>You can add rss to your site, Zola's default feed file is located in the root directory of the site, set <code>generate_feeds = true</code> in <code>config.toml</code>, <code>feed_filenames</code> can be set to <code>["atom.xml"]</code> or <code>["rss.xml"]</code> , corresponding to two different rss file standards, you should also set <code>generate_feeds = false</code> in <code>myblog/content/blog/_index.md</code></p>
+<p>You can add rss to your site, Zola's default feed file is located in the root directory of the site, set <code>generate_feeds = true</code> in <code>config.toml</code>, <code>feed_filenames</code> can be set to <code>["atom.xml"]</code> or <code>["rss.xml"] </code> , corresponding to two different rss file standards, you should also set <code>generate_feeds = false</code> in <code>myblog/content/posts/_index.md</code></p>
 </li>
 <li>
-<p>The serene theme looks more like a personal website, the posts are in the <code>/blog</code> directory, you may want the feed file to be in the <code>/blog</code> directory instead of the root directory, this requires you to set <code>generate_feeds = false </code> <code>feed_filenames = ["feed.xml"]</code> in <code>config.toml</code>, and set <code>generate_feeds = true</code> in <code>myblog/content/blog/_index.md</code></p>
+<p>The serene theme looks more like a personal website, the posts are in the <code>/posts</code> directory, you may want the feed file to be in the <code>/posts</code> directory instead of the root directory, this requires you to set <code>generate_feeds = false </code> <code>feed_filenames = ["feed.xml"]</code> in <code>config.toml</code>, and set <code>generate_feeds = true</code> in <code>myblog/content/posts/_index.md</code></p>
 </li>
 <li>
-<p><code>feed.xml</code> uses <code>title</code> and <code>description</code> from <code>myblog/content/blog/_index.md</code>, the other two use <code>config.toml</code>'s</p>
+<p><code>feed.xml</code> uses <code>title</code> and <code>description</code> from <code>myblog/content/posts/_index.md</code>, the other two use <code>config.toml</code>'s</p>
 </li>
 </ul>
 <h3 id="projects-page">Projects page<a class="zola-anchor" href="#projects-page" aria-label="Anchor link for: projects-page" style="visibility: hidden;"></a>
@@ -572,6 +576,52 @@
 <p><code>comment = true</code> in <code>config.toml</code> sets all posts to enable comments, you can set <code>comment = false</code> under <code>[extra]</code> in the front matter of the post to control whether a specific post displays comments</p>
 </li>
 </ul>
+<h3 id="anonymous-reactions">Anonymous reactions<a class="zola-anchor" href="#anonymous-reactions" aria-label="Anchor link for: anonymous-reactions" style="visibility: hidden;"></a>
+</h3>
+<ul>
+<li>
+<p>Serene supports a feature called anonymous emoji reactions, visitors of you site can react to your posts with emojis, without the need to log in or register.</p>
+</li>
+<li>
+<p>You need to setup a backend api endpoint to enable it. The endpoint should handle both <code>GET</code> and <code>POST</code>:</p>
+<ul>
+<li>
+<p><code>Get</code></p>
+<p>request query: <code>slug</code>, the slug of the post</p>
+<p>response:</p>
+<pre data-lang="jsonc" class="language-jsonc z-code"><code class="language-jsonc" data-lang="jsonc"><span class="z-text z-plain">{
+</span><span class="z-text z-plain">  &quot;👍&quot;: [123, true], // emoji: [count, reacted]
+</span><span class="z-text z-plain">  &quot;👀&quot;: [456, false]
+</span><span class="z-text z-plain">}
+</span></code></pre>
+</li>
+<li>
+<p><code>Post</code></p>
+<p>request body:</p>
+<pre data-lang="json" class="language-json z-code"><code class="language-json" data-lang="json"><span class="z-source z-json"><span class="z-meta z-mapping z-json"><span class="z-punctuation z-section z-mapping z-begin z-json">{</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>slug<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>post-slug<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>target<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>👍<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span><span class="z-punctuation z-separator z-mapping z-pair z-json">,</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>reacted<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-constant z-language z-json">true</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-section z-mapping z-end z-json">}</span></span>
+</span></code></pre>
+<p>response:</p>
+<pre data-lang="json" class="language-json z-code"><code class="language-json" data-lang="json"><span class="z-source z-json"><span class="z-meta z-mapping z-json"><span class="z-punctuation z-section z-mapping z-begin z-json">{</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-json">  </span><span class="z-meta z-mapping z-key z-json"><span class="z-string z-quoted z-double z-json"><span class="z-punctuation z-definition z-string z-begin z-json">&quot;</span>success<span class="z-punctuation z-definition z-string z-end z-json">&quot;</span></span></span><span class="z-meta z-mapping z-json"><span class="z-punctuation z-separator z-mapping z-key-value z-json">:</span> </span><span class="z-meta z-mapping z-value z-json"><span class="z-constant z-language z-json">true</span>
+</span></span><span class="z-source z-json"><span class="z-meta z-mapping z-value z-json"><span class="z-punctuation z-section z-mapping z-end z-json">}</span></span>
+</span></code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>For conivence, you can use <a rel="nofollow noreferrer" href="https://github.com/isunjn/reaction">this template repo</a> to setup your own endpoint. All you need is a <a rel="nofollow noreferrer" href="https://cloudflare.com">Cloudflare</a> account. The free tier is good enough for a low-traffic personal blog.</p>
+</li>
+<li>
+<p>After you setup your endpoint, set <code>reaction_endpoint = "&lt;your-endpoint&gt;"</code> and <code>reaction = true</code> in <code>config.toml</code> to enable it.</p>
+</li>
+<li>
+<p>Giscus also support a reaction feature, but it requires visitors to log in to GitHub, you can also disable it in giscus's settings.</p>
+</li>
+</ul>
 <h3 id="analytics">Analytics<a class="zola-anchor" href="#analytics" aria-label="Anchor link for: analytics" style="visibility: hidden;"></a>
 </h3>
 <ul>
@@ -603,17 +653,10 @@
 <p>If you want to customize more, you only need to copy that file under the <code>templates</code>, <code>static</code>, <code>sass</code> directory in the corresponding <code>themes/serene</code> to the same name directory of <code>myblog</code>, and modify it. Be careful not to directly modify the files under the serene directory, because these modifications may cause conflicts if the theme is updated</p>
 </li>
 </ul>
-<h3 id="homepage-layout">Homepage layout<a class="zola-anchor" href="#homepage-layout" aria-label="Anchor link for: homepage-layout" style="visibility: hidden;"></a>
+<h3 id="show-recent-posts-on-homepage">Show recent posts on homepage<a class="zola-anchor" href="#show-recent-posts-on-homepage" aria-label="Anchor link for: show-recent-posts-on-homepage" style="visibility: hidden;"></a>
 </h3>
 <ul>
-<li>
-<p>You can change the layout of the homepage by using the <code>homepage_layout</code> in <code>config.toml</code></p>
-<ul>
-<li><code>about</code>: displays markdown content of your <code>myblog/content/_index.md</code></li>
-<li><code>list</code>: the whole post list, can be categorized</li>
-<li><code>recent</code>: only a few recent posts</li>
-</ul>
-</li>
+<li>Show a few recent posts on homepage by settng <code>recent = true</code> in <code>config.toml</code></li>
 </ul>
 <h2 id="writing">Writing<a class="zola-anchor" href="#writing" aria-label="Anchor link for: writing" style="visibility: hidden;"></a>
 </h2>
@@ -643,6 +686,7 @@
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">display_tags = true
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">truncate_summary = false
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">featured = false
+</span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">reaction = false
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">+++
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">
 </span></span><span class="z-text z-html z-markdown"><span class="z-meta z-paragraph z-markdown">new post about something...
@@ -662,7 +706,7 @@
 <p>If you set <code>blog_categorized = true</code>, posts will be sorted alphabetically by default, you can manually set the order by adding the prefix of <code>__[0-9]{2}__</code> in front of the category name, for example, <code>categories = ["__01__Balabala"]</code></p>
 </li>
 <li>
-<p>Post files are created under <code>myblog/content/blog</code>, after done writing, change <code>draft</code> to false</p>
+<p>Post files are created under <code>myblog/content/posts</code>, after done writing, change <code>draft</code> to false</p>
 </li>
 </ul>
 <h3 id="shortcodes">Shortcodes<a class="zola-anchor" href="#shortcodes" aria-label="Anchor link for: shortcodes" style="visibility: hidden;"></a>
@@ -709,7 +753,7 @@
 </h3>
 <ul>
 <li>
-<p>Serene also uses shortcodes to implement callouts, the effect is shown in <a rel="nofollow noreferrer" href="https://serene-demo-site.vercel.app/blog/callouts">this page</a> of the demo site, there are currently 6 types: <code>note</code> <code>important </code> <code>warning</code> <code>alert</code> <code>question</code> <code>tip</code>, the format is as follows, the header attribute is optional:</p>
+<p>Serene also uses shortcodes to implement callouts, the effect is shown in <a rel="nofollow noreferrer" href="https://serene-demo.pages.dev/posts/callouts">this page</a> of the demo site, there are currently 6 types: <code>note</code> <code>important </code> <code>warning</code> <code>alert</code> <code>question</code> <code>tip</code>, the format is as follows, the header attribute is optional:</p>
 <pre class="z-code"><code><span class="z-text z-plain">{% note(header=&quot;Note&quot;) %}
 </span><span class="z-text z-plain">note text
 </span><span class="z-text z-plain">{% end %}
@@ -769,10 +813,14 @@
 <pre data-lang="sh" class="language-sh z-code"><code class="language-sh" data-lang="sh"><span class="z-source z-shell z-bash"><span class="z-meta z-function-call z-shell"><span class="z-variable z-function z-shell">git</span></span><span class="z-meta z-function-call z-arguments z-shell"> submodule update<span class="z-variable z-parameter z-option z-shell"><span class="z-punctuation z-definition z-parameter z-shell"> --</span>remote</span> themes/serene</span>
 </span></code></pre>
 <br />
+<p>If you like this theme, you may <a rel="nofollow noreferrer" href="https://github.com/isunjn/serene">give it a star</a></p>
 <p><em>Happy blogging :)</em></p>
 
         
       </article>
+
+      
+      
 
       
       

@@ -2,16 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
 	<title>serene::blog</title>
 	<subtitle>The demo blog page for zola theme serene</subtitle>
-	<link href="https://serene-demo.pages.dev/blog/feed.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://serene-demo.pages.dev/blog/"/>
+	<link href="https://serene-demo.pages.dev/posts/feed.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://serene-demo.pages.dev/posts/"/>
 	<updated>2023-08-31T00:00:00+00:00</updated>
-	<id>https://serene-demo.pages.dev/blog/feed.xml</id>
+	<id>https://serene-demo.pages.dev/posts/feed.xml</id>
 	<entry xml:lang="en">
 		<title>Example Post</title>
 		<published>2023-08-31T00:00:00+00:00</published>
 		<updated>2023-08-31T00:00:00+00:00</updated>
-		<link href="https://serene-demo.pages.dev/blog/example-post/" type="text/html"/>
-		<id>https://serene-demo.pages.dev/blog/example-post/</id>
+		<link href="https://serene-demo.pages.dev/posts/example-post/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/posts/example-post/</id>
 		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;lorem&quot;&gt;Lorem&lt;a class=&quot;zola-anchor&quot; href=&quot;#lorem&quot; aria-label=&quot;Anchor link for: lorem&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
@@ -27,11 +27,14 @@
     &lt;&#x2F;div&gt;
     &lt;div class=&quot;content&quot;&gt;
         
+        &lt;p&gt;&lt;strong&gt;Note&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+        
         &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero
-optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
+optioconsequuntur repudiandae et!&lt;&#x2F;p&gt;
 
     &lt;&#x2F;div&gt;
 &lt;&#x2F;blockquote&gt;
+&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;p&gt;
@@ -124,8 +127,8 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
 		<updated>2023-08-30T00:00:00+00:00</updated>
         <summary>&lt;p&gt;This is a post showing all supported elements.&lt;&#x2F;p&gt;
 </summary>
-		<link href="https://serene-demo.pages.dev/blog/markdown/" type="text/html"/>
-		<id>https://serene-demo.pages.dev/blog/markdown/</id>
+		<link href="https://serene-demo.pages.dev/posts/markdown/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/posts/markdown/</id>
 		<content type="html">&lt;p&gt;This is a post showing all supported elements.&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;a class=&quot;zola-anchor&quot; href=&quot;#heading&quot; aria-label=&quot;Anchor link for: heading&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
@@ -390,7 +393,7 @@ optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, s
         &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;&#x2F;p&gt;
 
     &lt;&#x2F;div&gt;
-&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;special-quote&quot;&gt;Special quote&lt;a class=&quot;zola-anchor&quot; href=&quot;#special-quote&quot; aria-label=&quot;Anchor link for: special-quote&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;special-quote&quot;&gt;Special Quote&lt;a class=&quot;zola-anchor&quot; href=&quot;#special-quote&quot; aria-label=&quot;Anchor link for: special-quote&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
 &lt;blockquote class=&quot;quote&quot;&gt;
   
@@ -442,6 +445,9 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;pre&gt;&lt;h2 id=&quot;comment-giscus&quot;&gt;Comment (Giscus)&lt;a class=&quot;zola-anchor&quot; href=&quot;#comment-giscus&quot; aria-label=&quot;Anchor link for: comment-giscus&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
 &lt;p&gt;As you can see in this post.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;anonymous-reactions&quot;&gt;Anonymous Reactions&lt;a class=&quot;zola-anchor&quot; href=&quot;#anonymous-reactions&quot; aria-label=&quot;Anchor link for: anonymous-reactions&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;As you can see in this &lt;a href=&quot;&#x2F;posts&#x2F;example-post&quot;&gt;first example post&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
 &lt;p&gt;First footnote.&lt;&#x2F;p&gt;
@@ -452,32 +458,11 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 </content>
 	</entry>
 	<entry xml:lang="en">
-		<title>Home Layout</title>
-		<published>2023-06-13T00:00:00+00:00</published>
-		<updated>2023-06-13T00:00:00+00:00</updated>
-		<link href="https://serene-demo.pages.dev/blog/layout/" type="text/html"/>
-		<id>https://serene-demo.pages.dev/blog/layout/</id>
-		<content type="html">&lt;p&gt;The &lt;code&gt;homepage_layout&lt;&#x2F;code&gt; option can be set to &lt;code&gt;about&lt;&#x2F;code&gt;, &lt;code&gt;list&lt;&#x2F;code&gt; or &lt;code&gt;recent&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;about&lt;&#x2F;code&gt;: Displays markdown content of your &lt;code&gt;myblog&#x2F;content&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;about-layout.png&quot; alt=&quot;about layout&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;list&lt;&#x2F;code&gt;: The whole post list, can be categorized&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;list-layout.png&quot; alt=&quot;list layout&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;recent&lt;&#x2F;code&gt;: Only a few recent posts&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;p&gt;&lt;img src=&quot;&#x2F;assets&#x2F;recent-layout.png&quot; alt=&quot;recent layout&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-</content>
-	</entry>
-	<entry xml:lang="en">
 		<title>Callouts</title>
 		<published>2023-05-17T00:00:00+00:00</published>
 		<updated>2023-05-17T00:00:00+00:00</updated>
-		<link href="https://serene-demo.pages.dev/blog/callouts/" type="text/html"/>
-		<id>https://serene-demo.pages.dev/blog/callouts/</id>
+		<link href="https://serene-demo.pages.dev/posts/callouts/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/posts/callouts/</id>
 		<content type="html">&lt;blockquote class=&quot;callout note&quot;&gt;
     
     &lt;div class=&quot;icon&quot;&gt;
@@ -556,8 +541,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<title>Special Quote</title>
 		<published>2023-05-16T00:00:00+00:00</published>
 		<updated>2023-05-16T00:00:00+00:00</updated>
-		<link href="https://serene-demo.pages.dev/blog/quote/" type="text/html"/>
-		<id>https://serene-demo.pages.dev/blog/quote/</id>
+		<link href="https://serene-demo.pages.dev/posts/quote/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/posts/quote/</id>
 		<content type="html">&lt;blockquote class=&quot;quote&quot;&gt;
   
   &lt;div class=&quot;icon&quot; style=&quot;display: none;&quot;&gt;&lt;svg fill=&quot;currentColor&quot; xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot;  width=&quot;12&quot; height=&quot;12&quot; viewBox=&quot;796 698 200 200&quot;&gt;
@@ -629,8 +614,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<updated>2022-08-21T00:00:00+00:00</updated>
         <summary>&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 </summary>
-		<link href="https://serene-demo.pages.dev/blog/outdate-alert/" type="text/html"/>
-		<id>https://serene-demo.pages.dev/blog/outdate-alert/</id>
+		<link href="https://serene-demo.pages.dev/posts/outdate-alert/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/posts/outdate-alert/</id>
 		<content type="html">&lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;p&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!&lt;&#x2F;p&gt;
@@ -648,8 +633,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<title>Featured Post</title>
 		<published>2022-02-21T00:00:00+00:00</published>
 		<updated>2022-02-21T00:00:00+00:00</updated>
-		<link href="https://serene-demo.pages.dev/blog/featured/" type="text/html"/>
-		<id>https://serene-demo.pages.dev/blog/featured/</id>
+		<link href="https://serene-demo.pages.dev/posts/featured/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/posts/featured/</id>
 		<content type="html">&lt;p&gt;Set &lt;code&gt;featured = true&lt;&#x2F;code&gt; will add a &lt;code&gt;*&lt;&#x2F;code&gt; mark in front of the post title.&lt;&#x2F;p&gt;
 </content>
 	</entry>
@@ -657,8 +642,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 		<title>Documentation</title>
 		<published>2022-02-15T00:00:00+00:00</published>
 		<updated>2022-02-15T00:00:00+00:00</updated>
-		<link href="https://serene-demo.pages.dev/blog/usage/" type="text/html"/>
-		<id>https://serene-demo.pages.dev/blog/usage/</id>
+		<link href="https://serene-demo.pages.dev/posts/usage/" type="text/html"/>
+		<id>https://serene-demo.pages.dev/posts/usage/</id>
 		<content type="html">&lt;p&gt;If you haven&#x27;t created a zola site yet, create a new zola site with the following command (assuming your site is called &lt;code&gt;myblog&lt;&#x2F;code&gt;):&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; class=&quot;language-sh z-code&quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;zola&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; init myblog&lt;&#x2F;span&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
@@ -671,7 +656,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;Copy the content of &lt;code&gt;myblog&#x2F;themes&#x2F;serene&#x2F;config.example.toml&lt;&#x2F;code&gt; to &lt;code&gt;myblog&#x2F;config.toml&lt;&#x2F;code&gt;, refer to the comments in the file and Zola&#x27;s &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;documentation&#x2F;getting-started&#x2F;overview&#x2F;&quot;&gt;documentation&lt;&#x2F;a&gt; to modify accordingly&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;sections-and-pages&quot;&gt;Sections and pages&lt;a class=&quot;zola-anchor&quot; href=&quot;#sections-and-pages&quot; aria-label=&quot;Anchor link for: sections-and-pages&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
-&lt;p&gt;There is a &lt;code&gt;sections&lt;&#x2F;code&gt; config item in your &lt;code&gt;config.toml&lt;&#x2F;code&gt;, which enumerates the sections your website has. You should have at least one &lt;code&gt;blog&lt;&#x2F;code&gt; section. The name and path can be changed, be noticed that if you changed the blog section path (e.g. from &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt; to &lt;code&gt;&#x2F;posts&lt;&#x2F;code&gt;), then you should also change &lt;code&gt;blog_section_path&lt;&#x2F;code&gt; config item.&lt;&#x2F;p&gt;
+&lt;p&gt;There is a &lt;code&gt;sections&lt;&#x2F;code&gt; config item in your &lt;code&gt;config.toml&lt;&#x2F;code&gt;, which enumerates the sections your website has. You should have at least one &lt;code&gt;blog&lt;&#x2F;code&gt; section. The name and path can be changed, be noticed that if you changed the blog section path (e.g. from &lt;code&gt;&#x2F;posts&lt;&#x2F;code&gt; to &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt;), then you should also change &lt;code&gt;blog_section_path&lt;&#x2F;code&gt; config item.&lt;&#x2F;p&gt;
 &lt;p&gt;The myblog directory now looks like this:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;├── config.toml
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;├── content&#x2F;
@@ -681,7 +666,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;└── themes&#x2F;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;    └── serene&#x2F;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;Create &lt;code&gt;myblog&#x2F;content&#x2F;_index.md&lt;&#x2F;code&gt; and &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt; with the following content:&lt;&#x2F;p&gt;
+&lt;p&gt;Create &lt;code&gt;myblog&#x2F;content&#x2F;_index.md&lt;&#x2F;code&gt; and &lt;code&gt;myblog&#x2F;content&#x2F;posts&#x2F;_index.md&lt;&#x2F;code&gt; with the following content:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;myblog&#x2F;content&#x2F;_index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;+++
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;template = &amp;#39;home.html&amp;#39;
@@ -692,7 +677,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Words about you
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;&lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;myblog&#x2F;content&#x2F;posts&#x2F;_index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;+++
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;title = &amp;quot;My Blog&amp;quot;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;description = &amp;quot;My blog site.&amp;quot;
@@ -706,8 +691,8 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;lang = &amp;#39;en&amp;#39;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;The path and the directory should match. If you changed the blog section path to &lt;code&gt;&#x2F;posts&lt;&#x2F;code&gt;, then you create &lt;code&gt;myblog&#x2F;content&#x2F;posts&#x2F;_index.md&lt;&#x2F;code&gt;, rather than &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;. The same goes for the others.&lt;&#x2F;p&gt;
-&lt;p&gt;If you want to display a projects page (as you see in the demo site), also create &lt;code&gt;myblog&#x2F;content&#x2F;projects&#x2F;_index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;p&gt;The path and the directory should match. If you changed the blog section path to &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt;, then you create &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;, rather than &lt;code&gt;myblog&#x2F;content&#x2F;posts&#x2F;_index.md&lt;&#x2F;code&gt;. The same goes for the others.&lt;&#x2F;p&gt;
+&lt;p&gt;If you want to display a projects page (as you see in the demo site), create &lt;code&gt;myblog&#x2F;content&#x2F;projects&#x2F;_index.md&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;+++
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;title = &amp;quot;My Projects&amp;quot;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;description = &amp;quot;My projects page.&amp;quot;
@@ -731,6 +716,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;mermaid = false
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;copy = false
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;comment = false
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;reaction = false
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;+++
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;Hi, My name is ....
@@ -738,11 +724,10 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;(more markdown content goes here)
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
-&lt;p&gt;You may also create a &lt;code&gt;friends&lt;&#x2F;code&gt; page to list all your friends on the internet, a &lt;code&gt;collections&#x2F;bookmarks&lt;&#x2F;code&gt; page to list your considered valuable bookmarks, a &lt;code&gt;cat&lt;&#x2F;code&gt; page to post a few pics of your lovely cat... In the future, serene may add more specific templates.&lt;&#x2F;p&gt;
 &lt;p&gt;Now the myblog directory may looks like this:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;├── config.toml
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;├── content&#x2F;
-&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;│   ├── blog&#x2F;
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;│   ├── posts&#x2F;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;│   │   └── _index.md
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;│   ├── projects&#x2F;
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;│   │   └── _index.md
@@ -783,7 +768,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;Copy &lt;code&gt;myblog&#x2F;themes&#x2F;serene&#x2F;static&#x2F;icon&lt;&#x2F;code&gt; directory to &lt;code&gt;myblog&#x2F;static&#x2F;icon&lt;&#x2F;code&gt;, the icon value in &lt;code&gt;links&lt;&#x2F;code&gt; is the file name of the svg file in it, without the &lt;code&gt;.svg&lt;&#x2F;code&gt; suffix&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Find the svg file of the icon you want, modify its width and height to 20, and the color to &lt;code&gt;currentColor&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;p&gt;Find the svg file of the icon you want, modify (in case you don&#x27;t kown, svg is just a plian text files) its width and height to 20, and the color to &lt;code&gt;currentColor&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;... width=&quot;20&quot; height=&quot;20&quot; ... fill=&quot;currentColor&quot; ...&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
@@ -818,13 +803,13 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;You can add rss to your site, Zola&#x27;s default feed file is located in the root directory of the site, set &lt;code&gt;generate_feeds = true&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;, &lt;code&gt;feed_filenames&lt;&#x2F;code&gt; can be set to &lt;code&gt;[&quot;atom.xml&quot;]&lt;&#x2F;code&gt; or &lt;code&gt;[&quot;rss.xml&quot;]&lt;&#x2F;code&gt; , corresponding to two different rss file standards, you should also set &lt;code&gt;generate_feeds = false&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;You can add rss to your site, Zola&#x27;s default feed file is located in the root directory of the site, set &lt;code&gt;generate_feeds = true&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;, &lt;code&gt;feed_filenames&lt;&#x2F;code&gt; can be set to &lt;code&gt;[&quot;atom.xml&quot;]&lt;&#x2F;code&gt; or &lt;code&gt;[&quot;rss.xml&quot;] &lt;&#x2F;code&gt; , corresponding to two different rss file standards, you should also set &lt;code&gt;generate_feeds = false&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;content&#x2F;posts&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;The serene theme looks more like a personal website, the posts are in the &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt; directory, you may want the feed file to be in the &lt;code&gt;&#x2F;blog&lt;&#x2F;code&gt; directory instead of the root directory, this requires you to set &lt;code&gt;generate_feeds = false &lt;&#x2F;code&gt; &lt;code&gt;feed_filenames = [&quot;feed.xml&quot;]&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;, and set &lt;code&gt;generate_feeds = true&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;The serene theme looks more like a personal website, the posts are in the &lt;code&gt;&#x2F;posts&lt;&#x2F;code&gt; directory, you may want the feed file to be in the &lt;code&gt;&#x2F;posts&lt;&#x2F;code&gt; directory instead of the root directory, this requires you to set &lt;code&gt;generate_feeds = false &lt;&#x2F;code&gt; &lt;code&gt;feed_filenames = [&quot;feed.xml&quot;]&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;, and set &lt;code&gt;generate_feeds = true&lt;&#x2F;code&gt; in &lt;code&gt;myblog&#x2F;content&#x2F;posts&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;feed.xml&lt;&#x2F;code&gt; uses &lt;code&gt;title&lt;&#x2F;code&gt; and &lt;code&gt;description&lt;&#x2F;code&gt; from &lt;code&gt;myblog&#x2F;content&#x2F;blog&#x2F;_index.md&lt;&#x2F;code&gt;, the other two use &lt;code&gt;config.toml&lt;&#x2F;code&gt;&#x27;s&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;code&gt;feed.xml&lt;&#x2F;code&gt; uses &lt;code&gt;title&lt;&#x2F;code&gt; and &lt;code&gt;description&lt;&#x2F;code&gt; from &lt;code&gt;myblog&#x2F;content&#x2F;posts&#x2F;_index.md&lt;&#x2F;code&gt;, the other two use &lt;code&gt;config.toml&lt;&#x2F;code&gt;&#x27;s&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;projects-page&quot;&gt;Projects page&lt;a class=&quot;zola-anchor&quot; href=&quot;#projects-page&quot; aria-label=&quot;Anchor link for: projects-page&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
@@ -883,6 +868,52 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;comment = true&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt; sets all posts to enable comments, you can set &lt;code&gt;comment = false&lt;&#x2F;code&gt; under &lt;code&gt;[extra]&lt;&#x2F;code&gt; in the front matter of the post to control whether a specific post displays comments&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;anonymous-reactions&quot;&gt;Anonymous reactions&lt;a class=&quot;zola-anchor&quot; href=&quot;#anonymous-reactions&quot; aria-label=&quot;Anchor link for: anonymous-reactions&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Serene supports a feature called anonymous emoji reactions, visitors of you site can react to your posts with emojis, without the need to log in or register.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;You need to setup a backend api endpoint to enable it. The endpoint should handle both &lt;code&gt;GET&lt;&#x2F;code&gt; and &lt;code&gt;POST&lt;&#x2F;code&gt;:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Get&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;request query: &lt;code&gt;slug&lt;&#x2F;code&gt;, the slug of the post&lt;&#x2F;p&gt;
+&lt;p&gt;response:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;jsonc&quot; class=&quot;language-jsonc z-code&quot;&gt;&lt;code class=&quot;language-jsonc&quot; data-lang=&quot;jsonc&quot;&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;{
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;  &amp;quot;👍&amp;quot;: [123, true], &#x2F;&#x2F; emoji: [count, reacted]
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;  &amp;quot;👀&amp;quot;: [456, false]
+&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Post&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;request body:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; class=&quot;language-json z-code&quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-begin z-json&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;  &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-key z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;slug&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-key-value z-json&quot;&gt;:&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;post-slug&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-pair z-json&quot;&gt;,&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;  &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-key z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;target&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-key-value z-json&quot;&gt;:&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;👍&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-pair z-json&quot;&gt;,&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;  &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-key z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;reacted&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-key-value z-json&quot;&gt;:&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-constant z-language z-json&quot;&gt;true&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-end z-json&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;response:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;json&quot; class=&quot;language-json z-code&quot;&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-begin z-json&quot;&gt;{&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;  &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-key z-json&quot;&gt;&lt;span class=&quot;z-string z-quoted z-double z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-string z-begin z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;success&lt;span class=&quot;z-punctuation z-definition z-string z-end z-json&quot;&gt;&amp;quot;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-separator z-mapping z-key-value z-json&quot;&gt;:&lt;&#x2F;span&gt; &lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-constant z-language z-json&quot;&gt;true&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-source z-json&quot;&gt;&lt;span class=&quot;z-meta z-mapping z-value z-json&quot;&gt;&lt;span class=&quot;z-punctuation z-section z-mapping z-end z-json&quot;&gt;}&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;For conivence, you can use &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;reaction&quot;&gt;this template repo&lt;&#x2F;a&gt; to setup your own endpoint. All you need is a &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;cloudflare.com&quot;&gt;Cloudflare&lt;&#x2F;a&gt; account. The free tier is good enough for a low-traffic personal blog.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;After you setup your endpoint, set &lt;code&gt;reaction_endpoint = &quot;&amp;lt;your-endpoint&amp;gt;&quot;&lt;&#x2F;code&gt; and &lt;code&gt;reaction = true&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt; to enable it.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Giscus also support a reaction feature, but it requires visitors to log in to GitHub, you can also disable it in giscus&#x27;s settings.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;analytics&quot;&gt;Analytics&lt;a class=&quot;zola-anchor&quot; href=&quot;#analytics&quot; aria-label=&quot;Anchor link for: analytics&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h3&gt;
 &lt;ul&gt;
@@ -914,17 +945,10 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;If you want to customize more, you only need to copy that file under the &lt;code&gt;templates&lt;&#x2F;code&gt;, &lt;code&gt;static&lt;&#x2F;code&gt;, &lt;code&gt;sass&lt;&#x2F;code&gt; directory in the corresponding &lt;code&gt;themes&#x2F;serene&lt;&#x2F;code&gt; to the same name directory of &lt;code&gt;myblog&lt;&#x2F;code&gt;, and modify it. Be careful not to directly modify the files under the serene directory, because these modifications may cause conflicts if the theme is updated&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;homepage-layout&quot;&gt;Homepage layout&lt;a class=&quot;zola-anchor&quot; href=&quot;#homepage-layout&quot; aria-label=&quot;Anchor link for: homepage-layout&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
+&lt;h3 id=&quot;show-recent-posts-on-homepage&quot;&gt;Show recent posts on homepage&lt;a class=&quot;zola-anchor&quot; href=&quot;#show-recent-posts-on-homepage&quot; aria-label=&quot;Anchor link for: show-recent-posts-on-homepage&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;You can change the layout of the homepage by using the &lt;code&gt;homepage_layout&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;about&lt;&#x2F;code&gt;: displays markdown content of your &lt;code&gt;myblog&#x2F;content&#x2F;_index.md&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;list&lt;&#x2F;code&gt;: the whole post list, can be categorized&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;code&gt;recent&lt;&#x2F;code&gt;: only a few recent posts&lt;&#x2F;li&gt;
-&lt;&#x2F;ul&gt;
-&lt;&#x2F;li&gt;
+&lt;li&gt;Show a few recent posts on homepage by settng &lt;code&gt;recent = true&lt;&#x2F;code&gt; in &lt;code&gt;config.toml&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h2 id=&quot;writing&quot;&gt;Writing&lt;a class=&quot;zola-anchor&quot; href=&quot;#writing&quot; aria-label=&quot;Anchor link for: writing&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
@@ -954,6 +978,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-html z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;display_tags = true
 &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-html z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;truncate_summary = false
 &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-html z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;featured = false
+&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-html z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;reaction = false
 &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-html z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;+++
 &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-html z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-html z-markdown&quot;&gt;&lt;span class=&quot;z-meta z-paragraph z-markdown&quot;&gt;new post about something...
@@ -973,7 +998,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;If you set &lt;code&gt;blog_categorized = true&lt;&#x2F;code&gt;, posts will be sorted alphabetically by default, you can manually set the order by adding the prefix of &lt;code&gt;__[0-9]{2}__&lt;&#x2F;code&gt; in front of the category name, for example, &lt;code&gt;categories = [&quot;__01__Balabala&quot;]&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;Post files are created under &lt;code&gt;myblog&#x2F;content&#x2F;blog&lt;&#x2F;code&gt;, after done writing, change &lt;code&gt;draft&lt;&#x2F;code&gt; to false&lt;&#x2F;p&gt;
+&lt;p&gt;Post files are created under &lt;code&gt;myblog&#x2F;content&#x2F;posts&lt;&#x2F;code&gt;, after done writing, change &lt;code&gt;draft&lt;&#x2F;code&gt; to false&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;h3 id=&quot;shortcodes&quot;&gt;Shortcodes&lt;a class=&quot;zola-anchor&quot; href=&quot;#shortcodes&quot; aria-label=&quot;Anchor link for: shortcodes&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
@@ -1020,7 +1045,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Serene also uses shortcodes to implement callouts, the effect is shown in &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;serene-demo-site.vercel.app&#x2F;blog&#x2F;callouts&quot;&gt;this page&lt;&#x2F;a&gt; of the demo site, there are currently 6 types: &lt;code&gt;note&lt;&#x2F;code&gt; &lt;code&gt;important &lt;&#x2F;code&gt; &lt;code&gt;warning&lt;&#x2F;code&gt; &lt;code&gt;alert&lt;&#x2F;code&gt; &lt;code&gt;question&lt;&#x2F;code&gt; &lt;code&gt;tip&lt;&#x2F;code&gt;, the format is as follows, the header attribute is optional:&lt;&#x2F;p&gt;
+&lt;p&gt;Serene also uses shortcodes to implement callouts, the effect is shown in &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;serene-demo.pages.dev&#x2F;posts&#x2F;callouts&quot;&gt;this page&lt;&#x2F;a&gt; of the demo site, there are currently 6 types: &lt;code&gt;note&lt;&#x2F;code&gt; &lt;code&gt;important &lt;&#x2F;code&gt; &lt;code&gt;warning&lt;&#x2F;code&gt; &lt;code&gt;alert&lt;&#x2F;code&gt; &lt;code&gt;question&lt;&#x2F;code&gt; &lt;code&gt;tip&lt;&#x2F;code&gt;, the format is as follows, the header attribute is optional:&lt;&#x2F;p&gt;
 &lt;pre class=&quot;z-code&quot;&gt;&lt;code&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;{% note(header=&amp;quot;Note&amp;quot;) %}
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;note text
 &lt;&#x2F;span&gt;&lt;span class=&quot;z-text z-plain&quot;&gt;{% end %}
@@ -1080,6 +1105,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;pre data-lang=&quot;sh&quot; class=&quot;language-sh z-code&quot;&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;z-source z-shell z-bash&quot;&gt;&lt;span class=&quot;z-meta z-function-call z-shell&quot;&gt;&lt;span class=&quot;z-variable z-function z-shell&quot;&gt;git&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;span class=&quot;z-meta z-function-call z-arguments z-shell&quot;&gt; submodule update&lt;span class=&quot;z-variable z-parameter z-option z-shell&quot;&gt;&lt;span class=&quot;z-punctuation z-definition z-parameter z-shell&quot;&gt; --&lt;&#x2F;span&gt;remote&lt;&#x2F;span&gt; themes&#x2F;serene&lt;&#x2F;span&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;br &#x2F;&gt;
+&lt;p&gt;If you like this theme, you may &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;serene&quot;&gt;give it a star&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;em&gt;Happy blogging :)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
 </content>
 	</entry>

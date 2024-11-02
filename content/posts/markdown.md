@@ -23,9 +23,9 @@ As you can see in this post.
 
 ## Paragraph
 
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
+Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
 ## Emphasis
 
@@ -33,10 +33,10 @@ normal text, **bold text**, *ltalic text*, ***bold and ltalic text***
 
 ## Blockquote
 
-> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
->> Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+>> Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
 ## List
 
@@ -229,7 +229,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 with header:
 
 {% note(header="Note") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 {% end %}
 
 {% alert(header="BREAKING!") %}
@@ -237,18 +237,18 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 {% end %}
 
 
-## Special quote
+## Special Quote
 
 {% quote(cite="Lorem Ipsum") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 {% end %}
 
 ## Expandable Detail
 
 {% detail(title="Lorem ipsum dolor sit, amet consectetur adipisicing elit.") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa! 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!  Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 {% end %}
 
 ## Math (KaTex / Typst)
@@ -258,7 +258,7 @@ f(x) = \int_{-\infty}^\infin \hat f(\xi) e^{2 \pi i \xi x}\ d\xi
 $$
 
 
-When $ a \ne 0 $, there are two solutions to $ (ax^2 + bx + c = 0) $ and they are 
+When $ a \ne 0 $, there are two solutions to $ (ax^2 + bx + c = 0) $ and they are
 $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
 
 The Cauchy-Schwarz Inequality
@@ -283,6 +283,10 @@ sequenceDiagram
 ## Comment (Giscus)
 
 As you can see in this post.
+
+## Anonymous Reactions
+
+As you can see in this [first example post](/posts/example-post).
 
 ---
 

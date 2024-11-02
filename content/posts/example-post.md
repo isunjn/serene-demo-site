@@ -8,26 +8,29 @@ tags = ["serene", "theme"]
 [extra]
 lang = "en"
 toc = true
+reaction = true
 +++
 
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!
 
 ## Lorem
 
-Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! 
+Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et!
 
 > Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
 Lorem ipsum dolor sit, **amet consectetur adipisicing elit**. Atque `libero` expedita laudantium cupiditate, sit explicabo sequi ipsa! Praesentium, *nisi saepe dolor unde iusto dolore nam*, vero optio `consequuntur` repudiandae et! Atque libero [expedita laudantium cupiditate](https://example.com), sit explicabo sequi ipsa!
 
-{% note() %}
+{% note(header="Note") %}
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero
-optioconsequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
+optioconsequuntur repudiandae et!
 {% end %}
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
+
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 > > Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
@@ -38,7 +41,7 @@ Lorem ipsum dolor sit, amet [consectetur adipisicing elit](https://example.com).
 
 Lorem ipsum dolor sit, amet [consectetur adipisicing elit](https://example.com). Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 
 Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
