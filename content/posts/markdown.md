@@ -286,7 +286,7 @@ As you can see in this post.
 
 ## Anonymous Reactions
 
-As you can see in this [first example post](/posts/example-post).
+As you can see in [first example post](/posts/example-post).
 
 ---
 
