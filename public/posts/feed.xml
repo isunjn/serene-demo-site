@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-	<title>serene::blog</title>
+	<title>serene::posts</title>
 	<subtitle>The demo blog page for zola theme serene</subtitle>
 	<link href="https://serene-demo.pages.dev/posts/feed.xml" rel="self" type="application/atom+xml"/>
     <link href="https://serene-demo.pages.dev/posts/"/>
@@ -447,7 +447,7 @@ $$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$&lt;&#x2F;p&gt;
 &lt;p&gt;As you can see in this post.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;anonymous-reactions&quot;&gt;Anonymous Reactions&lt;a class=&quot;zola-anchor&quot; href=&quot;#anonymous-reactions&quot; aria-label=&quot;Anchor link for: anonymous-reactions&quot; style=&quot;visibility: hidden;&quot;&gt;&lt;&#x2F;a&gt;
 &lt;&#x2F;h2&gt;
-&lt;p&gt;As you can see in this &lt;a href=&quot;&#x2F;posts&#x2F;example-post&quot;&gt;first example post&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;p&gt;As you can see in &lt;a href=&quot;&#x2F;posts&#x2F;example-post&quot;&gt;first example post&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
 &lt;div class=&quot;footnote-definition&quot; id=&quot;1&quot;&gt;&lt;sup class=&quot;footnote-definition-label&quot;&gt;1&lt;&#x2F;sup&gt;
 &lt;p&gt;First footnote.&lt;&#x2F;p&gt;
