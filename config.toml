@@ -36,7 +36,7 @@ anchors = "on"
 
 name = "Theme Serene"
 id = "serene"
-bio = "Lorem ipsum dolor sit, amet consectetur adipisicing elit"
+bio = "Lorem ipsum, amet consectetur adipisicing elit"
 avatar = "img/avatar.webp"
 
 display_id = true
@@ -62,9 +62,9 @@ blog_section_path = "/posts"
 
 force_theme = false
 blog_categorized = false
-blur_effect = true
+blur_effect = false
 back_to_top = true
-toc = true
+toc = false
 copy = true
 comment = false
 display_tags = true

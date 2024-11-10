@@ -6,7 +6,6 @@ discription = "Example post showing callouts"
 categories = ["Tech"]
 tags = ["serene", "callout"]
 [extra]
-toc = false
 +++
 
 {% note(header="Note") %}
