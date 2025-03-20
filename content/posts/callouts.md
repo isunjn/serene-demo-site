@@ -1,33 +1,51 @@
 +++
 title = "Callouts"
-date = 2023-05-17
+date = 2024-08-17
 discription = "Example post showing callouts"
 [taxonomies]
-categories = ["Tech"]
 tags = ["serene", "callout"]
 [extra]
+toc = true
 +++
 
-{% note(header="Note") %}
+{% note(title="Note") %}
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 {% end %}
 
-{% important(header="Important") %}
+{% tip(title="Tip") %}
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 {% end %}
 
-{% warning(header="Warning") %}
+{% important(title="Important") %}
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 {% end %}
 
-{% alert(header="Alert") %}
+{% warning(title="Warning") %}
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 {% end %}
 
-{% question(header="Question") %}
+{% caution(title="Caution") %}
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 {% end %}
 
-{% tip(header="Tip") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
+---
+
+{% note() %}
+Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+{% end %}
+
+{% tip() %}
+Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+{% end %}
+
+{% important() %}
+Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+{% end %}
+
+{% warning() %}
+Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+{% end %}
+
+{% caution() %}
+Lorem ipsum dolor sit, amet consectetur adipisicing elit.
 {% end %}

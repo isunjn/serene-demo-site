@@ -1,14 +1,11 @@
 +++
-title = "Featured Post"
+title = "Featured Mark"
 date = 2022-02-21
-description = "Featured post"
+description = "Featured Mark"
 [taxonomies]
-categories = ["Thoughts"]
-tags = ["featured"]
+tags = ["serene", "featured"]
 [extra]
-lang = "en"
-toc = false
 featured = true
 +++
 
-Set `featured = true` will add a `*` mark in front of the post title.
+`featured = true`: show a `*` mark in front of the post title

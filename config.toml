@@ -34,59 +34,23 @@ anchors = "on"
 
 [extra]
 
-name = "Theme Serene"
-id = "serene"
-bio = "Lorem ipsum, amet consectetur adipisicing elit"
-avatar = "img/avatar.webp"
-
-display_id = true
-display_bio = true
-display_avatar = false
-
-links = [
-  { name = "GitHub", icon = "github", url = "https://github.com/isunjn/serene" },
-  # { name = "Twitter", icon = "twitter", url = "https://twitter.com/<your-username>" },
-  { name = "Email", icon = "email", url = "mailto:<your-email-address>" },
-]
-
-recent = false
-recent_max = 5
-recent_more_text = "more »"
-
 sections = [
   { name = "posts", path = "/posts", is_external = false },
-  { name = "projects", path = "/projects", is_external = false },
+  # { name = "tags", path = "/tags", is_external = false },
+  { name = "collections", path = "/collections", is_external = false },
   { name = "about", path = "/about", is_external = false },
 ]
 blog_section_path = "/posts"
 
 force_theme = false
-blog_categorized = false
-blur_effect = false
-back_to_top = true
-toc = false
-copy = true
-comment = false
-display_tags = true
-truncate_summary = false
+back_link_text = "Back"
+
+footer_copyright = "© 2025 Serene"
+footer_credits = true
+
+not_found_error_text = "404 Not Found"
+not_found_recover_text = "« back to home »"
 
 reaction = false
 reaction_align = "right"
 reaction_endpoint = "https://reaction-serene-demo.isunjn.workers.dev"
-
-outdate_alert = false
-outdate_alert_days = 120
-outdate_alert_text_before = "This article was last updated "
-outdate_alert_text_after = " days ago and may be out of date."
-
-nav_separator = "::"
-nav_wrapper_left = "{"
-nav_wrapper_right = "} ;"
-nav_wrapper_separator = ","
-
-footer_copyright = "© 2023 serene"
-footer_credits = true
-
-not_found_title = "404"
-not_found_error_text = "Not Found"
-not_found_recover_text = "« back to home »"
