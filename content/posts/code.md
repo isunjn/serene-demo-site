@@ -114,8 +114,7 @@ let none = plus_one(None);
 
 ## Filename
 
-{% codeblock(name="src/main.rs") %}
-```rs
+```rs,name=src/main.rs
 fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         None => None,
@@ -127,10 +126,8 @@ let five = Some(5);
 let six = plus_one(five);
 let none = plus_one(None);
 ```
-{% end %}
 
-{% codeblock(name="src/main.rs") %}
-```rs,linenos,hl_lines=3-4
+```rs,linenos,hl_lines=3-4,name=src/main.rs
 fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         None => None,
@@ -142,4 +139,3 @@ let five = Some(5);
 let six = plus_one(five);
 let none = plus_one(None);
 ```
-{% end %}
