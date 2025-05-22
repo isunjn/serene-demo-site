@@ -11,9 +11,7 @@ subtitle = "Special blocks for showcasing your list"
 
 +++
 
-This theme has several special shortcodes for creating collections of items.
-These collections can be used to showcase various types of your list, such as projects, publications, blogroll, bookmarks, etc.
-
+Special shortcodes for showcasing your collections, such as projects, publications, blogroll, bookmarks, etc.
 Here are some examples:
 
 ## Projects
