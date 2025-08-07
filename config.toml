@@ -1,12 +1,12 @@
-base_url = "bharat-site-staging.netlify.app"
+base_url = "https://serene-demo.pages.dev"
 title = "bharat agarwal"
-description = "bharat agarwal's personal website"
+description = "The personal site of bharat agarwal"
 default_language = "en"
 theme = "serene"
 output_dir = "public"
 compile_sass = true
 minify_html = false
-build_search_index = true
+build_search_index = false
 generate_feeds = false
 feed_filenames = ["feed.xml"]
 taxonomies = [{ name = "tags" }, { name = "categories" }]
@@ -19,11 +19,11 @@ highlight_themes_css = [
   { theme = "serene-light", filename = "hl-light.css" },
   { theme = "serene-dark", filename = "hl-dark.css" },
 ]
-render_emoji = true
-external_links_target_blank = true
+render_emoji = false
+external_links_target_blank = false
 external_links_no_follow = true
 external_links_no_referrer = true
-smart_punctuation = true
+smart_punctuation = false
 
 [slugify]
 paths = "on"
@@ -46,7 +46,7 @@ blog_section_path = "/posts"
 force_theme = false
 back_link_text = "Back"
 
-footer_copyright = "© 2025 bharat"
+footer_copyright = "© 2025 Serene"
 footer_credits = true
 
 not_found_error_text = "404 Not Found"
