@@ -30,7 +30,7 @@ Unreachable objects can also appear in clusters that are totally disconnected fr
 
 Normally, unreachable objects stick around in your repository until they are either automatically or manually cleaned up. If you’ve ever seen the message, “Auto packing the repository for optimum performance,” in your terminal, Git is doing this for you in the background. You can also trigger [garbage collection](https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)) manually by running:
 
-```shell
+```bash
 $ git gc --prune=<date>
 ```
 
@@ -183,13 +183,13 @@ Now that Git can generate a cruft pack and perform garbage collection on a repos
 
 Other Git sub-commands, like `repack`, and `gc` needed to learn about cruft packs, and gain command-line flags and configuration knobs in order to opt-in to the new behavior. With all of the pieces in place, you can now trigger a garbage collection by running either:
 
-```lua
+```bash
 $ git gc --prune=1.day.ago --cruft
 ```
 
 or
 
-```lua
+```bash
 $ git repack -d --cruft --cruft-expiration=1.day.ago
 ```
 

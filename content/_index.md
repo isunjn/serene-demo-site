@@ -3,19 +3,20 @@ template = 'home.html'
 
 [extra]
 
+
 footer = false
 
-name = "Lorem Ipsum"
-id = "lorem"
-bio = "This is the demo site of zola theme serene"
-# avatar = "img/avatar.webp"
+name = ""
+id = ""
+bio = "Hello, I'm Bharat. I'm a software engineer based out of Gurgaon, India."
+avatar = "me.png"
 links = [
-  { name = "GitHub", icon = "github", url = "https://github.com/isunjn/serene" },
-  # { name = "Twitter", icon = "twitter", url = "https://twitter.com/<your-username>" },
-  { name = "Email", icon = "email", url = "mailto:<your-email-address>" },
+  { name = "GitHub", icon = "github", url = "https://github.com/bharatagarwal" },
+  # { name = "Email", icon = "email", url = "mailto:<bharatagarwal>" },
+  { name = "Linkedin", icon = "linkedin", url = "https://example.com" },
 ]
 
-recent = false
+recent = true
 recent_max = 5
 recent_more_text = "more »"
 
@@ -25,10 +26,6 @@ date_format = "%b %-d, %Y"
 
 +++
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+Currently, I'm a Tech Lead at [Qolaba](https://qolaba.ai), and have previously worked at [Atlassian](https://www.atlassian.com/blog/atlassian-engineering/cloud-overview") and [Shopify](https://shopify.engineering/scale-performance-testing). I'm also a co-creator of [Mothership](https://mothership.live/), an open-source platform-as-service for small applications.
 
-Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum fugiat nulla pariatur.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+This is my personal blog, where I share learnings from having been on this planet for 35 years. I've had a unique journey that covers design, career change, neurodivergence, self-education, and had my fair share of triumphs and disappointments along the way.

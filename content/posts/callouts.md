@@ -1,6 +1,7 @@
 +++
 title = "Callouts"
 date = 2024-08-17
+draft = true
 discription = "Example post showing callouts"
 [taxonomies]
 tags = ["serene", "callout"]
