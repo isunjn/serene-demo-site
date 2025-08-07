@@ -5,6 +5,7 @@ date = 2024-11-02
 tags = ["serene", "image"]
 [extra]
 toc = true
+draft=true
 +++
 
 Image can zoom in and out, try click it.

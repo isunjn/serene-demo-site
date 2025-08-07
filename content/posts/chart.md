@@ -1,6 +1,7 @@
 +++
 title = "Chart (Mermaid)"
 date = 2024-06-03
+draft=true
 [taxonomies]
 tags = ["serene", "chart"]
 [extra]

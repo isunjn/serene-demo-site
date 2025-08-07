@@ -1,6 +1,7 @@
 +++
 title = "Example Post"
 date = 2025-01-31
+draft=true
 [taxonomies]
 tags = ["serene", "theme"]
 [extra]

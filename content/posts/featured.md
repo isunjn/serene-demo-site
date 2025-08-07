@@ -2,6 +2,7 @@
 title = "Featured Mark"
 date = 2022-02-21
 description = "Featured Mark"
+draft=true
 [taxonomies]
 tags = ["serene", "featured"]
 [extra]

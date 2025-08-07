@@ -1,6 +1,7 @@
 +++
 title = "How to Make Wealth - Paul Graham"
 date = 2021-09-10
+draft=true
 [extra]
 toc = true
 +++

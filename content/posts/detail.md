@@ -1,6 +1,7 @@
 +++
 title = "Detail"
 date = 2024-08-14
+draft=true
 [taxonomies]
 tags = ["serene", "detail"]
 [extra]
