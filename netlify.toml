@@ -1,5 +1,3 @@
- [build.environment]
-   ZOLA_VERSION = "0.21.0"
-
- [[plugins]]
-   package = "netlify-plugin-zola"
+ [[build]
+  command = "zola build"
+  publish = "public"
