@@ -1,4 +1,4 @@
-base_url = "bharat-site-staging.netlify.app"
+base_url = "https://bharat-site-staging.netlify.app"
 title = "bharat agarwal"
 description = "bharat agarwal's personal website"
 default_language = "en"
