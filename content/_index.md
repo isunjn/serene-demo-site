@@ -13,7 +13,7 @@ avatar = "me.png"
 links = [
   { name = "GitHub", icon = "github", url = "https://github.com/bharatagarwal" },
   # { name = "Email", icon = "email", url = "mailto:<bharatagarwal>" },
-  { name = "Linkedin", icon = "linkedin", url = "https://example.com" },
+  { name = "Linkedin", icon = "linkedin", url = "https://www.linkedin.com/in/bharat--agarwal/" },
 ]
 
 recent = true

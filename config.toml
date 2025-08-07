@@ -39,8 +39,9 @@ sections = [
   # { name = "tags", path = "/tags", is_external = false },
   # { name = "collections", path = "/collections", is_external = false },
   { name = "about", path = "/about", is_external = false },
-  { name = "resume", path = "https://bharatagarwal.io/bharat-agarwal-2025-v6.pdf", is_external = true}
+  { name = "resume", path = "/bharat-agarwal-2025-v6.pdf", is_external = false}
 ]
+
 blog_section_path = "/posts"
 
 force_theme = false
