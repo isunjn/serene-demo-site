@@ -1,0 +1,46 @@
+
+
+
+[[collection]]
+type = "card"
+icon = "/assets/qolaba.png"
+title = "Qolaba AI"
+subtitle = "Lead AI Engineer"
+date = "2025-present"
+link = "https://qolaba.ai"
+content = ""
+
+[[collection]]
+type = "card"
+icon = "/assets/shopify.svg"
+title = "Shopify"
+link = "https://shopify.com"
+subtitle = "Software Engineer (Infrastructure)"
+date = "2024-2025"
+content = ""
+
+[[collection]]
+type = "card"
+icon = "/assets/atlassian.png"
+link = "https://atlassian.com"
+title = "Atlassian"
+subtitle = "Software Engineer"
+date = "2020-2022"
+content = ""
+
+[[collection]]
+type = "card"
+icon = "/assets/mothership.svg"
+link = "https://mothership.live"
+title = "Mothership"
+subtitle = "Co-creator and Software Engineer"
+date = "2019-2020"
+content = ""
+
+
+[[collection]]
+type = "card"
+title = "Self-employed"
+subtitle = "Architect"
+date = "2015-2019"
+content = ""

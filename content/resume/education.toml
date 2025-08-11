@@ -1,0 +1,27 @@
+[[collection]]
+type = "card"
+title = "Bradfield School of Computer Science"
+subtitle = "Computer Science Intensive"
+date = "2022-2023"
+content = ""
+
+[[collection]]
+type = "card"
+title = "Launch School"
+subtitle = "Mastery-based programming curriculum"
+date = "2018-2019"
+content = ""
+
+[[collection]]
+type = "card"
+title = "School of Planning and Architecture"
+subtitle = "Bachelor of Architecture"
+date = "2009-2015"
+content = ""
+
+[[collection]]
+type = "card"
+title = "DPS RK Puram"
+subtitle = "High School"
+date = "2002-2008"
+content = ""

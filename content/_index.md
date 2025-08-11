@@ -12,7 +12,7 @@ bio = "Hello, I'm Bharat. I'm a software engineer based out of Gurgaon, India."
 avatar = "me.png"
 links = [
   { name = "GitHub", icon = "github", url = "https://github.com/bharatagarwal" },
-  # { name = "Email", icon = "email", url = "mailto:<bharatagarwal>" },
+  { name = "Email", icon = "email", url = "mailto:bharatagarwal@gmail.com" },
   { name = "Linkedin", icon = "linkedin", url = "https://www.linkedin.com/in/bharat--agarwal/" },
 ]
 

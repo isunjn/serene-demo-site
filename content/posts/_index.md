@@ -1,5 +1,5 @@
 +++
-title = "serene::posts"
+title = "bharat agarwal | posts"
 description = "Demo posts page for zola-theme-serene"
 sort_by = "date"
 template = "blog.html"
