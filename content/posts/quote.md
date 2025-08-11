@@ -2,6 +2,7 @@
 title = "Special Quote"
 date = 2024-08-16
 discription = "Example post showing quote"
+draft=true
 [taxonomies]
 categories = ["Tech"]
 tags = ["serene", "quote"]

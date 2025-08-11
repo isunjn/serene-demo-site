@@ -1,6 +1,6 @@
 +++
 title = "bharat agarwal | posts"
-description = "Demo posts page for zola-theme-serene"
+description = "List of recent posts"
 sort_by = "date"
 template = "blog.html"
 page_template = "post.html"
@@ -11,7 +11,7 @@ generate_feeds = false
 lang = "en"
 
 title = "Posts"
-subtitle = "Example posts showcasing the features of this theme"
+subtitle = "List of recent posts"
 
 categorized = false
 back_to_top = true

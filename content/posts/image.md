@@ -1,11 +1,12 @@
 +++
 title = "Image"
 date = 2024-11-02
+draft=true
 [taxonomies]
 tags = ["serene", "image"]
 [extra]
 toc = true
-draft=true
+
 +++
 
 Image can zoom in and out, try click it.

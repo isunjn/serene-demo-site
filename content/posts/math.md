@@ -1,6 +1,7 @@
 +++
 title = "Math (KaTex)"
 date = 2024-07-15
+draft = true
 [taxonomies]
 tags = ["serene", "math"]
 [extra]

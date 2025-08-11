@@ -1,4 +1,4 @@
-base_url = "https://bharat-site-staging.netlify.app"
+base_url = "https://bharatagarwal.io"
 title = "bharat agarwal"
 description = "bharat agarwal's personal website"
 default_language = "en"
@@ -19,6 +19,7 @@ highlight_themes_css = [
   { theme = "serene-light", filename = "hl-light.css" },
   { theme = "serene-dark", filename = "hl-dark.css" },
 ]
+
 render_emoji = true
 external_links_target_blank = true
 external_links_no_follow = true
@@ -39,7 +40,7 @@ sections = [
   # { name = "tags", path = "/tags", is_external = false },
   # { name = "collections", path = "/collections", is_external = false },
   { name = "about", path = "/about", is_external = false },
-  { name = "resume", path = "/bharat-agarwal-2025-v6.pdf", is_external = false}
+  { name = "resume", path = "/bharat-agarwal-2025-v6.pdf", is_external = true}
 ]
 
 blog_section_path = "/posts"
