@@ -1,0 +1,31 @@
+5. Personal Journey
+
+
+Click here for my resumé
+
+Growing up, I never imagined myself working in the social sector. I wanted to reach the exalted heights of Corbusier or Foster, not the messy grimy social-realism world of informal settlements. But, this is where your surroundings shape you. In the classroom I saw the value of doing research, and asked myself, how can I make an impact as an architect?
+It seemed to me that the ‘creativity’ would be much more meaningful if it impacted people’s lives.
+
+
+	
+Scenes from the site of CodeCamp in Rakkar, near Dharamsala. 
+source: sahil thappa
+
+
+
+At the same time, I’ve always wanted to learn how to code. Computer Science was the other love, the other curiosity of my life that I didn’t get fulfill in university. To that end, I attended a code camp at HillHacks, where I met a lot of people from the ‘maker’ community in India, and got exposed to ideas like soldering and prototyping with Arduino, and in some ways expanded out from my perfectionist architect bubble.
+
+
+
+	Living in a techno-commune on an organic farm has been one of the most unique experiences of my life.
+    Bangalore is teeming with energy for new technology, and I attended a lot talks on blockchain, privacy, user experience. But ultimately, I felt like I understood the first 10 minutes of these talks, and then would look forward to clapping at the end of the talk. It was what a friend of mine termed “the cheerleader syndrome” - where you’re enthusiastic about the impact of technology without really knowing how it works.
+
+Launch School has provided with a solid, first-principles education on web development. He’s a diagram from one of my notebooks, showing the inner workings of a low-level Ruby server.
+This motivated me to hunt out Launch School, a rigorous self-paced program for learning software development. I’ve had my head deep into pseudocode, inheritance, encapsulation and state for the last 12 months. Alongside, I’ve also got to work on the fun, exciting -- and random world of Burning Man.
+
+Right now, I can write clean, readable code in Ruby. I’ve attempted a few problems from the Advent of Code set, and have been really satisfied with solving them.
+ The tangled wires and delicious food of Nizamuddin -- a place I visit frequently,
+and a place that has been a major influence on my ideas on urbanity.
+source: protyasha pandey
+
+By September, I’m optimisting of having the skills of a full-stack web developer. I’m hoping I can combine my two interests of technology and urbanity, and can create work which is a manifestation of beliefs and values I’ve picked up on this journey. 
