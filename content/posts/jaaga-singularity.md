@@ -145,3 +145,207 @@ We decided to use foam panels for this as they provide insulation, and covered t
 
 One thing to note is that Disorient occupies prime real estate at Burning Man, facing the esplanade where the eponymous man burns. So keeping these two factors in mind, we left some open platforms as gifts for the people roaming around the playa, small places to hang out and look onto the madness.
 
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*fwJ4bzjqr7lbXY8_ne21qQ.jpeg
+", 
+		alt="alt text", 
+		caption="Section cut from front view, emphasising hang-out spaces."
+	) 
+}}
+
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*3ZW1_AXZajEEb6J0d0P3cQ.jpeg", 
+		alt="alt text", 
+		caption="Section cut from side, showing circulation."
+	) 
+}}
+
+
+
+Inside the units, the onus was on hosting guests and having hang-out spaces. Because these are temporary, it was liberating to not have to follow building codes. We separated the living and service areas, providing a shower cubicle and wash-basin on the other side of the corridor.
+
+A ladder takes you to a mezzanine to sleep in when the weather permits, and a hatch leads you to a terrace to enjoy an panoramic view of the craziness at Burning Man.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*D3UV3YqYPnx5IOSP6_7bEA.jpeg", 
+		alt="alt text", 
+		caption="Burning Man madness: View of the esplanade. (source:HuffPo)"
+	) 
+}}
+
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*xlrJr8XQs7MXDJ4dWdliEw.jpeg", 
+		alt="alt text", 
+		caption="Burning Man madness: Art cars made by the Disorient camp. (source:HuffPo)"
+	) 
+}}
+
+
+
+
+
+
+Traditionally, Freeman’s been involved in developing the frontage for the Disorient camp, using pallet racks to raise height and create a view of the esplanade.
+
+
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*8L07528BDIzc6c-8XjRbZw.jpeg)
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*TeYnZLloVGUFTCw81FfGbA.jpeg", 
+		alt="alt text", 
+		caption="Variety of implementations of pallet racks at Burning Man (source:disorient.info)"
+	) 
+}}
+
+
+We were excited by the amphitheater kind of implementation we had achieved in the Hamsah Organic Farm structure, and tried to elaborate on that by creating public space surrounding the DJ’s dome. A limitation in this was the size of the existing uprights in the inventory of the camp. We worked around those to create a platforms of varying depths to accommodate groups of varying sizes.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*x-qhhKTMDgBqwJTM-CB_3Q.png", 
+		alt="alt text", 
+		caption=""
+	) 
+}}
+
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*uLznzpt_lzAAA3pJx6cCKA.png", 
+		alt="alt text", 
+		caption="Put together, the combined unit tries to balance the needs of privacy of the camp along with allowing the craziness of the esplanade seep in."
+	) 
+}}
+
+## The Singularity Festival of Learning
+
+Jaaga Study is planning to move to a new site in Yelanhanka by April. At the current farm, a lot of the infrastructure is built already, and the pallet racks just plug into an existing system, the Yelanhanka site is pretty much a blank state. Which means a much larger scope to go out there, in terms of ideas.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ZWcQgPg75gmECWygqB30fw.jpeg", 
+		alt="alt text", 
+		caption="15km from the Bangalore airport, the site is flanked by a eucalyptus forest on one side, and has a power line running across in the bottom portion"
+	) 
+}}
+
+
+
+
+
+Freeman imagines this farm being an artefact from a science-fiction universe. A metallic jungle, swarming with unicycle-riders plucking fruit from a vertical garden grown from their own composted waste, fabricating their own furniture, teaching kids the complexities of the universe using chatbots. A place thriving in solar energy, where everyone carries their own powerpack. We’re calling it the Mega Singularity.
+
+
+With not much being present in terms of context to respond to, we want for the inhabitants to forget their corporeal existence in this dimension and lose themselves in the pallet racks.
+
+Freeman sees this as a living art project, with vacant spaces using spare solar energy to create impossible things like a perpetual motion machine until the use of the space becomes necessary. To speed up growth of greenery, the idea is to bend reinforcement bars into notional trees, and plant fast growing vines so that they fill up fast, and are portable — unlike trees!
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*-wPA8D9cgyQFpmKl5ArCSg.jpeg", 
+		alt="alt text", 
+		caption=""
+	) 
+}}
+
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*qJ5iHcz6Hmv811FK1Zr2PA.png", 
+		alt="alt text", 
+		caption="A metallic forest to get lost in. (Note the monolith from ‘2001, A Space Odyssey’)"
+	) 
+}}
+
+
+There’s also ‘The Forest’, 20ft tall steel poles on a 4m x 4m array, a space open to interpretation and personalisation, maybe to be inhabited by a company/individual each in time to come.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*zqlxm7auRdpAHK7otYMCaQ.png", 
+		alt="alt text", 
+		caption="The Forest, an abstract place that can be anything you want it to be"
+	) 
+}}
+
+
+As of February 2016, this is where we are. I’ve moved on to join a firm in Bangalore as a digital product designer, and the mantle of Designer-in-Residence needs to be passed on. Before passing it on to another person(s?), I need to talk about what a designer can do in a previously programming dominated situation like that at Jaaga Study — or the Singularity Festival of Learning, which is what it’s going to be in the future.
+
+## New Directions
+
+The design I’ve shared above is a very early stage concept, and needs work to become a coherent whole. This is the pressing need anyone coming in would likely be responsible for, preferably someone with an architectural background.
+
+However, I’m wondering whether there is interest amongst the design community to engage with this whole idea of living in tents, surrounded by nature and being on the periphery of the city. Here are potential things a Designer-in-Residence could work on:
+
+- A self contained pallet rack system that fits into one shipping container and can be sold as a kit to other people to set up their own public spaces.
+- If there are more than one designers who want to join, there is a system design challenge at hand — to create a ecosystem where designers can contribute and take on each others’ work (and files). Programming has a pretty sophisticated methodology for this… it’d be a fun experiment to make this happen with design.
+- I’ve seen interest in digital fabrication at the farm, and one avenue of exploration would be to make furniture of the kind seen on OpenDesk and use that as a means of becoming self-sustaining.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*MdF21fobHk2Nw8IIGQB5vQ.jpeg", 
+		alt="alt text", 
+		caption="Fabrication of table via CNC milling, using designs from OpenDesk (source: r26d.com)"
+	) 
+}}
+
+
+- Then there is scope for a landscape designer to work on vertical gardens and artificial trees (using steel reinforcements) as mentioned above.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*pJFrgaTDBzgVH0FeuqSktQ.png", 
+		alt="alt text", 
+		caption="Vertical Garden done at Jaaga previously (source: jaaga.in)"
+	) 
+}}
+
+
+
+
+
+- With an expectation of an increasing number of software startups like Automte joining the farm, there’s a chance for an interaction designer to cut his/her teeth.
+
+- There is a CyberScouts team that goes to schools in the vicinity and introduces tablets to kids, with the aim of teaching them Math and English. A game designer could find this an ideal opportunity to develop new ideas, online or offline.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:1220/format:webp/1*graUHg1WrK1XQQf-gfhxbg.png", 
+		alt="alt text", 
+		caption="Ravi and Dolly lead the cyberscouts team (source: jaaga.in)"
+	) 
+}}
+
+
+- Other than the Yelahanka Site, architects could contribute to and stress-test ideas of open-source projects like Wikihouse, Paperhouses, Bricks and fork these to the needs of the Indian market.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*p2jbI6MVl1nwyEdkNmY7wQ.png", 
+		alt="alt text", 
+		caption="Microhouse project via wikihouse.cc"
+	) 
+}}
+
+- The entire site is a massive open canvas, and you’ll be hard-pressed to find an environment more conducive to experimentations with New Media, and work on programmable LEDs.
+
+{{ 
+	figure(
+		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*KpWr9uVbd8X6B70s-kQ2gg.jpeg", 
+		alt="alt text", 
+		caption="Make installations using LEDscape (source: https://github.com/osresearch/LEDscape)"
+	) 
+}}
+
+I’ve made the components available, and looking for designers to mix them up and cook up their own proposal. This program suits self-driven people who have an idea of what they want, and how to do it, and just need a platform from where to experiment and develop these ideas.
+
+The intellectual property developed here belongs to the world at large, and we share whatever we do online for other to use and adapt. I’ve set up a repository on GitHub called JaagaSingularity (which I’m in the process of filling), and will be adding those joining the farm to repo — expecting them to publish their work there. Residencies are open from 1st Feb to 19 March, and will open up again in April with a minimum one month commitment. You can contact me through email.
+
+I’ll be available for discussions twice a week on the farm, Tuesday and Thursday during nights and mornings. Plus I’m always available on Skype & Slack.
