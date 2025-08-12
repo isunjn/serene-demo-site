@@ -40,13 +40,13 @@ sections = [
   # { name = "tags", path = "/tags", is_external = false },
   # { name = "collections", path = "/collections", is_external = false },
   { name = "about", path = "/about", is_external = false },
-  { name = "resume", path = "/bharat-agarwal-2025-v6.pdf", is_external = true}
+  { name = "resumé ↗︎", path = "/bharat-agarwal-2025-v6.pdf", is_external = true}
 ]
 
 blog_section_path = "/posts"
 
 force_theme = false
-back_link_text = "Back"
+back_link_text = "back"
 
 footer_copyright = "© 2025 bharat"
 footer_credits = true
