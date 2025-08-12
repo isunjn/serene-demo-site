@@ -1,5 +1,5 @@
 +++
-title = "A more humanist approach to AI"
+title = "A more humanist approach towards AI"
 date = 2025-08-11
 draft = false
 [extra]
