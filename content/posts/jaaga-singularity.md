@@ -169,27 +169,6 @@ Inside the units, the onus was on hosting guests and having hang-out spaces. Bec
 
 A ladder takes you to a mezzanine to sleep in when the weather permits, and a hatch leads you to a terrace to enjoy an panoramic view of the craziness at Burning Man.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*D3UV3YqYPnx5IOSP6_7bEA.jpeg", 
-		alt="alt text", 
-		caption="Burning Man madness: View of the esplanade. (source:HuffPo)"
-	) 
-}}
-
-
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*xlrJr8XQs7MXDJ4dWdliEw.jpeg", 
-		alt="alt text", 
-		caption="Burning Man madness: Art cars made by the Disorient camp. (source:HuffPo)"
-	) 
-}}
-
-
-
-
-
 
 Traditionally, Freeman’s been involved in developing the frontage for the Disorient camp, using pallet racks to raise height and create a view of the esplanade.
 
@@ -288,15 +267,6 @@ However, I’m wondering whether there is interest amongst the design community 
 - If there are more than one designers who want to join, there is a system design challenge at hand — to create a ecosystem where designers can contribute and take on each others’ work (and files). Programming has a pretty sophisticated methodology for this… it’d be a fun experiment to make this happen with design.
 - I’ve seen interest in digital fabrication at the farm, and one avenue of exploration would be to make furniture of the kind seen on OpenDesk and use that as a means of becoming self-sustaining.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*MdF21fobHk2Nw8IIGQB5vQ.jpeg", 
-		alt="alt text", 
-		caption="Fabrication of table via CNC milling, using designs from OpenDesk (source: r26d.com)"
-	) 
-}}
-
-
 - Then there is scope for a landscape designer to work on vertical gardens and artificial trees (using steel reinforcements) as mentioned above.
 
 {{ 
@@ -335,14 +305,6 @@ However, I’m wondering whether there is interest amongst the design community 
 }}
 
 - The entire site is a massive open canvas, and you’ll be hard-pressed to find an environment more conducive to experimentations with New Media, and work on programmable LEDs.
-
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*KpWr9uVbd8X6B70s-kQ2gg.jpeg", 
-		alt="alt text", 
-		caption="Make installations using LEDscape (source: https://github.com/osresearch/LEDscape)"
-	) 
-}}
 
 I’ve made the components available, and looking for designers to mix them up and cook up their own proposal. This program suits self-driven people who have an idea of what they want, and how to do it, and just need a platform from where to experiment and develop these ideas.
 
