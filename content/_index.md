@@ -26,6 +26,6 @@ date_format = "%b %-d, %Y"
 
 +++
 
-Currently, I'm a Tech Lead at [Qolaba](https://qolaba.ai), and have previously worked at [Atlassian](https://www.atlassian.com/blog/atlassian-engineering/cloud-overview") and [Shopify](https://shopify.engineering/scale-performance-testing). I'm also a co-creator of [Mothership](https://mothership.live/), an open-source platform-as-service for small applications.
+Currently, I'm a Tech Lead at [Qolaba](https://qolaba.ai), and have previously worked at [Atlassian](https://www.atlassian.com/blog/atlassian-engineering/cloud-overview) and [Shopify](https://shopify.engineering/scale-performance-testing). I'm also a co-creator of [Mothership](https://mothership.live/), an open-source platform-as-service for small applications.
 
 This is my personal blog, where I share learnings from having been on this planet for 35 years. I've had a unique journey that covers design, career change, neurodivergence, self-education, and had my fair share of triumphs and disappointments along the way.
