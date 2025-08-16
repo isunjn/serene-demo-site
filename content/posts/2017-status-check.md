@@ -11,12 +11,7 @@ toc = false
 
 I’m a sucker for new beginnings. It’s the time when I have my brainstorm face on — furrowed eyebrows, wrinkled forehead, scratching beard (if present), munching on junk food, and making lists. Lists, they’re antithetical for getting the task done. You feel sastisfied at making the list, and never get down to doing it.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*00G4bwpwYowa6Fubpta6pQ.png", alt="alt text", 
-		caption="New Beginnings v283, May 2015"
-	) 
-}}
+![New Beginnings v283, May 2015](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*00G4bwpwYowa6Fubpta6pQ.png)
 
 
 So, I’m going for a manifesto of sorts. Things I want to be doing in the next few days/years/crogenic-defrostings/consciousness-downloadings.
@@ -45,13 +40,7 @@ I think you can do that by doing bold work. I’ve realised that’s what turns 
 
 [placeholder for transcendental]
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KKlyMGIgrv2CbjmWHlqaDQ.jpeg",
-		alt="alt text", 
-		caption="This should be everywhere. source: markmalazarte.com/jarmusch/"
-	) 
-}}
+![This should be everywhere. source: markmalazarte.com/jarmusch/](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*KKlyMGIgrv2CbjmWHlqaDQ.jpeg)
 
 
 

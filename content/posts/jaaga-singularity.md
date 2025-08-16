@@ -18,13 +18,7 @@ After graduating from college, I decided that I wanted to return to the the worl
 The fact that this was hosted at a hackerspace, and would culminate in HillHacks, made this really exciting for me. In addition, Jaaga was involved. I had seen their 'Creative Sunday Mornings' events with envy for some time, and this felt like the perfect opportunity to make that leap to the tech world.
 
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:1300/format:webp/1*tj1_X-0xCrdm_tmLZVW_Tg.jpeg", 
-		alt="alt text", 
-		caption="Ghoomakkad/Infinity Hackbase is a balm for the soul. (Image courtesy: Mayur Sontakke on Tripoto)"
-	) 
-}}
+![Ghoomakkad/Infinity Hackbase is a balm for the soul. (Image courtesy: Mayur Sontakke on Tripoto)](https://miro.medium.com/v2/resize:fit:1300/format:webp/1*tj1_X-0xCrdm_tmLZVW_Tg.jpeg)
 
 
 Programming, however, didn't really work out for me. Instead, I found that I would always end up being involved in discussions relating to design, be it doing wireframes for an in-house social network being developed by MindGreppers, or discussing with Freeman Murray his wild and completely out-there ideas on pallet racks and architecture.
@@ -32,12 +26,7 @@ Programming, however, didn't really work out for me. Instead, I found that I wou
 
 Mind you, this was extremely different from the cab-a/c-honking-dusty hell that was Delhi. We stayed in camping tents for two months, which took a while to adjust to, particularly when it was raining. You have to learn how to peg them down and find a suitable location, such that the trees can break the flow of wind. Once you do that, Quechua tents are a marvel - both in the ease of putting-up and how they manage to stay waterproof in the strongest thunderstorms. The best thing about living like this was the view. Every morning you wake up to a view of the mountains!
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HX02pP-Z6nc66PIabcacxg.jpeg", alt="alt text", 
-		caption="First experience of living in tents for an extended period of time. (Image courtesy: Sahil Thappa ekprayogblog.wordpress.com)"
-	) 
-}}
+![First experience of living in tents for an extended period of time. (Image courtesy: Sahil Thappa ekprayogblog.wordpress.com)](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*HX02pP-Z6nc66PIabcacxg.jpeg)
 
 
 HillHacks was lovely experience (more on that some other time). My conversations with other people consolidated my desire to pursue interaction design, and that Bangalore was the best place to be.
@@ -47,69 +36,33 @@ HillHacks was lovely experience (more on that some other time). My conversations
 
 I arrived at the Bangalore airport on 10th August, without a job or a ready portfolio. The first couple of months were a struggle adjusting, and I was haemorrhaging through my savings. Around October, I heard that a new Jaaga Study quarter is starting, and was delighted to see an option to join as a 'Digital Nomad', for 10k INR/month. This meant I could enjoy the environment of the farm while doing my own thing.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:2000/format:webp/1*chpe8SRqznEMn5nyyFLVPw.jpeg", alt="alt text", 
-		caption="Breakdown of terminology for the uninitiated."
-	) 
-}}
-
+![Breakdown of terminology for the uninitiated.](https://miro.medium.com/v2/resize:fit:2000/format:webp/1*chpe8SRqznEMn5nyyFLVPw.jpeg)
 
 There was just an allocated patch of land at the farm when I joined. Only two shipping containers packed with the components of a pallet racking system - 8m tall uprights, 4m span beams, 1m span secondary beams and 8' x 4' plywood sheets. We built the structure ourselves, putting in labour that most of us were not used to. When you build your own space, there is a unique sense of ownership about it. One thing I loved was that we built it in stages, with the cost of iteration almost nothing. You could just lift a beam from it's notches, and move it up or down in increments as small as 3 inches.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*l-jqnk6uGHs8nTcg9QEx8g.jpeg", alt="alt text", 
-		caption="Players of the game: Components of the pallet rack ecosystem at Jaaga"
-	) 
-}}
+![Players of the game: Components of the pallet rack ecosystem at Jaaga](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*l-jqnk6uGHs8nTcg9QEx8g.jpeg)
 
 Pallet Racks are a warehousing solution, designed to carry the load of boxes carrying inventory, on top of a wooden base (pallet). They allow for minute adjustments in height in order to maximise storage efficiency. The uprights are made out of steel, which has holes punched in and then roll-formed into a U-shaped section. Because of the industrial requirements, these are rated to carry loads in tonnes, thus being very safe to stand, walk, jump around and live on.
 
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*-s8_AnDgSS0iS2Qqite5Ew.jpeg", alt="alt text", 
-		caption="With Freeman the structure is always in beta, always going through iteration. After this model was made, waterproofing has been improved, a sloping roof and shade cloth has been added."
-	) 
-}}
+![With Freeman the structure is always in beta, always going through iteration. After this model was made, waterproofing has been improved, a sloping roof and shade cloth has been added.](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*-s8_AnDgSS0iS2Qqite5Ew.jpeg)
 
 Freeman hacked this warehousing system to build liveable space on. Instead of following a single straight line, like a storage shelf would, these are placed adjacent to each other to create a continuous coverage, that can be shaded and stacked. One thing that stands out is that this touches the ground very lightly, with no need for foundations. In fact it's hard to say that there was any structure on the land occupied after everything has been dismantled, because there's nothing permanent about the changes. This is important when you're operating on a nomadic model, and makes it an easier sell to farmers to allow their land to be used.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:1000/format:webp/1*jPpDsopnXxIwa4Ir2ezwGw.gif", alt="alt text", 
-		caption="Process for erecting a small shed for a meditation retreat at the farm"
-	) 
-}}
+![Process for erecting a small shed for a meditation retreat at the farm](https://miro.medium.com/v2/resize:fit:1000/format:webp/1*jPpDsopnXxIwa4Ir2ezwGw.gif)
 
 Jaaga Study's mandate is: Live in nature, do yoga, learn to code. The pallet rack structures fit into this neatly, as there is no notion of walls. In fact it's better for stability to allow the wind to pass through. The only time you're indoors is when you go into your tent to sleep. You're outside the whole day, exercising, cooking, learning together. Over time you end up with an easygoing collegiate kind of atmosphere. In fact the tents serve an important purpose - they become your own personal fortress of solitude.
 
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*lXgwpnN1ujp1FMS0wnunvQ.jpeg)
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*4LaS4cCjn0xVOs5nqlNB1w.jpeg", alt="alt text", 
-		caption="Tents, your own personal sanctuary"
-	) 
-}}
+![Tents, your own personal sanctuary](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*4LaS4cCjn0xVOs5nqlNB1w.jpeg)
 
 As my month as a nomad got over, my architecture portfolio was finished, I saw that it would take some time to find and join a design firm full-time. So I offered to help out with developing further applications of this system, and cooked up a title for myself - Designer in Residence.
 
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ffnjN4Iuec7elIiGbP58Zg.jpeg", alt="alt text", 
-		caption="Existing Jaaga Structure at the Hamsah Organic Farm (source: Freeman Murray)"
-	) 
-}}
+![Existing Jaaga Structure at the Hamsah Organic Farm (source: Freeman Murray)](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ffnjN4Iuec7elIiGbP58Zg.jpeg)
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*GKW2M9mCA3zxM-VG1_095w.jpeg", alt="alt text", 
-		caption="Communal study and workshop space (source: Freeman Murray)"
-	) 
-}}
+![Communal study and workshop space (source: Freeman Murray)](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*GKW2M9mCA3zxM-VG1_095w.jpeg)
 
 
 ## Designer-in-Residence
@@ -123,45 +76,22 @@ Freeman's a member at Disorient, a camp at Burning Man where he builds public ha
 
 Burning Man takes place in the flat Black Rock Desert of Nevada every year. For one week, an otherwise desolate patch of land becomes a hotbed of activity, and then goes back to being desolate. It’s an example of pop-up architecture, and it’s transience means that people either stay in tents, or bring their shelter with them in the form of Recreational Vehicles (RVs). These, however, are prohibitively expensive, and go somewhat against the do-it-yourself ethos of the festival.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*X_4gWNyxMyHRUwlvb7qseg.jpeg", alt="alt text", 
-		caption="Recreational Vehicles (RVs) at Burning Man. Expensive, resource heavy, and worst of all, uncool. (source: http://www.doityourselfrv.com/)"
-	) 
-}}
+![Recreational Vehicles (RVs) at Burning Man. Expensive, resource heavy, and worst of all, uncool. (source: http://www.doityourselfrv.com/)](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*X_4gWNyxMyHRUwlvb7qseg.jpeg)
 
 Freeman wants to build residential units that can be used in place of RVs, using pallet racks. These however, have very different requirements to Bangalore. The playa (spanish word for beach, used to describe dry lake beds in the American west such as the Black Rock Desert) can go through heavy duststorms, which means walls became a necessity. The units had to be as comfortable and more cool than RVs to appeal to the average burner, and we set about with the ambition of making it an art piece in itself.
 
 We decided to use foam panels for this as they provide insulation, and covered them with a reflective surface that would reduce heat, and also would gleam like a metal. Disorient’s colour scheme is Pornj (pink and orange), and we used that as a takeoff for designing lasercut plywood ‘trees’, bringing a sense of shrubbery and warmth to the place. Walls makes it vulnerable to shear force, and we improved stability by anchoring to the ground, much like you would anchor a tent.
 
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*vQEXKc9KeSR7tXXx-K2NaA.jpeg", alt="alt text", 
-		caption="Foam insulation boards mounted with reflective sheeting, protecting from the dust storms and celebrating the esplanade"
-	) 
-}}
+![Foam insulation boards mounted with reflective sheeting, protecting from the dust storms and celebrating the esplanade](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*vQEXKc9KeSR7tXXx-K2NaA.jpeg)
 
 
 One thing to note is that Disorient occupies prime real estate at Burning Man, facing the esplanade where the eponymous man burns. So keeping these two factors in mind, we left some open platforms as gifts for the people roaming around the playa, small places to hang out and look onto the madness.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*fwJ4bzjqr7lbXY8_ne21qQ.jpeg
-", 
-		alt="alt text", 
-		caption="Section cut from front view, emphasising hang-out spaces."
-	) 
-}}
+![Section cut from front view, emphasising hang-out spaces.](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*fwJ4bzjqr7lbXY8_ne21qQ.jpeg)
 
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*3ZW1_AXZajEEb6J0d0P3cQ.jpeg", 
-		alt="alt text", 
-		caption="Section cut from side, showing circulation."
-	) 
-}}
+![Section cut from side, showing circulation.](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*3ZW1_AXZajEEb6J0d0P3cQ.jpeg)
 
 
 
@@ -175,45 +105,21 @@ Traditionally, Freeman’s been involved in developing the frontage for the Diso
 
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*8L07528BDIzc6c-8XjRbZw.jpeg)
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*TeYnZLloVGUFTCw81FfGbA.jpeg", 
-		alt="alt text", 
-		caption="Variety of implementations of pallet racks at Burning Man (source:disorient.info)"
-	) 
-}}
+![Variety of implementations of pallet racks at Burning Man (source:disorient.info)](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*TeYnZLloVGUFTCw81FfGbA.jpeg)
 
 
 We were excited by the amphitheater kind of implementation we had achieved in the Hamsah Organic Farm structure, and tried to elaborate on that by creating public space surrounding the DJ’s dome. A limitation in this was the size of the existing uprights in the inventory of the camp. We worked around those to create a platforms of varying depths to accommodate groups of varying sizes.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*x-qhhKTMDgBqwJTM-CB_3Q.png", 
-		alt="alt text", 
-		caption=""
-	) 
-}}
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*x-qhhKTMDgBqwJTM-CB_3Q.png)
 
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*uLznzpt_lzAAA3pJx6cCKA.png", 
-		alt="alt text", 
-		caption="Put together, the combined unit tries to balance the needs of privacy of the camp along with allowing the craziness of the esplanade seep in."
-	) 
-}}
+![Put together, the combined unit tries to balance the needs of privacy of the camp along with allowing the craziness of the esplanade seep in.](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*uLznzpt_lzAAA3pJx6cCKA.png)
 
 ## The Singularity Festival of Learning
 
 Jaaga Study is planning to move to a new site in Yelanhanka by April. At the current farm, a lot of the infrastructure is built already, and the pallet racks just plug into an existing system, the Yelanhanka site is pretty much a blank state. Which means a much larger scope to go out there, in terms of ideas.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ZWcQgPg75gmECWygqB30fw.jpeg", 
-		alt="alt text", 
-		caption="15km from the Bangalore airport, the site is flanked by a eucalyptus forest on one side, and has a power line running across in the bottom portion"
-	) 
-}}
+![15km from the Bangalore airport, the site is flanked by a eucalyptus forest on one side, and has a power line running across in the bottom portion](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*ZWcQgPg75gmECWygqB30fw.jpeg)
 
 
 
@@ -226,33 +132,15 @@ With not much being present in terms of context to respond to, we want for the i
 
 Freeman sees this as a living art project, with vacant spaces using spare solar energy to create impossible things like a perpetual motion machine until the use of the space becomes necessary. To speed up growth of greenery, the idea is to bend reinforcement bars into notional trees, and plant fast growing vines so that they fill up fast, and are portable — unlike trees!
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*-wPA8D9cgyQFpmKl5ArCSg.jpeg", 
-		alt="alt text", 
-		caption=""
-	) 
-}}
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*-wPA8D9cgyQFpmKl5ArCSg.jpeg)
 
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*qJ5iHcz6Hmv811FK1Zr2PA.png", 
-		alt="alt text", 
-		caption="A metallic forest to get lost in. (Note the monolith from ‘2001, A Space Odyssey’)"
-	) 
-}}
+![A metallic forest to get lost in. (Note the monolith from '2001, A Space Odyssey')](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*qJ5iHcz6Hmv811FK1Zr2PA.png)
 
 
 There’s also ‘The Forest’, 20ft tall steel poles on a 4m x 4m array, a space open to interpretation and personalisation, maybe to be inhabited by a company/individual each in time to come.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*zqlxm7auRdpAHK7otYMCaQ.png", 
-		alt="alt text", 
-		caption="The Forest, an abstract place that can be anything you want it to be"
-	) 
-}}
+![The Forest, an abstract place that can be anything you want it to be](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*zqlxm7auRdpAHK7otYMCaQ.png)
 
 
 As of February 2016, this is where we are. I’ve moved on to join a firm in Bangalore as a digital product designer, and the mantle of Designer-in-Residence needs to be passed on. Before passing it on to another person(s?), I need to talk about what a designer can do in a previously programming dominated situation like that at Jaaga Study — or the Singularity Festival of Learning, which is what it’s going to be in the future.
@@ -269,13 +157,7 @@ However, I’m wondering whether there is interest amongst the design community 
 
 - Then there is scope for a landscape designer to work on vertical gardens and artificial trees (using steel reinforcements) as mentioned above.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*pJFrgaTDBzgVH0FeuqSktQ.png", 
-		alt="alt text", 
-		caption="Vertical Garden done at Jaaga previously (source: jaaga.in)"
-	) 
-}}
+![Vertical Garden done at Jaaga previously (source: jaaga.in)](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*pJFrgaTDBzgVH0FeuqSktQ.png)
 
 
 
@@ -285,24 +167,12 @@ However, I’m wondering whether there is interest amongst the design community 
 
 - There is a CyberScouts team that goes to schools in the vicinity and introduces tablets to kids, with the aim of teaching them Math and English. A game designer could find this an ideal opportunity to develop new ideas, online or offline.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:1220/format:webp/1*graUHg1WrK1XQQf-gfhxbg.png", 
-		alt="alt text", 
-		caption="Ravi and Dolly lead the cyberscouts team (source: jaaga.in)"
-	) 
-}}
+![Ravi and Dolly lead the cyberscouts team (source: jaaga.in)](https://miro.medium.com/v2/resize:fit:1220/format:webp/1*graUHg1WrK1XQQf-gfhxbg.png)
 
 
 - Other than the Yelahanka Site, architects could contribute to and stress-test ideas of open-source projects like Wikihouse, Paperhouses, Bricks and fork these to the needs of the Indian market.
 
-{{ 
-	figure(
-		src="https://miro.medium.com/v2/resize:fit:4800/format:webp/1*p2jbI6MVl1nwyEdkNmY7wQ.png", 
-		alt="alt text", 
-		caption="Microhouse project via wikihouse.cc"
-	) 
-}}
+![Microhouse project via wikihouse.cc](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*p2jbI6MVl1nwyEdkNmY7wQ.png)
 
 - The entire site is a massive open canvas, and you’ll be hard-pressed to find an environment more conducive to experimentations with New Media, and work on programmable LEDs.
 
