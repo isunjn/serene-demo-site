@@ -1,5 +1,5 @@
 +++
-title = "Passive v/s active voice in programming"
+title = "Passive versus active voice in programming"
 date = 2021-02-24
 draft = false
 [extra]
