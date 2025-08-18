@@ -9,7 +9,7 @@ toc = false
 
 *Note: This is a work-in-progress*
 
-It was raksha-bandhan this weekend, and I got to spend time with family. As I've grown older, I've started realising the grounding nature of spending time with family -- they are rare relationships in that they have been continuous in my life, and I can expect for for them to persist going forward.
+It was Raksha Bandhan this weekend, and I got to spend time with family. As I've grown older, I've started realising the grounding nature of spending time with family -- they are rare relationships in that they have been continuous in my life, and I can expect for for them to persist going forward.
 
 I think my family is fairly intellectual, and oftentimes the dicussions turn to state matters and economics -- and I don't have much to contribute there. This time though, what stood out was how much AI was at the top of everybody's mind.
 
