@@ -16,7 +16,7 @@
     <article class="prose" style="font-size: 0.9em;">
       {% for post in paginator.pages | reverse %}
         <div style="margin-bottom: 1.5em;">
-          <h2 style="margin-bottom: 0.4em; font-size: 1.3em;">{{ post.title }}</h2>
+          <h2 style="margin-top: calc(var(--baseline) * 1); margin-bottom: 0.4em; font-size: 1.3em;">{{ post.title }}</h2>
           <p style="font-size: 0.85em; color: var(--text-pale-color); margin-bottom: 0.8em;">{{ post.date | date(format="%b %-d, %Y") }}</p>
           
           <div class="til-content">
