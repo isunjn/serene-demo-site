@@ -1,0 +1,106 @@
+{% extends "serene/templates/_base.html" %}
+{% import "serene/templates/macros/prose.html" as macros %}
+
+{% block page %}prose-page{% endblock page%}
+{% block title %}{{ section.title }}{% endblock title %}
+
+{% block head %}
+<link id="hl" rel="stylesheet" type="text/css" href="/hl-{% if config.extra.force_theme == "dark" %}dark{% else %}light{% endif %}.css" />
+{% endblock head %}
+
+{% block content %}
+<div id="wrapper">
+  <main>
+    {{ macros::back_link(path = get_url(path="/")) }}
+    {% include "_section_title.html" %}
+    <article class="prose" style="font-size: 0.9em;">
+      {% for post in paginator.pages | reverse %}
+        <div style="margin-bottom: 1.5em;">
+          <h2 style="margin-bottom: 0.4em; font-size: 1.3em;">{{ post.title }}</h2>
+          <p style="font-size: 0.85em; color: var(--text-pale-color); margin-bottom: 0.8em;">{{ post.date | date(format="%b %-d, %Y") }}</p>
+          
+          <div class="til-content">
+            {{ post.content | safe }}
+          </div>
+          <script>
+            (function() {
+              const content = document.currentScript.previousElementSibling;
+              const paragraphs = content.querySelectorAll('p');
+              
+              if (paragraphs.length > 1) {
+                // Create hidden content container
+                const hiddenContent = document.createElement('div');
+                hiddenContent.style.display = 'none';
+                hiddenContent.style.marginTop = '0.75em';
+                hiddenContent.classList.add('til-hidden-content');
+                
+                // Create more link
+                const moreLink = document.createElement('a');
+                moreLink.textContent = 'more';
+                moreLink.href = '#';
+                moreLink.style.color = 'var(--primary-color)';
+                moreLink.style.fontSize = '0.8em';
+                moreLink.style.textDecoration = 'none';
+                moreLink.style.marginTop = '0.5em';
+                moreLink.style.display = 'inline-block';
+                moreLink.classList.add('til-more-link');
+                
+                // Move all paragraphs except the first to hidden content
+                for (let i = 1; i < paragraphs.length; i++) {
+                  hiddenContent.appendChild(paragraphs[i].cloneNode(true));
+                  paragraphs[i].remove();
+                }
+                
+                // Move any remaining content after paragraphs
+                const remainingElements = Array.from(content.children).slice(1);
+                remainingElements.forEach(el => {
+                  hiddenContent.appendChild(el.cloneNode(true));
+                  el.remove();
+                });
+                
+                // Add click handler
+                moreLink.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  hiddenContent.style.display = 'block';
+                  moreLink.style.display = 'none';
+                });
+                
+                content.appendChild(moreLink);
+                content.appendChild(hiddenContent);
+              }
+            })();
+          </script>
+        </div>
+        {% if not loop.last %}
+          <hr style="margin: 2em 0; border: none; border-top: 1px solid var(--border-color);">
+        {% endif %}
+      {% endfor %}
+    </article>
+    
+    <!-- Pagination -->
+    {% if paginator.number_pagers > 1 %}
+    <nav class="pagination" style="margin: 2em 0; text-align: center;">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 1em;">
+        {% if paginator.previous %}
+          <a href="{{ paginator.previous }}" style="color: var(--primary-color); text-decoration: none;">← Previous</a>
+        {% else %}
+          <span style="color: var(--text-pale-color);">← Previous</span>
+        {% endif %}
+        
+        <span style="font-size: 0.8em; color: var(--text-pale-color);">
+          Page {{ paginator.current_index }} of {{ paginator.number_pagers }}
+        </span>
+        
+        {% if paginator.next %}
+          <a href="{{ paginator.next }}" style="color: var(--primary-color); text-decoration: none;">Next →</a>
+        {% else %}
+          <span style="color: var(--text-pale-color);">Next →</span>
+        {% endif %}
+      </div>
+    </nav>
+    {% endif %}
+    
+    {% include "serene/templates/_footer.html" %}
+  </main>
+</div>
+{% endblock content %}
