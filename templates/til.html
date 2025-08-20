@@ -14,66 +14,17 @@
     {{ macros::back_link(path = get_url(path="/")) }}
     {% include "_section_title.html" %}
     <article class="prose" style="font-size: 0.9em;">
-      {% for post in paginator.pages | reverse %}
-        <div style="margin-bottom: 1.5em;">
-          <h2 style="margin-top: calc(var(--baseline) * 1); margin-bottom: 0.4em; font-size: 1.3em;">{{ post.title }}</h2>
-          <p style="font-size: 0.85em; color: var(--text-pale-color); margin-bottom: 0.8em;">{{ post.date | date(format="%b %-d, %Y") }}</p>
-          
-          <div class="til-content">
+      {% for post in paginator.pages %}
+        <details style="margin: 0.6em 0; border: none; padding: 0;">
+          <summary style="cursor: pointer; font-size: 1.2em; font-weight: bold; margin-bottom: 0.4em; list-style: none; font-family: 'Merriweather', serif;">
+            <span style="font-size: 1em; color: var(--text-pale-color); margin-right: 0.25em;">▶</span>
+            {{ post.title }}
+            <span style="font-size: 0.6em; font-weight: normal; color: var(--text-pale-color); margin-left: 0.5em;">{{ post.date | date(format="%b %-d, %Y") }}</span>
+          </summary>
+          <div class="til-content" style="margin-top: 0.75em;">
             {{ post.content | safe }}
           </div>
-          <script>
-            (function() {
-              const content = document.currentScript.previousElementSibling;
-              const paragraphs = content.querySelectorAll('p');
-              
-              if (paragraphs.length > 1) {
-                // Create hidden content container
-                const hiddenContent = document.createElement('div');
-                hiddenContent.style.display = 'none';
-                hiddenContent.style.marginTop = '0.75em';
-                hiddenContent.classList.add('til-hidden-content');
-                
-                // Create more link
-                const moreLink = document.createElement('a');
-                moreLink.textContent = 'more';
-                moreLink.href = '#';
-                moreLink.style.color = 'var(--primary-color)';
-                moreLink.style.fontSize = '0.8em';
-                moreLink.style.textDecoration = 'none';
-                moreLink.style.marginTop = '0.5em';
-                moreLink.style.display = 'inline-block';
-                moreLink.classList.add('til-more-link');
-                
-                // Move all paragraphs except the first to hidden content
-                for (let i = 1; i < paragraphs.length; i++) {
-                  hiddenContent.appendChild(paragraphs[i].cloneNode(true));
-                  paragraphs[i].remove();
-                }
-                
-                // Move any remaining content after paragraphs
-                const remainingElements = Array.from(content.children).slice(1);
-                remainingElements.forEach(el => {
-                  hiddenContent.appendChild(el.cloneNode(true));
-                  el.remove();
-                });
-                
-                // Add click handler
-                moreLink.addEventListener('click', function(e) {
-                  e.preventDefault();
-                  hiddenContent.style.display = 'block';
-                  moreLink.style.display = 'none';
-                });
-                
-                content.appendChild(moreLink);
-                content.appendChild(hiddenContent);
-              }
-            })();
-          </script>
-        </div>
-        {% if not loop.last %}
-          <hr style="margin: 2em 0; border: none; border-top: 1px solid var(--border-color);">
-        {% endif %}
+        </details>
       {% endfor %}
     </article>
     

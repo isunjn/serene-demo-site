@@ -1,6 +1,6 @@
 +++
 title = "Python doctests for inline testing"
-date = 2025-08-18
+date = 2025-08-16
 +++
 
 I've been going through [Composing Programs](https://www.composingprograms.com/) by John DeNero, and have been picking up little tricks of the trade when it comes to writing code in Python.
