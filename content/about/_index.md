@@ -11,7 +11,7 @@ reaction = true
 
 I'm a living, breathing human being. This cuts to the core of what I want to talk about, which is maintaining your humanity in a rapidly changing world.
 
-I went to an elite high-school in Delhi, but rebelled against everything and was a lost soul in school. I took a wild-swing and went to architecture school, and spent 6 years figuring out I was not a good fit. I bummed around and slept in tents, tried to learn to code, and then decided I want to be a UX Designer.
+I went to high-school in Delhi, but rebelled against everything and was generally a lost soul. I took a wild-swing and went to architecture school, and spent 6 years figuring out I was not a good fit. I bummed around and slept in tents, tried to learn to code, and then decided I want to be a UX Designer.
 
 I did some part-time work as a UX Designer, and decided that I want to learn to code properly, because no one was implementing my designs. I really enjoyed learning to code, and liked it enough to make that my profession.
 
