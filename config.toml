@@ -12,6 +12,7 @@ feed_filenames = ["feed.xml"]
 taxonomies = [{ name = "tags" }, { name = "categories" }]
 
 [markdown]
+# Use the new recommended syntax for highlighting
 highlighting = true
 highlight_theme = "css"
 
