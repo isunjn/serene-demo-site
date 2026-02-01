@@ -5,15 +5,15 @@
 [build.environment]
   ZOLA_VERSION = "0.22.1"
 
-# Updated build image to the latest Ubuntu LTS
+# Updated build image
 [build.image]
-  release = "noble"  # Ubuntu 24.04 LTS
+  release = "jammy"  # Latest Ubuntu LTS version
 
 # Disable legacy prerendering
 [prerender]
   enabled = false
 
-# Performance and security headers
+# Optional: Add redirects or headers if needed
 [[headers]]
   for = "/*"
   [headers.values]
@@ -21,7 +21,7 @@
     X-XSS-Protection = "1; mode=block"
     Content-Security-Policy = "default-src 'self'; img-src 'self' data:; script-src 'self' 'unsafe-inline'"
 
-# Caching optimizations
+# Performance and caching optimizations
 [[headers]]
   for = "*.js"
   [headers.values]
