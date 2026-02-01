@@ -3,7 +3,7 @@
   publish = "public"
 
 [build.environment]
-  ZOLA_VERSION = "0.21.0"
+  ZOLA_VERSION = "0.22.1"
 
 # Updated build image to the latest Ubuntu LTS
 [build.image]
