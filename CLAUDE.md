@@ -45,4 +45,4 @@ Run `bd prime` for workflow context, or install hooks (`bd hooks install`) for a
 
 ## Agent Preferences
 
-- **No background agents.** Always run Task agents in the foreground so output is visible. Never use `run_in_background: true`.
+- **No agents.** Do not use the Task tool (neither foreground nor background). Work directly in the main conversation, collaborating with the user step by step. Tackle tasks one at a time.

@@ -1,3 +1,3 @@
 [build]
-  command = "zola build"
+  command = "cd editor && pnpm install --frozen-lockfile && pnpm build && cd .. && zola build"
   publish = "public"
