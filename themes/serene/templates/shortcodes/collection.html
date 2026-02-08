@@ -1,0 +1,23 @@
+{% import 'macros/collection.html' as marcos -%}
+
+{% set data = load_data(path="content" ~ section.path ~ file, format="toml") %}
+
+<section class="collection-wrapper">
+{% for item in data.collection %}
+  {% if item.type == "card" %}
+    {{ marcos::card(item=item) }}
+  {% elif item.type == "card_simple" %}
+    {{ marcos::card_simple(item=item) }}
+  {% elif item.type == "entry" %}
+    {{ marcos::entry(item=item) }}
+  {% elif item.type == "box" %}
+    {{ marcos::box(item=item) }}
+  {% elif item.type == "art" %}
+    {{ marcos::art(item=item) }}
+  {% elif item.type == "art_simple" %}
+    {{ marcos::art_simple(item=item) }}
+  {% elif item.type == "br" %}
+    <br />
+  {% endif %}
+{% endfor %}
+</section>

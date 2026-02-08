@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+
+{% block page %}not-found{% endblock page%}
+{% block lang %}{{ config.default_language }}{% endblock lang %}
+{% block title %}404{% endblock title %}
+
+{% block content %}
+<div class="wrapper">
+  <p class="error">
+    {{ config.extra.not_found_error_text }}
+  </p>
+  <a class="instant" href="{{ get_url(path='/') }}">{{ config.extra.not_found_recover_text }}</a>
+</div>
+{% endblock %}

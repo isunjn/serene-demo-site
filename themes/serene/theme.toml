@@ -1,0 +1,12 @@
+name = "serene"
+description = "A spiffy blog theme for zola"
+license = "MIT"
+homepage = "https://github.com/isunjn/serene"
+min_version = "0.20.0"
+demo = "https://serene-demo.pages.dev"
+
+[author]
+name = "isunjn"
+homepage = "https://github.com/isunjn"
+
+[extra]

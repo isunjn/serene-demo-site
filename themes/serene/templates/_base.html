@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html lang="{% block lang %}{% endblock lang %}">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  {% block desc %}{% endblock desc %}
+  <title>{% block title %}{% endblock title %}</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='img/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='img/favicon-16x16.png') }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='img/apple-touch-icon.png') }}">
+  {% include "_custom_font.html" %}
+  {% include "_custom_css.html" %}
+  <link rel="stylesheet" href="{{ get_url(path='main.css') }}">
+  {% block head %}{% endblock head %}
+  {% include "_head_extend.html" %}
+</head>
+
+<body class="{% block page %}{% endblock page%}{% if config.extra.force_theme == "dark" %} dark{% endif %}">
+  {% if not config.extra.force_theme %}
+  <script>
+    const theme = sessionStorage.getItem('theme');
+    const match = window.matchMedia("(prefers-color-scheme: dark)").matches
+    if ((theme && theme == 'dark') || (!theme && match)) {
+      document.body.classList.add('dark');
+      const hl = document.querySelector('link#hl');
+      if (hl) hl.href = '{{ get_url(path="hl-dark.css") }}';
+    }
+  </script>
+  {% endif %}
+  {% block content %}{% endblock content %}
+  {% block script %}{% endblock script %}
+  <script src="{{ get_url(path='js/main.js') }}"></script>
+</body>
+
+</html>
