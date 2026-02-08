@@ -10,3 +10,6 @@ static/edit/
 # Editor internals
 editor/node_modules/
 editor/.svelte-kit/
+
+# bv (beads viewer) local config and caches
+.bv/

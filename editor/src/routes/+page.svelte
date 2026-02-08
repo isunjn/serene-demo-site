@@ -2,6 +2,7 @@
 	import 'carbon-components-svelte/css/g10.css';
 	import { initAuth, getToken } from '$lib/auth';
 	import Login from '$lib/Login.svelte';
+	import PostList from '$lib/PostList.svelte';
 
 	let authenticated = $state(false);
 	let loading = $state(true);
@@ -30,5 +31,5 @@
 	<Login onauth={handleAuth} />
 {:else}
 	<h1>Blog Editor</h1>
-	<p>Authenticated. Post listing goes here.</p>
+	<PostList />
 {/if}

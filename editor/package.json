@@ -12,7 +12,10 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
 	"pnpm": {
-		"onlyBuiltDependencies": ["esbuild", "carbon-components-svelte"]
+		"onlyBuiltDependencies": [
+			"esbuild",
+			"carbon-components-svelte"
+		]
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-static": "^3.0.10",
@@ -23,5 +26,8 @@
 		"svelte-check": "^4.3.6",
 		"typescript": "^5.9.3",
 		"vite": "^7.3.1"
+	},
+	"dependencies": {
+		"smol-toml": "^1.6.0"
 	}
 }
