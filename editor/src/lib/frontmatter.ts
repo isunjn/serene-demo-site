@@ -25,7 +25,11 @@ export const DEFAULT_FRONTMATTER: Frontmatter = {
 export function parseFrontmatter(raw: string): { frontmatter: Frontmatter; body: string } {
 	const match = raw.match(/^\+\+\+\n([\s\S]*?)\n\+\+\+\n([\s\S]*)$/);
 	if (!match) throw new Error('Invalid frontmatter: missing +++ delimiters');
-	const frontmatter = parse(match[1]) as unknown as Frontmatter;
+	const parsed = parse(match[1]) as Record<string, unknown>;
+	if (parsed.date instanceof Date) {
+		parsed.date = parsed.date.toISOString().slice(0, 10);
+	}
+	const frontmatter = parsed as unknown as Frontmatter;
 	return { frontmatter, body: match[2] };
 }
 

@@ -1,3 +1,6 @@
 [build]
   command = "cd editor && pnpm install --frozen-lockfile && pnpm build && cd .. && zola build"
   publish = "public"
+
+[build.environment]
+  ZOLA_VERSION = "0.21.0"

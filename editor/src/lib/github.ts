@@ -58,7 +58,9 @@ export async function listPosts(): Promise<PostEntry[]> {
 export async function getPost(slug: string): Promise<PostContent> {
 	const res = await request(`/repos/${OWNER}/${REPO}/contents/${POSTS_PATH}/${slug}.md`);
 	const data = (await res.json()) as { content: string; sha: string };
-	const content = atob(data.content.replace(/\n/g, ''));
+	const binary = atob(data.content.replace(/\n/g, ''));
+	const bytes = Uint8Array.from(binary, (c) => c.charCodeAt(0));
+	const content = new TextDecoder().decode(bytes);
 	return { content, sha: data.sha };
 }
 
@@ -70,7 +72,7 @@ export async function savePost(
 ): Promise<{ sha: string }> {
 	const body: Record<string, string> = {
 		message: sha ? `Update ${slug}` : `Create ${slug}`,
-		content: btoa(unescape(encodeURIComponent(content)))
+		content: btoa(Array.from(new TextEncoder().encode(content), (b) => String.fromCharCode(b)).join(''))
 	};
 	if (sha) body.sha = sha;
 
