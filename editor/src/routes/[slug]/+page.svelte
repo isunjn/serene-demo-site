@@ -4,13 +4,13 @@
 		Button,
 		Checkbox,
 		InlineNotification,
-		TextArea,
 		TextInput
 	} from 'carbon-components-svelte';
 	import { serializeFrontmatter } from '$lib/frontmatter';
 	import type { Frontmatter } from '$lib/frontmatter';
 	import { savePost } from '$lib/github';
 	import { base } from '$app/paths';
+	import TipTapEditor from '$lib/TipTapEditor.svelte';
 
 	const { data } = $props();
 	// svelte-ignore state_referenced_locally
@@ -81,7 +81,7 @@
 	</section>
 
 	<section class="body">
-		<TextArea labelText="Body" bind:value={body} rows={24} />
+		<TipTapEditor bind:content={body} />
 	</section>
 
 	<footer class="actions">
