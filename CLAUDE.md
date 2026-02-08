@@ -25,7 +25,7 @@ The `serene` theme lives directly in `themes/serene/` (no submodule).
 - Originally forked from https://github.com/bharatagarwal/serene
 
 ## Gotchas
-- **Zola version**: Pinned to v0.21.0 in both `.mise.toml` (local) and `netlify.toml` (deploy). The v0.22+ config format is incompatible — don't upgrade without migrating `config.toml`.
+- **Zola version**: Pinned to v0.21.0 via `.mise.toml` (Netlify also picks this up). Deliberately staying on 0.21 — upgrading to 0.22+ requires migrating `config.toml` (highlighting fields move under `[markdown.highlighting]`) and updating 3 template files (`post.html`, `home.html`, `prose.html`). Low benefit for the effort.
 - **Highlight themes**: Custom CSS-based highlighting configured in `config.toml` — themes live in `themes/serene/highlight_themes/`.
 - **TOML frontmatter**: Posts use `+++` delimiters (TOML), not `---` (YAML).
 - **Collections are data-driven**: Each collection (books, projects, etc.) is a `.toml` file in `content/collections/`, not individual markdown files.
