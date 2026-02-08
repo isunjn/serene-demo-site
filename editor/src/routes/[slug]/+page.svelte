@@ -12,17 +12,19 @@
 	import { savePost } from '$lib/github';
 	import { base } from '$app/paths';
 
-	let { data } = $props();
+	const { data } = $props();
+	// svelte-ignore state_referenced_locally
+	const { frontmatter, body: initialBody, sha: initialSha, slug } = data;
 
-	let title = $state(data.frontmatter.title);
-	let date = $state(data.frontmatter.date);
-	let description = $state(data.frontmatter.description ?? '');
-	let draft = $state(data.frontmatter.draft ?? false);
-	let tags = $state((data.frontmatter.taxonomies?.tags ?? []).join(', '));
-	let featured = $state(data.frontmatter.extra?.featured ?? false);
-	let toc = $state(data.frontmatter.extra?.toc ?? false);
-	let body = $state(data.body);
-	let sha = $state(data.sha);
+	let title = $state(frontmatter.title);
+	let date = $state(frontmatter.date);
+	let description = $state(frontmatter.description ?? '');
+	let draft = $state(frontmatter.draft ?? false);
+	let tags = $state((frontmatter.taxonomies?.tags ?? []).join(', '));
+	let featured = $state(frontmatter.extra?.featured ?? false);
+	let toc = $state(frontmatter.extra?.toc ?? false);
+	let body = $state(initialBody);
+	let sha = $state(initialSha);
 
 	let saving = $state(false);
 	let saved = $state(false);
@@ -45,7 +47,7 @@
 		const content = serializeFrontmatter(frontmatter, body);
 
 		try {
-			const result = await savePost(data.slug, content, sha);
+			const result = await savePost(slug, content, sha);
 			sha = result.sha;
 			saved = true;
 		} catch (e) {
@@ -57,13 +59,13 @@
 </script>
 
 <svelte:head>
-	<title>Edit — {data.slug}</title>
+	<title>Edit — {slug}</title>
 </svelte:head>
 
 <div class="editor">
 	<header class="editor-header">
 		<a href="{base}/">&larr; Posts</a>
-		<h1>{data.slug}</h1>
+		<h1>{slug}</h1>
 	</header>
 
 	<section class="fields">
