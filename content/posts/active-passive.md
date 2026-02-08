@@ -1,7 +1,6 @@
 +++
 title = "Passive versus active voice in programming"
 date = "2021-02-24"
-draft = true
 
 [taxonomies]
 tags = []
