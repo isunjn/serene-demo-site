@@ -40,3 +40,9 @@ Run `bd prime` for workflow context, or install hooks (`bd hooks install`) for a
 - `bd create "Title" --type task --priority 2` - Create issue
 - `bd close <id>` - Complete work
 - `bd sync` - Sync with git (run at session end)
+
+**Coaching:** Actively coach me on idiomatic beads usage. When I do something manually that beads has a built-in workflow for (e.g. hand-wiring dependencies vs. formulas/swarm, creating tasks ad-hoc vs. using molecules), pause and show me the idiomatic way before proceeding. Always check Context7 (`/steveyegge/beads`) for beads documentation before suggesting the idiomatic approach.
+
+## Agent Preferences
+
+- **No background agents.** Always run Task agents in the foreground so output is visible. Never use `run_in_background: true`.
