@@ -29,3 +29,14 @@ The `serene` theme lives directly in `themes/serene/` (no submodule).
 - **Highlight themes**: Custom CSS-based highlighting configured in `config.toml` — themes live in `themes/serene/highlight_themes/`.
 - **TOML frontmatter**: Posts use `+++` delimiters (TOML), not `---` (YAML).
 - **Collections are data-driven**: Each collection (books, projects, etc.) is a `.toml` file in `content/collections/`, not individual markdown files.
+
+## Issue Tracking
+
+This project uses **bd (beads)** for issue tracking.
+Run `bd prime` for workflow context, or install hooks (`bd hooks install`) for auto-injection.
+
+**Quick reference:**
+- `bd ready` - Find unblocked work
+- `bd create "Title" --type task --priority 2` - Create issue
+- `bd close <id>` - Complete work
+- `bd sync` - Sync with git (run at session end)
