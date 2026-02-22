@@ -10,3 +10,5 @@ static/edit/
 # Editor internals
 editor/node_modules/
 editor/.svelte-kit/
+
+.firecrawl/
