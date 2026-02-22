@@ -14,7 +14,7 @@ toc = false
 
 # The Agent Memory Problem
 
-*Synthesized from Steve Yegge's Beads series, October–November 2025. Written by Claude Code, edited by Bharat.*
+*Synthesized from Steve Yegge's Beads series, October–November 2025. Written by Claude Opus 4.6, edited by Bharat.*
 
 If you've spent serious time with AI coding agents, you've felt it: the creeping realization that your brilliant collaborator has the long-term memory of a goldfish. Not because it's stupid — quite the opposite. It's because it dies every ten minutes.
 
