@@ -30,7 +30,7 @@ The specific numbers deserve scrutiny. They conflate three separate constraints 
 
 **Latency** increases too — longer context means slower generation — though this is manageable.
 
-**Reasoning quality** Yegge presents this very confidently: models make worse decisions as context fills somewhat contentious, but I trust Yegge’s instincts
+**Reasoning quality** Yegge presents this very confidently: models make worse decisions as context fills. Claude marked this as contentious, but I’m choosing to trust Yegge’s instincts, given the amount of practical experience he’s got.  
 
 There's also a confounding factor Yegge doesn't mention: system prompt overhead. MCP tool definitions, plugin instructions, hooks, and onboarding docs all consume context before you type a single message. One developer found that convenience features alone inflated initial usage from 19% to 43% of the window. Yegge's setup — Beads, MCP Agent Mail, Playwright, custom AGENTS.md — would eat a substantial share of the window at startup, so his "usable 10–15% of the total" may really be 10–15% of what remains after tooling claims its cut.
 
