@@ -47,7 +47,7 @@
       .title-text { font: bold 19px sans-serif; fill: #222; text-anchor: middle; dominant-baseline: central; }
       .subtitle-text { font: 12px sans-serif; fill: #666; text-anchor: middle; dominant-baseline: central; }
       .pillar-label { font: bold 15px sans-serif; fill: #333; text-anchor: middle; dominant-baseline: central; }
-      .annotation { font: 11px sans-serif; fill: #D55E00; text-anchor: middle; dominant-baseline: central; }
+      .annotation { font: 11px sans-serif; fill: #D55E00; dominant-baseline: central; }
       .file-label { font: 10px sans-serif; fill: #888; text-anchor: middle; dominant-baseline: central; }
 
       /* Shape styles */
@@ -131,10 +131,10 @@
     <path d="M 225,260 L 240,275 L 248,270" class="crack-line-thin" stroke-opacity="0.5"/>
   </g>
 
-  <!-- Annotation for left pillar -->
-  <text class="annotation" x="210" y="132">
-    <tspan x="210" dy="0">Too heavyweight</tspan>
-    <tspan x="210" dy="14">for desktop tools</tspan>
+  <!-- Annotation for left pillar (to the left of pillar) -->
+  <text class="annotation" x="125" y="270" text-anchor="end">
+    <tspan x="125" dy="0">Too heavyweight</tspan>
+    <tspan x="125" dy="14">for desktop tools</tspan>
   </text>
 
   <!-- Right pillar: Plan Orchestration -->
@@ -163,10 +163,10 @@
     <path d="M 505,270 L 520,285 L 530,278" class="crack-line-thin" stroke-opacity="0.5"/>
   </g>
 
-  <!-- Annotation for right pillar -->
-  <text class="annotation" x="490" y="132">
-    <tspan x="490" dy="0">605 markdown files</tspan>
-    <tspan x="490" dy="14">70k LOC of plans</tspan>
+  <!-- Annotation for right pillar (to the right of pillar) -->
+  <text class="annotation" x="575" y="270" text-anchor="start">
+    <tspan x="575" dy="0">605 markdown files</tspan>
+    <tspan x="575" dy="14">70k LOC of plans</tspan>
   </text>
 
   <!-- ==================== FOREGROUND: TOP PLATFORM ==================== -->
