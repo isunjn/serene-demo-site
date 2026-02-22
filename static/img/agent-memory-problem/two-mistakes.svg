@@ -1,0 +1,226 @@
+<svg viewBox="0 0 700 450" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="title desc">
+  <title id="title">Two Fatal Architectural Mistakes</title>
+  <desc id="desc">
+    A structural diagram showing the vibecoder project (350k LOC TypeScript)
+    as a crumbling platform supported by two failing pillars: Temporal.io
+    (too heavyweight) and Plan Orchestration (605 markdown files, 70k LOC).
+    Both pillars bear red X marks and crack lines. Scattered small rectangles
+    below represent the 605 dead plan files.
+  </desc>
+
+  <defs>
+    <!-- Compatible drop shadow filter -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="2" dy="3" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Lighter shadow for scattered files -->
+    <filter id="shadow-light" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1.5" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.1" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Diagonal hatch pattern for crumbling area -->
+    <pattern id="crack-hatch" width="6" height="6"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6"
+            stroke="#D55E00" stroke-width="0.8" stroke-opacity="0.3"/>
+    </pattern>
+
+    <style>
+      /* Text styles */
+      .title-text { font: bold 19px sans-serif; fill: #222; text-anchor: middle; dominant-baseline: central; }
+      .subtitle-text { font: 12px sans-serif; fill: #666; text-anchor: middle; dominant-baseline: central; }
+      .pillar-label { font: bold 15px sans-serif; fill: #333; text-anchor: middle; dominant-baseline: central; }
+      .annotation { font: 11px sans-serif; fill: #D55E00; text-anchor: middle; dominant-baseline: central; }
+      .file-label { font: 10px sans-serif; fill: #888; text-anchor: middle; dominant-baseline: central; }
+
+      /* Shape styles */
+      .platform { fill: #f5f0eb; stroke: #999; stroke-width: 2; }
+      .pillar { fill: #d6cfc7; stroke: #999; stroke-width: 1.5; }
+      .crack-line { stroke: #D55E00; stroke-width: 2; fill: none; stroke-linecap: round; }
+      .crack-line-thin { stroke: #D55E00; stroke-width: 1.2; fill: none; stroke-linecap: round; }
+      .plan-file { fill: #e8e4df; stroke: #ccc; stroke-width: 0.8; }
+    </style>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect x="0" y="0" width="700" height="450" fill="#fafaf8"/>
+
+  <!-- Subtle ground line -->
+  <line x1="40" y1="380" x2="660" y2="380" stroke="#ddd" stroke-width="1"/>
+
+  <!-- ==================== SCATTERED PLAN FILES (behind pillars) ==================== -->
+  <!-- 605 dead markdown plan files, represented as small scattered rectangles -->
+  <!-- Row 1: near base of pillars, spanning full width -->
+  <rect class="plan-file" x="72" y="348" width="22" height="16" rx="1" transform="rotate(-8, 83, 356)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="108" y="355" width="20" height="14" rx="1" transform="rotate(5, 118, 362)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="148" y="350" width="24" height="15" rx="1" transform="rotate(-12, 160, 358)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="190" y="358" width="18" height="13" rx="1" transform="rotate(3, 199, 365)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="228" y="346" width="22" height="16" rx="1" transform="rotate(-6, 239, 354)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="270" y="354" width="20" height="14" rx="1" transform="rotate(10, 280, 361)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="310" y="350" width="24" height="15" rx="1" transform="rotate(-4, 322, 358)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="355" y="356" width="18" height="13" rx="1" transform="rotate(7, 364, 363)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="395" y="348" width="22" height="16" rx="1" transform="rotate(-9, 406, 356)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="438" y="352" width="20" height="14" rx="1" transform="rotate(6, 448, 359)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="478" y="347" width="24" height="15" rx="1" transform="rotate(-11, 490, 355)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="520" y="355" width="18" height="13" rx="1" transform="rotate(4, 529, 362)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="555" y="349" width="22" height="16" rx="1" transform="rotate(-7, 566, 357)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="590" y="354" width="20" height="14" rx="1" transform="rotate(8, 600, 361)" filter="url(#shadow-light)"/>
+
+  <!-- Row 2: lower, more scattered -->
+  <rect class="plan-file" x="55" y="370" width="20" height="14" rx="1" transform="rotate(12, 65, 377)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="95" y="374" width="18" height="13" rx="1" transform="rotate(-15, 104, 381)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="135" y="368" width="22" height="16" rx="1" transform="rotate(6, 146, 376)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="180" y="375" width="20" height="14" rx="1" transform="rotate(-3, 190, 382)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="245" y="370" width="18" height="13" rx="1" transform="rotate(14, 254, 377)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="340" y="372" width="22" height="16" rx="1" transform="rotate(-10, 351, 380)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="420" y="368" width="20" height="14" rx="1" transform="rotate(9, 430, 375)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="500" y="374" width="18" height="13" rx="1" transform="rotate(-13, 509, 381)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="560" y="370" width="22" height="16" rx="1" transform="rotate(5, 571, 377)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="615" y="372" width="20" height="14" rx="1" transform="rotate(-8, 625, 379)" filter="url(#shadow-light)"/>
+
+  <!-- Row 3: bottom, partially cut off at ground line -->
+  <rect class="plan-file" x="80" y="390" width="20" height="14" rx="1" transform="rotate(-6, 90, 397)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="160" y="393" width="22" height="16" rx="1" transform="rotate(11, 171, 401)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="290" y="388" width="18" height="13" rx="1" transform="rotate(-14, 299, 395)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="380" y="392" width="22" height="16" rx="1" transform="rotate(7, 391, 400)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="465" y="389" width="20" height="14" rx="1" transform="rotate(-9, 475, 396)" filter="url(#shadow-light)"/>
+  <rect class="plan-file" x="540" y="393" width="18" height="13" rx="1" transform="rotate(13, 549, 400)" filter="url(#shadow-light)"/>
+
+  <!-- Scattered files label -->
+  <text class="file-label" x="350" y="430">605 dead markdown plan files</text>
+
+  <!-- ==================== MIDGROUND: PILLARS ==================== -->
+
+  <!-- Left pillar: Temporal.io -->
+  <!-- Pillar body: x=140 y=160 w=140 h=180, centered at x=210 -->
+  <g aria-label="Left pillar: Temporal.io">
+    <rect class="pillar" x="140" y="160" width="140" height="180" rx="3" filter="url(#shadow)"/>
+
+    <!-- Pillar capital (top decorative block, 8px wider each side) -->
+    <rect x="132" y="152" width="156" height="16" rx="2" fill="#c8c0b5" stroke="#999" stroke-width="1.5"/>
+
+    <!-- Pillar base block -->
+    <rect x="132" y="332" width="156" height="16" rx="2" fill="#c8c0b5" stroke="#999" stroke-width="1.5"/>
+
+    <!-- Pillar label -->
+    <text class="pillar-label" x="210" y="238">Temporal.io</text>
+
+    <!-- Red X through pillar body -->
+    <line x1="158" y1="185" x2="262" y2="315" class="crack-line" stroke-width="3" stroke-opacity="0.7"/>
+    <line x1="262" y1="185" x2="158" y2="315" class="crack-line" stroke-width="3" stroke-opacity="0.7"/>
+
+    <!-- Crack lines radiating from X intersection -->
+    <path d="M 195,230 L 180,215 L 170,220" class="crack-line-thin" stroke-opacity="0.5"/>
+    <path d="M 225,260 L 240,275 L 248,270" class="crack-line-thin" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Annotation for left pillar -->
+  <text class="annotation" x="210" y="132">
+    <tspan x="210" dy="0">Too heavyweight</tspan>
+    <tspan x="210" dy="14">for desktop tools</tspan>
+  </text>
+
+  <!-- Right pillar: Plan Orchestration -->
+  <!-- Pillar body: x=420 y=160 w=140 h=180, centered at x=490 -->
+  <g aria-label="Right pillar: Plan Orchestration">
+    <rect class="pillar" x="420" y="160" width="140" height="180" rx="3" filter="url(#shadow)"/>
+
+    <!-- Pillar capital -->
+    <rect x="412" y="152" width="156" height="16" rx="2" fill="#c8c0b5" stroke="#999" stroke-width="1.5"/>
+
+    <!-- Pillar base block -->
+    <rect x="412" y="332" width="156" height="16" rx="2" fill="#c8c0b5" stroke="#999" stroke-width="1.5"/>
+
+    <!-- Pillar label (two lines for "Plan Orchestration") -->
+    <text class="pillar-label" x="490" y="230">
+      <tspan x="490" dy="0">Plan</tspan>
+      <tspan x="490" dy="18">Orchestration</tspan>
+    </text>
+
+    <!-- Red X through pillar body -->
+    <line x1="438" y1="185" x2="542" y2="315" class="crack-line" stroke-width="3" stroke-opacity="0.7"/>
+    <line x1="542" y1="185" x2="438" y2="315" class="crack-line" stroke-width="3" stroke-opacity="0.7"/>
+
+    <!-- Crack lines radiating from X intersection -->
+    <path d="M 475,220 L 460,205 L 452,210" class="crack-line-thin" stroke-opacity="0.5"/>
+    <path d="M 505,270 L 520,285 L 530,278" class="crack-line-thin" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Annotation for right pillar -->
+  <text class="annotation" x="490" y="132">
+    <tspan x="490" dy="0">605 markdown files</tspan>
+    <tspan x="490" dy="14">70k LOC of plans</tspan>
+  </text>
+
+  <!-- ==================== FOREGROUND: TOP PLATFORM ==================== -->
+
+  <!-- The vibecoder platform sitting on top of the pillars -->
+  <!-- Wide box: x=70 y=60 w=560 h=80 -->
+  <g aria-label="Vibecoder platform, crumbling">
+    <!-- Main platform rectangle -->
+    <rect class="platform" x="70" y="60" width="560" height="80" rx="4" filter="url(#shadow)"/>
+
+    <!-- Hatch overlay to suggest structural weakness -->
+    <rect x="70" y="60" width="560" height="80" rx="4" fill="url(#crack-hatch)" opacity="0.4"/>
+
+    <!-- Platform labels -->
+    <text class="title-text" x="350" y="88">vibecoder</text>
+    <text class="subtitle-text" x="350" y="112">350k LOC TypeScript</text>
+
+    <!-- Crack 1: top-left edge, jagged zigzag path -->
+    <path d="M 120,60 L 128,75 L 140,68 L 155,82 L 162,72 L 175,80"
+          class="crack-line" stroke-opacity="0.8"/>
+
+    <!-- Crack 2: top-right edge -->
+    <path d="M 530,60 L 538,78 L 548,65 L 560,80 L 572,70 L 582,85"
+          class="crack-line" stroke-opacity="0.8"/>
+
+    <!-- Crack 3: bottom edge, center-left -->
+    <path d="M 200,140 L 210,128 L 222,137 L 235,125 L 242,135"
+          class="crack-line" stroke-opacity="0.6"/>
+
+    <!-- Crack 4: bottom edge, center-right -->
+    <path d="M 460,140 L 470,126 L 480,138 L 495,124 L 505,132"
+          class="crack-line" stroke-opacity="0.6"/>
+
+    <!-- Small debris fragments falling from bottom of platform -->
+    <rect x="215" y="144" width="12" height="8" rx="1" fill="#e8e0d6" stroke="#bbb" stroke-width="0.8"
+          transform="rotate(-15, 221, 148)" opacity="0.7"/>
+    <rect x="475" y="143" width="10" height="7" rx="1" fill="#e8e0d6" stroke="#bbb" stroke-width="0.8"
+          transform="rotate(12, 480, 147)" opacity="0.7"/>
+    <rect x="245" y="148" width="8" height="6" rx="1" fill="#e8e0d6" stroke="#bbb" stroke-width="0.8"
+          transform="rotate(-20, 249, 151)" opacity="0.5"/>
+    <rect x="500" y="147" width="9" height="6" rx="1" fill="#e8e0d6" stroke="#bbb" stroke-width="0.8"
+          transform="rotate(18, 505, 150)" opacity="0.5"/>
+  </g>
+
+  <!-- ==================== FOREGROUND: CONNECTING DETAILS ==================== -->
+
+  <!-- Dashed lines from platform bottom to pillar capitals (load-bearing gap) -->
+  <line x1="210" y1="140" x2="210" y2="152" stroke="#999" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <line x1="490" y1="140" x2="490" y2="152" stroke="#999" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Diagram title at very top -->
+  <text x="350" y="30" text-anchor="middle" dominant-baseline="central"
+        font-family="sans-serif" font-size="13" fill="#888" font-style="italic">
+    Two fatal decisions
+  </text>
+
+</svg>

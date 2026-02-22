@@ -1,0 +1,328 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">Beads-Powered Session Workflow</title>
+  <desc id="diagram-desc">
+    A circular workflow diagram showing six steps in the Beads-powered
+    agent session cycle: What's next, Work on issue, File discoveries,
+    Close issue, Land the plane, and Kill session. Arrows connect each
+    step clockwise, with the final step looping back to the first via
+    a "New agent" handoff. The center shows that Beads carries context
+    across the entire loop.
+  </desc>
+
+  <defs>
+    <!-- Drop shadow (compatible feGaussianBlur pattern) -->
+    <filter id="shadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.2" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow for center icon -->
+    <filter id="center-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Arrowhead marker for flow connections -->
+    <marker id="flow-arrow" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#555"/>
+    </marker>
+
+    <!-- Special arrowhead for the "New agent" return arc -->
+    <marker id="return-arrow" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#D55E00"/>
+    </marker>
+
+    <!-- Radial gradient for background -->
+    <radialGradient id="bg-gradient" cx="50%" cy="50%" r="60%">
+      <stop offset="0%"   stop-color="#f8fbff"/>
+      <stop offset="100%" stop-color="#eaf0f7"/>
+    </radialGradient>
+
+    <!-- Radial gradient for center circle -->
+    <radialGradient id="center-gradient" cx="40%" cy="35%" r="65%">
+      <stop offset="0%"   stop-color="#56B4E9" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0072B2" stop-opacity="0.95"/>
+    </radialGradient>
+
+    <style>
+      /* Node styles */
+      .node-rect {
+        rx: 10;
+        stroke-width: 2;
+        filter: url(#shadow);
+      }
+      .node-blue {
+        fill: #e8f4fc;
+        stroke: #0072B2;
+      }
+      .node-green {
+        fill: #e6f5f0;
+        stroke: #009E73;
+      }
+      .node-entry {
+        fill: #0072B2;
+        stroke: #004a75;
+        stroke-width: 2.5;
+      }
+
+      /* Text styles */
+      .node-label {
+        font-family: sans-serif;
+        font-size: 12.5px;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #1a1a1a;
+      }
+      .node-label-light {
+        font-family: sans-serif;
+        font-size: 13.5px;
+        font-weight: bold;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #ffffff;
+      }
+      .node-num {
+        font-family: sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #0072B2;
+      }
+      .node-num-light {
+        font-family: sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: rgba(255,255,255,0.7);
+      }
+      .node-subtitle {
+        font-family: sans-serif;
+        font-size: 9.5px;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #666;
+      }
+      .node-subtitle-light {
+        font-family: sans-serif;
+        font-size: 9.5px;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: rgba(255,255,255,0.65);
+      }
+
+      /* Connection styles */
+      .flow-arc {
+        stroke: #555;
+        stroke-width: 2;
+        fill: none;
+        marker-end: url(#flow-arrow);
+      }
+      .return-arc {
+        stroke: #D55E00;
+        stroke-width: 2.5;
+        stroke-dasharray: 8, 4;
+        fill: none;
+        marker-end: url(#return-arrow);
+      }
+
+      /* Center styles */
+      .center-title {
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #ffffff;
+      }
+      .center-subtitle {
+        font-family: sans-serif;
+        font-size: 9.5px;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: rgba(255,255,255,0.8);
+      }
+
+      /* Annotation */
+      .return-label {
+        font-family: sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: #D55E00;
+      }
+
+      /* Diagram title */
+      .diagram-title {
+        font-family: sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: #1a1a1a;
+      }
+    </style>
+  </defs>
+
+  <!-- =============================== -->
+  <!-- BACKGROUND                      -->
+  <!-- =============================== -->
+  <rect width="600" height="600" fill="url(#bg-gradient)"/>
+
+  <!-- Title -->
+  <text x="300" y="32" class="diagram-title">Session Workflow Loop</text>
+
+  <!-- =============================== -->
+  <!-- MIDGROUND: orbit ring           -->
+  <!-- =============================== -->
+  <!-- Faint circular orbit path to guide the eye -->
+  <!-- Center at (300, 318), radius 175 -->
+  <circle cx="300" cy="318" r="175" fill="none"
+          stroke="#c8d8e8" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- =============================== -->
+  <!-- MIDGROUND: curved flow arrows   -->
+  <!-- =============================== -->
+  <!--
+    6 nodes on a circle: center (300, 318), R=175
+    Positions (top=12 o'clock, clockwise):
+      0: (300.0, 143.0)   "What's next?"
+      1: (451.6, 230.5)   "Work on issue"
+      2: (451.6, 405.5)   "File discoveries"
+      3: (300.0, 493.0)   "Close issue"
+      4: (148.4, 405.5)   "Land the plane"
+      5: (148.4, 230.5)   "Kill session"
+
+    Arc arrows connect adjacent nodes along the circle.
+    Each arc is drawn slightly inward (R~155) so it doesn't
+    overlap the node shapes. We use quadratic beziers aimed
+    at the circle center to create the curvature.
+  -->
+
+  <!-- Arrow 0->1: "What's next?" to "Work on issue" -->
+  <path class="flow-arc"
+        d="M 340,160 Q 410,175 435,215"
+        />
+
+  <!-- Arrow 1->2: "Work on issue" to "File discoveries" -->
+  <path class="flow-arc"
+        d="M 462,260 Q 475,330 462,375"
+        />
+
+  <!-- Arrow 2->3: "File discoveries" to "Close issue" -->
+  <path class="flow-arc"
+        d="M 435,425 Q 400,465 345,480"
+        />
+
+  <!-- Arrow 3->4: "Close issue" to "Land the plane" -->
+  <path class="flow-arc"
+        d="M 256,480 Q 195,465 165,425"
+        />
+
+  <!-- Arrow 4->5: "Land the plane" to "Kill session" -->
+  <path class="flow-arc"
+        d="M 138,375 Q 125,330 138,260"
+        />
+
+  <!-- Arrow 5->0: "Kill session" back to "What's next?" (special return arc) -->
+  <path class="return-arc"
+        d="M 165,215 Q 200,170 260,155"
+        />
+
+  <!-- "New agent" label on the return arc -->
+  <text x="190" y="162" class="return-label"
+        transform="rotate(-28, 190, 162)">New agent</text>
+
+  <!-- =============================== -->
+  <!-- FOREGROUND: center hub          -->
+  <!-- =============================== -->
+  <g filter="url(#center-glow)">
+    <circle cx="300" cy="318" r="52" fill="url(#center-gradient)"/>
+  </g>
+  <!-- Beads icon: three small connected circles -->
+  <g opacity="0.35">
+    <circle cx="286" cy="305" r="5" fill="#fff"/>
+    <circle cx="300" cy="296" r="5" fill="#fff"/>
+    <circle cx="314" cy="305" r="5" fill="#fff"/>
+    <line x1="290" y1="303" x2="297" y2="298" stroke="#fff" stroke-width="1.5"/>
+    <line x1="303" y1="298" x2="310" y2="303" stroke="#fff" stroke-width="1.5"/>
+    <line x1="288" y1="308" x2="312" y2="308" stroke="#fff" stroke-width="1.5" stroke-dasharray="2,2"/>
+  </g>
+  <text x="300" y="322" class="center-title">Beads</text>
+  <text x="300" y="338" class="center-subtitle">carries context</text>
+
+  <!-- =============================== -->
+  <!-- FOREGROUND: workflow nodes      -->
+  <!-- =============================== -->
+
+  <!-- Node 0: "What's next?" at top — entry point, emphasized -->
+  <g transform="translate(300, 143)">
+    <rect class="node-rect node-entry"
+          x="-62" y="-30" width="124" height="60"/>
+    <text class="node-num-light" x="0" y="-17">1</text>
+    <text class="node-label-light" x="0" y="1">What's next?</text>
+    <text class="node-subtitle-light" x="0" y="16">query bd ready</text>
+  </g>
+
+  <!-- Node 1: "Work on issue" at upper-right -->
+  <g transform="translate(451.6, 230.5)">
+    <rect class="node-rect node-blue"
+          x="-58" y="-27" width="116" height="54"/>
+    <text class="node-num" x="0" y="-14">2</text>
+    <text class="node-label" x="0" y="3">Work on issue</text>
+    <text class="node-subtitle" x="0" y="16">tackle one issue</text>
+  </g>
+
+  <!-- Node 2: "File discoveries" at lower-right -->
+  <g transform="translate(451.6, 405.5)">
+    <rect class="node-rect node-blue"
+          x="-58" y="-27" width="116" height="54"/>
+    <text class="node-num" x="0" y="-14">3</text>
+    <text class="node-label" x="0" y="3">File discoveries</text>
+    <text class="node-subtitle" x="0" y="16">create new issues</text>
+  </g>
+
+  <!-- Node 3: "Close issue" at bottom — green for completion -->
+  <g transform="translate(300, 493)">
+    <rect class="node-rect node-green"
+          x="-58" y="-27" width="116" height="54"/>
+    <text class="node-num" x="0" y="-14" style="fill:#009E73">4</text>
+    <text class="node-label" x="0" y="3">Close issue</text>
+    <text class="node-subtitle" x="0" y="16">mark complete</text>
+  </g>
+
+  <!-- Node 4: "Land the plane" at lower-left — green for hygiene -->
+  <g transform="translate(148.4, 405.5)">
+    <rect class="node-rect node-green"
+          x="-58" y="-27" width="116" height="54"/>
+    <text class="node-num" x="0" y="-14" style="fill:#009E73">5</text>
+    <text class="node-label" x="0" y="3">Land the plane</text>
+    <text class="node-subtitle" x="0" y="16">tests, git, cleanup</text>
+  </g>
+
+  <!-- Node 5: "Kill session" at upper-left -->
+  <g transform="translate(148.4, 230.5)">
+    <rect class="node-rect node-blue"
+          x="-58" y="-27" width="116" height="54"/>
+    <text class="node-num" x="0" y="-14">6</text>
+    <text class="node-label" x="0" y="3">Kill session</text>
+    <text class="node-subtitle" x="0" y="16">agent dies cleanly</text>
+  </g>
+
+</svg>

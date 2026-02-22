@@ -1,0 +1,403 @@
+<svg viewBox="0 0 900 450" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="dia-title dia-desc">
+  <title id="dia-title">Markdown Plans vs. Structured Issue Graph</title>
+  <desc id="dia-desc">
+    Side-by-side comparison showing chaotic scattered markdown files with
+    confused cross-references on the left, versus a clean dependency graph
+    of structured issues color-coded by status on the right.
+  </desc>
+
+  <defs>
+    <!-- Compatible drop shadow (feGaussianBlur pattern) -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Lighter shadow for the small file icons -->
+    <filter id="shadow-light" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1.5" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Arrowhead for confused dashed references (left side) -->
+    <marker id="arrow-confused" viewBox="0 0 10 10"
+            refX="10" refY="5" markerWidth="6" markerHeight="6"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#D55E00" fill-opacity="0.5"/>
+    </marker>
+
+    <!-- Arrowhead for clean dependency arrows (right side) -->
+    <marker id="arrow-dep" viewBox="0 0 10 10"
+            refX="10" refY="5" markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#555"/>
+    </marker>
+
+    <!-- Diagonal hatch pattern for chaos background -->
+    <pattern id="chaos-hatch" width="12" height="12"
+             patternUnits="userSpaceOnUse" patternTransform="rotate(30)">
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#D55E00" stroke-width="0.4" stroke-opacity="0.12"/>
+    </pattern>
+
+    <style>
+      /* Typography */
+      .title       { font: bold 18px sans-serif; fill: #222; }
+      .section-lbl { font: bold 15px sans-serif; text-anchor: middle; }
+      .file-name   { font: 10px sans-serif; fill: #553300; }
+      .issue-id    { font: bold 11px sans-serif; fill: #fff; }
+      .issue-title { font: 11px sans-serif; fill: #333; }
+      .legend-text { font: 11px sans-serif; fill: #444; }
+      .dep-label   { font: 9px sans-serif; fill: #666; text-anchor: middle; }
+      .annotation  { font: italic 11px sans-serif; fill: #777; text-anchor: middle; }
+
+      /* Issue node status colors (Okabe-Ito derived) */
+      .status-done    { fill: #009E73; } /* Bluish Green */
+      .status-ready   { fill: #0072B2; } /* Blue */
+      .status-blocked { fill: #888; }    /* Gray */
+    </style>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- BACKGROUND                                   -->
+  <!-- ============================================ -->
+
+  <!-- Overall background -->
+  <rect x="0" y="0" width="900" height="450" fill="#FAFAFA" rx="4"/>
+
+  <!-- Left side warm chaos tint -->
+  <rect x="0" y="0" width="440" height="450" fill="#FFF5EE" rx="4"/>
+  <rect x="0" y="0" width="440" height="450" fill="url(#chaos-hatch)" rx="4"/>
+
+  <!-- Right side cool calm tint -->
+  <rect x="460" y="0" width="440" height="450" fill="#F0F7FC" rx="4"/>
+
+  <!-- ============================================ -->
+  <!-- DIVIDER                                      -->
+  <!-- ============================================ -->
+
+  <line x1="450" y1="30" x2="450" y2="420"
+        stroke="#999" stroke-width="1.5" stroke-dasharray="6,4"/>
+
+  <!-- ============================================ -->
+  <!-- LEFT SIDE: Markdown Plans (chaos)            -->
+  <!-- ============================================ -->
+
+  <!-- Section label -->
+  <text x="220" y="38" class="section-lbl" fill="#D55E00">Markdown Plans</text>
+  <line x1="120" y1="47" x2="320" y2="47" stroke="#D55E00" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!-- File icon template: a small page shape with dog-ear -->
+  <!-- File 1: plan-v3.md at (55, 75), rotated -4deg -->
+  <g transform="translate(55, 75) rotate(-4)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <!-- Fake text lines inside document -->
+    <line x1="8" y1="18" x2="50" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="55" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="32" x2="40" y2="32" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="39" x2="48" y2="39" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="60" y="140" class="file-name" transform="rotate(-4, 60, 140)">plan-v3.md</text>
+
+  <!-- File 2: todo-2.md at (175, 62), rotated 5deg -->
+  <g transform="translate(175, 62) rotate(5)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <line x1="8" y1="18" x2="45" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="52" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="32" x2="38" y2="32" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="195" y="126" class="file-name" transform="rotate(5, 195, 126)">todo-2.md</text>
+
+  <!-- File 3: phase-4-cleanup.md at (310, 80), rotated -7deg -->
+  <g transform="translate(310, 80) rotate(-7)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <line x1="8" y1="18" x2="50" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="48" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="32" x2="55" y2="32" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="39" x2="35" y2="39" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="320" y="145" class="file-name" transform="rotate(-7, 320, 145)">phase-4-cleanup.md</text>
+
+  <!-- File 4: ROADMAP.md at (30, 175), rotated 3deg -->
+  <g transform="translate(30, 175) rotate(3)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <line x1="8" y1="18" x2="50" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="42" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="32" x2="56" y2="32" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="42" y="240" class="file-name" transform="rotate(3, 42, 240)">ROADMAP.md</text>
+
+  <!-- File 5: design-notes-FINAL.md at (160, 160), rotated -2deg -->
+  <g transform="translate(160, 160) rotate(-2)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <line x1="8" y1="18" x2="52" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="46" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="32" x2="38" y2="32" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="39" x2="54" y2="39" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="160" y="224" class="file-name" transform="rotate(-2, 160, 224)">design-notes-FINAL.md</text>
+
+  <!-- File 6: backlog-sept.md at (305, 185), rotated 6deg -->
+  <g transform="translate(305, 185) rotate(6)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <line x1="8" y1="18" x2="48" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="55" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="32" x2="40" y2="32" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="320" y="250" class="file-name" transform="rotate(6, 320, 250)">backlog-sept.md</text>
+
+  <!-- File 7: ideas-v2-DRAFT.md at (80, 280), rotated -5deg -->
+  <g transform="translate(80, 280) rotate(-5)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <line x1="8" y1="18" x2="50" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="44" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="88" y="345" class="file-name" transform="rotate(-5, 88, 345)">ideas-v2-DRAFT.md</text>
+
+  <!-- File 8: sprint-plan.md at (230, 270), rotated 4deg -->
+  <g transform="translate(230, 270) rotate(4)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <line x1="8" y1="18" x2="46" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="52" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="32" x2="38" y2="32" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="245" y="335" class="file-name" transform="rotate(4, 245, 335)">sprint-plan.md</text>
+
+  <!-- File 9: priorities-Q3.md at (350, 290), rotated -3deg -->
+  <g transform="translate(350, 290) rotate(-3)" filter="url(#shadow-light)">
+    <path d="M 0 0 L 58 0 L 70 12 L 70 50 L 0 50 Z" fill="#FFF3E0" stroke="#E69F00" stroke-width="1.2"/>
+    <path d="M 58 0 L 58 12 L 70 12" fill="#FDDCAA" stroke="#E69F00" stroke-width="1.2"/>
+    <line x1="8" y1="18" x2="48" y2="18" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="25" x2="55" y2="25" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="32" x2="42" y2="32" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+    <line x1="8" y1="39" x2="50" y2="39" stroke="#D4A574" stroke-width="1.5" stroke-opacity="0.4"/>
+  </g>
+  <text x="358" y="356" class="file-name" transform="rotate(-3, 358, 356)">priorities-Q3.md</text>
+
+  <!-- Confused dashed reference arrows between files (left side) -->
+  <!-- plan-v3 to todo-2 -->
+  <path d="M 118,100 C 140,85 165,82 185,88"
+        stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.45" fill="none"
+        stroke-dasharray="4,3" marker-end="url(#arrow-confused)"/>
+  <!-- todo-2 to phase-4-cleanup -->
+  <path d="M 240,95 C 268,90 295,88 315,95"
+        stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.45" fill="none"
+        stroke-dasharray="4,3" marker-end="url(#arrow-confused)"/>
+  <!-- ROADMAP to design-notes-FINAL -->
+  <path d="M 95,200 C 115,190 140,185 165,185"
+        stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.45" fill="none"
+        stroke-dasharray="4,3" marker-end="url(#arrow-confused)"/>
+  <!-- design-notes-FINAL to backlog-sept -->
+  <path d="M 228,195 C 255,195 280,198 310,205"
+        stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.45" fill="none"
+        stroke-dasharray="4,3" marker-end="url(#arrow-confused)"/>
+  <!-- plan-v3 to design-notes-FINAL (long confused ref) -->
+  <path d="M 85,125 C 90,145 130,160 165,170"
+        stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.35" fill="none"
+        stroke-dasharray="4,3" marker-end="url(#arrow-confused)"/>
+  <!-- sprint-plan to ideas-v2-DRAFT (back reference) -->
+  <path d="M 235,295 C 200,290 165,295 148,300"
+        stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.45" fill="none"
+        stroke-dasharray="4,3" marker-end="url(#arrow-confused)"/>
+  <!-- backlog-sept to priorities-Q3 -->
+  <path d="M 355,240 C 360,260 362,275 368,290"
+        stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.45" fill="none"
+        stroke-dasharray="4,3" marker-end="url(#arrow-confused)"/>
+  <!-- phase-4-cleanup to sprint-plan (confused cross-ref) -->
+  <path d="M 340,135 C 320,180 290,230 270,270"
+        stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.35" fill="none"
+        stroke-dasharray="4,3" marker-end="url(#arrow-confused)"/>
+
+  <!-- Question marks scattered for confusion -->
+  <text x="140" y="155" font-size="16" fill="#D55E00" fill-opacity="0.5" font-family="sans-serif" font-weight="bold">?</text>
+  <text x="275" y="165" font-size="14" fill="#D55E00" fill-opacity="0.4" font-family="sans-serif" font-weight="bold">?</text>
+  <text x="190" y="260" font-size="18" fill="#D55E00" fill-opacity="0.45" font-family="sans-serif" font-weight="bold">?</text>
+  <text x="365" y="178" font-size="13" fill="#D55E00" fill-opacity="0.4" font-family="sans-serif" font-weight="bold">?</text>
+
+  <!-- Chaos annotation -->
+  <text x="220" y="405" class="annotation" fill="#D55E00">"Which file is current?"</text>
+
+  <!-- ============================================ -->
+  <!-- RIGHT SIDE: Structured Issue Graph           -->
+  <!-- ============================================ -->
+
+  <!-- Section label -->
+  <text x="675" y="38" class="section-lbl" fill="#0072B2">Issue Graph</text>
+  <line x1="590" y1="47" x2="760" y2="47" stroke="#0072B2" stroke-width="1" stroke-opacity="0.4"/>
+
+  <!--
+    Issue node layout: clean DAG (directed acyclic graph)
+    Nodes in 3 tiers:
+      Tier 1 (top):     bd-10 (done), bd-11 (done)
+      Tier 2 (middle):  bd-12 (done), bd-15 (ready), bd-16 (ready)
+      Tier 3 (bottom):  bd-18 (blocked), bd-20 (blocked), bd-21 (ready)
+    Each node: rounded rect 130x42 with colored status badge + title
+  -->
+
+  <!-- Tier 1 -->
+  <!-- bd-10: Auth service (done), center x=580 -->
+  <g filter="url(#shadow)">
+    <rect x="515" y="70" width="130" height="42" rx="8" fill="#fff" stroke="#009E73" stroke-width="1.8"/>
+  </g>
+  <!-- Status badge -->
+  <rect x="521" y="76" width="38" height="16" rx="4" class="status-done"/>
+  <text x="540" y="84" class="issue-id" text-anchor="middle" dominant-baseline="central" font-size="9">bd-10</text>
+  <!-- Title -->
+  <text x="580" y="101" class="issue-title" text-anchor="middle" dominant-baseline="central">Auth service</text>
+  <!-- Done checkmark -->
+  <text x="637" y="81" font-size="11" fill="#009E73" font-family="sans-serif" dominant-baseline="central">&#10003;</text>
+
+  <!-- bd-11: Data model (done), center x=770 -->
+  <g filter="url(#shadow)">
+    <rect x="705" y="70" width="130" height="42" rx="8" fill="#fff" stroke="#009E73" stroke-width="1.8"/>
+  </g>
+  <rect x="711" y="76" width="38" height="16" rx="4" class="status-done"/>
+  <text x="730" y="84" class="issue-id" text-anchor="middle" dominant-baseline="central" font-size="9">bd-11</text>
+  <text x="770" y="101" class="issue-title" text-anchor="middle" dominant-baseline="central">Data model</text>
+  <text x="827" y="81" font-size="11" fill="#009E73" font-family="sans-serif" dominant-baseline="central">&#10003;</text>
+
+  <!-- Tier 2 -->
+  <!-- bd-12: API endpoints (done), center x=520 -->
+  <g filter="url(#shadow)">
+    <rect x="455" y="170" width="130" height="42" rx="8" fill="#fff" stroke="#009E73" stroke-width="1.8"/>
+  </g>
+  <rect x="461" y="176" width="38" height="16" rx="4" class="status-done"/>
+  <text x="480" y="184" class="issue-id" text-anchor="middle" dominant-baseline="central" font-size="9">bd-12</text>
+  <text x="520" y="201" class="issue-title" text-anchor="middle" dominant-baseline="central">API endpoints</text>
+  <text x="577" y="181" font-size="11" fill="#009E73" font-family="sans-serif" dominant-baseline="central">&#10003;</text>
+
+  <!-- bd-15: Search index (ready), center x=675 -->
+  <g filter="url(#shadow)">
+    <rect x="610" y="170" width="130" height="42" rx="8" fill="#fff" stroke="#0072B2" stroke-width="1.8"/>
+  </g>
+  <rect x="616" y="176" width="38" height="16" rx="4" class="status-ready"/>
+  <text x="635" y="184" class="issue-id" text-anchor="middle" dominant-baseline="central" font-size="9">bd-15</text>
+  <text x="675" y="201" class="issue-title" text-anchor="middle" dominant-baseline="central">Search index</text>
+
+  <!-- bd-16: Rate limiter (ready), center x=830 -->
+  <g filter="url(#shadow)">
+    <rect x="765" y="170" width="130" height="42" rx="8" fill="#fff" stroke="#0072B2" stroke-width="1.8"/>
+  </g>
+  <rect x="771" y="176" width="38" height="16" rx="4" class="status-ready"/>
+  <text x="790" y="184" class="issue-id" text-anchor="middle" dominant-baseline="central" font-size="9">bd-16</text>
+  <text x="830" y="201" class="issue-title" text-anchor="middle" dominant-baseline="central">Rate limiter</text>
+
+  <!-- Tier 3 -->
+  <!-- bd-18: Full-text search (blocked), center x=540 -->
+  <g filter="url(#shadow)">
+    <rect x="475" y="280" width="130" height="42" rx="8" fill="#fff" stroke="#888" stroke-width="1.8"/>
+  </g>
+  <rect x="481" y="286" width="38" height="16" rx="4" class="status-blocked"/>
+  <text x="500" y="294" class="issue-id" text-anchor="middle" dominant-baseline="central" font-size="9">bd-18</text>
+  <text x="540" y="311" class="issue-title" text-anchor="middle" dominant-baseline="central">Full-text search</text>
+
+  <!-- bd-20: Load testing (blocked), center x=710 -->
+  <g filter="url(#shadow)">
+    <rect x="645" y="280" width="130" height="42" rx="8" fill="#fff" stroke="#888" stroke-width="1.8"/>
+  </g>
+  <rect x="651" y="286" width="38" height="16" rx="4" class="status-blocked"/>
+  <text x="670" y="294" class="issue-id" text-anchor="middle" dominant-baseline="central" font-size="9">bd-20</text>
+  <text x="710" y="311" class="issue-title" text-anchor="middle" dominant-baseline="central">Load testing</text>
+
+  <!-- bd-21: Dashboard UI (ready), center x=840 -->
+  <g filter="url(#shadow)">
+    <rect x="785" y="280" width="110" height="42" rx="8" fill="#fff" stroke="#0072B2" stroke-width="1.8"/>
+  </g>
+  <rect x="791" y="286" width="38" height="16" rx="4" class="status-ready"/>
+  <text x="810" y="294" class="issue-id" text-anchor="middle" dominant-baseline="central" font-size="9">bd-21</text>
+  <text x="840" y="311" class="issue-title" text-anchor="middle" dominant-baseline="central">Dashboard</text>
+
+  <!-- Dependency arrows (solid, clean) -->
+  <!-- bd-10 to bd-12 (auth needed for API) -->
+  <line x1="565" y1="112" x2="530" y2="170"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- bd-11 to bd-12 (data model needed for API) -->
+  <line x1="755" y1="112" x2="540" y2="170"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- bd-11 to bd-15 (data model needed for search) -->
+  <line x1="770" y1="112" x2="685" y2="170"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- bd-10 to bd-16 (auth needed for rate limiter) -->
+  <line x1="590" y1="112" x2="815" y2="170"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- bd-15 to bd-18 (search index needed for full-text) -->
+  <line x1="665" y1="212" x2="555" y2="280"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- bd-12 to bd-18 (API needed for full-text search) -->
+  <line x1="520" y1="212" x2="530" y2="280"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- bd-16 to bd-20 (rate limiter needed for load testing) -->
+  <line x1="830" y1="212" x2="725" y2="280"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- bd-12 to bd-20 (API needed for load testing) -->
+  <line x1="530" y1="212" x2="695" y2="280"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- bd-12 to bd-21 (API needed for dashboard) -->
+  <line x1="540" y1="212" x2="825" y2="280"
+        stroke="#555" stroke-width="1.6" fill="none" marker-end="url(#arrow-dep)"/>
+
+  <!-- Structured annotation -->
+  <text x="675" y="355" class="annotation" fill="#0072B2">"What blocks what?"</text>
+
+  <!-- ============================================ -->
+  <!-- FOREGROUND: Legend                           -->
+  <!-- ============================================ -->
+
+  <!-- Right side legend, bottom area -->
+  <g transform="translate(530, 380)">
+    <!-- Done -->
+    <rect x="0" y="0" width="12" height="12" rx="3" class="status-done"/>
+    <text x="6" y="6" class="issue-id" font-size="7" text-anchor="middle" dominant-baseline="central">&#10003;</text>
+    <text x="18" y="10" class="legend-text">Done</text>
+
+    <!-- Ready -->
+    <rect x="65" y="0" width="12" height="12" rx="3" class="status-ready"/>
+    <text x="83" y="10" class="legend-text">Ready</text>
+
+    <!-- Blocked -->
+    <rect x="140" y="0" width="12" height="12" rx="3" class="status-blocked"/>
+    <text x="158" y="10" class="legend-text">Blocked</text>
+
+    <!-- Arrow meaning -->
+    <line x1="220" y1="6" x2="245" y2="6" stroke="#555" stroke-width="1.6" marker-end="url(#arrow-dep)"/>
+    <text x="253" y="10" class="legend-text">depends on</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- Bottom contrast banner                       -->
+  <!-- ============================================ -->
+
+  <rect x="0" y="430" width="900" height="20" fill="#f0f0f0" rx="0"/>
+  <text x="220" y="442" font-size="10" font-family="sans-serif" fill="#999" text-anchor="middle"
+        dominant-baseline="central">scattered, stale, no dependencies</text>
+  <text x="675" y="442" font-size="10" font-family="sans-serif" fill="#999" text-anchor="middle"
+        dominant-baseline="central">ordered, queryable, dependency-aware</text>
+</svg>

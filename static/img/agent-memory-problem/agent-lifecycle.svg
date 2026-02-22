@@ -1,0 +1,238 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="lifecycle-title lifecycle-desc">
+  <title id="lifecycle-title">The Ten-Minute Lifetime of an AI Coding Agent</title>
+  <desc id="lifecycle-desc">
+    A horizontal arc showing five lifecycle stages of an AI coding agent:
+    Birth at 0 minutes, Learning at 2 minutes, Peak productivity at 4-8 minutes,
+    Decline at 8-10 minutes, and Death at 10 minutes. Below the arc, a context
+    window meter fills from 0% to approximately 100%, transitioning from green
+    through yellow to red as the agent's context window saturates.
+  </desc>
+
+  <defs>
+    <!-- Drop shadow (compatible pattern using feGaussianBlur) -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow for the peak stage -->
+    <filter id="peak-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Context meter gradient: green -> yellow -> red -->
+    <linearGradient id="meter-fill" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#009E73"/>
+      <stop offset="40%" stop-color="#009E73"/>
+      <stop offset="65%" stop-color="#E69F00"/>
+      <stop offset="85%" stop-color="#D55E00"/>
+      <stop offset="100%" stop-color="#D55E00"/>
+    </linearGradient>
+
+    <!-- Background subtle gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fafbfc"/>
+      <stop offset="100%" stop-color="#f0f1f3"/>
+    </linearGradient>
+
+    <!-- Arc gradient: blue in the middle (productive), warm at the edges -->
+    <linearGradient id="arc-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#56B4E9" stop-opacity="0.5"/>
+      <stop offset="25%" stop-color="#0072B2"/>
+      <stop offset="55%" stop-color="#0072B2"/>
+      <stop offset="80%" stop-color="#D55E00"/>
+      <stop offset="100%" stop-color="#D55E00" stop-opacity="0.4"/>
+    </linearGradient>
+
+    <style>
+      .title       { font: bold 19px sans-serif; fill: #222; }
+      .subtitle    { font: 12px sans-serif; fill: #666; }
+      .stage-label { font: bold 13px sans-serif; text-anchor: middle; }
+      .stage-time  { font: 11px sans-serif; fill: #888; text-anchor: middle; }
+      .stage-quote { font: italic 11px sans-serif; fill: #555; text-anchor: middle; }
+      .meter-label { font: bold 12px sans-serif; fill: #444; }
+      .meter-tick  { font: 10px sans-serif; fill: #888; text-anchor: middle; }
+      .annotation  { font: 10px sans-serif; fill: #777; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect width="800" height="420" fill="url(#bg-grad)" rx="0"/>
+
+  <!-- ==================== TITLE ==================== -->
+  <text x="400" y="32" class="title" text-anchor="middle">The Ten-Minute Lifetime</text>
+  <text x="400" y="50" class="subtitle" text-anchor="middle">An AI coding agent is born, peaks, and dies before you finish your coffee</text>
+
+  <!-- ==================== MIDGROUND: THE ARC ==================== -->
+  <!--
+    The lifecycle arc: a parabolic curve from left to right.
+    5 stages positioned along it. The arc peaks in the middle
+    to represent peak productivity.
+
+    Stage X positions (evenly spaced across usable width 100-700):
+      Birth:    x=100  (0 min)
+      Learning: x=250  (2 min)
+      Peak:     x=400  (5 min, center of 4-8)
+      Decline:  x=550  (9 min)
+      Death:    x=700  (10 min)
+
+    Arc Y positions (inverted parabola, peak at center):
+      Birth:    y=220
+      Learning: y=145
+      Peak:     y=105
+      Decline:  y=155
+      Death:    y=230
+  -->
+
+  <!-- The sweeping arc path behind the stages -->
+  <path d="M 100,220 C 170,140 250,100 400,95 C 550,90 620,150 700,230"
+        fill="none" stroke="url(#arc-grad)" stroke-width="3" stroke-opacity="0.5"/>
+
+  <!-- Subtle area fill under the arc to show "productive zone" -->
+  <path d="M 100,220 C 170,140 250,100 400,95 C 550,90 620,150 700,230 L 700,260 L 100,260 Z"
+        fill="#0072B2" fill-opacity="0.04"/>
+
+  <!-- ==================== FOREGROUND: STAGE NODES ==================== -->
+
+  <!-- Stage 1: Birth (0 min) — small circle -->
+  <g filter="url(#shadow)">
+    <circle cx="100" cy="220" r="14" fill="#56B4E9" stroke="#0072B2" stroke-width="2"/>
+    <text x="100" y="220" text-anchor="middle" dominant-baseline="central"
+          font-family="sans-serif" font-size="9" fill="#fff" font-weight="bold">?</text>
+  </g>
+  <text x="100" y="252" class="stage-label" fill="#0072B2">Birth</text>
+  <text x="100" y="266" class="stage-time">0 min</text>
+  <text x="100" y="282" class="stage-quote">"Where am I?"</text>
+
+  <!-- Stage 2: Learning (2 min) — medium circle, growing -->
+  <g filter="url(#shadow)">
+    <circle cx="250" cy="150" r="22" fill="#56B4E9" stroke="#0072B2" stroke-width="2"/>
+    <!-- Book/reading icon: simple open book shape -->
+    <path d="M 241,148 L 250,153 L 259,148 M 250,143 L 250,153"
+          fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <text x="250" y="252" class="stage-label" fill="#0072B2">Learning</text>
+  <text x="250" y="266" class="stage-time">~2 min</text>
+  <text x="250" y="282" class="stage-quote">"Reading codebase..."</text>
+
+  <!-- Stage 3: Peak (4-8 min) — large circle with glow -->
+  <g filter="url(#peak-glow)">
+    <circle cx="400" cy="100" r="36" fill="#0072B2" stroke="#004466" stroke-width="2.5"/>
+    <!-- Mountain icon: two triangles -->
+    <path d="M 380,114 L 394,90 L 404,106 L 410,96 L 420,114 Z"
+          fill="none" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>
+  </g>
+  <text x="400" y="252" class="stage-label" fill="#0072B2">Peak</text>
+  <text x="400" y="266" class="stage-time">4 - 8 min</text>
+  <text x="400" y="282" class="stage-quote">"Moving mountains"</text>
+
+  <!-- Dashed bracket showing the productive window -->
+  <line x1="200" y1="240" x2="500" y2="240" stroke="#0072B2" stroke-width="1"
+        stroke-dasharray="4,3" stroke-opacity="0.4"/>
+  <text x="350" y="238" class="annotation" fill="#0072B2">productive window</text>
+
+  <!-- Stage 4: Decline (8-10 min) — shrinking circle, warm color -->
+  <g filter="url(#shadow)">
+    <circle cx="550" cy="160" r="20" fill="#E69F00" stroke="#D55E00" stroke-width="2"/>
+    <!-- Warning icon: exclamation mark -->
+    <line x1="550" y1="151" x2="550" y2="163" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="550" cy="169" r="1.5" fill="#fff"/>
+  </g>
+  <text x="550" y="252" class="stage-label" fill="#D55E00">Decline</text>
+  <text x="550" y="266" class="stage-time">8 - 9 min</text>
+  <text x="550" y="282" class="stage-quote">"Shortcuts &amp; panic"</text>
+
+  <!-- Stage 5: Death (10 min) — small X, flatline -->
+  <g filter="url(#shadow)">
+    <circle cx="700" cy="230" r="12" fill="#D55E00" fill-opacity="0.6"
+            stroke="#D55E00" stroke-width="1.5"/>
+    <!-- X mark -->
+    <line x1="695" y1="225" x2="705" y2="235" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+    <line x1="705" y1="225" x2="695" y2="235" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- Flatline extending right from the death node -->
+  <line x1="713" y1="230" x2="770" y2="230" stroke="#999" stroke-width="1.5"
+        stroke-dasharray="6,4"/>
+  <text x="700" y="252" class="stage-label" fill="#D55E00">Death</text>
+  <text x="700" y="266" class="stage-time">10 min</text>
+  <text x="700" y="282" class="stage-quote">"Scrawls notes..."</text>
+
+  <!-- ==================== CONTEXT WINDOW METER ==================== -->
+  <!--
+    Horizontal bar meter below the timeline.
+    Position: y=325 to y=349 (24px tall)
+    Width: 600px (from x=100 to x=700), matching the timeline span.
+    Fills from left to right, green -> yellow -> red.
+  -->
+
+  <!-- Meter label -->
+  <text x="55" y="340" class="meter-label" text-anchor="end">Context</text>
+  <text x="55" y="354" class="meter-label" text-anchor="end" font-weight="normal"
+        font-size="10" fill="#888">window</text>
+
+  <!-- Meter background (empty) -->
+  <rect x="100" y="325" width="600" height="24" rx="4"
+        fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Meter fill — fills left-to-right showing context accumulation -->
+  <!-- The fill goes the full width since by death the context is ~100% consumed -->
+  <rect x="100" y="325" width="600" height="24" rx="4"
+        fill="url(#meter-fill)" fill-opacity="0.85"/>
+
+  <!-- Tick marks on the meter for percentage -->
+  <line x1="100" y1="350" x2="100" y2="358" stroke="#aaa" stroke-width="1"/>
+  <text x="100" y="368" class="meter-tick">0%</text>
+
+  <line x1="250" y1="350" x2="250" y2="358" stroke="#aaa" stroke-width="1"/>
+  <text x="250" y="368" class="meter-tick">~15%</text>
+
+  <line x1="400" y1="350" x2="400" y2="358" stroke="#aaa" stroke-width="1"/>
+  <text x="400" y="368" class="meter-tick">~50%</text>
+
+  <line x1="550" y1="350" x2="550" y2="358" stroke="#aaa" stroke-width="1"/>
+  <text x="550" y="368" class="meter-tick">~80%</text>
+
+  <line x1="700" y1="350" x2="700" y2="358" stroke="#aaa" stroke-width="1"/>
+  <text x="700" y="368" class="meter-tick">100%</text>
+
+  <!-- Meter annotation: zones labeled inside the bar -->
+  <text x="175" y="340" text-anchor="middle" dominant-baseline="central"
+        font-family="sans-serif" font-size="9" fill="#fff" font-weight="bold">FRESH</text>
+  <text x="400" y="340" text-anchor="middle" dominant-baseline="central"
+        font-family="sans-serif" font-size="9" fill="#fff" font-weight="bold">FILLING UP</text>
+  <text x="630" y="340" text-anchor="middle" dominant-baseline="central"
+        font-family="sans-serif" font-size="9" fill="#fff" font-weight="bold">SATURATED</text>
+
+  <!-- ==================== CONNECTING DOTTED LINES: stages to meter ==================== -->
+  <!-- Thin dotted vertical lines connecting each stage to its meter position -->
+  <line x1="100" y1="285" x2="100" y2="325" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="250" y1="285" x2="250" y2="325" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="400" y1="285" x2="400" y2="325" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="550" y1="285" x2="550" y2="325" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2,2"/>
+  <line x1="700" y1="285" x2="700" y2="325" stroke="#bbb" stroke-width="0.8" stroke-dasharray="2,2"/>
+
+  <!-- ==================== TIME AXIS ==================== -->
+  <!-- Subtle horizontal axis line at y=296 connecting all stages -->
+  <line x1="80" y1="296" x2="720" y2="296" stroke="#ddd" stroke-width="1"/>
+  <!-- Small arrow at the right end -->
+  <path d="M 716,292 L 724,296 L 716,300" fill="none" stroke="#ccc" stroke-width="1"/>
+  <text x="745" y="296" font-family="sans-serif" font-size="9" fill="#bbb"
+        dominant-baseline="central">time</text>
+
+  <!-- ==================== FOOTER ANNOTATION ==================== -->
+  <text x="400" y="405" text-anchor="middle" font-family="sans-serif"
+        font-size="10" fill="#999">
+    Each agent thread is ephemeral — it learns fast, works hard, then forgets everything.
+  </text>
+</svg>

@@ -1,0 +1,286 @@
+<svg viewBox="0 0 800 380" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="plan-descent-title plan-descent-desc">
+  <title id="plan-descent-title">The Descent into Madness: Recursive Plan Fragmentation</title>
+  <desc id="plan-descent-desc">
+    An agent creates a 6-phase plan. Phases 1 and 2 complete successfully.
+    At Phase 3, the agent forgets the outer plan and creates a new 5-phase
+    sub-plan. Within that sub-plan, it completes Phases 1-2, then declares
+    "Done!" at Phase 3 while Phases 4-6 of the outer plan and Phases 4-5
+    of the inner plan remain forgotten and untouched.
+  </desc>
+
+  <defs>
+    <!-- Diagonal hatch pattern for "forgotten" phases (accessibility: not color-only) -->
+    <pattern id="forgotten-hatch" width="6" height="6"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6"
+            stroke="#b0b0b0" stroke-width="1"/>
+    </pattern>
+
+    <!-- Drop shadow (compatible feGaussianBlur pattern) -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Warm glow for the "Done!" callout -->
+    <filter id="callout-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#D55E00" flood-opacity="0.35" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Arrowhead marker for connectors -->
+    <marker id="arrow" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#009E73"/>
+    </marker>
+
+    <style>
+      /* Typography */
+      .title { font: bold 18px sans-serif; fill: #222; }
+      .subtitle { font: 12px sans-serif; fill: #666; }
+      .phase-label { font: bold 12px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; }
+      .row-label { font: bold 13px sans-serif; fill: #555; }
+      .status-text { font-size: 9px; font-family: sans-serif;
+                     text-anchor: middle; dominant-baseline: central; }
+      .done-text { font: bold 15px sans-serif; fill: #fff;
+                   text-anchor: middle; dominant-baseline: central; }
+      .forgotten-label { font: bold 11px sans-serif; fill: #D55E00;
+                         text-anchor: middle; }
+      .progress-label { font-size: 10px; font-family: sans-serif; fill: #666; }
+      .progress-value { font-size: 9px; font-family: sans-serif; fill: #fff;
+                        text-anchor: middle; dominant-baseline: central;
+                        font-weight: bold; }
+
+      /* Phase box base */
+      .phase-box { rx: 6; stroke-width: 1.5; }
+
+      /* Completed phases: Blue #0072B2 */
+      .completed { fill: #0072B2; stroke: #005a8e; }
+      .completed-label { fill: #fff; }
+
+      /* Active phase: Bluish Green #009E73 */
+      .active { fill: #009E73; stroke: #007a59; }
+      .active-label { fill: #fff; }
+
+      /* Forgotten phases: Gray with hatch overlay */
+      .forgotten { fill: #e0e0e0; stroke: #c0c0c0; }
+      .forgotten-text { fill: #999; }
+
+      /* Connector line */
+      .connector { stroke: #009E73; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect x="0" y="0" width="800" height="380" fill="#fafafa" rx="4"/>
+
+  <!-- ==================== TITLE ==================== -->
+  <text x="400" y="32" class="title" text-anchor="middle">The Descent into Madness</text>
+  <text x="400" y="50" class="subtitle" text-anchor="middle">How agents recursively fragment their own plans</text>
+
+  <!-- ==================== OUTER PLAN (6 phases) ==================== -->
+  <!--
+    Layout: 6 boxes, each 100px wide, 44px tall
+    Gaps between boxes: 12px. Total: 6*100 + 5*12 = 660px.
+    Left offset: 80px (leaving room for "Plan A" label at left)
+    Row top: y=72
+  -->
+  <g aria-label="Outer plan: 6 phases">
+    <!-- Row label -->
+    <text x="30" y="94" class="row-label">Plan A</text>
+
+    <!-- Phase 1 - Completed -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box completed" x="80" y="72" width="100" height="44"/>
+    </g>
+    <text class="phase-label completed-label" x="130" y="88">Phase 1</text>
+    <text x="130" y="104" class="status-text" fill="#b3d9f2">done</text>
+
+    <!-- Phase 2 - Completed -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box completed" x="192" y="72" width="100" height="44"/>
+    </g>
+    <text class="phase-label completed-label" x="242" y="88">Phase 2</text>
+    <text x="242" y="104" class="status-text" fill="#b3d9f2">done</text>
+
+    <!-- Phase 3 - Active / Expanded -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box active" x="304" y="72" width="100" height="44"/>
+    </g>
+    <text class="phase-label active-label" x="354" y="88">Phase 3</text>
+    <text x="354" y="104" class="status-text" fill="#80cfb6">active</text>
+
+    <!-- Phase 4 - Forgotten -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box forgotten" x="416" y="72" width="100" height="44"/>
+      <rect x="416" y="72" width="100" height="44" rx="6"
+            fill="url(#forgotten-hatch)" opacity="0.4"/>
+    </g>
+    <text class="phase-label forgotten-text" x="466" y="94">Phase 4</text>
+
+    <!-- Phase 5 - Forgotten -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box forgotten" x="528" y="72" width="100" height="44"/>
+      <rect x="528" y="72" width="100" height="44" rx="6"
+            fill="url(#forgotten-hatch)" opacity="0.4"/>
+    </g>
+    <text class="phase-label forgotten-text" x="578" y="94">Phase 5</text>
+
+    <!-- Phase 6 - Forgotten -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box forgotten" x="640" y="72" width="100" height="44"/>
+      <rect x="640" y="72" width="100" height="44" rx="6"
+            fill="url(#forgotten-hatch)" opacity="0.4"/>
+    </g>
+    <text class="phase-label forgotten-text" x="690" y="94">Phase 6</text>
+  </g>
+
+  <!-- ==================== "FORGOTTEN" ANNOTATION: Outer Phases 4-6 ==================== -->
+  <g aria-label="Annotation: outer phases 4 through 6 are forgotten">
+    <!-- Bracket line spanning phases 4-6, below the outer row -->
+    <line x1="416" y1="126" x2="740" y2="126"
+          stroke="#D55E00" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Ticks at each end -->
+    <line x1="416" y1="121" x2="416" y2="126" stroke="#D55E00" stroke-width="1.5"/>
+    <line x1="740" y1="121" x2="740" y2="126" stroke="#D55E00" stroke-width="1.5"/>
+    <!-- Label centered under bracket -->
+    <text x="578" y="141" class="forgotten-label">Forgotten by the agent</text>
+  </g>
+
+  <!-- ==================== CONNECTOR: Phase 3 to Inner Plan ==================== -->
+  <!-- Curved path from bottom of outer Phase 3 down to inner plan row -->
+  <path d="M 354,116 L 354,155 Q 354,165 344,165 L 200,165"
+        class="connector"
+        marker-end="url(#arrow)"/>
+  <!-- Label along the connector -->
+  <text x="372" y="150" font-size="10" font-family="sans-serif" fill="#009E73"
+        font-style="italic">expands into...</text>
+
+  <!-- ==================== INNER PLAN (5 phases) ==================== -->
+  <!--
+    Layout: 5 boxes, each 90px wide, 40px tall
+    Gaps: 10px. Total: 5*90 + 4*10 = 490px.
+    Starting x: 105 (indented from Plan A label area)
+    Row top: y=180
+  -->
+  <g aria-label="Inner plan: 5 phases spawned from Phase 3">
+    <!-- Row label -->
+    <text x="30" y="196" class="row-label">Plan B</text>
+    <text x="30" y="210" font-size="9" font-family="sans-serif" fill="#999">(sub-plan)</text>
+
+    <!-- Inner Phase 1 - Completed -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box completed" x="105" y="180" width="90" height="40"/>
+    </g>
+    <text class="phase-label completed-label" x="150" y="194">Phase 1</text>
+    <text x="150" y="209" class="status-text" fill="#b3d9f2">done</text>
+
+    <!-- Inner Phase 2 - Completed -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box completed" x="205" y="180" width="90" height="40"/>
+    </g>
+    <text class="phase-label completed-label" x="250" y="194">Phase 2</text>
+    <text x="250" y="209" class="status-text" fill="#b3d9f2">done</text>
+
+    <!-- Inner Phase 3 - Active (false completion declared here) -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box active" x="305" y="180" width="90" height="40"/>
+    </g>
+    <text class="phase-label active-label" x="350" y="200">Phase 3</text>
+
+    <!-- Inner Phase 4 - Forgotten -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box forgotten" x="405" y="180" width="90" height="40"/>
+      <rect x="405" y="180" width="90" height="40" rx="6"
+            fill="url(#forgotten-hatch)" opacity="0.4"/>
+    </g>
+    <text class="phase-label forgotten-text" x="450" y="200">Phase 4</text>
+
+    <!-- Inner Phase 5 - Forgotten -->
+    <g filter="url(#shadow)">
+      <rect class="phase-box forgotten" x="505" y="180" width="90" height="40"/>
+      <rect x="505" y="180" width="90" height="40" rx="6"
+            fill="url(#forgotten-hatch)" opacity="0.4"/>
+    </g>
+    <text class="phase-label forgotten-text" x="550" y="200">Phase 5</text>
+  </g>
+
+  <!-- ==================== "DONE!" CALLOUT BUBBLE ==================== -->
+  <!--
+    Speech bubble below inner Phase 3 with triangular tail pointing up.
+    Bubble: x=280..395, y=232..270. Sits left of the inner forgotten bracket.
+  -->
+  <g filter="url(#callout-glow)" aria-label="False completion declaration">
+    <!-- Triangular tail pointing up to inner Phase 3 -->
+    <polygon points="330,232 345,222 350,232" fill="#D55E00"/>
+    <!-- Bubble body -->
+    <rect x="280" y="232" width="115" height="38" rx="8"
+          fill="#D55E00" stroke="#b34d00" stroke-width="1.5"/>
+  </g>
+  <text x="337" y="251" class="done-text">Done!</text>
+
+  <!-- ==================== "FORGOTTEN" ANNOTATION: Inner Phases 4-5 ==================== -->
+  <!--
+    Bracket sits below inner phases 4-5 (x=405..595).
+    Positioned at y=232 bracket line, y=247 label.
+    No overlap with "Done!" callout (ends at x=395).
+  -->
+  <g aria-label="Annotation: inner phases 4 and 5 are forgotten">
+    <!-- Bracket line below inner phases 4-5 -->
+    <line x1="405" y1="232" x2="595" y2="232"
+          stroke="#D55E00" stroke-width="1.5" stroke-dasharray="4,3"/>
+    <!-- Ticks at each end -->
+    <line x1="405" y1="226" x2="405" y2="232" stroke="#D55E00" stroke-width="1.5"/>
+    <line x1="595" y1="226" x2="595" y2="232" stroke="#D55E00" stroke-width="1.5"/>
+    <!-- Label -->
+    <text x="500" y="247" class="forgotten-label">Also forgotten</text>
+  </g>
+
+  <!-- ==================== PROGRESS SUMMARY (bottom) ==================== -->
+  <!--
+    Two progress bars contrasting actual vs. perceived completion.
+    Actual: ~33% (2 of 6 outer phases). Agent thinks: 100%.
+    Bar width: 560px. 33% of 560 = 185px.
+  -->
+  <g aria-label="Completion summary comparing actual versus perceived progress">
+    <!-- Actual progress -->
+    <text x="115" y="290" class="progress-label">Actual progress</text>
+    <rect x="115" y="296" width="560" height="16" rx="8"
+          fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+    <!-- 33% fill: 560 * 0.33 = 185 -->
+    <rect x="115" y="296" width="185" height="16" rx="8"
+          fill="#0072B2" opacity="0.75"/>
+    <text x="207" y="304" class="progress-value">~33%</text>
+
+    <!-- Agent's perceived progress -->
+    <text x="115" y="332" class="progress-label">Agent thinks</text>
+    <rect x="115" y="338" width="560" height="16" rx="8"
+          fill="#e8e8e8" stroke="#ccc" stroke-width="1"/>
+    <!-- 100% fill -->
+    <rect x="115" y="338" width="560" height="16" rx="8"
+          fill="#009E73" opacity="0.75"/>
+    <text x="395" y="346" class="progress-value">100% "Done!"</text>
+
+    <!-- Exclamation mark highlighting the contrast between bars -->
+    <text x="695" y="322" font-size="22" font-family="sans-serif" fill="#D55E00"
+          text-anchor="middle" dominant-baseline="central" font-weight="bold">!</text>
+  </g>
+
+</svg>

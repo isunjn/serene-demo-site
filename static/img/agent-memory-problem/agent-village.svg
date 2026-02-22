@@ -1,0 +1,206 @@
+<svg viewBox="0 0 750 500" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="title desc">
+  <title id="title">The Agent Village</title>
+  <desc id="desc">
+    Five agents arranged in a circle around two central shared services:
+    Beads (shared memory) and Agent Mail (messaging). Dashed lines connect
+    each agent to both services, illustrating decentralized coordination
+    with no central orchestrator.
+  </desc>
+
+  <defs>
+    <!-- Compatible drop shadow (feGaussianBlur pattern) -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2.5" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Lighter shadow for agent nodes -->
+    <filter id="shadow-light" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft glow for the central hub area -->
+    <radialGradient id="hub-glow" cx="50%" cy="46%" r="30%">
+      <stop offset="0%" stop-color="#E8F0FE" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#E8F0FE" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Shared styles -->
+    <style>
+      .title       { font: bold 22px sans-serif; fill: #111; text-anchor: middle; }
+      .svc-label   { font: bold 16px sans-serif; fill: #fff;
+                     text-anchor: middle; dominant-baseline: central; }
+      .svc-sub     { font: 12px sans-serif; fill: #fff;
+                     text-anchor: middle; dominant-baseline: central; }
+      .agent-label { font: bold 13px sans-serif; fill: #fff;
+                     text-anchor: middle; dominant-baseline: central; }
+      .annotation  { font: italic 13px sans-serif; fill: #333;
+                     text-anchor: middle; dominant-baseline: central; }
+      .conn-beads  { stroke: #0072B2; stroke-width: 1.8; fill: none;
+                     stroke-dasharray: 6,4; stroke-opacity: 0.7; }
+      .conn-mail   { stroke: #E69F00; stroke-width: 1.8; fill: none;
+                     stroke-dasharray: 6,4; stroke-opacity: 0.7; }
+    </style>
+  </defs>
+
+  <!-- ===================== BACKGROUND ===================== -->
+
+  <!-- Subtle background fill -->
+  <rect width="750" height="500" fill="#FAFBFC" rx="0"/>
+
+  <!-- Soft glow behind the central hub -->
+  <ellipse cx="375" cy="230" rx="220" ry="200" fill="url(#hub-glow)"/>
+
+  <!-- ===================== MIDGROUND: CONNECTIONS ===================== -->
+  <!--
+    5 agents at radial positions around center (375, 235), radius 175.
+    Angles at 72-degree intervals starting from top (-90 deg).
+    Agent positions (pre-calculated):
+      A0 top:          (375.0, 60.0)
+      A1 upper-right:  (541.4, 180.9)
+      A2 lower-right:  (477.9, 376.6)
+      A3 lower-left:   (272.1, 376.6)
+      A4 upper-left:   (208.6, 180.9)
+
+    Beads box center:  (330, 235)
+    Mail box center:   (420, 235)
+  -->
+
+  <!-- Agent 0 (top) connections -->
+  <path class="conn-beads" d="M 375.0,93 Q 350,160 330,200"/>
+  <path class="conn-mail"  d="M 375.0,93 Q 400,160 420,200"/>
+
+  <!-- Agent 1 (upper-right) connections -->
+  <path class="conn-beads" d="M 510.4,191.9 Q 430,200 365,215"/>
+  <path class="conn-mail"  d="M 510.4,191.9 Q 465,205 450,215"/>
+
+  <!-- Agent 2 (lower-right) connections -->
+  <path class="conn-beads" d="M 456.9,348.6 Q 390,300 350,262"/>
+  <path class="conn-mail"  d="M 456.9,348.6 Q 440,300 430,262"/>
+
+  <!-- Agent 3 (lower-left) connections -->
+  <path class="conn-beads" d="M 293.1,348.6 Q 310,300 320,262"/>
+  <path class="conn-mail"  d="M 293.1,348.6 Q 360,300 410,262"/>
+
+  <!-- Agent 4 (upper-left) connections -->
+  <path class="conn-beads" d="M 239.6,191.9 Q 285,205 305,215"/>
+  <path class="conn-mail"  d="M 239.6,191.9 Q 320,200 395,215"/>
+
+  <!-- ===================== FOREGROUND: CENTRAL SERVICES ===================== -->
+
+  <!-- Beads service box -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="192" width="140" height="86" rx="14" fill="#0072B2"/>
+  </g>
+  <!-- Database icon -->
+  <g transform="translate(320, 218)">
+    <ellipse cx="0" cy="0" rx="12" ry="5" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <line x1="-12" y1="0" x2="-12" y2="14" stroke="#fff" stroke-width="1.5"/>
+    <line x1="12" y1="0" x2="12" y2="14" stroke="#fff" stroke-width="1.5"/>
+    <ellipse cx="0" cy="14" rx="12" ry="5" fill="none" stroke="#fff" stroke-width="1.5"/>
+  </g>
+  <text x="320" y="250" class="svc-label">Beads</text>
+  <text x="320" y="266" class="svc-sub">Shared Memory</text>
+
+  <!-- Agent Mail service box -->
+  <g filter="url(#shadow)">
+    <rect x="360" y="192" width="140" height="86" rx="14" fill="#E69F00"/>
+  </g>
+  <!-- Envelope icon -->
+  <g transform="translate(430, 218)">
+    <rect x="-14" y="-7" width="28" height="18" rx="2"
+          fill="none" stroke="#fff" stroke-width="1.5"/>
+    <polyline points="-14,-7 0,5 14,-7"
+              fill="none" stroke="#fff" stroke-width="1.5"/>
+  </g>
+  <text x="430" y="250" class="svc-label">Agent Mail</text>
+  <text x="430" y="266" class="svc-sub">Messaging</text>
+
+  <!-- Overlap region -->
+  <rect x="360" y="192" width="30" height="86" rx="0" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- ===================== FOREGROUND: AGENT NODES ===================== -->
+
+  <!-- Agent 0 (top) -->
+  <g transform="translate(375.0, 60.0)" filter="url(#shadow-light)">
+    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
+    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
+    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
+    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
+    <text x="0" y="16" class="agent-label">Agent 1</text>
+  </g>
+
+  <!-- Agent 1 (upper-right) -->
+  <g transform="translate(541.4, 180.9)" filter="url(#shadow-light)">
+    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
+    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
+    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
+    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
+    <text x="0" y="16" class="agent-label">Agent 2</text>
+  </g>
+
+  <!-- Agent 2 (lower-right) -->
+  <g transform="translate(477.9, 376.6)" filter="url(#shadow-light)">
+    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
+    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
+    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
+    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
+    <text x="0" y="16" class="agent-label">Agent 3</text>
+  </g>
+
+  <!-- Agent 3 (lower-left) -->
+  <g transform="translate(272.1, 376.6)" filter="url(#shadow-light)">
+    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
+    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
+    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
+    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
+    <text x="0" y="16" class="agent-label">Agent 4</text>
+  </g>
+
+  <!-- Agent 4 (upper-left) -->
+  <g transform="translate(208.6, 180.9)" filter="url(#shadow-light)">
+    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
+    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
+    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
+    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
+    <text x="0" y="16" class="agent-label">Agent 5</text>
+  </g>
+
+  <!-- ===================== FOREGROUND: TITLE & ANNOTATION ===================== -->
+
+  <!-- Diagram title -->
+  <text x="375" y="28" class="title">The Agent Village</text>
+
+  <!-- Annotation at bottom -->
+  <g transform="translate(375, 465)">
+    <!-- Dashed border annotation box -->
+    <rect x="-170" y="-16" width="340" height="32" rx="8"
+          fill="#F5F5F5" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
+    <text x="0" y="0" class="annotation">No central orchestrator -- agents self-organize</text>
+  </g>
+
+  <!-- Small legend at bottom-left -->
+  <g transform="translate(60, 465)">
+    <line x1="0" y1="0" x2="24" y2="0" class="conn-beads" stroke-opacity="0.8"/>
+    <text x="30" y="1" font-size="10" font-family="sans-serif" fill="#666"
+          dominant-baseline="central">read/write</text>
+    <line x1="0" y1="14" x2="24" y2="14" class="conn-mail" stroke-opacity="0.8"/>
+    <text x="30" y="15" font-size="10" font-family="sans-serif" fill="#666"
+          dominant-baseline="central">send/receive</text>
+  </g>
+
+</svg>

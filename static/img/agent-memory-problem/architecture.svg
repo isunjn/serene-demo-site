@@ -1,0 +1,206 @@
+<svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="arch-title arch-desc">
+  <title id="arch-title">Beads Three-Layer Architecture</title>
+  <desc id="arch-desc">
+    A vertical stack showing the Beads architecture: CLI/MCP interface at the top,
+    SQLite cache in the middle, and JSONL-in-Git source of truth at the bottom.
+    Bidirectional sync arrows connect each layer. A curved self-healing arrow on
+    the right shows reconstruction from git history.
+  </desc>
+
+  <defs>
+    <!-- Arrowhead marker for connections -->
+    <marker id="arrow" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#555"/>
+    </marker>
+
+    <!-- Arrowhead for the self-healing curved arrow (vermillion) -->
+    <marker id="arrow-heal" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#D55E00"/>
+    </marker>
+
+    <!-- Drop shadow (compatible feGaussianBlur pattern) -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="2" dy="3" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shared styles -->
+    <style>
+      .title       { font: bold 19px sans-serif; fill: #222; text-anchor: middle; }
+      .layer-label { font: bold 15px sans-serif; fill: #fff; text-anchor: middle;
+                     dominant-baseline: central; }
+      .layer-sub   { font: 11px sans-serif; fill: rgba(255,255,255,0.85); text-anchor: middle;
+                     dominant-baseline: central; }
+      .arrow-label { font: 12px sans-serif; fill: #555; text-anchor: middle;
+                     dominant-baseline: central; }
+      .heal-label  { font: 11px sans-serif; fill: #D55E00; }
+      .icon-text   { font: 12px sans-serif; fill: #444; text-anchor: middle;
+                     dominant-baseline: central; }
+      .conn        { stroke: #555; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+
+  <!-- ========== BACKGROUND ========== -->
+  <rect x="0" y="0" width="700" height="500" fill="#f8f9fa"/>
+
+  <!-- Diagram title — centered at viewBox midpoint x=350 -->
+  <text x="330" y="32" class="title">Beads Three-Layer Architecture</text>
+
+  <!-- ========== ICONS: Agent/Terminal icons above top layer ========== -->
+  <!-- Three small icons spaced across the top layer width -->
+
+  <!-- Icon 1: Terminal (x=215) -->
+  <g transform="translate(215, 68)">
+    <rect x="-18" y="-14" width="36" height="26" rx="3"
+          fill="#333" stroke="#222" stroke-width="1"/>
+    <text x="-7" y="1" font-family="monospace" font-size="10"
+          fill="#56B4E9" dominant-baseline="central">$_</text>
+    <text x="0" y="24" class="icon-text">CLI</text>
+  </g>
+
+  <!-- Icon 2: Agent robot (x=330) -->
+  <g transform="translate(330, 68)">
+    <!-- Robot head -->
+    <rect x="-12" y="-12" width="24" height="20" rx="4"
+          fill="#56B4E9" stroke="#0072B2" stroke-width="1.2"/>
+    <circle cx="-4" cy="-3" r="2.5" fill="#fff"/>
+    <circle cx="4" cy="-3" r="2.5" fill="#fff"/>
+    <rect x="-6" y="3" width="12" height="2" rx="1" fill="#fff"/>
+    <!-- Antenna -->
+    <line x1="0" y1="-12" x2="0" y2="-17" stroke="#0072B2" stroke-width="1.2"/>
+    <circle cx="0" cy="-18" r="2" fill="#0072B2"/>
+    <text x="0" y="24" class="icon-text">Agent</text>
+  </g>
+
+  <!-- Icon 3: MCP robot (x=445) -->
+  <g transform="translate(445, 68)">
+    <rect x="-12" y="-12" width="24" height="20" rx="4"
+          fill="#56B4E9" stroke="#0072B2" stroke-width="1.2"/>
+    <circle cx="-4" cy="-3" r="2.5" fill="#fff"/>
+    <circle cx="4" cy="-3" r="2.5" fill="#fff"/>
+    <rect x="-6" y="3" width="12" height="2" rx="1" fill="#fff"/>
+    <line x1="0" y1="-12" x2="0" y2="-17" stroke="#0072B2" stroke-width="1.2"/>
+    <circle cx="0" cy="-18" r="2" fill="#0072B2"/>
+    <text x="0" y="24" class="icon-text">MCP</text>
+  </g>
+
+  <!-- ========== MIDGROUND: Three architectural layers ========== -->
+
+  <!-- === TOP LAYER: CLI / MCP Interface === -->
+  <!-- Box: x=115, y=110, w=430, h=70. Horizontal center at 330, vertical at 145. -->
+  <g filter="url(#shadow)">
+    <rect x="115" y="110" width="430" height="70" rx="10"
+          fill="#56B4E9" stroke="#0072B2" stroke-width="2"/>
+  </g>
+  <text x="330" y="138" class="layer-label">bd CLI / MCP Server</text>
+  <text x="330" y="158" class="layer-sub">Agents interact here</text>
+
+  <!-- === Bidirectional arrows: Top layer <-> Middle layer === -->
+  <!-- Gap spans y=180 to y=228 -->
+  <!-- Down arrow (left): query -->
+  <line x1="280" y1="184" x2="280" y2="224"
+        class="conn" marker-end="url(#arrow)"/>
+  <!-- Up arrow (right): update -->
+  <line x1="380" y1="224" x2="380" y2="184"
+        class="conn" marker-end="url(#arrow)"/>
+  <!-- Labels centered between the two arrows -->
+  <text x="330" y="200" class="arrow-label">query</text>
+  <text x="330" y="216" class="arrow-label">update</text>
+
+  <!-- === MIDDLE LAYER: SQLite Cache (cylinder shape) === -->
+  <!-- Cylinder body: x=115..545 (w=430), y=243..298 (h=55). rx=215. -->
+  <g filter="url(#shadow)">
+    <!-- Cylinder body fill -->
+    <rect x="115" y="243" width="430" height="55" fill="#0072B2"/>
+    <!-- Cylinder top ellipse (lid) -->
+    <ellipse cx="330" cy="243" rx="215" ry="18"
+             fill="#2D8DC7" stroke="#005A8E" stroke-width="1.5"/>
+    <!-- Cylinder bottom ellipse (base, half hidden behind body) -->
+    <ellipse cx="330" cy="298" rx="215" ry="18" fill="#005A8E"/>
+    <!-- Side edges -->
+    <line x1="115" y1="243" x2="115" y2="298" stroke="#005A8E" stroke-width="1.5"/>
+    <line x1="545" y1="243" x2="545" y2="298" stroke="#005A8E" stroke-width="1.5"/>
+    <!-- Re-stroke top ellipse so it sits on top visually -->
+    <ellipse cx="330" cy="243" rx="215" ry="18"
+             fill="none" stroke="#005A8E" stroke-width="1.5"/>
+  </g>
+  <text x="330" y="266" class="layer-label">SQLite</text>
+  <text x="330" y="286" class="layer-sub">Fast queryable cache</text>
+
+  <!-- === Bidirectional arrows: Middle layer <-> Bottom layer === -->
+  <!-- Gap spans y=316 to y=362 -->
+  <!-- Down arrow (left): sync -->
+  <line x1="280" y1="320" x2="280" y2="358"
+        class="conn" marker-end="url(#arrow)"/>
+  <!-- Up arrow (right): hydrate -->
+  <line x1="380" y1="358" x2="380" y2="320"
+        class="conn" marker-end="url(#arrow)"/>
+  <!-- Labels -->
+  <text x="330" y="335" class="arrow-label">hydrate</text>
+  <text x="330" y="351" class="arrow-label">sync</text>
+
+  <!-- === BOTTOM LAYER: JSONL in Git (Source of Truth) === -->
+  <!-- Box: x=95, y=362, w=470, h=80. Widest and darkest = visual foundation. -->
+  <g filter="url(#shadow)">
+    <rect x="95" y="362" width="470" height="80" rx="10"
+          fill="#004A75" stroke="#003A5C" stroke-width="2.5"/>
+  </g>
+
+  <!-- Git branch icon (positioned inside left region of bottom layer) -->
+  <g transform="translate(155, 402)">
+    <!-- Main branch line (vertical) -->
+    <line x1="0" y1="-16" x2="0" y2="16" stroke="#56B4E9"
+          stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Feature branch forking off -->
+    <path d="M 0,-4 C 8,-4 12,-12 18,-12" stroke="#E69F00"
+          stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Commit dots on main branch -->
+    <circle cx="0" cy="-14" r="3" fill="#56B4E9"/>
+    <circle cx="0" cy="0" r="3" fill="#56B4E9"/>
+    <circle cx="0" cy="14" r="3" fill="#56B4E9"/>
+    <!-- Commit dot on feature branch -->
+    <circle cx="18" cy="-12" r="3" fill="#E69F00"/>
+  </g>
+
+  <text x="330" y="394" class="layer-label">issues.jsonl in Git</text>
+  <text x="330" y="414" class="layer-sub"
+        style="fill: rgba(255,255,255,0.75);">Source of truth -- never lost</text>
+
+  <!-- ========== SELF-HEALING ANNOTATION (right side) ========== -->
+  <!-- Curved dashed arrow from bottom layer right edge up to middle layer right edge.
+       Starts near (565, 388), arcs rightward, ends near (549, 268). -->
+  <path d="M 560,388 C 630,388 648,328 648,300 C 648,268 630,260 549,262"
+        stroke="#D55E00" stroke-width="2" fill="none"
+        stroke-dasharray="6,3"
+        marker-end="url(#arrow-heal)"/>
+
+  <!-- Rotated label alongside the curved arrow -->
+  <text class="heal-label" text-anchor="start"
+        transform="translate(660, 350) rotate(-90)">
+    <tspan x="0" dy="0">Reconstruct from</tspan>
+    <tspan x="0" dy="13">git history</tspan>
+  </text>
+
+  <!-- "self-healing" pill badge near the curve's midpoint -->
+  <g transform="translate(612, 385)">
+    <rect x="-42" y="-10" width="84" height="20" rx="10"
+          fill="#D55E00" fill-opacity="0.12" stroke="#D55E00" stroke-width="1"/>
+    <text x="0" y="1" font-size="9" font-family="sans-serif" fill="#D55E00"
+          text-anchor="middle" dominant-baseline="central"
+          font-weight="bold">self-healing</text>
+  </g>
+
+</svg>
