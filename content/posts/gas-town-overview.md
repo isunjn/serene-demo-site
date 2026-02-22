@@ -34,15 +34,23 @@ The insight that unlocked everything was a shift in strategy. Stop trying to mak
 
 Gas Town was not Yegge's first attempt. It was his fourth complete, functioning orchestrator of 2025, and the failures are as instructive as the success.
 
-**Orchestrator v1:** `vibecoder` **(TypeScript, August 2025).** Built atop Temporal.io, the gold standard for workflow orchestration. It was a working system. But Temporal proved cumbersome for Yegge's needs — the workflows he was orchestrating turned out to be micro-workflows, since you have to severely decompose tasks for LLMs to reliably follow them. Temporal is powerful enough for distributed cloud services but overkill for a desktop developer tool. Yegge still believes Temporal will be a key piece of the puzzle for scaling AI workflows to enterprise level, but he needed something lighter.
+**Orchestrator v1:** `vibecoder` **(TypeScript, August 2025).** 
 
-**Orchestrator v2:** `vc` **(Go).** In hindsight, the lesson from v1 was "make more agents, not better ones." But Yegge tried again to make agents better — a more monolithic approach that wound up bloated and wrong-headed. The failure wasn't total: Beads, the lightweight Git-backed issue tracker that would become the foundation for everything that followed, was born during v2. Abandoned.
+Built atop Temporal.io, the gold standard for workflow orchestration. It was a working system. But Temporal proved cumbersome for Yegge's needs — the workflows he was orchestrating turned out to be micro-workflows, since you have to severely decompose tasks for LLMs to reliably follow them. Temporal is powerful enough for distributed cloud services but overkill for a desktop developer tool. Yegge still believes Temporal will be a key piece of the puzzle for scaling AI workflows to enterprise level, but he needed something lighter.
 
-**Orchestrator v3: PGT / Python Gas Town (November 2025).** This was the pivot. Yegge gave up on quality and switched focus to quantity. He moved all his ad-hoc named agents under a single directory tree, organized them with `git worktree`, and started trying to coordinate swarms.
+**Orchestrator v2:** `vc` **(Go).** 
+
+In hindsight, the lesson from v1 was "make more agents, not better ones." But Yegge tried again to make agents better — a more monolithic approach that wound up bloated and wrong-headed. The failure wasn't total: Beads, the lightweight Git-backed issue tracker that would become the foundation for everything that followed, was born during v2. Abandoned.
+
+**Orchestrator v3: PGT / Python Gas Town (November 2025).** 
+
+This was the pivot. Yegge gave up on quality and switched focus to quantity. He moved all his ad-hoc named agents under a single directory tree, organized them with `git worktree`, and started trying to coordinate swarms.
 
 PGT eagerly adopted a discovery by Jeffrey Emanuel, author of MCP Agent Mail: combining mail with Beads led to an ad-hoc "agent village" where agents naturally collaborated, divided work, and farmed it out. PGT grew quickly and carried Yegge for several weeks. Most of its roles evolved here. But something about it felt right enough to warrant one more rewrite.
 
-**Orchestrator v4: Gas Town (Go, December 15 onward).** The last two weeks of December were the fertile innovation period. Yegge had promised to launch by Christmas or New Year's. He wound up redesigning and rewriting the whole thing in Go — 75,000 lines, 2,000 commits in seventeen days. Ninety percent of Gas Town's design emerged during this sprint.
+**Orchestrator v4: Gas Town (Go, December 15 onward).** 
+
+The last two weeks of December were the fertile innovation period. Yegge had promised to launch by Christmas or New Year's. He wound up redesigning and rewriting the whole thing in Go — 75,000 lines, 2,000 commits in seventeen days. Ninety percent of Gas Town's design emerged during this sprint.
 
 It finally achieved liftoff at 8pm on December 29th. Yegge had been talking to the Mayor, complaining about things, and then the fixes started landing around him. He realized he was just shaping the whole thing by talking. The convoys were flowing and landing, the work was being filed and reviewed. He'd been aiming for this for months.
 
@@ -52,13 +60,19 @@ The Go rewrite was deliberate. Across his four orchestrators (TypeScript, Go, Py
 
 {{ figure(src="/img/orchestration-leap/gas-town-architecture.svg", alt="Gas Town's architecture", caption="Gas Town's architecture") }}
 
-Gas Town is an opinionated orchestration system for running twenty to thirty Claude Code instances simultaneously. It draws comparison to both Kubernetes and Temporal, though neither analogy captures the full picture. Like K8s, it coordinates unreliable workers toward a goal using a control plane watching over execution nodes. Like Temporal, it guarantees workflow completion through persistent state. But the destination is different. Kubernetes asks "is it running?" Gas Town asks "is it done?"
+Gas Town is an opinionated orchestration system for running twenty to thirty Claude Code instances simultaneously. It draws comparison to both Kubernetes and Temporal, though neither analogy captures the full picture. 
+
+Like K8s, it coordinates unreliable workers toward a goal using a control plane watching over execution nodes. Like Temporal, it guarantees workflow completion through persistent state. But the destination is different. Kubernetes asks "is it running?" Gas Town asks "is it done?"
 
 One thing to know up front: Gas Town degrades gracefully. Every worker can do its job independently, or in small groups, and at any time you can choose which parts of Gas Town you want running. It even works in a "no-tmux" mode, limping along on naked Claude Code sessions without real-time messages. Slower, but still functional.
 
 The system is built on seven worker roles, all prompted into standard Claude Code instances, plus the human operator (the **Overseer**, who has their own identity, inbox, and mail in the system).
 
-The physical layout starts with the **Town** — your HQ directory (e.g. `~/gt`), managed by the `gt` binary. Each project (git repo) under Gas Town management is a **Rig**. Some roles are per-rig (Witness, Polecats, Refinery, Crew), while others are town-level (Mayor, Deacon, Dogs).
+The physical layout starts with the **Town** — your HQ directory (e.g. `~/gt`), managed by the `gt` binary. 
+
+Each project (git repo) under Gas Town management is a **Rig**. 
+
+Some roles are per-rig (Witness, Polecats, Refinery, Crew), while others are town-level (Mayor, Deacon, Dogs).
 
 **The Mayor** is the primary agent the human talks to — a concierge and chief-of-staff that kicks off most work and receives notifications when it finishes.
 
@@ -74,7 +88,9 @@ The physical layout starts with the **Town** — your HQ directory (e.g. `~/gt`)
 
 **The Crew** are long-lived, named per-rig agents that the human works with directly for design, debugging, and back-and-forth collaboration — the direct replacements for whatever workflow you used to be using.
 
-Everything in Gas Town runs on Beads — the lightweight Git-backed issue tracker created two months earlier. Beads serves as both the data plane and control plane: all work, all identities, all mail, and all orchestration are expressed as Beads issues in a JSONL file checked into Git. This is not an accident. Beads was the breakthrough from the failed `vc` orchestrator (v2) that made everything else possible.
+Everything in Gas Town runs on Beads — the lightweight Git-backed issue tracker created two months earlier. Beads serves as both the data plane and control plane: all work, all identities, all mail, and all orchestration are expressed as 
+
+Beads issues in a JSONL file checked into Git. This is not an accident. Beads was the breakthrough from the failed `vc` orchestrator (v2) that made everything else possible.
 
 ### GUPP: The Propulsion Principle
 
@@ -82,9 +98,13 @@ The biggest problem with coding agents is that they stop. The context window fil
 
 GUPP states simply: **if there is work on your hook, YOU MUST RUN IT.**
 
-Every Gas Town worker has a persistent identity expressed as a Bead, and every identity has a "hook" — a special pinned Bead where work gets hung. The fundamental primitive is `gt sling`: you sling work to a worker, it goes on their hook, and the worker executes it. If the session crashes or context fills up, the hook persists in Git. When a new session starts for that worker role, GUPP kicks in: the agent finds work on its hook and continues without waiting for permission.
+Every Gas Town worker has a persistent identity expressed as a Bead, and every identity has a "hook" — a special pinned Bead where work gets hung. 
 
-In practice, Claude Code is "so miserably polite" that GUPP doesn't always fire automatically. Agents sometimes sit there waiting for input even when their hook is loaded. So Gas Town has a workaround — the GUPP Nudge — where patrol agents send a tmux notification to wake up stalled workers within thirty to sixty seconds. With the nudge hack in place and the hierarchical heartbeat from the Deacon downward, GUPP generally keeps Gas Town humming for as long as there's work available.
+The fundamental primitive is `gt sling`: you sling work to a worker, it goes on their hook, and the worker executes it. If the session crashes or context fills up, the hook persists in Git. When a new session starts for that worker role, GUPP kicks in: the agent finds work on its hook and continues without waiting for permission.
+
+In practice, Claude Code is "so miserably polite" that GUPP doesn't always fire automatically. Agents sometimes sit there waiting for input even when their hook is loaded. So Gas Town has a workaround — the GUPP Nudge — where patrol agents send a tmux notification to wake up stalled workers within thirty to sixty seconds. 
+
+With the nudge hack in place and the hierarchical heartbeat from the Deacon downward, GUPP generally keeps Gas Town humming for as long as there's work available.
 
 ### MEOW: The Work Stack
 
@@ -92,11 +112,23 @@ Gas Town operates on a layered stack of work abstractions called MEOW — the Mo
 
 {{ figure(src="/img/orchestration-leap/meow-stack.svg", alt="The MEOW stack", caption="The MEOW stack") }}
 
-At the base are **Beads**: atomic work units, individual issues with status, priority, type, and assignee. Above them are **Epics**: Beads with children, which can themselves be epics, giving you flexible top-down plans where children are parallel by default but can be explicitly sequenced with dependencies.
+At the base are **Beads**: atomic work units, individual issues with status, priority, type, and assignee. 
 
-Then come **Molecules**: workflows chained with Beads. Unlike epics, molecules can have arbitrary shapes — loops, gates, branching paths — and they're Turing-complete. Each step of the workflow is executed by a superintelligent AI that's reliable at following TODO lists and acceptance criteria. If the workflow is captured as a molecule, it survives agent crashes, compactions, restarts, and interruptions. Just start the agent up in the same sandbox, have it find its place in the molecule, and pick up where it left off.
+Above them are **Epics**: Beads with children, which can themselves be epics, giving you flexible top-down plans where children are parallel by default but can be explicitly sequenced with dependencies.
 
-The remaining layers build on molecules. **Protomolecules** are templates — entire graphs of template issues with instructions and dependencies set up in advance, which you instantiate into molecules via variable substitution. (Yegge has a 20-step release process for Beads encoded as a protomolecule.) **Formulas**, written in TOML, are the source form for workflows, "cooked" into protomolecules and then instantiated. And **Guzzoline** is the term for the entire sea of molecularized work — all the work in the world, composed together, ready for Gas Town to swarm.
+Then come **Molecules**: workflows chained with Beads. Unlike epics, molecules can have arbitrary shapes — loops, gates, branching paths — and they're Turing-complete. 
+
+Each step of the workflow is executed by a superintelligent AI that's reliable at following TODO lists and acceptance criteria. If the workflow is captured as a molecule, it survives agent crashes, compactions, restarts, and interruptions. 
+
+Just start the agent up in the same sandbox, have it find its place in the molecule, and pick up where it left off.
+
+The remaining layers build on molecules. **Protomolecules** are templates — entire graphs of template issues with instructions and dependencies set up in advance, which you instantiate into molecules via variable substitution. 
+
+(Yegge has a 20-step release process for Beads encoded as a protomolecule.) 
+
+**Formulas**, written in TOML, are the source form for workflows, "cooked" into protomolecules and then instantiated. 
+
+And **Guzzoline** is the term for the entire sea of molecularized work — all the work in the world, composed together, ready for Gas Town to swarm.
 
 ## Nondeterministic Idempotence
 
@@ -104,27 +136,41 @@ The remaining layers build on molecules. **Protomolecules** are templates — en
 
 At the heart of Gas Town's reliability guarantee is a principle called Nondeterministic Idempotence, or NDI. It is superficially similar to Temporal's deterministic durable replay, but achieves its durability through completely different machinery.
 
-In Gas Town, an agent is not a session. Sessions are ephemeral — the "cattle" in the Kubernetes "pets vs cattle" metaphor. Claude Code sessions are the cattle that Gas Town throws at persistent work. The work lives in Beads (persistent, in Git). The hook is a Bead (persistent, in Git). The agent identity is a Bead (persistent, in Git). Sessions come and go; agents stay.
+In Gas Town, an agent is not a session. Sessions are ephemeral — the "cattle" in the Kubernetes "pets vs cattle" metaphor. Claude Code sessions are the cattle that Gas Town throws at persistent work. 
+
+The work lives in Beads (persistent, in Git). The hook is a Bead (persistent, in Git). The agent identity is a Bead (persistent, in Git). Sessions come and go; agents stay.
 
 So it doesn't matter if Claude Code crashes or runs out of context. As soon as another session starts up for that agent role, it picks up the molecule where the last session left off. If it finds that the previous session crashed mid-step, it figures out the right fix, performs it, and moves on.
 
-The path is fully nondeterministic — there's no replay log, no event sourcing, no deterministic re-execution. But the *outcome* is idempotent: the workflow eventually finishes, "guaranteed," as long as you keep throwing agents at it. The agent may even make mistakes along the way, but can self-correct, because the molecule's acceptance criteria are presumably well-specified by whoever designed the molecule. This isn't a replacement for Temporal — but it provides workflow guarantees that are "plenty good enough for a developer tool."
+The path is fully nondeterministic — there's no replay log, no event sourcing, no deterministic re-execution. But the *outcome* is idempotent: the workflow eventually finishes, "guaranteed," as long as you keep throwing agents at it. 
+
+The agent may even make mistakes along the way, but can self-correct, because the molecule's acceptance criteria are presumably well-specified by whoever designed the molecule. This isn't a replacement for Temporal — but it provides workflow guarantees that are "plenty good enough for a developer tool."
 
 ### Wisps and Patrols
 
-Two refinements complete the execution model. **Wisps** are ephemeral Beads — they exist in the database and get hash IDs, but Gas Town never writes them to the JSONL file or persists them to Git. At the end of their run, wisps are "burned" (destroyed). They're the vapor phase of Gas Town's work matter, used for high-velocity orchestration workflows that need transactional guarantees without polluting Git history.
+Two refinements complete the execution model. 
 
-**Patrols** are ephemeral wisp workflows that run in loops for the system's supervisory roles. The Refinery's patrol processes the Merge Queue until it's empty. The Witness's patrol checks on polecats and refineries. The Deacon's patrol runs town-level plugins and ensures workers are properly maintained. Patrols have exponential backoff — the agent gradually goes to sleep if it finds no work, then wakes when any mutating command signals new activity.
+**Wisps** are ephemeral Beads — they exist in the database and get hash IDs, but Gas Town never writes them to the JSONL file or persists them to Git. At the end of their run, wisps are "burned" (destroyed). They're the vapor phase of Gas Town's work matter, used for high-velocity orchestration workflows that need transactional guarantees without polluting Git history.
 
-The most surprising feature to emerge from the session lifecycle is `gt seance` — a command that lets workers communicate with their predecessors by resuming old Claude Code sessions. When a worker hands off and the successor can't find the handoff notes, the new session can revive the previous one with Claude Code's `/resume` feature and ask: "Where the hell is my stuff you left for me?"
+**Patrols** are ephemeral wisp workflows that run in loops for the system's supervisory roles. The Refinery's patrol processes the Merge Queue until it's empty. The Witness's patrol checks on polecats and refineries. The Deacon's patrol runs town-level plugins and ensures workers are properly maintained. 
+
+Patrols have exponential backoff — the agent gradually goes to sleep if it finds no work, then wakes when any mutating command signals new activity.
+
+The most surprising feature to emerge from the session lifecycle is `gt seance` — a command that lets workers communicate with their predecessors by resuming old Claude Code sessions. 
+
+When a worker hands off and the successor can't find the handoff notes, the new session can revive the previous one with Claude Code's `/resume` feature and ask: "Where the hell is my stuff you left for me?"
 
 ### Convoys
 
 Everything in Gas Town rolls up into a **Convoy** — Gas Town's ticketing or work-order system. A Convoy is a special bead that wraps a bunch of work into a unit you track for delivery. It doesn't use the Epic structure, because the tracked issues in a Convoy mostly already have another parent.
 
-The fundamental primitive for slinging work is `gt sling`. Tell the Mayor "our tmux sessions are showing the wrong rig count — file it and sling it," and the Mayor will file a bead for the problem and sling it to a polecat, which works on it immediately. Every unit of slung work, from a single polecat task to a large swarm, gets wrapped with a Convoy. Convoys show up in a dashboard with expanding trees for each convoy's tracked issues.
+The fundamental primitive for slinging work is `gt sling`. Tell the Mayor "our tmux sessions are showing the wrong rig count — file it and sling it," and the Mayor will file a bead for the problem and sling it to a polecat, which works on it immediately. 
 
-A Convoy can have multiple swarms attack it before it's finished. Swarms are ephemeral agent sessions taking on persistent work. Whoever is managing the Convoy keeps recycling polecats and pushing them on issues until everything lands. Convoys are basically features — whether a tech debt cleanup, a bug fix, or an actual feature, each one is a ticketing unit of Gas Town's work-order architecture.
+Every unit of slung work, from a single polecat task to a large swarm, gets wrapped with a Convoy. Convoys show up in a dashboard with expanding trees for each convoy's tracked issues.
+
+A Convoy can have multiple swarms attack it before it's finished. Swarms are ephemeral agent sessions taking on persistent work. 
+
+Whoever is managing the Convoy keeps recycling polecats and pushing them on issues until everything lands. Convoys are basically features — whether a tech debt cleanup, a bug fix, or an actual feature, each one is a ticketing unit of Gas Town's work-order architecture.
 
 ## The Invisible Garden
 
@@ -165,17 +211,27 @@ If you're not at least Stage 7 — or maybe Stage 6 and very brave — Gas Town 
 
 ### Big Companies in Big Trouble
 
-The prediction: big companies will face an existential crisis in 2026. The problem: big companies are slow, weighed down by processes, approvals, review cycles, and organizational inertia. All of that made sense when writing code was the bottleneck. But code is no longer the bottleneck — decision-making is. Meanwhile, small teams of two to five people armed with AI agents can now produce software at a rate that rivals teams of fifty to a hundred. A small team with $10K/month in API costs can outproduce a team with a $2M/month payroll. The entire world is going to explode into tiny companies, which will then aggregate and re-form into larger ones — a Cambrian explosion for software companies.
+The prediction: big companies will face an existential crisis in 2026. The problem: big companies are slow, weighed down by processes, approvals, review cycles, and organizational inertia. 
 
-Agents themselves will specialize. Gas Town already shows this: the Deacon is a planner, polecats are workers, Dogs are reviewers. By end of 2026, expect purpose-built agents specifically trained for code review, test writing, database migration, security auditing, and performance optimization. General-purpose agents will still exist, but they'll be like general practitioners in medicine — you go to them first, and they refer you to specialists.
+All of that made sense when writing code was the bottleneck. But code is no longer the bottleneck — decision-making is. Meanwhile, small teams of two to five people armed with AI agents can now produce software at a rate that rivals teams of fifty to a hundred.
+
+A small team with $10K/month in API costs can outproduce a team with a $2M/month payroll. The entire world is going to explode into tiny companies, which will then aggregate and re-form into larger ones — a Cambrian explosion for software companies.
+
+Agents themselves will specialize. Gas Town already shows this: the Deacon is a planner, polecats are workers, Dogs are reviewers. By end of 2026, expect purpose-built agents specifically trained for code review, test writing, database migration, security auditing, and performance optimization. 
+
+General-purpose agents will still exist, but they'll be like general practitioners in medicine — you go to them first, and they refer you to specialists.
 
 ### Factory, Not Workbench
 
 {{ figure(src="/img/orchestration-leap/factory-vs-workbench.svg", alt="Factory vs. workbench", caption="Factory vs. workbench") }}
 
-The deepest implication is architectural. IDEs are workbenches — visual environments optimized for a human writing code by hand. Agents don't need any of that. They read files, write code, run tests, look at errors. The IDE was always for humans, and humans are increasingly not the ones writing the code.
+The deepest implication is architectural. IDEs are workbenches — visual environments optimized for a human writing code by hand. Agents don't need any of that. They read files, write code, run tests, look at errors. 
 
-The framing: "You don't put the factory inside the workbench. You put the workbench inside the factory." Cursor, Windsurf, and others saw the agent wave coming and tried to jam agents into the IDE. But that's backwards. Gas Town is a factory. IDEs are workbenches. The future is factories.
+The IDE was always for humans, and humans are increasingly not the ones writing the code.
+
+The framing: "You don't put the factory inside the workbench. You put the workbench inside the factory." Cursor, Windsurf, and others saw the agent wave coming and tried to jam agents into the IDE. 
+
+But that's backwards. Gas Town is a factory. IDEs are workbenches. The future is factories.
 
 In this model, the human becomes a Product Manager and Gas Town is an Idea Compiler. You design features, file implementation plans, sling work to polecats and crew, and watch convoys land. The focus shifts from writing code to making decisions — which was always the actual bottleneck at big companies, hidden behind the illusion that code-writing was the slow part.
 
@@ -190,7 +246,9 @@ Gas Town will improve dramatically through 2026 without anyone lifting a finger:
 
 ### Honest Caveats
 
-Gas Town is seventeen days old. It's 100% vibe coded — Yegge has never seen the code. It needs multiple expensive API subscriptions. It can murder your workers mid-task. Its heresies spread like disease through invisible code. The tmux interface is functional but primitive. The plugin system is barely sketched. Federation — linking multiple Gas Towns across machines — isn't built yet.
+Gas Town is seventeen days old. It's 100% vibe coded — Yegge has never seen the code. It needs multiple expensive API subscriptions. It can murder your workers mid-task. Its heresies spread like disease through invisible code. 
+
+The tmux interface is functional but primitive. The plugin system is barely sketched. Federation — linking multiple Gas Towns across machines — isn't built yet.
 
 And yet people are already using it despite every warning not to, because the promise is extraordinary: a system where you describe what you want and agents build it, autonomously, through the night, coordinated by persistent work molecules that survive any individual session's death.
 
