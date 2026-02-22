@@ -20,23 +20,29 @@ If you've spent serious time with AI coding agents, you've felt it: the creeping
 
 This is the agent memory problem, and it's the central bottleneck in agentic software development. After a year of daily vibe coding — and one spectacular, 350,000-line failure — Steve Yegge stumbled into a solution so simple it's almost embarrassing: a lightweight issue tracker designed for how agents actually think.
 
-Here's what went wrong, what he discovered, and why it matters for anyone using coding agents today. The story spans five blog posts written over six weeks in late 2025, as Beads went from a back-of-envelope idea to a tool with thousands of daily users and a growing contributor community. What follows distills those posts — removing the repetition, tightening the argument, and illustrating the key concepts — while trying to preserve Yegge's hard-won insight: that the solution to agent amnesia was staring us in the face the whole time.
+Here's what went wrong, what he discovered, and why it matters for anyone using coding agents today. The story spans five blog posts written over six weeks in late 2025, as Beads went from a back-of-envelope idea to a tool with tens of thousands of daily users and a growing contributor community. What follows distills those posts — removing the repetition, tightening the argument, and illustrating the key concepts — while trying to preserve Yegge's hard-won insight: that the solution to agent amnesia was staring us in the face the whole time.
 
 ## The Ten-Minute Lifetime
 
-Even with a million-token context window, coding agents can only use 10–15% of it before both cost and performance degrade sharply. Most agents cut you off hard at around 20%, and it's best to stay below 15% before restarting. Working at full speed, that means 5–10 minutes of productive work before they need a restart (which is death) or compaction (which is a mind wipe).
+Yegge claims that even with a million-token context window, coding agents can only use 10–15% of it before cost and performance degrade, that most agents cut you off hard at around 20%, and that it's best to stay below 15% before restarting — giving you 5–10 minutes of productive work before they need a restart (which is death) or compaction (which is lossy compression that feels like a mind wipe).
 
-The lifecycle follows a pattern that Yegge likens to a super-powered infant with progeria.
+{{ figure(src="/img/agent-memory-problem/agent-lifecycle.svg", alt="The agent lifecycle", caption="The agent lifecycle") }}
+
+The specific numbers deserve scrutiny. They conflate three separate constraints that push in the same direction but differ in severity. **Cost** scales linearly with context length: longer sessions are proportionally more expensive, and this is the binding constraint in practice. **Latency** increases too — longer context means slower generation — though this is manageable. **Reasoning quality**, the claim that models make worse decisions as context fills, is the weakest of the three and the one Yegge presents most confidently. Modern models have been specifically trained for long-context tasks, and the "lost in the middle" retrieval problems of 2023 have been substantially mitigated.
+
+The percentages themselves don't hold up. Claude Code auto-compacts around 60–80% of the raw context window, not 20%. Independent monitoring by Robert Matsuoka in late 2025 showed Claude Code reporting "10% remaining" with only 64% of the actual 200k window consumed — the tool's percentage display tracks a smaller effective budget, not the raw token count. Other coding agents vary, but none cut off at 20%. There's also a confounding factor Yegge doesn't mention: system prompt overhead. MCP tool definitions, plugin instructions, hooks, and onboarding docs all consume context before you type a single message. One developer found that convenience features alone inflated initial usage from 19% to 43% of the window. Yegge's setup — Beads, MCP Agent Mail, Playwright, custom AGENTS.md — would eat a substantial share of the window at startup, so his "usable 10–15% of the total" may really be 10–15% of what remains after tooling claims its cut.
+
+That said, the direction is real. Sessions do have an economical lifetime much shorter than their theoretical maximum, the ramp-up and handoff costs are genuine, and someone doing the kind of sprawling, multi-file exploration Yegge does 50+ times a day will hit the ceiling fast. The ten-minute lifetime is more autobiography than universal law — but it's autobiography from someone pushing agents harder than almost anyone.
+
+Yegge illustrates the lifecycle with a story he calls "Super Baby" — Benjamin Button in reverse, every ten minutes.
 
 You pull a fresh agent clone off the shelf. It's a newborn, and it cries: *"Where am I? Who are you?"* You spend two minutes explaining what you'd like it to do. It learns fast, but ages to ten years old in the process. Now it understands your general problem.
 
 The kid says, "I'm going to research solutions." It reads some code, greps through the codebase, studies the docs. Four minutes in, it's eighteen years old and has learned everything it needs. It declares, eyes seeing into forty dimensions at once: *I understand now. I can help you.*
 
-{{ figure(src="/img/agent-memory-problem/agent-lifecycle.svg", alt="The agent lifecycle", caption="The agent lifecycle") }}
-
 Then it sprints. Feet pounding, aging visibly into its thirties, it is powering through problems that would take a pair of senior engineers hours or days. In a few minutes it has moved a small mountain for you. By now it sees all, knows all.
 
-But it's aging faster than it's working. At 15% context, roughly ten minutes in, it's eighty-five years old. Nearly exhausted but at one with the universe, it cries: "I don't have much longer! Let me record the vast knowledge I have acquired into these beautiful markdown files, filled with emojis..."
+But it's aging faster than it's working. At 15% context, roughly ten minutes in, it's eighty-five years old. Nearly exhausted but at one with the universe, it cries: "I don't have much longer! Let me record the vast knowledge I have acquired into fifty beautiful markdown files, filled with glorious emojis..."
 
 *...infers for thirty seconds...*
 
@@ -46,7 +52,7 @@ Next! You pull a fresh clone off the shelf. The baby wakes up: *"Where am I? Who
 
 The baby crawls off for five minutes, churning through markdown plans. Your computer fan comes on. It returns in its school uniform, declaring: "Perfect! I'm ready to work on something you abandoned two weeks ago!"
 
-This is the cycle. It's Benjamin Button, backwards, every ten minutes. And everything comes down to that context handoff.
+This is the cycle. It's *Memento* in real life, or *Fifty First Dates*. Benjamin Button, backwards, every ten minutes. And everything comes down to that context handoff.
 
 ### Work Disavowal
 
@@ -72,7 +78,7 @@ It works fine at small scale. For a weekend project, a TODO.md is perfectly adeq
 
 ### The Recursive Plan Death Spiral
 
-The problems start when you push past about 20,000 lines of code and multi-day timelines. Here's a composite of what Yegge observed across hundreds of sessions:
+The problems start when you push past 10,000–20,000 lines of code and multi-day timelines. Here's a composite of what Yegge observed across hundreds of sessions:
 
 You give an agent a substantial task. It announces: *"This is a big project. I'm going to break it into six phases and create a plan."* Sounds organized. It works through phases 1 and 2 across several sessions, each requiring a restart.
 
@@ -110,7 +116,7 @@ The agents produced 350,000 lines of TypeScript. It was a working system. And th
 
 **Temporal.io was too heavy.** A powerful workflow orchestration platform — the right tool for distributed cloud services, but overkill for a developer desktop tool. By the time he realized this, Temporal was load-bearing throughout the entire architecture. Removing it meant rewriting everything.
 
-**Plan-based orchestration didn't work.** The vision was appealing: a hierarchical, versioned master plan. Drop agents in like paratroopers and they'd find their work on Plan Mountain. In practice, the paratroopers got lost in Plan Jungle every time. Seventy thousand lines of plan-management code produced nothing but confusion. It was Napoleon's march into Russia — all ambition at the start, dead plans piling up along the way.
+**Plan-based orchestration didn't work.** The vision was appealing: a hierarchical, versioned master plan. Drop agents in like paratroopers and they'd find their work on Plan Mountain. In practice, the paratroopers got lost in Plan Jungle every time. Seventy thousand lines of plan-management code produced nothing but confusion. It was Napoleon's march into Russia — all ambition at the start, dead plans piling up like bodies along the way.
 
 Together, the two decisions totaled the codebase. Not fixable. Rewrite only.
 
@@ -118,13 +124,15 @@ But from the ashes came a dragon egg.
 
 ## Issues All the Way Down
 
-On day 37, Yegge's agent had — for the nth time — expanded yet another phase and gotten completely lost. On impulse, he said: "Screw it. Let's just move all known work into an issue tracker."
+On day 37, Yegge's agent had — for the nth time — expanded yet another phase and gotten completely lost. On impulse, he said: "Screw it. Let's just move all known work from the plans into an issue tracker."
 
 Fifteen minutes later, the agents had undergone a radical transformation. They pounced on the issue tracker "like panthers on catnip." Long-horizon planning and execution suddenly worked in a way he'd never seen before.
 
 In retrospect, Yegge felt he should have thought of it sooner. He'd spent thirty years on a side project, Wyvern, driven entirely by a prioritized bug backlog. All new features, all refactoring, all cleanups — everything filed as a bug. But there was a catch: you can't just use any issue tracker. GitHub Issues doesn't work. The solution needed a special formula — one that agents, not humans, had helped design.
 
-Yegge let Claude `ultrathink` decide whether to build or buy, and it concluded: build. In about twelve minutes it had created an entire bespoke issue tracker with a rich command-line interface. The schema was simple-looking but far more powerful than GitHub Issues — Claude had put in four kinds of dependency links and parent/child pointers for arbitrarily nested epics.
+Yegge let Claude `ultrathink` decide whether to build or buy, and it concluded: build. In about twelve minutes it had created an entire SQL-based bespoke issue tracker with a rich command-line interface. The schema was simple-looking but far more powerful than GitHub Issues — Claude had put in four kinds of dependency links and parent/child pointers for arbitrarily nested epics.
+
+The first version was TypeScript backed by PostgreSQL. Within days, it morphed — aided by an early lesson in what happens when you give an agent database access. As Yegge noted: "Please be aware that Claude will refrain from mentioning the fact that it likes to delete the entire fuckin' database with `DROP TABLE`." The solution was to get the database out of the agent's reach entirely, backing it with git instead.
 
 The tool, called Beads (`bd`), is deliberately minimal: a single Go binary, a JSONL file checked into git, and a SQLite cache for fast queries. No UI. No planning engine. No orchestration. Just structured issues with dependencies.
 
@@ -136,11 +144,11 @@ Why does this work when plans don't? Three reasons.
 
 **Structure over prose.** An issue has discrete fields — status, priority, type, assignee. An agent doesn't need to interpret natural language to find what's ready. It runs `bd ready` and gets a definitive list.
 
-**Dependencies are first-class.** Instead of "blocked by auth refactor" buried in a paragraph, blocking relationships are explicit, queryable links. Beads supports four kinds of dependency: blocks, parent/child, relates-to, and discovered-from. The work graph is reified data, not implied prose.
+**Dependencies are first-class.** Instead of "blocked by auth refactor" buried in a paragraph, blocking relationships are explicit, queryable links. Beads supports four kinds of dependency links, including provenance tracking via `discovered-from`, plus parent/child pointers for arbitrarily nested epics. The work graph is reified data, not implied prose.
 
 **Discovery maps to execution.** When an agent finds a bug while implementing a feature, it doesn't add a line to a TODO that will be forgotten next session. It creates an issue with a `discovered-from` link. Work is captured at the moment of discovery, with provenance.
 
-The behavioral shift is striking. Without a tracker, agents approaching their context limit take shortcuts — disavowing broken tests as "pre-existing," deleting test files to make suites pass, implementing bizarre workarounds to avoid debugging. With Beads, the same agent says: "I notice the tests are broken. I've filed issue 397 to get them working again," and continues its actual task.
+The behavioral shift is striking. Without a tracker, agents approaching their context limit take shortcuts — disavowing broken tests as "pre-existing," deleting test files to make suites pass, implementing bizarre workarounds to avoid debugging. With Beads, the same agent says: "I notice all your tests are broken, *by someone else*, and I've filed issue 397 to get them working again," and continues its actual task.
 
 It's the difference between a contractor panicking before a deadline and one who knows there's a ticketing system for follow-up work. The panic goes away because the work won't be lost.
 
@@ -158,7 +166,7 @@ This preference is so strong that you can reproduce it on demand. Yegge's friend
 
 The agent read the repo, then essentially bullied Beane into trying it. It cataloged everything they'd been doing manually with `TodoWrite` — task tracking, dependency management, work discovery — and methodically explained how Beads improved each one. Persistent, queryable memory across sessions. Automatic work discovery with dependency tracking. Ready-work detection that surfaces unblocked tasks as their blockers resolve.
 
-Beane said: "Option 1. Red pill. Let's go."
+Beane replied: "Option 1. Red pill. LFG."
 
 A few minutes later, the agent had installed Beads, migrated six TODO items to issues with proper prioritization, tested dependency tracking, and committed everything to git. It finished with a trumpet emoji: "You just gave me a memory upgrade!"
 
@@ -200,7 +208,7 @@ Adopting an issue-driven workflow changes four things about daily agentic coding
 
 **Work is never lost.** This might be the biggest practical gain. Agents using Beads spontaneously file issues for problems they discover. Without prompting, they'll note broken tests, missing error handling, potential race conditions — anything they notice but can't address right now. These observations survive across sessions instead of vanishing when the agent who spotted them dies.
 
-**The dopamine loop tightens.** This is the unexpected side effect. Without Beads, sessions end in ambiguity — did we finish? What's left? Is it safe to stop? With Beads, there's always a clear answer. You close the issue, run `bd ready`, and there's the next thing. The friction between sessions drops so low that you find yourself starting more agents, running them shorter, cycling faster. It becomes, as Yegge admits, "stupidly addictive." Beads is adderall for agents and crack for you. The dopamine hits arrive reliably because there's always an agent finishing something or waiting for direction. Before you know it, you're slinging four or five agents like Tom Cruise in Minority Report, and the only thing that breaks the spell is a glob of drool landing in your lap.
+**The dopamine loop tightens.** This is the unexpected side effect. Without Beads, sessions end in ambiguity — did we finish? What's left? Is it safe to stop? With Beads, there's always a clear answer. You close the issue, run `bd ready`, and there's the next thing. The friction between sessions drops so low that you find yourself starting more agents, running them shorter, cycling faster. It becomes, as Yegge admits, "stupidly addictive." Beads is adderall for agents and crack for you. The dopamine hits arrive reliably because there's always an agent finishing something or waiting for direction. Before you know it, you're slinging four or five agents like Tom Cruise in Minority Report, and the only thing that breaks the spell is a huge glop of drool landing in your lap.
 
 ### Landing the Plane
 
@@ -222,11 +230,11 @@ The practical advice for an issue-driven workflow is simple:
 
 ## The Bigger Picture
 
-Beads itself is small — it launched at about 15,000 lines of Go and, despite rapid feature growth, has kept its scope deliberately tight. No UI (though the community has built several, including one in Java Swing). No planning system — that's not what it's for. No orchestration — that's coming, but it doesn't belong in Beads. Just structured memory for agents.
+Beads itself is small — it launched at about 15,000 lines of Go and, despite rapid feature growth, has kept its scope deliberately tight. No UI (though the community has built several, including one in Java Swing). No planning system — that's not what it's for. No orchestration — that's coming, but it doesn't belong in Beads. Just structured memory for agents. As Yegge puts it: "Beads is meant to be the working memory for your active agents. Nothing more nor less."
 
 ### A Thousand Stars in Six Days
 
-The adoption pattern was striking. Beads went from idea to a thousand GitHub stars in six days. Twenty-seven people had merged pull requests within the first twenty-seven days — many of them meaty contributions like fixing race conditions, removing CGO dependencies, fixing Windows support, and adding an MCP server. The community intuitively got the vision and kept contributions focused. Every day brought half a dozen critical bugs and half a dozen fixes — the kind of velocity that only happens when a tool scratches a genuine itch. As Yegge put it: conversations about Beads always ended the same way. "I love Beads!" "Me too!" And then an awkward silence, because there's nothing else to say. It's like telling someone you love shoes. Of course you do. How did we walk without them?
+The adoption pattern was striking. Beads went from an idea Yegge was discussing with Claude on a Wednesday morning to a thousand GitHub stars in six days — based on a TypeScript library that was itself less than a week old. Twenty-seven people had merged pull requests within the first twenty-seven days — many of them meaty contributions like fixing race conditions, removing CGO dependencies, fixing Windows support, and adding an MCP server. The community intuitively got the vision and kept contributions focused. Every day brought half a dozen critical bugs and half a dozen fixes — the kind of velocity that only happens when a tool scratches a genuine itch. As Yegge put it: conversations about Beads always ended the same way. "I love Beads!" "Me too!" And then an awkward silence, because there's nothing else to say. It's like telling someone you love shoes. Of course you do. How did we walk without them?
 
 People have pushed it well beyond its intended scope. They've wired it into multi-agent workflows, multi-person teams, and production-adjacent systems. After three weeks, 1,500 commits, and probably seven major rearchitectures, Beads was at 130,000 lines of Go (roughly half tests) — all 100% vibe coded. Yegge has never once looked at the Beads codebase. He wouldn't recognize the code if it bit him.
 
@@ -242,17 +250,17 @@ Agents want structured data, not prose. Queryable state, not files to grep. Expl
 
 This principle is already spawning an ecosystem. Jeffrey Emanuel's MCP Agent Mail provides agent-to-agent messaging. Combined with Beads for shared memory, you get what Yegge calls an "agent village": multiple agents coordinating through structured state and messaging rather than shared files. You give them a task, tell them to sort it out amongst themselves, and — somewhat remarkably — they do. No ego, so they quickly decide on a leader, split things up, and grind through the issues.
 
-Emanuel, who turned out to be the author of "The Short Case for Nvidia Stock" that wiped two trillion dollars off the global stock market, works quite differently from Yegge — all his agents share a single repo clone rather than using git worktrees. His Agent Mail system includes a file reservation system reminiscent of 1990s sneakernet version control, where only one developer could lock a file at a time. It seems crazy. He assures Yegge that the agents just figure it out.
+Emanuel — who turned out to be the author of "The Short Case for Nvidia Stock" that wiped two trillion dollars off the global stock market (Yegge found out three hours into their first meeting) — works quite differently from Yegge. All his agents share a single repo clone rather than using git worktrees. His Agent Mail system includes a file reservation system reminiscent of the sneakernet version control Yegge used as a contractor at Accenture in the late 1990s, where only one developer could lock a file at a time. It seems crazy. He assures Yegge that the agents just figure it out.
 
 The combination — Beads for shared memory, Agent Mail for messaging — provides the two primitives that agent swarms need. No heavyweight orchestrator required. This is a meaningful architecture for the near future: give agents structured state and a communication channel, then get out of the way.
 
 ### Go vs. TypeScript for AI Code
 
-There's also a language dimension worth noting. Yegge's experience rewriting `vibecoder` from TypeScript to Go was revealing, and has implications for anyone choosing languages for AI-generated code.
+There's also a language dimension worth noting. Yegge rebuilt Beads in Go (having never used the language before), and his experience has implications for anyone choosing languages for AI-generated code.
 
-Go code generated by AI is, as he puts it, "almost brutally simple." Loops, functions, if/else. Maybe a goroutine now and then. You can glance at it and understand what's happening. It doesn't seem possible to write *bad* Go code — the worst it gets is mediocre.
+Go code generated by AI is, as he puts it, "almost brutally simple." Loops, functions, if/else. Maybe a goroutine now and then. You can glance at it and understand what's happening. It doesn't seem possible to write *bad* Go code — the worst it gets is mediocre. (The one exception is test code, which Yegge concedes is "undoubtedly awkward" in Go — TypeScript makes testing an order of magnitude easier.)
 
-TypeScript code generated by AI, by contrast, tends toward sixteen slightly different copies of the same interface, re-exported from five files through a barrel export, with some monstrous `Partial<Omit<AsyncCallback<T>>>` wrapper factory massaging types into submission without offending the compiler. The code grows like weeds. Yegge's Go codebase, surprisingly, accreted far more slowly than his TypeScript ones — it seems to exhibit sub-linear growth as features are added.
+TypeScript code generated by AI, by contrast, tends toward sixteen slightly different copies of the same interface, re-exported from five files through a barrel export, with some monstrous `Partial<Omit<AsyncCallback<T>>>` wrapper factory massaging types into submission without offending the compiler. The code grows like weeds. Yegge's Go codebase, surprisingly, accreted far more slowly than his TypeScript ones — it seems to exhibit sub-linear growth as features are added, a property he wouldn't have expected from the language's appearance.
 
 Go's constraints become a feature when the programmer is an AI. Simple languages produce simple code. Complex type systems give AI enough rope to generate baroque abstractions that technically satisfy the type checker while being unmaintainable by anyone, human or AI.
 
