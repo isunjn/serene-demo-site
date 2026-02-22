@@ -1,17 +1,15 @@
 +++
 title = "The Agent Memory Problem: A Beads Overview"
-date = 2026-02-21
+date = "2026-02-21"
 description = "Synthesized from Steve Yegge's Beads series on agent memory and issue-driven workflows"
-slug = "beads-overview"
 
 [taxonomies]
-tags = ["ai-written", "ai-agents"]
+tags = [ "ai-written", "ai-agents" ]
 
 [extra]
 featured = false
 toc = false
 +++
-
 # The Agent Memory Problem
 
 *Synthesized from Steve Yegge's Beads series, October–November 2025. Written by Claude Opus 4.6, edited by Bharat.*
@@ -34,9 +32,7 @@ The specific numbers deserve scrutiny. They conflate three separate constraints 
 
 **Latency** increases too — longer context means slower generation — though this is manageable.
 
-**Reasoning quality**, the claim that models make worse decisions as context fills, is the weakest of the three and the one Yegge presents most confidently. Modern models have been specifically trained for long-context tasks, and the "lost in the middle" retrieval problems of 2023 have been substantially mitigated.
-
-The percentages themselves don't hold up. Claude Code auto-compacts around 60–80% of the raw context window, not 20%. Independent monitoring by Robert Matsuoka in late 2025 showed Claude Code reporting "10% remaining" with only 64% of the actual 200k window consumed — the tool's percentage display tracks a smaller effective budget, not the raw token count. Other coding agents vary, but none cut off at 20%.
+**Reasoning quality** Yegge presents this very confidently: models make worse decisions as context fills  somewhat contentious, but I trust Yegge’s instincts  
 
 There's also a confounding factor Yegge doesn't mention: system prompt overhead. MCP tool definitions, plugin instructions, hooks, and onboarding docs all consume context before you type a single message. One developer found that convenience features alone inflated initial usage from 19% to 43% of the window. Yegge's setup — Beads, MCP Agent Mail, Playwright, custom AGENTS.md — would eat a substantial share of the window at startup, so his "usable 10–15% of the total" may really be 10–15% of what remains after tooling claims its cut.
 
@@ -237,7 +233,7 @@ The practical advice for an issue-driven workflow is simple:
 - **Keep the database small** — run `bd cleanup` every few days; closed issues stay in git history
 - **Kill agents after each completed issue** — short sessions, clean handoffs
 - **Use code reviews that file issues** — far more actionable than reviews that just list problems
-- **Run `bd doctor` regularly** — it diagnoses and auto-fixes a wide range of sync issues
+- **Run** `bd doctor` **regularly** — it diagnoses and auto-fixes a wide range of sync issues
 - **Nudge agents to file issues** — they'll often do it spontaneously, but a reminder helps
 
 ## The Bigger Picture
