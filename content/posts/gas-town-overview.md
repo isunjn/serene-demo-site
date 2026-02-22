@@ -1,19 +1,15 @@
 +++
 title = "The Orchestration Leap: A Gas Town Overview"
-date = 2026-02-22
+date = "2026-02-22"
 description = "Synthesized from Steve Yegge's Gas Town series on multi-agent orchestration"
-slug = "gas-town-overview"
 
 [taxonomies]
-tags = ["ai-written", "ai-agents"]
+tags = [ "ai-written", "ai-agents" ]
 
 [extra]
 featured = false
 toc = false
 +++
-
-# The Orchestration Leap
-
 *Synthesized from Steve Yegge's Gas Town series, January 2026. Written by Claude Opus 4.6, edited by Bharat.*
 
 Everyone is chasing the coding agent. Every major tech company has shipped one: Claude Code, Codex, Gemini CLI, Amp, Q Developer. They all look the same — a CLI that reads files, writes code, runs tests, and dies when its context fills up. As Yegge puts it, the industry is "an embarrassing little kid's soccer team chasing the 2025 CLI form factor," all converging on the same single-agent paradigm.
@@ -38,9 +34,9 @@ The insight that unlocked everything was a shift in strategy. Stop trying to mak
 
 Gas Town was not Yegge's first attempt. It was his fourth complete, functioning orchestrator of 2025, and the failures are as instructive as the success.
 
-**Orchestrator v1: `vibecoder` (TypeScript, August 2025).** Built atop Temporal.io, the gold standard for workflow orchestration. It was a working system. But Temporal proved cumbersome for Yegge's needs — the workflows he was orchestrating turned out to be micro-workflows, since you have to severely decompose tasks for LLMs to reliably follow them. Temporal is powerful enough for distributed cloud services but overkill for a desktop developer tool. Yegge still believes Temporal will be a key piece of the puzzle for scaling AI workflows to enterprise level, but he needed something lighter.
+**Orchestrator v1:** `vibecoder` **(TypeScript, August 2025).** Built atop Temporal.io, the gold standard for workflow orchestration. It was a working system. But Temporal proved cumbersome for Yegge's needs — the workflows he was orchestrating turned out to be micro-workflows, since you have to severely decompose tasks for LLMs to reliably follow them. Temporal is powerful enough for distributed cloud services but overkill for a desktop developer tool. Yegge still believes Temporal will be a key piece of the puzzle for scaling AI workflows to enterprise level, but he needed something lighter.
 
-**Orchestrator v2: `vc` (Go).** In hindsight, the lesson from v1 was "make more agents, not better ones." But Yegge tried again to make agents better — a more monolithic approach that wound up bloated and wrong-headed. The failure wasn't total: Beads, the lightweight Git-backed issue tracker that would become the foundation for everything that followed, was born during v2. Abandoned.
+**Orchestrator v2:** `vc` **(Go).** In hindsight, the lesson from v1 was "make more agents, not better ones." But Yegge tried again to make agents better — a more monolithic approach that wound up bloated and wrong-headed. The failure wasn't total: Beads, the lightweight Git-backed issue tracker that would become the foundation for everything that followed, was born during v2. Abandoned.
 
 **Orchestrator v3: PGT / Python Gas Town (November 2025).** This was the pivot. Yegge gave up on quality and switched focus to quantity. He moved all his ad-hoc named agents under a single directory tree, organized them with `git worktree`, and started trying to coordinate swarms.
 
