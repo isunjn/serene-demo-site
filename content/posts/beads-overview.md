@@ -14,7 +14,7 @@ toc = false
 
 # The Agent Memory Problem
 
-*Synthesized from Steve Yegge's Beads series, October–November 2025. Written by Claude Opus 4.6.*
+*Synthesized from Steve Yegge's Beads series, October–November 2025. Written by Claude Code, edited by Bharat.*
 
 If you've spent serious time with AI coding agents, you've felt it: the creeping realization that your brilliant collaborator has the long-term memory of a goldfish. Not because it's stupid — quite the opposite. It's because it dies every ten minutes.
 
@@ -28,9 +28,17 @@ Yegge claims that even with a million-token context window, coding agents can on
 
 {{ figure(src="/img/agent-memory-problem/agent-lifecycle.svg", alt="The agent lifecycle", caption="The agent lifecycle") }}
 
-The specific numbers deserve scrutiny. They conflate three separate constraints that push in the same direction but differ in severity. **Cost** scales linearly with context length: longer sessions are proportionally more expensive, and this is the binding constraint in practice. **Latency** increases too — longer context means slower generation — though this is manageable. **Reasoning quality**, the claim that models make worse decisions as context fills, is the weakest of the three and the one Yegge presents most confidently. Modern models have been specifically trained for long-context tasks, and the "lost in the middle" retrieval problems of 2023 have been substantially mitigated.
+The specific numbers deserve scrutiny. They conflate three separate constraints that push in the same direction but differ in severity.
 
-The percentages themselves don't hold up. Claude Code auto-compacts around 60–80% of the raw context window, not 20%. Independent monitoring by Robert Matsuoka in late 2025 showed Claude Code reporting "10% remaining" with only 64% of the actual 200k window consumed — the tool's percentage display tracks a smaller effective budget, not the raw token count. Other coding agents vary, but none cut off at 20%. There's also a confounding factor Yegge doesn't mention: system prompt overhead. MCP tool definitions, plugin instructions, hooks, and onboarding docs all consume context before you type a single message. One developer found that convenience features alone inflated initial usage from 19% to 43% of the window. Yegge's setup — Beads, MCP Agent Mail, Playwright, custom AGENTS.md — would eat a substantial share of the window at startup, so his "usable 10–15% of the total" may really be 10–15% of what remains after tooling claims its cut.
+**Cost** scales linearly with context length: longer sessions are proportionally more expensive, and this is the binding constraint in practice.
+
+**Latency** increases too — longer context means slower generation — though this is manageable.
+
+**Reasoning quality**, the claim that models make worse decisions as context fills, is the weakest of the three and the one Yegge presents most confidently. Modern models have been specifically trained for long-context tasks, and the "lost in the middle" retrieval problems of 2023 have been substantially mitigated.
+
+The percentages themselves don't hold up. Claude Code auto-compacts around 60–80% of the raw context window, not 20%. Independent monitoring by Robert Matsuoka in late 2025 showed Claude Code reporting "10% remaining" with only 64% of the actual 200k window consumed — the tool's percentage display tracks a smaller effective budget, not the raw token count. Other coding agents vary, but none cut off at 20%.
+
+There's also a confounding factor Yegge doesn't mention: system prompt overhead. MCP tool definitions, plugin instructions, hooks, and onboarding docs all consume context before you type a single message. One developer found that convenience features alone inflated initial usage from 19% to 43% of the window. Yegge's setup — Beads, MCP Agent Mail, Playwright, custom AGENTS.md — would eat a substantial share of the window at startup, so his "usable 10–15% of the total" may really be 10–15% of what remains after tooling claims its cut.
 
 That said, the direction is real. Sessions do have an economical lifetime much shorter than their theoretical maximum, the ramp-up and handoff costs are genuine, and someone doing the kind of sprawling, multi-file exploration Yegge does 50+ times a day will hit the ceiling fast. The ten-minute lifetime is more autobiography than universal law — but it's autobiography from someone pushing agents harder than almost anyone.
 
@@ -66,7 +74,9 @@ It's like watching someone with twelve seconds to clean a room madly stuffing ev
 
 ### Every Agent Has This Problem
 
-The universality of this problem is easy to miss. Every major coding agent — Claude Code, Amp, Codex, Cline, Cursor Agent, Gemini CLI, Q Developer — uses the same approach for working memory: markdown files. It doesn't matter which agent or which model. They all write plans in prose, store them as `.md` files, and hope the next session can reconstruct the thread. It's the one part of the agentic stack that nobody has rethought, and it's the part that breaks first at scale.
+The universality of this problem is easy to miss. Every major coding agent — Claude Code, Amp, Codex, Cline, Cursor Agent, Gemini CLI, Q Developer — uses the same approach for working memory: markdown files. It doesn't matter which agent or which model. They all write plans in prose, store them as `.md` files, and hope the next session can reconstruct the thread.
+
+It's the one part of the agentic stack that nobody has rethought, and it's the part that breaks first at scale.
 
 To bridge the gap between sessions, agents write plans. Markdown files with names like `phase-6-design-review.md`, dropped somewhere in your project tree. Most coding agents even get access to a dedicated function called `TodoWrite` or `todo_write`, which unfortunately only encourages them to use it constantly.
 
@@ -208,7 +218,9 @@ Adopting an issue-driven workflow changes four things about daily agentic coding
 
 **Work is never lost.** This might be the biggest practical gain. Agents using Beads spontaneously file issues for problems they discover. Without prompting, they'll note broken tests, missing error handling, potential race conditions — anything they notice but can't address right now. These observations survive across sessions instead of vanishing when the agent who spotted them dies.
 
-**The dopamine loop tightens.** This is the unexpected side effect. Without Beads, sessions end in ambiguity — did we finish? What's left? Is it safe to stop? With Beads, there's always a clear answer. You close the issue, run `bd ready`, and there's the next thing. The friction between sessions drops so low that you find yourself starting more agents, running them shorter, cycling faster. It becomes, as Yegge admits, "stupidly addictive." Beads is adderall for agents and crack for you. The dopamine hits arrive reliably because there's always an agent finishing something or waiting for direction. Before you know it, you're slinging four or five agents like Tom Cruise in Minority Report, and the only thing that breaks the spell is a huge glop of drool landing in your lap.
+**The dopamine loop tightens.** This is the unexpected side effect. Without Beads, sessions end in ambiguity — did we finish? What's left? Is it safe to stop? With Beads, there's always a clear answer. You close the issue, run `bd ready`, and there's the next thing. The friction between sessions drops so low that you find yourself starting more agents, running them shorter, cycling faster.
+
+It becomes, as Yegge admits, "stupidly addictive." Beads is adderall for agents and crack for you. The dopamine hits arrive reliably because there's always an agent finishing something or waiting for direction. Before you know it, you're slinging four or five agents like Tom Cruise in Minority Report, and the only thing that breaks the spell is a huge glop of drool landing in your lap.
 
 ### Landing the Plane
 

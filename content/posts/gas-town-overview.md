@@ -14,7 +14,7 @@ toc = false
 
 # The Orchestration Leap
 
-*Synthesized from Steve Yegge's Gas Town series, January 2026. Written by Claude Opus 4.6.*
+*Synthesized from Steve Yegge's Gas Town series, January 2026. Written by Claude Code, edited by Bharat.*
 
 Everyone is chasing the coding agent. Every major tech company has shipped one: Claude Code, Codex, Gemini CLI, Amp, Q Developer. They all look the same — a CLI that reads files, writes code, runs tests, and dies when its context fills up. As Yegge puts it, the industry is "an embarrassing little kid's soccer team chasing the 2025 CLI form factor," all converging on the same single-agent paradigm.
 
