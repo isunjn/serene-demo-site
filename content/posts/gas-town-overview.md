@@ -18,7 +18,7 @@ As Yegge puts it, the industry is "an embarrassing little kid's soccer team chas
 
 But the single agent is a dead end. Not because it's bad — it's astonishingly good — but because one agent, no matter how smart, hits a ceiling that no amount of model intelligence will lift. The real frontier isn't a better agent. It's what happens when you lash thirty of them together and teach them to work as a factory.
 
-This is the story of Gas Town: a system that took three failed predecessors, 75,000 lines of Go, and seventeen days of feverish vibe coding to reach liftoff — and that represents, if Yegge is right, the shape of software development for the next several years. 
+This is the story of Gas Town: a system that took three failed predecessors, 75,000 lines of Go, and seventeen days of feverish vibe coding to reach liftoff — and that represents, if he's right, the shape of software development for the next several years. 
 
 What follows synthesizes three blog posts published in the first two weeks of January 2026. The repetition is removed and the argument tightened, but the hard-won architectural insight is preserved: orchestrating many mediocre sessions beats perfecting one.
 
@@ -28,7 +28,7 @@ What follows synthesizes three blog posts published in the first two weeks of Ja
 
 The fundamental constraint is familiar to anyone who's spent serious time with coding agents: they die. Context windows fill up in five to ten minutes of hard work. The agent ages from newborn to geriatric in that span, and then it's gone. You pull a fresh clone, explain the situation again, and repeat.
 
-This is manageable when you're working on a single task. But real software projects have dozens of things happening at once — features being built, bugs being filed, tests breaking, code reviews landing, releases going out. A single agent can only do one of these at a time, and each context reset costs minutes of ramp-up. The human becomes the bottleneck, not because they're slow at coding, but because they're slow at *babysitting*. As Yegge describes it, ninety-five to ninety-nine percent of interactions with coding agents are mundane: "Now fix the broken tests." "No, I don't care which of those two you do first." "Yes, I'd like you to continue." His LinkedIn title had been "AI Babysitter" for six months. He wanted his evenings back.
+This is manageable when you're working on a single task. But real software projects have dozens of things happening at once — features being built, bugs being filed, tests breaking, code reviews landing, releases going out. A single agent can only do one of these at a time, and each context reset costs minutes of ramp-up. The human becomes the bottleneck, not because they're slow at coding, but because they're slow at *babysitting*. Ninety-five to ninety-nine percent of interactions with coding agents are mundane: "Now fix the broken tests." "No, I don't care which of those two you do first." "Yes, I'd like you to continue." His LinkedIn title had been "AI Babysitter" for six months. He wanted his evenings back.
 
 The insight that unlocked everything was a shift in strategy. Stop trying to make one agent better. Start making *more* of them. If a single agent can move a small mountain in ten minutes, thirty agents can reshape a landscape in an afternoon — if you can keep them coordinated. That coordination problem is the orchestration problem, and it turns out to be genuinely hard.
 
@@ -40,25 +40,25 @@ Gas Town was not Yegge's first attempt. It was his fourth complete, functioning 
 
 **Orchestrator v1:** `vibecoder` **(TypeScript, August 2025).**
 
-Built atop Temporal.io, the gold standard for workflow orchestration. It was a working system. But Temporal proved cumbersome for Yegge's needs — the workflows he was orchestrating turned out to be micro-workflows, since you have to severely decompose tasks for LLMs to reliably follow them. Temporal is powerful enough for distributed cloud services but overkill for a desktop developer tool. Yegge still believes Temporal will be a key piece of the puzzle for scaling AI workflows to enterprise level, but he needed something lighter.
+Built atop Temporal.io, the gold standard for workflow orchestration. It was a working system. But Temporal proved cumbersome for his needs — the workflows he was orchestrating turned out to be micro-workflows, since you have to severely decompose tasks for LLMs to reliably follow them. Temporal is powerful enough for distributed cloud services but overkill for a desktop developer tool. He still believes Temporal will be a key piece of the puzzle for scaling AI workflows to enterprise level, but he needed something lighter.
 
 **Orchestrator v2:** `vc` **(Go).**
 
-In hindsight, the lesson from v1 was "make more agents, not better ones." But Yegge tried again to make agents better — a more monolithic approach that wound up bloated and wrong-headed. The failure wasn't total: Beads, the lightweight Git-backed issue tracker that would become the foundation for everything that followed, was born during v2. Abandoned.
+In hindsight, the lesson from v1 was "make more agents, not better ones." But Steve tried again to make agents better — a more monolithic approach that wound up bloated and wrong-headed. The failure wasn't total: Beads, the lightweight Git-backed issue tracker that would become the foundation for everything that followed, was born during v2. Abandoned.
 
 **Orchestrator v3: PGT / Python Gas Town (November 2025).**
 
-This was the pivot. Yegge gave up on quality and switched focus to quantity. He moved all his ad-hoc named agents under a single directory tree, organized them with `git worktree`, and started trying to coordinate swarms.
+This was the pivot. He gave up on quality and switched focus to quantity. He moved all his ad-hoc named agents under a single directory tree, organized them with `git worktree`, and started trying to coordinate swarms.
 
-PGT eagerly adopted a discovery by Jeffrey Emanuel, author of MCP Agent Mail: combining mail with Beads led to an ad-hoc "agent village" where agents naturally collaborated, divided work, and farmed it out. PGT grew quickly and carried Yegge for several weeks. Most of its roles evolved here. But something about it felt right enough to warrant one more rewrite.
+PGT eagerly adopted a discovery by Jeffrey Emanuel, author of MCP Agent Mail: combining mail with Beads led to an ad-hoc "agent village" where agents naturally collaborated, divided work, and farmed it out. PGT grew quickly and carried him for several weeks. Most of its roles evolved here. But something about it felt right enough to warrant one more rewrite.
 
 **Orchestrator v4: Gas Town (Go, December 15 onward).**
 
-The last two weeks of December were the fertile innovation period. Yegge had promised to launch by Christmas or New Year's. He wound up redesigning and rewriting the whole thing in Go — 75,000 lines, 2,000 commits in seventeen days. Ninety percent of Gas Town's design emerged during this sprint.
+The last two weeks of December were the fertile innovation period. Steve had promised to launch by Christmas or New Year's. He wound up redesigning and rewriting the whole thing in Go — 75,000 lines, 2,000 commits in seventeen days. Ninety percent of Gas Town's design emerged during this sprint.
 
-It finally achieved liftoff at 8pm on December 29th. Yegge had been talking to the Mayor, complaining about things, and then the fixes started landing around him. He realized he was just shaping the whole thing by talking. The convoys were flowing and landing, the work was being filed and reviewed. He'd been aiming for this for months.
+It finally achieved liftoff at 8pm on December 29th. Steve had been talking to the Mayor, complaining about things, and then the fixes started landing around him. He realized he was just shaping the whole thing by talking. The convoys were flowing and landing, the work was being filed and reviewed. He'd been aiming for this for months.
 
-The Go rewrite was deliberate. Across his four orchestrators (TypeScript, Go, Python, Go), Yegge found Go to be far and away the best language for vibe coding. Go's compilation errors are "the closest thing we have to formal verification of vibe-coded work." TypeScript has too many red herrings. Python's type system does nothing for correctness. But Go says "you have an error on line 47" and it's a real error — you fix it and the code works.
+The Go rewrite was deliberate. Across his four orchestrators (TypeScript, Go, Python, Go), he found Go to be far and away the best language for vibe coding. Go's compilation errors are "the closest thing we have to formal verification of vibe-coded work." TypeScript has too many red herrings. Python's type system does nothing for correctness. But Go says "you have an error on line 47" and it's a real error — you fix it and the code works.
 
 ## Welcome to Gas Town
 
@@ -128,7 +128,7 @@ Just start the agent up in the same sandbox, have it find its place in the molec
 
 The remaining layers build on molecules. **Protomolecules** are templates — entire graphs of template issues with instructions and dependencies set up in advance, which you instantiate into molecules via variable substitution.
 
-(Yegge has a 20-step release process for Beads encoded as a protomolecule.)
+(Steve has a 20-step release process for Beads encoded as a protomolecule.)
 
 **Formulas**, written in TOML, are the source form for workflows, "cooked" into protomolecules and then instantiated.
 
@@ -180,7 +180,7 @@ Whoever is managing the Convoy keeps recycling polecats and pushing them on issu
 
 {{ figure(src="/img/orchestration-leap/three-loops.svg", alt="The three developer loops", caption="The three developer loops") }}
 
-Gas Town has been running in production since January 1, 2026. In the first twelve days, Yegge merged over 100 pull requests from nearly 50 contributors, adding 44,000 lines of code that no human has looked at. This grew Gas Town to 189,000 lines of Go code across 2,684 commits since its first commit on December 15th.
+Gas Town has been running in production since January 1, 2026. In the first twelve days, he merged over 100 pull requests from nearly 50 contributors, adding 44,000 lines of code that no human has looked at. This grew Gas Town to 189,000 lines of Go code across 2,684 commits since its first commit on December 15th.
 
 It has not been smooth.
 
@@ -244,7 +244,7 @@ In this model, the human becomes a Product Manager and Gas Town is an Idea Compi
 Gas Town will improve dramatically through 2026 without anyone lifting a finger:
 
 1. **Smarter models.** He aimed high, and the current "oozing swamp monster" will become a "shiny, well-run agent factory" as model cognition improves.
-2. **Training-corpus absorption.** Gas Town and Beads will enter the training corpus, so agents will know about them natively by summer. Yegge has been curating Gas Town using what he calls the "Desire Paths" approach to agent UX: you tell the agent what you want, watch closely what they try, and then implement the thing they tried — make it real — over and over, until the tool works the way agents believe it should. Gas Town is already becoming agent-friendly, even without being in the training data.
+2. **Training-corpus absorption.** Gas Town and Beads will enter the training corpus, so agents will know about them natively by summer. He has been curating Gas Town using what he calls the "Desire Paths" approach to agent UX: you tell the agent what you want, watch closely what they try, and then implement the thing they tried — make it real — over and over, until the tool works the way agents believe it should. Gas Town is already becoming agent-friendly, even without being in the training data.
 3. **Platform competition.** Agent platforms will compete on how well they support factory-worker automation hooks — turning their "beloved pets into cattle."
 4. **Community momentum.** Over 50 PRs and double that in issues and feature requests landed in the first weekend alone.
 
