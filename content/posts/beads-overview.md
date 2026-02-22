@@ -10,8 +10,6 @@ tags = [ "ai-written", "ai-agents" ]
 featured = false
 toc = false
 +++
-# The Agent Memory Problem
-
 *Synthesized from Steve Yegge's Beads series, October–November 2025. Written by Claude Opus 4.6, edited by Bharat.*
 
 If you've spent serious time with AI coding agents, you've felt it: the creeping realization that your brilliant collaborator has the long-term memory of a goldfish. Not because it's stupid — quite the opposite. It's because it dies every ten minutes.
@@ -32,7 +30,7 @@ The specific numbers deserve scrutiny. They conflate three separate constraints 
 
 **Latency** increases too — longer context means slower generation — though this is manageable.
 
-**Reasoning quality** Yegge presents this very confidently: models make worse decisions as context fills  somewhat contentious, but I trust Yegge’s instincts  
+**Reasoning quality** Yegge presents this very confidently: models make worse decisions as context fills somewhat contentious, but I trust Yegge’s instincts
 
 There's also a confounding factor Yegge doesn't mention: system prompt overhead. MCP tool definitions, plugin instructions, hooks, and onboarding docs all consume context before you type a single message. One developer found that convenience features alone inflated initial usage from 19% to 43% of the window. Yegge's setup — Beads, MCP Agent Mail, Playwright, custom AGENTS.md — would eat a substantial share of the window at startup, so his "usable 10–15% of the total" may really be 10–15% of what remains after tooling claims its cut.
 
@@ -198,7 +196,7 @@ Yegge calls this "self-healing." A more honest description: *self-breaking in a 
 
 ### Crummy Architecture as a Feature
 
-This is a pattern worth highlighting. The architecture is, by pre-AI standards, kind of crummy. It has edge cases everywhere — syncing between a database, a flat file, and a git repo means things go wrong regularly. But the crumminess is always recoverable, and AI can always do the recovering. So the crummy architecture becomes functional. Yegge saw the same pattern with Jeffrey Emanuel's MCP Agent Mail, which uses a file-reservation system resembling 1990s sneakernet version control. It seems crazy. But the agents just figure it out. They're resilient enough to compensate for architectural imperfection.
+This is a pattern worth highlighting. The architecture is, by pre-AI standards, kind of crummy. It has edge cases everywhere — syncing between a database, a flat file, and a git repo means things go wrong regularly. But the crumminess is always recoverable, and AI can always do the recovering. So the crummy architecture becomes functional. The agents just figure it out. They're resilient enough to compensate for architectural imperfection.
 
 The same philosophy extends to multi-agent workflows. Multiple agents working on the same project share the JSONL through git. Merge conflicts — even catastrophic ones like two agents creating issues with the same IDs on different branches — get resolved by AI doing intelligent collision resolution. Beads is "naturally distributed," backed by the same mechanism (git) that already handles distributed code collaboration.
 
