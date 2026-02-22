@@ -1,0 +1,466 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">Session Lifecycle and Nondeterministic Idempotence</title>
+  <desc id="diagram-desc">
+    A diagram showing how Gas Town's sessions are ephemeral cattle thrown at
+    persistent work. A molecule (workflow of steps 1-7) persists in Git across
+    session boundaries. Session 1 picks up at step 3, works through steps 3-5,
+    then dies when context fills. Session 2 starts fresh, reads the hook, finds
+    the molecule at step 5, and continues from step 6 through completion at step 7.
+    The persistent Bead identity and molecule chain survive across both sessions.
+  </desc>
+
+  <defs>
+    <!-- Drop shadow (compatible feGaussianBlur pattern) -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Lighter shadow for annotation boxes and small nodes -->
+    <filter id="shadow-sm" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1.5" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.15" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Generic arrowhead for session-to-molecule connectors -->
+    <marker id="arrow" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#555"/>
+    </marker>
+
+    <!-- Green arrowhead for molecule chain links -->
+    <marker id="arrow-chain" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#009E73"/>
+    </marker>
+
+    <!-- Background gradient (subtle vertical wash) -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#f6f9fc"/>
+      <stop offset="100%" stop-color="#edf2f7"/>
+    </linearGradient>
+
+    <!-- Session 1 fill gradient (Sky Blue family, translucent) -->
+    <linearGradient id="session1-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#56B4E9" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#56B4E9" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Session 2 fill gradient (Orange family, translucent) -->
+    <linearGradient id="session2-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#E69F00" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#E69F00" stop-opacity="0.08"/>
+    </linearGradient>
+
+    <!-- Git persistence bar fill (Bluish Green, very light) -->
+    <linearGradient id="git-bar-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#009E73" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#009E73" stop-opacity="0.12"/>
+    </linearGradient>
+
+    <!-- Diagonal hatch pattern for the "crash zone" between sessions -->
+    <pattern id="hatch" width="6" height="6"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6"
+            stroke="#D55E00" stroke-width="1" stroke-opacity="0.25"/>
+    </pattern>
+
+    <style>
+      /* Title */
+      .diagram-title {
+        font: bold 18px sans-serif;
+        text-anchor: middle;
+        fill: #1a1a1a;
+      }
+      .diagram-subtitle {
+        font: 11px sans-serif;
+        text-anchor: middle;
+        fill: #666;
+      }
+
+      /* Session container labels */
+      .session-label {
+        font: bold 13px sans-serif;
+        dominant-baseline: central;
+        fill: #1a1a1a;
+      }
+      .session-detail {
+        font: 11px sans-serif;
+        fill: #555;
+      }
+
+      /* Molecule step circles */
+      .step-circle {
+        stroke-width: 2;
+        filter: url(#shadow-sm);
+      }
+      .step-num {
+        font: bold 12px sans-serif;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #fff;
+      }
+
+      /* Molecule chain connectors */
+      .chain-link {
+        stroke: #009E73;
+        stroke-width: 2;
+        fill: none;
+        marker-end: url(#arrow-chain);
+      }
+
+      /* Git persistence layer labels */
+      .git-label {
+        font: bold 12px sans-serif;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #009E73;
+      }
+      .git-sublabel {
+        font: 10px sans-serif;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #666;
+      }
+
+      /* Annotation callouts */
+      .annotation {
+        font: 10px sans-serif;
+        fill: #555;
+      }
+      .annotation-bold {
+        font: bold 10px sans-serif;
+        fill: #333;
+      }
+      .annotation-cmd {
+        font: bold 10px monospace;
+        fill: #0072B2;
+      }
+
+      /* Crash / completion markers */
+      .crash-label {
+        font: bold 11px sans-serif;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #D55E00;
+      }
+      .done-label {
+        font: bold 11px sans-serif;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #009E73;
+      }
+
+      /* Bead identity box */
+      .identity-box {
+        fill: #e8f4fc;
+        stroke: #0072B2;
+        stroke-width: 2;
+        rx: 8;
+        filter: url(#shadow);
+      }
+      .identity-label {
+        font: bold 12px sans-serif;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #0072B2;
+      }
+      .identity-sublabel {
+        font: 10px sans-serif;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #555;
+      }
+
+      /* Leader lines for annotations */
+      .leader {
+        stroke: #999;
+        stroke-width: 1;
+        stroke-dasharray: 3,2;
+      }
+    </style>
+  </defs>
+
+  <!-- =============================== -->
+  <!-- BACKGROUND                      -->
+  <!-- =============================== -->
+  <rect width="800" height="450" fill="url(#bg-grad)"/>
+
+  <!-- Title -->
+  <text x="400" y="28" class="diagram-title">Session Lifecycle: Nondeterministic Idempotence</text>
+  <text x="400" y="46" class="diagram-subtitle">Sessions are cattle. Agents are persistent identities. The molecule survives.</text>
+
+  <!-- =============================== -->
+  <!-- MIDGROUND: Persistent Git layer -->
+  <!-- =============================== -->
+  <!--
+    The Git/Bead persistence bar runs across the bottom third.
+    It contains the molecule chain (steps 1 through 7) that persists
+    regardless of which session is alive.
+
+    Molecule chain layout:
+      7 steps evenly spaced from x=175 to x=715
+      spacing = (715 minus 175) / 6 = 90
+      y center of chain = 340
+      circle radius = 16
+  -->
+
+  <!-- Git persistence background band -->
+  <rect x="40" y="295" width="720" height="90" rx="8"
+        fill="url(#git-bar-grad)" stroke="#009E73" stroke-width="1.5"
+        stroke-opacity="0.4"/>
+
+  <!-- Git icon and label (left end of band) -->
+  <text x="80" y="308" class="git-label">Git</text>
+  <text x="80" y="322" class="git-sublabel">persistent</text>
+
+  <!-- Persistent agent identity box (left of chain) -->
+  <g transform="translate(80, 357)">
+    <rect class="identity-box" x="-38" y="-17" width="76" height="34"/>
+    <text x="0" y="-3" class="identity-label">Bead</text>
+    <text x="0" y="10" class="identity-sublabel">Agent ID</text>
+  </g>
+
+  <!-- Hook indicator connecting identity to molecule chain -->
+  <line x1="118" y1="352" x2="140" y2="340"
+        stroke="#0072B2" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="138" y="348" font-size="9" font-family="sans-serif" fill="#0072B2"
+        text-anchor="start" dominant-baseline="central">hook</text>
+
+  <!-- Chain connectors (drawn first so circles paint on top) -->
+  <!-- x positions: 175, 265, 355, 445, 535, 625, 715 -->
+  <line x1="191" y1="340" x2="249" y2="340" class="chain-link"/>
+  <line x1="281" y1="340" x2="339" y2="340" class="chain-link"/>
+  <line x1="371" y1="340" x2="429" y2="340" class="chain-link"/>
+  <line x1="461" y1="340" x2="519" y2="340" class="chain-link"/>
+  <line x1="551" y1="340" x2="609" y2="340" class="chain-link"/>
+  <line x1="641" y1="340" x2="699" y2="340" class="chain-link"/>
+
+  <!-- Step 1: completed before either session (dimmed) -->
+  <circle cx="175" cy="340" r="16" class="step-circle"
+          fill="#bbb" stroke="#888"/>
+  <text x="175" y="340" class="step-num">1</text>
+
+  <!-- Step 2: completed before either session (dimmed) -->
+  <circle cx="265" cy="340" r="16" class="step-circle"
+          fill="#bbb" stroke="#888"/>
+  <text x="265" y="340" class="step-num">2</text>
+
+  <!-- Step 3: active in Session 1 (Sky Blue) -->
+  <circle cx="355" cy="340" r="16" class="step-circle"
+          fill="#56B4E9" stroke="#0072B2"/>
+  <text x="355" y="340" class="step-num">3</text>
+
+  <!-- Step 4: active in Session 1 (Sky Blue) -->
+  <circle cx="445" cy="340" r="16" class="step-circle"
+          fill="#56B4E9" stroke="#0072B2"/>
+  <text x="445" y="340" class="step-num">4</text>
+
+  <!-- Step 5: handoff point, Session 1 crashed here, Session 2 reads it -->
+  <circle cx="535" cy="340" r="16" class="step-circle"
+          fill="#56B4E9" stroke="#D55E00" stroke-width="2.5"/>
+  <text x="535" y="340" class="step-num">5</text>
+
+  <!-- Step 6: active in Session 2 (Orange) -->
+  <circle cx="625" cy="340" r="16" class="step-circle"
+          fill="#E69F00" stroke="#D55E00"/>
+  <text x="625" y="340" class="step-num">6</text>
+
+  <!-- Step 7: active in Session 2, workflow completes (Orange + green ring) -->
+  <circle cx="715" cy="340" r="16" class="step-circle"
+          fill="#E69F00" stroke="#009E73" stroke-width="2.5"/>
+  <text x="715" y="340" class="step-num">7</text>
+
+  <!-- "Molecule" label under chain -->
+  <text x="445" y="376" font-size="10" font-family="sans-serif"
+        text-anchor="middle" fill="#009E73" font-weight="bold">
+    MOLECULE (workflow persists in Git)
+  </text>
+
+  <!-- Steps 1-2 "previously completed" label -->
+  <text x="220" y="376" font-size="9" font-family="sans-serif"
+        text-anchor="middle" fill="#888" font-style="italic">
+    (completed earlier)
+  </text>
+
+  <!-- =============================== -->
+  <!-- FOREGROUND: Session containers  -->
+  <!-- =============================== -->
+  <!--
+    Session blocks sit above the molecule chain as ephemeral containers.
+    Session 1: spans steps 3 to 5, x=320 to x=550
+    Session 2: spans steps 5 to 7, x=555 to x=765
+    The hatched crash zone at x=540 to 555 shows the death/handoff boundary.
+    Session container y range: 72 to 272 (height=200).
+  -->
+
+  <!-- Session 1 container (dashed border = ephemeral) -->
+  <rect x="320" y="72" width="230" height="200" rx="10"
+        fill="url(#session1-grad)" stroke="#0072B2" stroke-width="2"
+        stroke-dasharray="6,3" filter="url(#shadow)"/>
+
+  <!-- Session 1 header -->
+  <text x="435" y="92" class="session-label"
+        text-anchor="middle">Session 1</text>
+  <text x="435" y="108" class="session-detail"
+        text-anchor="middle">ephemeral Claude Code instance</text>
+
+  <!-- Downward arrows from Session 1 to molecule steps 3, 4, 5 -->
+  <line x1="355" y1="272" x2="355" y2="322"
+        stroke="#0072B2" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="445" y1="272" x2="445" y2="322"
+        stroke="#0072B2" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="535" y1="272" x2="535" y2="322"
+        stroke="#0072B2" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Session 1 internal progress bar (context filling up) -->
+  <g transform="translate(345, 140)">
+    <rect x="0" y="0" width="180" height="6" rx="3" fill="#e0e0e0"/>
+    <!-- Filled portion: 75% through before crash -->
+    <rect x="0" y="0" width="135" height="6" rx="3" fill="#56B4E9"/>
+    <text x="0" y="20" font-size="9" font-family="sans-serif" fill="#0072B2">
+      picks up step 3
+    </text>
+    <text x="180" y="20" font-size="9" font-family="sans-serif" fill="#D55E00"
+          text-anchor="end">
+      context full at step 5
+    </text>
+  </g>
+
+  <!-- Work log inside Session 1 -->
+  <text x="370" y="188" font-size="10" font-family="monospace" fill="#0072B2">
+    <tspan x="355" dy="0">step 3...</tspan>
+    <tspan x="355" dy="14">step 4...</tspan>
+    <tspan x="355" dy="14">step 5... </tspan>
+  </text>
+
+  <!-- Crash indicator (X mark) at right edge of Session 1 -->
+  <g transform="translate(535, 80)">
+    <line x1="-6" y1="-6" x2="6" y2="6" stroke="#D55E00" stroke-width="3" stroke-linecap="round"/>
+    <line x1="6" y1="-6" x2="-6" y2="6" stroke="#D55E00" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="535" y="66" class="crash-label">DIES</text>
+
+  <!-- Hatched "crash zone" between sessions (diagonal hatch = disruption) -->
+  <rect x="540" y="72" width="20" height="200" fill="url(#hatch)" opacity="0.6"/>
+
+  <!-- Session 2 container (dashed border = ephemeral) -->
+  <rect x="555" y="72" width="210" height="200" rx="10"
+        fill="url(#session2-grad)" stroke="#E69F00" stroke-width="2"
+        stroke-dasharray="6,3" filter="url(#shadow)"/>
+
+  <!-- Session 2 header -->
+  <text x="660" y="92" class="session-label"
+        text-anchor="middle">Session 2</text>
+  <text x="660" y="108" class="session-detail"
+        text-anchor="middle">fresh Claude Code instance</text>
+
+  <!-- Downward arrows from Session 2 to molecule steps 6, 7 -->
+  <line x1="625" y1="272" x2="625" y2="322"
+        stroke="#E69F00" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="715" y1="272" x2="715" y2="322"
+        stroke="#E69F00" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Session 2 internal progress bar (completes fully) -->
+  <g transform="translate(580, 140)">
+    <rect x="0" y="0" width="160" height="6" rx="3" fill="#e0e0e0"/>
+    <rect x="0" y="0" width="160" height="6" rx="3" fill="#E69F00"/>
+    <text x="0" y="20" font-size="9" font-family="sans-serif" fill="#E69F00">
+      reads hook, finds step 5
+    </text>
+    <text x="160" y="20" font-size="9" font-family="sans-serif" fill="#009E73"
+          text-anchor="end">
+      completes step 7
+    </text>
+  </g>
+
+  <!-- Work log inside Session 2 -->
+  <text x="625" y="188" font-size="10" font-family="monospace" fill="#D55E00">
+    <tspan x="625" dy="0">step 6...</tspan>
+    <tspan x="625" dy="14">step 7...</tspan>
+  </text>
+
+  <!-- Completion checkmark at right edge of Session 2 -->
+  <g transform="translate(745, 80)">
+    <polyline points="-8,0 -3,6 8,-8" fill="none"
+              stroke="#009E73" stroke-width="3" stroke-linecap="round"
+              stroke-linejoin="round"/>
+  </g>
+  <text x="745" y="66" class="done-label">DONE</text>
+
+  <!-- =============================== -->
+  <!-- FOREGROUND: Annotations         -->
+  <!-- =============================== -->
+
+  <!-- GUPP annotation (top-left callout box) -->
+  <g transform="translate(40, 78)">
+    <rect x="0" y="0" width="250" height="52" rx="6"
+          fill="#fff" stroke="#0072B2" stroke-width="1.5"
+          filter="url(#shadow-sm)"/>
+    <text x="125" y="16" class="annotation-bold"
+          text-anchor="middle">GUPP: Work on hook = must run it</text>
+    <text x="125" y="32" class="annotation"
+          text-anchor="middle">"If there is work on your hook,</text>
+    <text x="125" y="44" class="annotation"
+          text-anchor="middle">YOU MUST RUN IT."</text>
+  </g>
+
+  <!-- Leader from GUPP box to Session 1 -->
+  <line x1="290" y1="104" x2="322" y2="104" class="leader"/>
+
+  <!-- gt seance annotation (top-left callout box, below GUPP) -->
+  <g transform="translate(40, 148)">
+    <rect x="0" y="0" width="250" height="40" rx="6"
+          fill="#fff" stroke="#CC79A7" stroke-width="1.5"
+          filter="url(#shadow-sm)"/>
+    <text x="125" y="14" class="annotation-cmd"
+          text-anchor="middle">gt seance</text>
+    <text x="125" y="28" class="annotation"
+          text-anchor="middle">talk to dead predecessors via /resume</text>
+  </g>
+
+  <!-- Leader from gt seance to the crash zone -->
+  <line x1="290" y1="168" x2="548" y2="168" class="leader"/>
+
+  <!-- "Cattle vs. Persistent" summary (bottom-left) -->
+  <g transform="translate(40, 400)">
+    <text x="0" y="0" class="annotation-bold">
+      <tspan fill="#D55E00">Sessions = cattle</tspan>
+      <tspan fill="#555"> (ephemeral, disposable)</tspan>
+    </text>
+    <text x="0" y="16" class="annotation-bold">
+      <tspan fill="#009E73">Agents = persistent</tspan>
+      <tspan fill="#555"> (Beads in Git, survive crashes)</tspan>
+    </text>
+  </g>
+
+  <!-- NDI principle summary (bottom-right) -->
+  <g transform="translate(535, 400)">
+    <text x="0" y="0" font-size="10" font-family="sans-serif" fill="#555">
+      <tspan font-weight="bold" fill="#333">NDI:</tspan>
+      <tspan> Path is nondeterministic, outcome is idempotent.</tspan>
+    </text>
+    <text x="0" y="14" font-size="10" font-family="sans-serif" fill="#555">
+      Keep throwing sessions at it. The molecule finishes.
+    </text>
+  </g>
+
+</svg>

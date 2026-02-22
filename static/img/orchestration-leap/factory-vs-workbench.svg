@@ -1,0 +1,279 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">Factory vs. Workbench: Two approaches to agent tooling</title>
+  <desc id="diagram-desc">
+    A two-panel comparison. Left panel shows the IDE approach where a factory
+    (agent) is crammed inside a workbench (IDE), constrained by human-centric UI.
+    Right panel shows the Gas Town approach where workbenches (optional IDE tools)
+    sit inside a large factory, with agents working freely. The right panel appears
+    more spacious and productive.
+  </desc>
+
+  <defs>
+    <!-- Compatible drop shadow (feGaussianBlur pattern) -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="2" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle inner shadow for the "cramped" feeling on the left -->
+    <filter id="shadow-inset" x="-5%" y="-5%" width="115%" height="115%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Diagonal hatch pattern for IDE chrome areas -->
+    <pattern id="ide-chrome" width="6" height="6"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6"
+            stroke="#D55E00" stroke-width="0.5" stroke-opacity="0.15"/>
+    </pattern>
+
+    <!-- Dot pattern for factory floor -->
+    <pattern id="factory-floor" width="12" height="12"
+             patternUnits="userSpaceOnUse">
+      <circle cx="6" cy="6" r="1" fill="#009E73" fill-opacity="0.12"/>
+    </pattern>
+
+    <style>
+      /* Typography */
+      .title       { font: bold 18px sans-serif; fill: #222; }
+      .panel-title { font: bold 14px sans-serif; text-anchor: middle; }
+      .label       { font: 13px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; }
+      .label-bold  { font: bold 13px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; }
+      .caption     { font: italic 12px sans-serif; text-anchor: middle;
+                     fill: #444; }
+      .annotation  { font: 10px sans-serif; text-anchor: middle;
+                     fill: #555; }
+      .indicator   { font: bold 12px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; }
+      .agent-label { font: bold 10px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: #fff; }
+      .tool-label  { font: 9px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: #555; }
+      .chrome-label { font: 9px sans-serif; fill: #8B4513; }
+
+      /* Shapes */
+      .outer-box   { stroke-width: 2.5; rx: 8; }
+      .inner-box   { stroke-width: 1.5; rx: 5; }
+      .agent-dot   { fill: #0072B2; }
+      .workbench   { fill: #FFF8F0; stroke: #E69F00; stroke-width: 1.5; rx: 4; }
+      .divider     { stroke: #ccc; stroke-width: 1; stroke-dasharray: 6,4; }
+    </style>
+  </defs>
+
+  <!-- ==================== BACKGROUND ==================== -->
+  <rect width="800" height="450" fill="#FAFAFA" rx="4"/>
+
+  <!-- Diagram title -->
+  <text x="400" y="30" class="title" text-anchor="middle">Factory vs. Workbench</text>
+
+  <!-- Central divider -->
+  <line x1="400" y1="50" x2="400" y2="420" class="divider"/>
+
+  <!-- ==================== LEFT PANEL: IDE APPROACH ==================== -->
+  <g aria-label="Left panel: The IDE Approach">
+
+    <!-- Panel header -->
+    <text x="200" y="64" class="panel-title" text-anchor="start" fill="#D55E00">The IDE Approach</text>
+
+    <!-- Large workbench/IDE outer box: dominates the panel -->
+    <!-- Positioned at x=30, y=80, w=340, h=290 -->
+    <rect x="30" y="80" width="340" height="290" class="outer-box"
+          fill="#FFF0E0" stroke="#E69F00" filter="url(#shadow)"/>
+
+    <!-- IDE chrome decoration: hatched sidebar area (file tree) -->
+    <rect x="30" y="80" width="340" height="290" rx="8"
+          fill="url(#ide-chrome)" fill-opacity="0.5"/>
+
+    <!-- IDE label at top of the box -->
+    <rect x="30" y="80" width="340" height="28" rx="8" ry="0"
+          fill="#E69F00" fill-opacity="0.2"/>
+    <!-- Clip the bottom corners to be square -->
+    <rect x="30" y="96" width="340" height="12"
+          fill="#E69F00" fill-opacity="0.2"/>
+    <text x="200" y="97" class="label-bold" fill="#8B4513">IDE / Workbench</text>
+
+    <!-- Simulated IDE chrome elements: file tree sidebar -->
+    <rect x="38" y="115" width="65" height="245" rx="3"
+          fill="#FFF5E8" stroke="#E69F00" stroke-opacity="0.3" stroke-width="1"/>
+    <text x="70" y="128" class="chrome-label" text-anchor="middle">File Tree</text>
+    <!-- Fake file entries -->
+    <line x1="46" y1="140" x2="92" y2="140" stroke="#D4A574" stroke-width="1" stroke-opacity="0.4"/>
+    <line x1="46" y1="150" x2="85" y2="150" stroke="#D4A574" stroke-width="1" stroke-opacity="0.4"/>
+    <line x1="46" y1="160" x2="90" y2="160" stroke="#D4A574" stroke-width="1" stroke-opacity="0.4"/>
+    <line x1="46" y1="170" x2="78" y2="170" stroke="#D4A574" stroke-width="1" stroke-opacity="0.4"/>
+    <line x1="46" y1="180" x2="88" y2="180" stroke="#D4A574" stroke-width="1" stroke-opacity="0.4"/>
+
+    <!-- Simulated tabs at top of editor area -->
+    <rect x="110" y="115" width="55" height="18" rx="2"
+          fill="#E69F00" fill-opacity="0.15" stroke="#E69F00" stroke-opacity="0.3" stroke-width="0.5"/>
+    <text x="137" y="126" style="font: 7px sans-serif; fill: #8B4513; text-anchor: middle;">main.py</text>
+    <rect x="168" y="115" width="55" height="18" rx="2"
+          fill="#FFF5E8" stroke="#E69F00" stroke-opacity="0.2" stroke-width="0.5"/>
+    <text x="195" y="126" style="font: 7px sans-serif; fill: #B08060; text-anchor: middle;">utils.py</text>
+
+    <!-- Syntax highlighting lines (decorative, showing human-centric UI) -->
+    <g opacity="0.3">
+      <line x1="115" y1="142" x2="175" y2="142" stroke="#0072B2" stroke-width="1.5"/>
+      <line x1="180" y1="142" x2="210" y2="142" stroke="#009E73" stroke-width="1.5"/>
+      <line x1="115" y1="152" x2="145" y2="152" stroke="#CC79A7" stroke-width="1.5"/>
+      <line x1="150" y1="152" x2="220" y2="152" stroke="#555" stroke-width="1.5"/>
+      <line x1="115" y1="162" x2="160" y2="162" stroke="#0072B2" stroke-width="1.5"/>
+      <line x1="165" y1="162" x2="235" y2="162" stroke="#E69F00" stroke-width="1.5"/>
+    </g>
+
+    <!-- The agent: small, crammed, constrained -->
+    <!-- Placed in the remaining space, visually squeezed -->
+    <rect x="120" y="185" width="230" height="100" class="inner-box"
+          fill="#D6EEFF" stroke="#0072B2" stroke-width="2"
+          filter="url(#shadow-inset)"/>
+
+    <!-- Agent icon: single circle with label -->
+    <circle cx="200" cy="230" r="16" class="agent-dot" filter="url(#shadow)"/>
+    <text x="200" y="230" class="agent-label">Agent</text>
+
+    <!-- Constraint arrows pointing inward (walls closing in) -->
+    <!-- Left wall pressure -->
+    <line x1="130" y1="220" x2="148" y2="230" stroke="#D55E00" stroke-width="1.5"
+          stroke-opacity="0.5"/>
+    <line x1="130" y1="240" x2="148" y2="230" stroke="#D55E00" stroke-width="1.5"
+          stroke-opacity="0.5"/>
+    <!-- Right wall pressure -->
+    <line x1="340" y1="220" x2="322" y2="230" stroke="#D55E00" stroke-width="1.5"
+          stroke-opacity="0.5"/>
+    <line x1="340" y1="240" x2="322" y2="230" stroke="#D55E00" stroke-width="1.5"
+          stroke-opacity="0.5"/>
+
+    <!-- Constraint labels around the agent box -->
+    <text x="235" y="196" class="tool-label" fill="#8B4513">Tabs</text>
+    <text x="278" y="196" class="tool-label" fill="#8B4513">Syntax colors</text>
+    <text x="180" y="196" class="tool-label" fill="#8B4513">UI</text>
+
+    <!-- "Limited" annotation under the agent -->
+    <text x="235" y="265" style="font: italic 9px sans-serif; fill: #D55E00;
+          text-anchor: middle;">constrained by human-centric UI</text>
+
+    <!-- Bottom status bar decoration -->
+    <rect x="38" y="340" width="324" height="16" rx="2"
+          fill="#E69F00" fill-opacity="0.1" stroke="#E69F00" stroke-opacity="0.2" stroke-width="0.5"/>
+    <text x="200" y="350" style="font: 7px sans-serif; fill: #B08060; text-anchor: middle;">
+      Ln 42, Col 8  |  UTF-8  |  Python  |  Spaces: 4
+    </text>
+
+    <!-- Caption -->
+    <text x="200" y="395" class="caption">"Factory inside the workbench"</text>
+  </g>
+
+  <!-- ==================== RIGHT PANEL: GAS TOWN APPROACH ==================== -->
+  <g aria-label="Right panel: The Gas Town Approach">
+
+    <!-- Panel header -->
+    <text x="600" y="64" class="panel-title" text-anchor="start" fill="#009E73">The Gas Town Approach</text>
+
+    <!-- Large factory outer box: dominates the panel, feels spacious -->
+    <!-- Positioned at x=430, y=80, w=340, h=290 -->
+    <rect x="430" y="80" width="340" height="290" class="outer-box"
+          fill="#F0FFF4" stroke="#009E73" filter="url(#shadow)"/>
+
+    <!-- Factory floor dot pattern for texture -->
+    <rect x="430" y="80" width="340" height="290" rx="8"
+          fill="url(#factory-floor)"/>
+
+    <!-- Factory label at top -->
+    <rect x="430" y="80" width="340" height="28" rx="8" ry="0"
+          fill="#009E73" fill-opacity="0.15"/>
+    <rect x="430" y="96" width="340" height="12"
+          fill="#009E73" fill-opacity="0.15"/>
+    <text x="600" y="97" class="label-bold" fill="#006B52">Factory</text>
+
+    <!-- Multiple agents freely positioned (spacious, productive) -->
+    <!-- Agent 1: top-left area -->
+    <circle cx="475" cy="140" r="14" class="agent-dot" filter="url(#shadow)"/>
+    <text x="475" y="140" class="agent-label">A1</text>
+
+    <!-- Agent 2: top-center -->
+    <circle cx="560" cy="130" r="14" class="agent-dot" filter="url(#shadow)"/>
+    <text x="560" y="130" class="agent-label">A2</text>
+
+    <!-- Agent 3: center-right -->
+    <circle cx="700" cy="155" r="14" class="agent-dot" filter="url(#shadow)"/>
+    <text x="700" y="155" class="agent-label">A3</text>
+
+    <!-- Agent 4: center -->
+    <circle cx="620" cy="185" r="14" class="agent-dot" filter="url(#shadow)"/>
+    <text x="620" y="185" class="agent-label">A4</text>
+
+    <!-- Agent 5: lower-left -->
+    <circle cx="490" cy="210" r="14" class="agent-dot" filter="url(#shadow)"/>
+    <text x="490" y="210" class="agent-label">A5</text>
+
+    <!-- Coordination lines between agents (light, showing collaboration) -->
+    <line x1="489" y1="140" x2="546" y2="130" stroke="#0072B2" stroke-width="1"
+          stroke-opacity="0.3" stroke-dasharray="3,3"/>
+    <line x1="574" y1="130" x2="686" y2="155" stroke="#0072B2" stroke-width="1"
+          stroke-opacity="0.3" stroke-dasharray="3,3"/>
+    <line x1="560" y1="144" x2="620" y2="171" stroke="#0072B2" stroke-width="1"
+          stroke-opacity="0.3" stroke-dasharray="3,3"/>
+    <line x1="504" y1="210" x2="606" y2="185" stroke="#0072B2" stroke-width="1"
+          stroke-opacity="0.3" stroke-dasharray="3,3"/>
+    <line x1="475" y1="154" x2="490" y2="196" stroke="#0072B2" stroke-width="1"
+          stroke-opacity="0.3" stroke-dasharray="3,3"/>
+
+    <!-- Small optional workbench/IDE tools: not dominant, just available -->
+    <!-- Workbench 1: bottom-left -->
+    <rect x="445" y="258" width="80" height="42" class="workbench"
+          filter="url(#shadow-inset)"/>
+    <text x="485" y="273" class="tool-label">Editor</text>
+    <text x="485" y="286" style="font: italic 8px sans-serif; fill: #999;
+          text-anchor: middle;">(optional)</text>
+
+    <!-- Workbench 2: bottom-center -->
+    <rect x="545" y="265" width="80" height="42" class="workbench"
+          filter="url(#shadow-inset)"/>
+    <text x="585" y="280" class="tool-label">Debugger</text>
+    <text x="585" y="293" style="font: italic 8px sans-serif; fill: #999;
+          text-anchor: middle;">(optional)</text>
+
+    <!-- Workbench 3: bottom-right -->
+    <rect x="645" y="255" width="80" height="42" class="workbench"
+          filter="url(#shadow-inset)"/>
+    <text x="685" y="270" class="tool-label">Terminal</text>
+    <text x="685" y="283" style="font: italic 8px sans-serif; fill: #999;
+          text-anchor: middle;">(optional)</text>
+
+    <!-- "Available when needed" bracket annotation -->
+    <text x="585" y="320" style="font: italic 9px sans-serif; fill: #009E73;
+          text-anchor: middle;">human tools available, not required</text>
+
+    <!-- Spaciousness indicator: open space label -->
+    <text x="650" y="228" class="annotation" fill="#009E73" opacity="0.6">
+      open space
+    </text>
+
+    <!-- Caption -->
+    <text x="600" y="395" class="caption">"Workbench inside the factory"</text>
+  </g>
+
+  <!-- ==================== FOREGROUND: ANNOTATION ==================== -->
+  <!-- Bottom annotation spanning both panels -->
+  <text x="400" y="430" class="annotation" fill="#333" style="font-style: italic;">
+    Agents don't need syntax highlighting. They need coordination.
+  </text>
+
+</svg>

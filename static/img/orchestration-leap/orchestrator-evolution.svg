@@ -1,0 +1,252 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="orch-title orch-desc">
+  <title id="orch-title">Evolution of Yegge's Four Orchestrator Attempts</title>
+  <desc id="orch-desc">
+    A horizontal timeline showing four orchestrator iterations: vibecoder (TypeScript,
+    Aug 2025) failed due to plan-based orchestration; vc (Go) was too monolithic;
+    PGT / Python Gas Town (Nov 2025) pivoted to quantity over quality with Agent Mail
+    and Beads; Gas Town (Go, Dec 2025) achieved liftoff with 75K lines in 17 days.
+    The first three are marked as failures, the last as success.
+  </desc>
+
+  <defs>
+    <!-- Compatible drop shadow filter -->
+    <filter id="card-shadow" x="-12%" y="-12%" width="130%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2.5" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow filter for success milestone -->
+    <filter id="success-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Diagonal hatch pattern for failure cards -->
+    <pattern id="fail-hatch" width="6" height="6"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6"
+            stroke="#D55E00" stroke-width="0.6" stroke-opacity="0.15"/>
+    </pattern>
+
+    <!-- Arrowhead for timeline -->
+    <marker id="timeline-arrow" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#555"/>
+    </marker>
+
+    <style>
+      .title       { font: bold 18px sans-serif; fill: #222; text-anchor: middle; }
+      .subtitle    { font: 11px sans-serif; fill: #666; text-anchor: middle; }
+      .name        { font: bold 14px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; }
+      .tech        { font: 12px sans-serif; fill: #555; text-anchor: middle; }
+      .date        { font: bold 11px sans-serif; text-anchor: middle; fill: #777; }
+      .lesson      { font: 11px sans-serif; text-anchor: middle; fill: #444; }
+      .lesson-em   { font: italic 11px sans-serif; text-anchor: middle; fill: #444; }
+      .stat        { font: 10px sans-serif; text-anchor: middle; fill: #666; }
+      .fail-label  { font: bold 10px sans-serif; text-anchor: middle;
+                     fill: #D55E00; letter-spacing: 0.5px; }
+      .win-label   { font: bold 10px sans-serif; text-anchor: middle;
+                     fill: #009E73; letter-spacing: 0.5px; }
+      .timeline    { stroke: #888; stroke-width: 2.5; fill: none; }
+    </style>
+  </defs>
+
+  <!-- ======================== BACKGROUND ======================== -->
+  <!-- Subtle gradient background -->
+  <rect width="800" height="450" fill="#FAFBFD" rx="0"/>
+
+  <!-- Title -->
+  <text x="400" y="32" class="title">The Orchestrator Evolution</text>
+  <text x="400" y="50" class="subtitle">Four attempts, three failures, one liftoff</text>
+
+  <!-- ======================== MIDGROUND: TIMELINE ======================== -->
+  <!-- Main horizontal timeline axis -->
+  <!-- Runs from x=70 to x=740, centered at y=225 -->
+  <line x1="60" y1="225" x2="745" y2="225" class="timeline"
+        marker-end="url(#timeline-arrow)"/>
+
+  <!-- Time labels along the bottom edge of timeline -->
+  <text x="60" y="245" class="date" text-anchor="start">2025</text>
+  <text x="740" y="245" class="date" text-anchor="end">2026</text>
+
+  <!-- ======================== FOREGROUND: MILESTONES ======================== -->
+  <!--
+    4 milestones evenly spaced across the timeline.
+    x positions: 135, 310, 485, 660
+    spacing = (660 - 135) / 3 = 175
+  -->
+
+  <!-- ===== MILESTONE 1: vibecoder (FAIL) ===== -->
+  <g>
+    <!-- Card above timeline -->
+    <rect x="65" y="72" width="140" height="110" rx="7"
+          fill="url(#fail-hatch)" stroke="#D55E00" stroke-width="1.5"
+          filter="url(#card-shadow)"/>
+    <rect x="65" y="72" width="140" height="110" rx="7"
+          fill="#FFF8F5" fill-opacity="0.88" stroke="none"/>
+    <rect x="65" y="72" width="140" height="110" rx="7"
+          fill="none" stroke="#D55E00" stroke-width="1.5"/>
+
+    <!-- Card content -->
+    <text x="135" y="93" class="name" fill="#D55E00">vibecoder</text>
+    <text x="135" y="110" class="tech">TypeScript + Temporal</text>
+    <text x="135" y="125" class="stat">350K lines of code</text>
+    <text x="135" y="142" class="lesson">Plan-based orchestration</text>
+    <text x="135" y="156" class="lesson-em">"Plans always fail"</text>
+    <text x="135" y="172" class="fail-label">FAILED</text>
+
+    <!-- Connector line from card to timeline -->
+    <line x1="135" y1="182" x2="135" y2="210" stroke="#D55E00" stroke-width="1.5"
+          stroke-dasharray="3,2"/>
+
+    <!-- Milestone marker: X mark (failure) -->
+    <circle cx="135" cy="225" r="12" fill="#FFF" stroke="#D55E00" stroke-width="2.5"/>
+    <line x1="129" y1="219" x2="141" y2="231" stroke="#D55E00" stroke-width="2.5"
+          stroke-linecap="round"/>
+    <line x1="141" y1="219" x2="129" y2="231" stroke="#D55E00" stroke-width="2.5"
+          stroke-linecap="round"/>
+
+    <!-- Date below timeline -->
+    <text x="135" y="256" class="date">Aug 2025</text>
+  </g>
+
+  <!-- ===== MILESTONE 2: vc (FAIL) ===== -->
+  <g>
+    <!-- Card below timeline (alternating position for visual rhythm) -->
+    <rect x="240" y="270" width="140" height="110" rx="7"
+          fill="url(#fail-hatch)" stroke="#D55E00" stroke-width="1.5"
+          filter="url(#card-shadow)"/>
+    <rect x="240" y="270" width="140" height="110" rx="7"
+          fill="#FFF8F5" fill-opacity="0.88" stroke="none"/>
+    <rect x="240" y="270" width="140" height="110" rx="7"
+          fill="none" stroke="#D55E00" stroke-width="1.5"/>
+
+    <!-- Card content -->
+    <text x="310" y="291" class="name" fill="#D55E00">vc</text>
+    <text x="310" y="308" class="tech">Go rewrite</text>
+    <text x="310" y="323" class="stat">Monolithic architecture</text>
+    <text x="310" y="340" class="lesson">Tried to make agents</text>
+    <text x="310" y="354" class="lesson-em">"better" instead of "more"</text>
+    <text x="310" y="370" class="fail-label">FAILED</text>
+
+    <!-- Connector line from timeline to card -->
+    <line x1="310" y1="240" x2="310" y2="268" stroke="#D55E00" stroke-width="1.5"
+          stroke-dasharray="3,2"/>
+
+    <!-- Milestone marker: X mark (failure) -->
+    <circle cx="310" cy="225" r="12" fill="#FFF" stroke="#D55E00" stroke-width="2.5"/>
+    <line x1="304" y1="219" x2="316" y2="231" stroke="#D55E00" stroke-width="2.5"
+          stroke-linecap="round"/>
+    <line x1="316" y1="219" x2="304" y2="231" stroke="#D55E00" stroke-width="2.5"
+          stroke-linecap="round"/>
+
+    <!-- Date above timeline -->
+    <text x="310" y="205" class="date">Sep 2025</text>
+  </g>
+
+  <!-- ===== MILESTONE 3: PGT (FAIL but pivotal) ===== -->
+  <g>
+    <!-- Card above timeline -->
+    <rect x="415" y="72" width="140" height="110" rx="7"
+          fill="url(#fail-hatch)" stroke="#E69F00" stroke-width="1.5"
+          filter="url(#card-shadow)"/>
+    <rect x="415" y="72" width="140" height="110" rx="7"
+          fill="#FFFCF0" fill-opacity="0.88" stroke="none"/>
+    <rect x="415" y="72" width="140" height="110" rx="7"
+          fill="none" stroke="#E69F00" stroke-width="1.5"/>
+
+    <!-- Card content -->
+    <text x="485" y="93" class="name" fill="#E69F00">PGT</text>
+    <text x="485" y="110" class="tech">Python Gas Town</text>
+    <text x="485" y="125" class="stat">Pivotal prototype</text>
+    <text x="485" y="142" class="lesson">Quantity over quality:</text>
+    <text x="485" y="156" class="lesson-em">Agent Mail + Beads village</text>
+    <text x="485" y="172" class="fail-label" fill="#E69F00">STEPPING STONE</text>
+
+    <!-- Connector line from card to timeline -->
+    <line x1="485" y1="182" x2="485" y2="210" stroke="#E69F00" stroke-width="1.5"
+          stroke-dasharray="3,2"/>
+
+    <!-- Milestone marker: ~ (partial/pivot) -->
+    <circle cx="485" cy="225" r="12" fill="#FFF" stroke="#E69F00" stroke-width="2.5"/>
+    <text x="485" y="225" text-anchor="middle" dominant-baseline="central"
+          font-size="16" font-weight="bold" fill="#E69F00">~</text>
+
+    <!-- Date below timeline -->
+    <text x="485" y="256" class="date">Nov 2025</text>
+  </g>
+
+  <!-- ===== MILESTONE 4: Gas Town (SUCCESS) ===== -->
+  <g>
+    <!-- Card below timeline -->
+    <rect x="590" y="270" width="150" height="120" rx="7"
+          fill="#F0FBF7" stroke="#009E73" stroke-width="2"
+          filter="url(#card-shadow)"/>
+
+    <!-- Card content -->
+    <text x="665" y="293" class="name" fill="#009E73">Gas Town</text>
+    <text x="665" y="310" class="tech">Go (final rewrite)</text>
+    <text x="665" y="326" class="stat">75K lines, 2000 commits</text>
+    <text x="665" y="342" class="stat">Built in 17 days</text>
+    <text x="665" y="360" class="lesson-em">"Liftoff: Dec 29"</text>
+    <text x="665" y="380" class="win-label">LIFTOFF</text>
+
+    <!-- Connector line from timeline to card -->
+    <line x1="665" y1="240" x2="665" y2="268" stroke="#009E73" stroke-width="1.5"
+          stroke-dasharray="3,2"/>
+
+    <!-- Milestone marker: checkmark (success), with glow -->
+    <circle cx="665" cy="225" r="13" fill="#009E73" stroke="#009E73" stroke-width="2"
+            filter="url(#success-glow)"/>
+    <!-- Checkmark path inside circle -->
+    <polyline points="657,225 663,231 674,219" fill="none"
+              stroke="#FFF" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round"/>
+
+    <!-- Date above timeline -->
+    <text x="665" y="205" class="date">Dec 15, 2025</text>
+  </g>
+
+  <!-- ======================== LEGEND / KEY ======================== -->
+  <!-- Small legend in bottom-left -->
+  <g transform="translate(40, 415)">
+    <!-- Failure marker -->
+    <circle cx="0" cy="0" r="6" fill="#FFF" stroke="#D55E00" stroke-width="1.5"/>
+    <line x1="-3" y1="-3" x2="3" y2="3" stroke="#D55E00" stroke-width="1.5"
+          stroke-linecap="round"/>
+    <line x1="3" y1="-3" x2="-3" y2="3" stroke="#D55E00" stroke-width="1.5"
+          stroke-linecap="round"/>
+    <text x="14" y="0" dominant-baseline="central"
+          font-size="10" font-family="sans-serif" fill="#666">Failed attempt</text>
+
+    <!-- Pivot marker -->
+    <circle cx="120" cy="0" r="6" fill="#FFF" stroke="#E69F00" stroke-width="1.5"/>
+    <text x="120" y="0" text-anchor="middle" dominant-baseline="central"
+          font-size="9" font-weight="bold" fill="#E69F00">~</text>
+    <text x="134" y="0" dominant-baseline="central"
+          font-size="10" font-family="sans-serif" fill="#666">Key pivot</text>
+
+    <!-- Success marker -->
+    <circle cx="220" cy="0" r="6" fill="#009E73" stroke="#009E73" stroke-width="1.5"/>
+    <polyline points="216,0 219,3 224,-3" fill="none"
+              stroke="#FFF" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round"/>
+    <text x="234" y="0" dominant-baseline="central"
+          font-size="10" font-family="sans-serif" fill="#666">Success</text>
+  </g>
+
+</svg>

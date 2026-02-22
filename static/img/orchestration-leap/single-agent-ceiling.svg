@@ -1,0 +1,368 @@
+<svg viewBox="0 0 880 510" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="diagram-title diagram-desc">
+  <title id="diagram-title">The Single-Agent Ceiling</title>
+  <desc id="diagram-desc">
+    A diagram showing the futile cycle of working with a single coding agent.
+    Three iterations of the same loop are shown left to right: the agent works
+    productively while its context window fills like a progress bar, then hits
+    a wall and dies. The human must re-explain everything to a fresh agent,
+    losing time each cycle. A shrinking "useful work" band and growing
+    "re-explain" band across iterations show how the human becomes the
+    bottleneck babysitting this repetitive process.
+  </desc>
+
+  <defs>
+    <!-- Drop shadow (compatible feGaussianBlur pattern) -->
+    <filter id="shadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Glow for the death icon -->
+    <filter id="death-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Context fill gradient: green at bottom (fresh) to red at top (full) -->
+    <linearGradient id="context-fill" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%"   stop-color="#009E73"/>
+      <stop offset="55%"  stop-color="#E69F00"/>
+      <stop offset="100%" stop-color="#D55E00"/>
+    </linearGradient>
+
+    <!-- Background gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#f7f9fc"/>
+      <stop offset="100%" stop-color="#ebeef4"/>
+    </linearGradient>
+
+    <!-- Hatching pattern for "wasted" ramp-up time -->
+    <pattern id="ramp-hatch" width="6" height="6"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6"
+            stroke="#CC79A7" stroke-width="1.5" stroke-opacity="0.5"/>
+    </pattern>
+
+    <!-- Curved return arrow marker (vermillion for death/restart) -->
+    <marker id="return-arrow" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#D55E00"/>
+    </marker>
+
+    <style>
+      /* Title */
+      .title {
+        font-family: sans-serif;
+        font-size: 19px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: #1a1a1a;
+      }
+      .subtitle {
+        font-family: sans-serif;
+        font-size: 11px;
+        text-anchor: middle;
+        fill: #666;
+      }
+
+      /* Labels */
+      .label-small {
+        font-family: sans-serif;
+        font-size: 10px;
+        text-anchor: middle;
+        dominant-baseline: central;
+        fill: #555;
+      }
+      .annotation {
+        font-family: sans-serif;
+        font-size: 10px;
+        text-anchor: middle;
+        fill: #888;
+      }
+      .phase-label {
+        font-family: sans-serif;
+        font-size: 11px;
+        font-weight: bold;
+        text-anchor: middle;
+        dominant-baseline: central;
+      }
+      .iteration-label {
+        font-family: sans-serif;
+        font-size: 13px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: #0072B2;
+      }
+
+      /* Bar track (empty context window) */
+      .bar-track {
+        fill: #e8ecf2;
+        stroke: #c0c8d4;
+        stroke-width: 1.5;
+        rx: 4;
+      }
+
+      /* Connection lines */
+      .return-line {
+        stroke: #D55E00;
+        stroke-width: 2;
+        stroke-dasharray: 6, 3;
+        fill: none;
+        marker-end: url(#return-arrow);
+      }
+
+      /* Ceiling label */
+      .ceiling-label {
+        font-family: sans-serif;
+        font-size: 10px;
+        font-weight: bold;
+        fill: #D55E00;
+      }
+    </style>
+  </defs>
+
+  <!-- =============================== -->
+  <!-- BACKGROUND                      -->
+  <!-- =============================== -->
+  <rect width="880" height="510" fill="url(#bg-grad)"/>
+
+  <!-- Title -->
+  <text x="440" y="30" class="title">The Single-Agent Ceiling</text>
+  <text x="440" y="48" class="subtitle">Each cycle: work, fill context, die, re-explain &#x2014; the human becomes the bottleneck</text>
+
+  <!-- =============================== -->
+  <!-- MIDGROUND: ceiling line         -->
+  <!-- =============================== -->
+  <!-- The "ceiling": a hard horizontal limit across the top of the work zone -->
+  <line x1="68" y1="118" x2="810" y2="118"
+        stroke="#D55E00" stroke-width="2.5" stroke-dasharray="8,4" opacity="0.6"/>
+  <text x="68" y="112" class="ceiling-label" text-anchor="start">CONTEXT LIMIT</text>
+
+  <!-- =============================== -->
+  <!-- FOREGROUND: Three iterations    -->
+  <!-- =============================== -->
+  <!--
+    Layout: 3 iteration columns across 880px width.
+    Column centers at: 175, 440, 705
+    Bar dimensions: 62 wide x 250 tall, from y=128 to y=378
+  -->
+
+  <!-- ============ ITERATION 1 ============ -->
+  <g aria-label="Iteration 1: Fresh start, most productive">
+    <text x="175" y="82" class="iteration-label">Cycle 1</text>
+
+    <!-- Context bar track -->
+    <rect class="bar-track" x="144" y="128" width="62" height="250"/>
+
+    <!-- Ramp-up zone: 32px at bottom (initial setup, small) -->
+    <rect x="145" y="347" width="60" height="30" fill="url(#ramp-hatch)" rx="3"/>
+    <text x="175" y="362" class="label-small" fill="#CC79A7">setup</text>
+
+    <!-- Productive work zone: fills from y=129 to y=347 (218px of 250px = 87%) -->
+    <rect x="145" y="129" width="60" height="218" fill="url(#context-fill)" rx="3"
+          opacity="0.85"/>
+
+    <!-- Label inside bar -->
+    <text x="175" y="240" class="phase-label" fill="#fff">
+      <tspan x="175" dy="0">Productive</tspan>
+      <tspan x="175" dy="15">Work</tspan>
+    </text>
+
+    <!-- Agent icon at bottom: simple robot head -->
+    <g transform="translate(175, 405)">
+      <rect x="-15" y="-13" width="30" height="26" rx="5"
+            fill="#0072B2" stroke="#004a75" stroke-width="1.5" filter="url(#shadow)"/>
+      <!-- Eyes -->
+      <circle cx="-5" cy="-2" r="3" fill="#56B4E9"/>
+      <circle cx="5" cy="-2" r="3" fill="#56B4E9"/>
+      <!-- Mouth -->
+      <rect x="-7" y="5" width="14" height="3" rx="1" fill="#56B4E9"/>
+    </g>
+    <text x="175" y="432" class="label-small">Agent (fresh)</text>
+
+    <!-- Death symbol at top: X mark when context fills to the limit -->
+    <g transform="translate(175, 123)" filter="url(#death-glow)">
+      <line x1="-6" y1="-6" x2="6" y2="6" stroke="#D55E00" stroke-width="3" stroke-linecap="round"/>
+      <line x1="6" y1="-6" x2="-6" y2="6" stroke="#D55E00" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Return arc: Cycle 1 death to Cycle 2 start (human re-explains) -->
+  <path class="return-line"
+        d="M 210,125 C 260,92 345,92 400,125"/>
+  <!-- Human stick figure above the return arc -->
+  <g transform="translate(305, 88)" aria-label="Human re-explains context">
+    <circle cx="0" cy="-6" r="5" fill="#E69F00" stroke="#b37a00" stroke-width="1"/>
+    <line x1="0" y1="-1" x2="0" y2="10" stroke="#E69F00" stroke-width="1.5"/>
+    <line x1="-6" y1="4" x2="6" y2="4" stroke="#E69F00" stroke-width="1.2"/>
+  </g>
+  <text x="305" y="70" class="annotation">re-explain</text>
+
+  <!-- ============ ITERATION 2 ============ -->
+  <g aria-label="Iteration 2: More ramp-up overhead, less productive work">
+    <text x="440" y="82" class="iteration-label">Cycle 2</text>
+
+    <!-- Context bar track -->
+    <rect class="bar-track" x="409" y="128" width="62" height="250"/>
+
+    <!-- Ramp-up zone is larger now: 72px (re-explaining accumulated context) -->
+    <rect x="410" y="305" width="60" height="72" fill="url(#ramp-hatch)" rx="3"/>
+    <text x="440" y="334" class="label-small" fill="#CC79A7">
+      <tspan x="440" dy="0">re-explain</tspan>
+      <tspan x="440" dy="13">context</tspan>
+    </text>
+
+    <!-- Productive work zone: y=129 to y=305 (176px of 250px = 70%) -->
+    <rect x="410" y="129" width="60" height="176" fill="url(#context-fill)" rx="3"
+          opacity="0.85"/>
+
+    <!-- Label inside bar -->
+    <text x="440" y="220" class="phase-label" fill="#fff">
+      <tspan x="440" dy="0">Productive</tspan>
+      <tspan x="440" dy="15">Work</tspan>
+    </text>
+
+    <!-- Agent icon at bottom -->
+    <g transform="translate(440, 405)">
+      <rect x="-15" y="-13" width="30" height="26" rx="5"
+            fill="#0072B2" stroke="#004a75" stroke-width="1.5" filter="url(#shadow)"/>
+      <circle cx="-5" cy="-2" r="3" fill="#56B4E9"/>
+      <circle cx="5" cy="-2" r="3" fill="#56B4E9"/>
+      <rect x="-7" y="5" width="14" height="3" rx="1" fill="#56B4E9"/>
+    </g>
+    <text x="440" y="432" class="label-small">Agent (clone)</text>
+
+    <!-- Death symbol at top -->
+    <g transform="translate(440, 123)" filter="url(#death-glow)">
+      <line x1="-6" y1="-6" x2="6" y2="6" stroke="#D55E00" stroke-width="3" stroke-linecap="round"/>
+      <line x1="6" y1="-6" x2="-6" y2="6" stroke="#D55E00" stroke-width="3" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- Return arc: Cycle 2 death to Cycle 3 start -->
+  <path class="return-line"
+        d="M 475,125 C 525,92 610,92 665,125"/>
+  <!-- Human stick figure above the return arc -->
+  <g transform="translate(570, 88)" aria-label="Human re-explains context again">
+    <circle cx="0" cy="-6" r="5" fill="#E69F00" stroke="#b37a00" stroke-width="1"/>
+    <line x1="0" y1="-1" x2="0" y2="10" stroke="#E69F00" stroke-width="1.5"/>
+    <line x1="-6" y1="4" x2="6" y2="4" stroke="#E69F00" stroke-width="1.2"/>
+  </g>
+  <text x="570" y="70" class="annotation">re-explain</text>
+
+  <!-- ============ ITERATION 3 ============ -->
+  <g aria-label="Iteration 3: Even more overhead, even less productive work">
+    <text x="705" y="82" class="iteration-label">Cycle 3</text>
+
+    <!-- Context bar track -->
+    <rect class="bar-track" x="674" y="128" width="62" height="250"/>
+
+    <!-- Ramp-up zone is largest: 115px (accumulated project context is heavy) -->
+    <rect x="675" y="262" width="60" height="115" fill="url(#ramp-hatch)" rx="3"/>
+    <text x="705" y="305" class="label-small" fill="#CC79A7">
+      <tspan x="705" dy="0">re-explain</tspan>
+      <tspan x="705" dy="13">more</tspan>
+      <tspan x="705" dy="13">context</tspan>
+    </text>
+
+    <!-- Productive work zone: y=129 to y=262 (133px of 250px = 53%) -->
+    <rect x="675" y="129" width="60" height="133" fill="url(#context-fill)" rx="3"
+          opacity="0.85"/>
+
+    <!-- Label inside bar -->
+    <text x="705" y="198" class="phase-label" fill="#fff">
+      <tspan x="705" dy="0">Productive</tspan>
+      <tspan x="705" dy="15">Work</tspan>
+    </text>
+
+    <!-- Agent icon at bottom -->
+    <g transform="translate(705, 405)">
+      <rect x="-15" y="-13" width="30" height="26" rx="5"
+            fill="#0072B2" stroke="#004a75" stroke-width="1.5" filter="url(#shadow)"/>
+      <circle cx="-5" cy="-2" r="3" fill="#56B4E9"/>
+      <circle cx="5" cy="-2" r="3" fill="#56B4E9"/>
+      <rect x="-7" y="5" width="14" height="3" rx="1" fill="#56B4E9"/>
+    </g>
+    <text x="705" y="432" class="label-small">Agent (clone)</text>
+
+    <!-- Death symbol at top -->
+    <g transform="translate(705, 123)" filter="url(#death-glow)">
+      <line x1="-6" y1="-6" x2="6" y2="6" stroke="#D55E00" stroke-width="3" stroke-linecap="round"/>
+      <line x1="6" y1="-6" x2="-6" y2="6" stroke="#D55E00" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Trailing ellipsis to suggest the cycle continues indefinitely -->
+    <text x="780" y="250" font-family="sans-serif" font-size="24" fill="#999"
+          text-anchor="middle" dominant-baseline="central">...</text>
+  </g>
+
+  <!-- =============================== -->
+  <!-- FOREGROUND: Legend and callouts  -->
+  <!-- =============================== -->
+
+  <!-- Diminishing returns annotation -->
+  <g aria-label="Annotation showing diminishing returns across cycles">
+    <line x1="110" y1="450" x2="770" y2="450" stroke="#999" stroke-width="1"
+          stroke-dasharray="3,3"/>
+    <text x="440" y="463" font-family="sans-serif" font-size="10.5" fill="#D55E00"
+          text-anchor="middle" font-style="italic">
+      Each cycle: less work done, more time re-explaining
+    </text>
+  </g>
+
+  <!-- Legend at bottom -->
+  <g transform="translate(440, 488)" aria-label="Legend">
+    <!-- Productive work swatch -->
+    <rect x="-240" y="-10" width="16" height="12" fill="url(#context-fill)" rx="2" opacity="0.85"/>
+    <text x="-220" y="-4" font-family="sans-serif" font-size="10" fill="#555"
+          dominant-baseline="central">Productive work</text>
+
+    <!-- Re-explain overhead swatch -->
+    <rect x="-120" y="-10" width="16" height="12" fill="url(#ramp-hatch)" rx="2"
+          stroke="#CC79A7" stroke-width="0.5"/>
+    <text x="-100" y="-4" font-family="sans-serif" font-size="10" fill="#555"
+          dominant-baseline="central">Re-explain overhead</text>
+
+    <!-- Death marker swatch -->
+    <g transform="translate(15, -4)">
+      <line x1="-4" y1="-4" x2="4" y2="4" stroke="#D55E00" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="4" y1="-4" x2="-4" y2="4" stroke="#D55E00" stroke-width="2.5" stroke-linecap="round"/>
+    </g>
+    <text x="27" y="-4" font-family="sans-serif" font-size="10" fill="#555"
+          dominant-baseline="central">Context death</text>
+
+    <!-- Human babysitter swatch -->
+    <g transform="translate(130, -4)">
+      <circle cx="0" cy="-4" r="4" fill="#E69F00"/>
+      <line x1="0" y1="0" x2="0" y2="7" stroke="#E69F00" stroke-width="1.5"/>
+    </g>
+    <text x="140" y="-4" font-family="sans-serif" font-size="10" fill="#555"
+          dominant-baseline="central">Human babysitter</text>
+  </g>
+
+  <!-- Left-side callout: "95% of interactions are babysitting" -->
+  <g transform="translate(72, 250)" aria-label="Babysitting statistic callout">
+    <rect x="-38" y="-28" width="76" height="56" rx="8"
+          fill="#fff" stroke="#E69F00" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="0" y="-14" font-family="sans-serif" font-size="18" font-weight="bold"
+          text-anchor="middle" dominant-baseline="central" fill="#E69F00">95%</text>
+    <text x="0" y="3" font-family="sans-serif" font-size="9" text-anchor="middle"
+          dominant-baseline="central" fill="#666">of interactions</text>
+    <text x="0" y="15" font-family="sans-serif" font-size="9" text-anchor="middle"
+          dominant-baseline="central" fill="#666">= babysitting</text>
+  </g>
+
+</svg>

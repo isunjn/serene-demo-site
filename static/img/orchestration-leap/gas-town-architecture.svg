@@ -1,0 +1,288 @@
+<svg viewBox="0 0 900 580" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="arch-title arch-desc">
+  <title id="arch-title">Gas Town Worker Role Architecture</title>
+  <desc id="arch-desc">
+    Hub-and-spoke diagram showing Gas Town's seven worker roles plus human
+    Overseer, with Beads (JSONL + Git) as the central universal data plane.
+    Data flows include work slinging (gt sling), mail, GUPP heartbeats,
+    and merge requests flowing to the Refinery.
+  </desc>
+
+  <defs>
+    <!-- Compatible drop shadow -->
+    <filter id="shadow" x="-15%" y="-15%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Stronger shadow for center hub -->
+    <filter id="shadow-lg" x="-20%" y="-20%" width="150%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="5" result="blur"/>
+      <feOffset in="blur" dx="2" dy="3" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.22" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Radial glow behind center hub -->
+    <radialGradient id="beads-glow" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#E69F00" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#E69F00" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Arrowhead for special flows -->
+    <marker id="arrow-sm" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#888"/>
+    </marker>
+
+    <!-- Orange arrowhead for human-interaction lines -->
+    <marker id="arrow-human" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#D55E00"/>
+    </marker>
+
+    <style>
+      .title       { font: bold 19px sans-serif; fill: #222; text-anchor: middle; }
+      .subtitle    { font: 11px sans-serif; fill: #666; text-anchor: middle; }
+      .role-label  { font: bold 13px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: #fff; }
+      .role-desc   { font: 10px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; }
+      .hub-label   { font: bold 16px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: #fff; }
+      .hub-sub     { font: 10px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: rgba(255,255,255,0.85); }
+      .flow-label  { font: italic 9px sans-serif; }
+      .legend-text { font: 10px sans-serif; fill: #555;
+                     dominant-baseline: central; }
+
+      /* Spokes: subtle bidirectional connections to Beads hub */
+      .spoke { stroke: #c8cdd6; stroke-width: 1.8; }
+
+      /* Special directional flows */
+      .flow-special { stroke-width: 1.5; fill: none; stroke-dasharray: 6,3; }
+    </style>
+  </defs>
+
+  <!-- ============================================================ -->
+  <!-- BACKGROUND                                                    -->
+  <!-- ============================================================ -->
+  <rect width="900" height="580" fill="#FAFAFA" rx="4"/>
+  <text x="450" y="30" class="title">Gas Town Worker Role Architecture</text>
+  <text x="450" y="48" class="subtitle">
+    7 worker roles + human Overseer, connected through the Beads data plane
+  </text>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 1: Spoke lines (hub ↔ roles, no arrows — bidirectional) -->
+  <!-- Hub center: (450, 300). Drawn first so nodes cover endpoints. -->
+  <!-- ============================================================ -->
+
+  <!--                       hub center      role center  -->
+  <!-- Mayor    (340, 175) --><line class="spoke" x1="450" y1="300" x2="340" y2="175"/>
+  <!-- Crew     (155, 232) --><line class="spoke" x1="450" y1="300" x2="155" y2="232"/>
+  <!-- Dogs     (140, 415) --><line class="spoke" x1="450" y1="300" x2="140" y2="415"/>
+  <!-- Deacon   (265, 502) --><line class="spoke" x1="450" y1="300" x2="265" y2="502"/>
+  <!-- Witness  (582, 502) --><line class="spoke" x1="450" y1="300" x2="582" y2="502"/>
+  <!-- Refinery (720, 395) --><line class="spoke" x1="450" y1="300" x2="720" y2="395"/>
+  <!-- Polecats (700, 192) --><line class="spoke" x1="450" y1="300" x2="700" y2="192"/>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 2: Special directional flows (curved, dashed, arrows)  -->
+  <!-- ============================================================ -->
+
+  <!-- Overseer → Mayor (vermillion, direct command) -->
+  <path d="M 408,98 Q 380,125 348,152"
+        stroke="#D55E00" stroke-width="1.8" fill="none"
+        marker-end="url(#arrow-human)"/>
+
+  <!-- Overseer → Crew (vermillion, direct command) -->
+  <path d="M 385,95 Q 280,140 200,210"
+        stroke="#D55E00" stroke-width="1.8" fill="none"
+        marker-end="url(#arrow-human)"/>
+
+  <!-- Polecats → Refinery (merge requests, reddish purple) -->
+  <path d="M 710,215 C 738,270 740,340 725,370"
+        class="flow-special" stroke="#CC79A7"
+        marker-end="url(#arrow-sm)"/>
+
+  <!-- Witness → Polecats (watches, green) -->
+  <path d="M 600,480 C 640,400 665,300 693,215"
+        class="flow-special" stroke="#009E73"
+        marker-end="url(#arrow-sm)"/>
+
+  <!-- Witness → Refinery (watches, green) -->
+  <path d="M 618,492 C 660,465 688,440 698,420"
+        class="flow-special" stroke="#009E73"
+        marker-end="url(#arrow-sm)"/>
+
+  <!-- Deacon → Dogs (GUPP heartbeat, sky blue) -->
+  <path d="M 228,492 C 198,470 172,450 158,438"
+        class="flow-special" stroke="#56B4E9"
+        marker-end="url(#arrow-sm)"/>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 3: Central hub (Beads data plane)                      -->
+  <!-- ============================================================ -->
+
+  <!-- Glow halo -->
+  <circle cx="450" cy="300" r="82" fill="url(#beads-glow)"/>
+  <!-- Hub circle -->
+  <circle cx="450" cy="300" r="54" fill="#E69F00" filter="url(#shadow-lg)"/>
+  <!-- Inner decorative ring -->
+  <circle cx="450" cy="300" r="47" fill="none" stroke="rgba(255,255,255,0.3)"
+          stroke-width="1.5"/>
+  <text x="450" y="294" class="hub-label">BEADS</text>
+  <text x="450" y="312" class="hub-sub">JSONL + Git</text>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 4: Overseer + Role nodes                               -->
+  <!-- Drawn last so they sit on top of spokes and special flows.   -->
+  <!-- ============================================================ -->
+
+  <!-- === THE OVERSEER (Human) === -->
+  <g filter="url(#shadow)" aria-label="The Overseer, human operator">
+    <circle cx="410" cy="65" r="13" fill="#D55E00"/>
+    <rect x="384" y="79" width="52" height="28" rx="11" fill="#D55E00"/>
+  </g>
+  <text x="410" y="122" font-family="sans-serif" font-size="14"
+        font-weight="bold" text-anchor="middle" fill="#333">The Overseer</text>
+  <text x="410" y="137" class="role-desc" fill="#555">(human operator)</text>
+
+  <!-- === THE MAYOR === (NNW, concierge / chief-of-staff) -->
+  <g filter="url(#shadow)">
+    <rect x="282" y="152" width="116" height="46" rx="8" fill="#0072B2"/>
+  </g>
+  <text x="340" y="169" class="role-label">The Mayor</text>
+  <text x="340" y="186" class="role-desc" fill="rgba(255,255,255,0.85)">
+    concierge / chief-of-staff
+  </text>
+
+  <!-- === THE CREW === (W, long-lived named agents) -->
+  <g filter="url(#shadow)">
+    <rect x="97" y="209" width="116" height="46" rx="8" fill="#D55E00"/>
+  </g>
+  <text x="155" y="226" class="role-label">The Crew</text>
+  <text x="155" y="243" class="role-desc" fill="rgba(255,255,255,0.85)">
+    long-lived named agents
+  </text>
+
+  <!-- === DOGS === (WSW, Deacon's helpers) -->
+  <g filter="url(#shadow)">
+    <rect x="90" y="394" width="100" height="42" rx="7" fill="#56B4E9"/>
+  </g>
+  <text x="140" y="410" class="role-label" style="font-size:12px">Dogs</text>
+  <text x="140" y="426" class="role-desc" fill="rgba(255,255,255,0.85)">
+    Deacon's helpers
+  </text>
+
+  <!-- === THE DEACON === (SSW, heartbeat patrol) -->
+  <g filter="url(#shadow)">
+    <rect x="208" y="479" width="114" height="46" rx="8" fill="#0072B2"/>
+  </g>
+  <text x="265" y="496" class="role-label">The Deacon</text>
+  <text x="265" y="513" class="role-desc" fill="rgba(255,255,255,0.85)">
+    heartbeat patrol
+  </text>
+
+  <!-- === THE WITNESS === (SSE, watches + unsticks) -->
+  <g filter="url(#shadow)">
+    <rect x="525" y="479" width="114" height="46" rx="8" fill="#009E73"/>
+  </g>
+  <text x="582" y="496" class="role-label">The Witness</text>
+  <text x="582" y="513" class="role-desc" fill="rgba(255,255,255,0.85)">
+    watches + unsticks
+  </text>
+
+  <!-- === REFINERY === (ESE, Merge Queue manager) -->
+  <g filter="url(#shadow)">
+    <rect x="663" y="372" width="114" height="46" rx="8" fill="#CC79A7"/>
+  </g>
+  <text x="720" y="389" class="role-label">Refinery</text>
+  <text x="720" y="406" class="role-desc" fill="rgba(255,255,255,0.85)">
+    Merge Queue manager
+  </text>
+
+  <!-- === POLECATS === (ENE, ephemeral swarm) -->
+  <g filter="url(#shadow)">
+    <rect x="645" y="173" width="110" height="38" rx="7" fill="#56B4E9"/>
+  </g>
+  <text x="700" y="193" class="role-label">Polecats</text>
+  <!-- Swarm dots: fading trail to suggest many ephemeral instances -->
+  <circle cx="660" cy="222" r="5" fill="#56B4E9" opacity="0.7"/>
+  <circle cx="676" cy="225" r="5" fill="#56B4E9" opacity="0.55"/>
+  <circle cx="692" cy="222" r="5" fill="#56B4E9" opacity="0.4"/>
+  <circle cx="708" cy="225" r="5" fill="#56B4E9" opacity="0.3"/>
+  <circle cx="724" cy="222" r="5" fill="#56B4E9" opacity="0.2"/>
+  <rect x="638" y="232" width="124" height="28" rx="4" fill="#FAFAFA" fill-opacity="0.85"/>
+  <text x="700" y="242" class="role-desc" fill="#555">ephemeral swarm workers</text>
+  <text x="700" y="255" class="role-desc" fill="#888"
+        style="font-style:italic; font-size:8px">(multiple instances)</text>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 5: Flow labels (positioned beside their flow lines)    -->
+  <!-- ============================================================ -->
+
+  <!-- "gt sling" label — on the Mayor spoke -->
+  <rect x="367" y="212" width="42" height="14" rx="3" fill="#FAFAFA" fill-opacity="0.85"/>
+  <text x="388" y="222" class="flow-label" fill="#666"
+        text-anchor="middle">gt sling</text>
+
+  <!-- "mail" label — on the Crew spoke -->
+  <rect x="278" y="245" width="28" height="14" rx="3" fill="#FAFAFA" fill-opacity="0.85"/>
+  <text x="292" y="255" class="flow-label" fill="#666"
+        text-anchor="middle">mail</text>
+
+  <!-- "merge requests" — beside Polecats → Refinery curve -->
+  <rect x="755" y="279" width="42" height="28" rx="3" fill="#FAFAFA" fill-opacity="0.85"/>
+  <text x="760" y="290" class="flow-label" fill="#CC79A7"
+        text-anchor="start">merge</text>
+  <text x="760" y="302" class="flow-label" fill="#CC79A7"
+        text-anchor="start">requests</text>
+
+  <!-- "watches" — beside Witness supervision paths -->
+  <rect x="640" y="438" width="40" height="14" rx="3" fill="#FAFAFA" fill-opacity="0.85"/>
+  <text x="645" y="448" class="flow-label" fill="#009E73"
+        text-anchor="start">watches</text>
+
+  <!-- "GUPP heartbeat" — beside Deacon → Dogs path -->
+  <rect x="150" y="452" width="60" height="26" rx="3" fill="#FAFAFA" fill-opacity="0.85"/>
+  <text x="180" y="462" class="flow-label" fill="#56B4E9"
+        text-anchor="middle">GUPP</text>
+  <text x="180" y="474" class="flow-label" fill="#56B4E9"
+        text-anchor="middle">heartbeat</text>
+
+  <!-- ============================================================ -->
+  <!-- LAYER 6: Legend                                               -->
+  <!-- ============================================================ -->
+  <g transform="translate(30, 555)" aria-label="Legend">
+    <!-- Solid line = data flow through Beads -->
+    <line x1="0" y1="0" x2="28" y2="0" stroke="#c8cdd6" stroke-width="2"/>
+    <text x="34" y="0" class="legend-text">Data flow via Beads</text>
+
+    <!-- Dashed arrow = supervision / special flow -->
+    <line x1="195" y1="0" x2="223" y2="0" stroke="#888" stroke-width="1.5"
+          stroke-dasharray="6,3" marker-end="url(#arrow-sm)"/>
+    <text x="230" y="0" class="legend-text">Supervision / special flow</text>
+
+    <!-- Vermillion arrow = human interaction -->
+    <line x1="430" y1="0" x2="458" y2="0" stroke="#D55E00" stroke-width="1.8"
+          marker-end="url(#arrow-human)"/>
+    <text x="465" y="0" class="legend-text">Human interaction</text>
+
+    <!-- Orange dot = data plane -->
+    <circle cx="615" cy="0" r="6" fill="#E69F00"/>
+    <text x="627" y="0" class="legend-text">Universal data plane</text>
+  </g>
+
+</svg>

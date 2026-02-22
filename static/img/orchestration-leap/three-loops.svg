@@ -1,0 +1,170 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="three-loops-title three-loops-desc">
+  <title id="three-loops-title">The Three Developer Loops</title>
+  <desc id="three-loops-desc">
+    Three nested rounded rectangles showing the developer feedback loops
+    from the Vibe Coding book applied to Gas Town: an outer strategic loop
+    (days to weeks), a middle feature development loop (hours to days),
+    and an inner agent interaction loop (seconds to minutes).
+  </desc>
+
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .title    { font: bold 18px sans-serif; fill: #1a1a1a;
+                  text-anchor: middle; dominant-baseline: central; }
+      .subtitle { font: 12px sans-serif; fill: #777;
+                  text-anchor: middle; dominant-baseline: central; }
+      .badge    { font: bold 11px sans-serif; fill: #fff; letter-spacing: 0.6px;
+                  text-anchor: middle; dominant-baseline: central; }
+      .cadence  { font: bold 13px sans-serif;
+                  text-anchor: middle; dominant-baseline: central; }
+      .item     { font: 13px sans-serif; fill: #222;
+                  text-anchor: start; dominant-baseline: central; }
+      .gt-item  { font: 13px sans-serif; fill: #333;
+                  text-anchor: start; dominant-baseline: central; }
+      .gt-tag   { font: bold 8px sans-serif; fill: #fff;
+                  text-anchor: middle; dominant-baseline: central; }
+      .legend   { font: 11px sans-serif; fill: #666;
+                  text-anchor: start; dominant-baseline: central; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f7f9fc"/>
+
+  <!-- Title -->
+  <text class="title" x="400" y="26">The Three Developer Loops</text>
+  <text class="subtitle" x="400" y="46">Vibe Coding (Yegge &amp; Kim), applied to Gas Town</text>
+
+  <!-- ============================== -->
+  <!-- OUTER LOOP: Days to Weeks      -->
+  <!-- y=65 h=490 => bot=555          -->
+  <!-- ============================== -->
+  <rect x="30" y="65" width="740" height="490" rx="18"
+        fill="#dceefb" stroke="#56B4E9" stroke-width="2"
+        filter="url(#shadow)"/>
+
+  <!-- Outer badge -->
+  <rect x="300" y="74" width="200" height="28" rx="14" fill="#56B4E9"/>
+  <text class="badge" x="400" y="88">OUTER LOOP</text>
+  <text class="cadence" x="400" y="118" fill="#0072B2">Days to Weeks</text>
+
+  <!-- Outer: standard activities (left) -->
+  <g transform="translate(58, 142)">
+    <circle cx="5" cy="0" r="3.5" fill="#0072B2"/>
+    <text class="item" x="16" y="0">Strategic planning</text>
+    <circle cx="5" cy="24" r="3.5" fill="#0072B2"/>
+    <text class="item" x="16" y="24">Architecture decisions</text>
+    <circle cx="5" cy="48" r="3.5" fill="#0072B2"/>
+    <text class="item" x="16" y="48">Design docs &amp; principles</text>
+  </g>
+
+  <!-- Outer: GT additions (right) -->
+  <g transform="translate(490, 138)">
+    <rect x="0" y="0" width="28" height="14" rx="7" fill="#D55E00"/>
+    <text class="gt-tag" x="14" y="7">GT</text>
+    <rect x="2" y="25" width="5" height="5" rx="1" fill="#D55E00"
+          transform="rotate(45, 4.5, 27.5)"/>
+    <text class="gt-item" x="16" y="28">Town-level planning</text>
+    <rect x="2" y="49" width="5" height="5" rx="1" fill="#D55E00"
+          transform="rotate(45, 4.5, 51.5)"/>
+    <text class="gt-item" x="16" y="52">Rig management</text>
+    <rect x="2" y="73" width="5" height="5" rx="1" fill="#D55E00"
+          transform="rotate(45, 4.5, 75.5)"/>
+    <text class="gt-item" x="16" y="76">Formula design</text>
+  </g>
+
+  <!-- ============================== -->
+  <!-- MIDDLE LOOP: Hours to Days     -->
+  <!-- y=230 h=260 => bot=490         -->
+  <!-- ============================== -->
+  <rect x="90" y="230" width="620" height="260" rx="14"
+        fill="#b8dbef" stroke="#0072B2" stroke-width="2"
+        filter="url(#shadow)"/>
+
+  <!-- Middle badge -->
+  <rect x="295" y="238" width="210" height="28" rx="14" fill="#0072B2"/>
+  <text class="badge" x="400" y="252">MIDDLE LOOP</text>
+  <text class="cadence" x="400" y="280" fill="#004a7a">Hours to Days</text>
+
+  <!-- Middle: standard activities (left) -->
+  <g transform="translate(118, 304)">
+    <circle cx="5" cy="0" r="3.5" fill="#004a7a"/>
+    <text class="item" x="16" y="0">Feature development</text>
+    <circle cx="5" cy="24" r="3.5" fill="#004a7a"/>
+    <text class="item" x="16" y="24">Epic execution</text>
+    <circle cx="5" cy="48" r="3.5" fill="#004a7a"/>
+    <text class="item" x="16" y="48">Convoy management</text>
+  </g>
+
+  <!-- Middle: GT additions (right) -->
+  <g transform="translate(460, 300)">
+    <rect x="0" y="0" width="28" height="14" rx="7" fill="#D55E00"/>
+    <text class="gt-tag" x="14" y="7">GT</text>
+    <rect x="2" y="25" width="5" height="5" rx="1" fill="#D55E00"
+          transform="rotate(45, 4.5, 27.5)"/>
+    <text class="gt-item" x="16" y="28">Convoy tracking</text>
+    <rect x="2" y="49" width="5" height="5" rx="1" fill="#D55E00"
+          transform="rotate(45, 4.5, 51.5)"/>
+    <text class="gt-item" x="16" y="52">Polecat swarming</text>
+    <rect x="2" y="73" width="5" height="5" rx="1" fill="#D55E00"
+          transform="rotate(45, 4.5, 75.5)"/>
+    <text class="gt-item" x="16" y="76">Code review sweeps</text>
+  </g>
+
+  <!-- ============================== -->
+  <!-- INNER LOOP: Seconds to Minutes -->
+  <!-- y=400 h=130 => bot=530         -->
+  <!-- ============================== -->
+  <rect x="190" y="400" width="420" height="130" rx="10"
+        fill="#8fc4e2" stroke="#004a7a" stroke-width="2"
+        filter="url(#shadow)"/>
+
+  <!-- Inner badge -->
+  <rect x="322" y="408" width="156" height="26" rx="13" fill="#004a7a"/>
+  <text class="badge" x="400" y="421">INNER LOOP</text>
+  <text class="cadence" x="400" y="448" fill="#002c4a">Seconds to Minutes</text>
+
+  <!-- Inner: standard activities (left) -->
+  <g transform="translate(214, 472)">
+    <circle cx="5" cy="0" r="3.5" fill="#002c4a"/>
+    <text class="item" x="16" y="0" fill="#111">Agent interactions</text>
+    <circle cx="5" cy="24" r="3.5" fill="#002c4a"/>
+    <text class="item" x="16" y="24" fill="#111">Session handoffs</text>
+  </g>
+
+  <!-- Inner: GT additions (right) -->
+  <g transform="translate(420, 468)">
+    <rect x="0" y="0" width="28" height="14" rx="7" fill="#D55E00"/>
+    <text class="gt-tag" x="14" y="7">GT</text>
+    <rect x="2" y="25" width="5" height="5" rx="1" fill="#D55E00"
+          transform="rotate(45, 4.5, 27.5)"/>
+    <text class="gt-item" x="16" y="28" fill="#111">gt handoff / gt sling</text>
+    <rect x="2" y="49" width="5" height="5" rx="1" fill="#D55E00"
+          transform="rotate(45, 4.5, 51.5)"/>
+    <text class="gt-item" x="16" y="52" fill="#111">gt seance / GUPP nudge</text>
+  </g>
+
+  <!-- ============================== -->
+  <!-- Legend                          -->
+  <!-- ============================== -->
+  <g transform="translate(250, 575)">
+    <circle cx="5" cy="0" r="3.5" fill="#0072B2"/>
+    <text class="legend" x="14" y="0">Standard vibe coding</text>
+    <rect x="160" y="-7" width="28" height="14" rx="7" fill="#D55E00"/>
+    <text class="gt-tag" x="174" y="0">GT</text>
+    <text class="legend" x="196" y="0">Gas Town additions</text>
+  </g>
+
+</svg>

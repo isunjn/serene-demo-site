@@ -1,0 +1,206 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="meow-title meow-desc">
+  <title id="meow-title">The MEOW Stack — Molecular Expression of Work</title>
+  <desc id="meow-desc">
+    A vertical stack diagram showing Gas Town's layered work abstraction hierarchy,
+    from Beads (atomic work units) at the bottom through Epics, Molecules,
+    Protomolecules, and Formulas at the top, all surrounded by Guzzoline,
+    the sea of molecularized work — each layer is wider at the bottom, creating
+    a pyramid feel. Arrows show the cooking/instantiation process between
+    the top three layers.
+  </desc>
+
+  <defs>
+    <!-- Compatible drop shadow filter (feGaussianBlur pattern) -->
+    <filter id="layer-shadow" x="-5%" y="-5%" width="115%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
+      <feOffset in="blur" dx="1" dy="3" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle glow for the Guzzoline border -->
+    <filter id="guzzoline-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Arrowhead marker for process arrows -->
+    <marker id="arrow" viewBox="0 0 10 10"
+            refX="10" refY="5"
+            markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#555"/>
+    </marker>
+
+    <!-- Wave pattern for Guzzoline "sea" background -->
+    <pattern id="guzzoline-waves" width="60" height="12"
+             patternUnits="userSpaceOnUse"
+             patternTransform="rotate(-5)">
+      <path d="M 0 6 Q 15 0 30 6 Q 45 12 60 6"
+            fill="none" stroke="#E69F00" stroke-width="0.8" stroke-opacity="0.15"/>
+    </pattern>
+
+    <style>
+      /* Typography hierarchy */
+      .title       { font: bold 20px sans-serif; fill: #222; text-anchor: middle; }
+      .subtitle    { font: italic 12px sans-serif; fill: #555; text-anchor: middle; }
+      .layer-name  { font: bold 15px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; }
+      .layer-desc  { font: 11px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: #444; }
+      .cook-label  { font: italic 11px sans-serif; fill: #555; text-anchor: middle; }
+      .guzz-label  { font: bold 12px sans-serif; fill: #E69F00; text-anchor: middle;
+                     letter-spacing: 2px; }
+      .abstract-label { font: 11px sans-serif; fill: #888; text-anchor: middle;
+                        letter-spacing: 1px; }
+
+      /* Layer trapezoid shapes */
+      .layer-shape { stroke-width: 2; filter: url(#layer-shadow); }
+    </style>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- BACKGROUND: Guzzoline ambient wash           -->
+  <!-- ============================================ -->
+  <rect x="0" y="0" width="800" height="500" fill="#FFFDF5"/>
+  <!-- Wave pattern overlay for "sea" effect -->
+  <rect x="0" y="0" width="800" height="500" fill="url(#guzzoline-waves)"/>
+
+  <!-- Guzzoline outer border with dashed glow -->
+  <rect x="12" y="12" width="776" height="476" rx="14"
+        fill="none" stroke="#E69F00" stroke-width="2"
+        stroke-opacity="0.3" stroke-dasharray="8,4"
+        filter="url(#guzzoline-glow)"/>
+
+  <!-- Guzzoline labels in corners and bottom -->
+  <text x="72" y="34" class="guzz-label" opacity="0.6">GUZZOLINE</text>
+  <text x="728" y="34" class="guzz-label" opacity="0.6">GUZZOLINE</text>
+  <text x="400" y="488" class="guzz-label" opacity="0.45">the sea of molecularized work</text>
+
+  <!-- ============================================ -->
+  <!-- TITLE                                        -->
+  <!-- ============================================ -->
+  <text x="400" y="62" class="title">The MEOW Stack</text>
+  <text x="400" y="80" class="subtitle">Molecular Expression of Work</text>
+
+  <!-- ============================================ -->
+  <!-- MIDGROUND: Pyramid stack of 5 layers         -->
+  <!-- Each layer is a trapezoid (wider at bottom)  -->
+  <!-- Stack area: y=100..435, centered at x=400    -->
+  <!-- Layer height: 56px, vertical gap: 8px        -->
+  <!-- Width narrows by 80px per layer (40 per side)-->
+  <!-- ============================================ -->
+
+  <!-- Layer 1 (bottom): BEADS —widest, the foundation -->
+  <!-- Trapezoid: bottom edge 640px wide, top edge ~590px -->
+  <g aria-label="Layer 1: Beads —atomic work units">
+    <path d="M 80,435 L 105,379 L 695,379 L 720,435 Z"
+          class="layer-shape" fill="#D2E8F9" stroke="#0072B2"/>
+    <!-- Three small circles as "bead" icons -->
+    <circle cx="155" cy="407" r="4.5" fill="#0072B2" opacity="0.35"/>
+    <circle cx="173" cy="407" r="4.5" fill="#0072B2" opacity="0.35"/>
+    <circle cx="191" cy="407" r="4.5" fill="#0072B2" opacity="0.35"/>
+    <text x="400" y="400" class="layer-name" fill="#0072B2">Beads</text>
+    <text x="400" y="420" class="layer-desc">Atomic work units: issues with status, priority, type</text>
+  </g>
+
+  <!-- Layer 2: EPICS -->
+  <!-- Trapezoid: bottom edge 560px, top edge ~510px -->
+  <g aria-label="Layer 2: Epics —beads with children">
+    <path d="M 120,371 L 145,315 L 655,315 L 680,371 Z"
+          class="layer-shape" fill="#E8F5E9" stroke="#009E73"/>
+    <!-- Bracket icon suggesting grouping/children -->
+    <text x="178" y="336" font-family="sans-serif" font-size="16"
+          fill="#009E73" opacity="0.45" dominant-baseline="central">{</text>
+    <text x="194" y="336" font-family="sans-serif" font-size="10"
+          fill="#009E73" opacity="0.45" dominant-baseline="central">...</text>
+    <text x="212" y="336" font-family="sans-serif" font-size="16"
+          fill="#009E73" opacity="0.45" dominant-baseline="central">}</text>
+    <text x="400" y="336" class="layer-name" fill="#009E73">Epics</text>
+    <text x="400" y="356" class="layer-desc">Beads with children —parallel by default, sequenceable</text>
+  </g>
+
+  <!-- Layer 3: MOLECULES -->
+  <!-- Trapezoid: bottom edge 480px, top edge ~430px -->
+  <g aria-label="Layer 3: Molecules —chained workflows">
+    <path d="M 160,307 L 185,251 L 615,251 L 640,307 Z"
+          class="layer-shape" fill="#FFF3E0" stroke="#E69F00"/>
+    <!-- Molecule icon: three connected dots -->
+    <circle cx="208" cy="273" r="3.5" fill="#E69F00" opacity="0.45"/>
+    <circle cx="222" cy="266" r="3.5" fill="#E69F00" opacity="0.45"/>
+    <circle cx="222" cy="280" r="3.5" fill="#E69F00" opacity="0.45"/>
+    <line x1="211" y1="271" x2="219" y2="267" stroke="#E69F00" stroke-width="1" opacity="0.35"/>
+    <line x1="211" y1="275" x2="219" y2="279" stroke="#E69F00" stroke-width="1" opacity="0.35"/>
+    <line x1="222" y1="269" x2="222" y2="277" stroke="#E69F00" stroke-width="1" opacity="0.35"/>
+    <text x="400" y="272" class="layer-name" fill="#B87700">Molecules</text>
+    <text x="400" y="292" class="layer-desc">Chained workflows: loops, gates, Turing-complete</text>
+  </g>
+
+  <!-- Layer 4: PROTOMOLECULES -->
+  <!-- Trapezoid: bottom edge 400px, top edge ~350px -->
+  <g aria-label="Layer 4: Protomolecules —templates for molecules">
+    <path d="M 200,243 L 225,187 L 575,187 L 600,243 Z"
+          class="layer-shape" fill="#FCE4EC" stroke="#CC79A7"/>
+    <!-- Template icon: dashed rectangle -->
+    <rect x="242" y="206" width="15" height="11" rx="2"
+          fill="none" stroke="#CC79A7" stroke-width="1"
+          stroke-dasharray="2,2" opacity="0.5"/>
+    <text x="400" y="208" class="layer-name" fill="#A85080">Protomolecules</text>
+    <text x="400" y="228" class="layer-desc">Templates/classes —instantiated via variable substitution</text>
+  </g>
+
+  <!-- Layer 5 (top): FORMULAS -->
+  <!-- Trapezoid: bottom edge 320px, top edge ~270px -->
+  <g aria-label="Layer 5: Formulas —TOML source form">
+    <path d="M 240,179 L 265,123 L 535,123 L 560,179 Z"
+          class="layer-shape" fill="#EDE7F6" stroke="#7B61A6"/>
+    <!-- TOML-like icon -->
+    <text x="286" y="145" font-family="monospace" font-size="9"
+          fill="#7B61A6" opacity="0.45" dominant-baseline="central">[..]</text>
+    <text x="400" y="145" class="layer-name" fill="#5E4594">Formulas</text>
+    <text x="400" y="165" class="layer-desc">TOML source form —"cooked" into protomolecules</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FOREGROUND: Cooking/instantiation arrows     -->
+  <!-- Curved arrows on the right side of pyramid   -->
+  <!-- showing the transformation pipeline          -->
+  <!-- ============================================ -->
+
+  <!-- Arrow: Formulas "cook" to Protomolecules -->
+  <g aria-label="Cooking process: Formulas to Protomolecules">
+    <path d="M 570,151 C 620,148 638,178 618,210"
+          fill="none" stroke="#555" stroke-width="1.8"
+          marker-end="url(#arrow)"/>
+    <text x="635" y="178" class="cook-label">cook</text>
+  </g>
+
+  <!-- Arrow: Protomolecules "instantiate" to Molecules -->
+  <g aria-label="Instantiation process: Protomolecules to Molecules">
+    <path d="M 612,220 C 660,218 675,252 658,278"
+          fill="none" stroke="#555" stroke-width="1.8"
+          marker-end="url(#arrow)"/>
+    <text x="690" y="250" class="cook-label">instantiate</text>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FOREGROUND: Abstraction arrow on left side   -->
+  <!-- Vertical arrow showing increasing abstraction-->
+  <!-- ============================================ -->
+  <g aria-label="Increasing abstraction indicator">
+    <line x1="55" y1="430" x2="55" y2="128"
+          stroke="#888" stroke-width="1.5"
+          marker-end="url(#arrow)"/>
+    <text transform="rotate(-90, 38, 280)" x="38" y="280"
+          class="abstract-label">INCREASING ABSTRACTION</text>
+  </g>
+
+</svg>
