@@ -69,4 +69,32 @@
     }
   }
 
+  .svg-lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2147483646;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(43, 43, 43, 0.92);
+    cursor: zoom-out;
+  }
+
+  .svg-lightbox-overlay img {
+    max-width: 88vw;
+    max-height: 84vh;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  .svg-lightbox-caption {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 12px;
+  }
+
 </style>

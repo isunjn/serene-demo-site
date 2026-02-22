@@ -202,7 +202,65 @@ function convertMarkdownImages() {
 }
 
 function enableImgLightense() {
-  window.addEventListener("load", () => Lightense(".prose img:not(.no-lightense)", { background: 'rgba(43, 43, 43, 0.19)' }));
+  window.addEventListener("load", () => {
+    // Lightense for raster images only — SVGs get a custom handler
+    Lightense(".prose img:not(.no-lightense):not([src$='.svg'])", { background: 'rgba(43, 43, 43, 0.19)', padding: 40 });
+
+    // Custom lightbox for SVGs: full viewport size with arrow key navigation
+    const svgImages = Array.from(document.querySelectorAll('.prose img[src$=".svg"]'));
+    let activeOverlay = null;
+    let activeIndex = -1;
+
+    function showSvgLightbox(index) {
+      if (activeOverlay) activeOverlay.remove();
+
+      activeIndex = index;
+      const img = svgImages[index];
+      const overlay = document.createElement('div');
+      overlay.className = 'svg-lightbox-overlay';
+
+      const clone = document.createElement('img');
+      clone.src = img.src;
+      overlay.append(clone);
+
+      const figcaption = img.closest('figure')?.querySelector('figcaption');
+      if (figcaption) {
+        const caption = document.createElement('div');
+        caption.className = 'svg-lightbox-caption';
+        caption.textContent = figcaption.textContent;
+        overlay.append(caption);
+      }
+
+      overlay.addEventListener('click', closeSvgLightbox);
+      activeOverlay = overlay;
+      document.body.append(overlay);
+    }
+
+    function closeSvgLightbox() {
+      if (!activeOverlay) return;
+      activeOverlay.remove();
+      activeOverlay = null;
+      activeIndex = -1;
+    }
+
+    function handleLightboxKeys(e) {
+      if (!activeOverlay) return;
+      if (e.key === 'ArrowRight' && activeIndex < svgImages.length - 1) {
+        showSvgLightbox(activeIndex + 1);
+      } else if (e.key === 'ArrowLeft' && activeIndex > 0) {
+        showSvgLightbox(activeIndex - 1);
+      } else if (e.key === 'Escape') {
+        closeSvgLightbox();
+      }
+    }
+
+    document.addEventListener('keydown', handleLightboxKeys);
+
+    svgImages.forEach((img, i) => {
+      img.style.cursor = 'zoom-in';
+      img.addEventListener('click', () => showSvgLightbox(i));
+    });
+  });
 }
 
 function enableContextAwareBackButton() {
