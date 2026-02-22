@@ -30,19 +30,6 @@ The `serene` theme lives directly in `themes/serene/` (no submodule).
 - **TOML frontmatter**: Posts use `+++` delimiters (TOML), not `---` (YAML).
 - **Collections are data-driven**: Each collection (books, projects, etc.) is a `.toml` file in `content/collections/`, not individual markdown files.
 
-## Issue Tracking
-
-This project uses **bd (beads)** for issue tracking.
-Run `bd prime` for workflow context, or install hooks (`bd hooks install`) for auto-injection.
-
-**Quick reference:**
-- `bd ready` - Find unblocked work
-- `bd create "Title" --type task --priority 2` - Create issue
-- `bd close <id>` - Complete work
-- `bd sync` - Sync with git (run at session end)
-
-**Coaching:** Actively coach me on idiomatic beads usage. When I do something manually that beads has a built-in workflow for (e.g. hand-wiring dependencies vs. formulas/swarm, creating tasks ad-hoc vs. using molecules), pause and show me the idiomatic way before proceeding. Always check Context7 (`/steveyegge/beads`) for beads documentation before suggesting the idiomatic approach.
-
 ## Agent Preferences
 
 - **No agents.** Do not use the Task tool (neither foreground nor background). Work directly in the main conversation, collaborating with the user step by step. Tackle tasks one at a time.
