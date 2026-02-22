@@ -1,19 +1,18 @@
-<svg viewBox="0 0 750 500" xmlns="http://www.w3.org/2000/svg"
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"
      role="img" aria-labelledby="title desc">
-  <title id="title">The Agent Village</title>
+  <title id="title">From Isolated Agents to Coordinated Villages</title>
   <desc id="desc">
-    Five agents arranged in a circle around two central shared services:
-    Beads (shared memory) and Agent Mail (messaging). Dashed lines connect
-    each agent to both services, illustrating decentralized coordination
-    with no central orchestrator.
+    Two-panel comparison. Left: three isolated agents each maintaining their own
+    markdown files, with a stressed human manually relaying context between them.
+    Right: three agents connected through two shared primitives — Beads for memory
+    and Agent Mail for messaging — self-organizing without a human bottleneck.
   </desc>
 
   <defs>
-    <!-- Compatible drop shadow (feGaussianBlur pattern) -->
     <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur"/>
-      <feOffset in="blur" dx="1.5" dy="2.5" result="offsetBlur"/>
-      <feFlood flood-color="#000" flood-opacity="0.18" result="color"/>
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.15" result="color"/>
       <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
       <feMerge>
         <feMergeNode in="shadow"/>
@@ -21,186 +20,185 @@
       </feMerge>
     </filter>
 
-    <!-- Lighter shadow for agent nodes -->
-    <filter id="shadow-light" x="-15%" y="-15%" width="140%" height="140%">
-      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
-      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
-      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
-      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
-      <feMerge>
-        <feMergeNode in="shadow"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <!-- Soft glow for the central hub area -->
-    <radialGradient id="hub-glow" cx="50%" cy="46%" r="30%">
-      <stop offset="0%" stop-color="#E8F0FE" stop-opacity="0.6"/>
-      <stop offset="100%" stop-color="#E8F0FE" stop-opacity="0"/>
-    </radialGradient>
-
-    <!-- Shared styles -->
     <style>
-      .title       { font: bold 22px sans-serif; fill: #111; text-anchor: middle; }
-      .svc-label   { font: bold 16px sans-serif; fill: #fff;
-                     text-anchor: middle; dominant-baseline: central; }
-      .svc-sub     { font: 12px sans-serif; fill: #fff;
-                     text-anchor: middle; dominant-baseline: central; }
-      .agent-label { font: bold 13px sans-serif; fill: #fff;
-                     text-anchor: middle; dominant-baseline: central; }
-      .annotation  { font: italic 13px sans-serif; fill: #333;
-                     text-anchor: middle; dominant-baseline: central; }
-      .conn-beads  { stroke: #0072B2; stroke-width: 1.8; fill: none;
-                     stroke-dasharray: 6,4; stroke-opacity: 0.7; }
-      .conn-mail   { stroke: #E69F00; stroke-width: 1.8; fill: none;
-                     stroke-dasharray: 6,4; stroke-opacity: 0.7; }
+      .title       { font: bold 17px sans-serif; fill: #222; text-anchor: middle; }
+      .panel-title { font: bold 14px sans-serif; text-anchor: middle; }
+      .label       { font: 12px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: #555; }
+      .label-bold  { font: bold 12px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; }
+      .agent-label { font: bold 11px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: #fff; }
+      .annotation  { font: italic 11px sans-serif; text-anchor: middle;
+                     fill: #555; }
+      .caption     { font: italic 12px sans-serif; text-anchor: middle;
+                     fill: #444; }
+      .svc-label   { font: bold 12px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: #fff; }
+      .svc-sub     { font: 10px sans-serif; text-anchor: middle;
+                     dominant-baseline: central; fill: rgba(255,255,255,0.85); }
+      .file-label  { font: 9px monospace; fill: #888; text-anchor: middle; }
+      .divider     { stroke: #ccc; stroke-width: 1; stroke-dasharray: 6,4; }
     </style>
   </defs>
 
-  <!-- ===================== BACKGROUND ===================== -->
+  <!-- Background -->
+  <rect width="800" height="420" fill="#FAFAFA" rx="4"/>
 
-  <!-- Subtle background fill -->
-  <rect width="750" height="500" fill="#FAFBFC" rx="0"/>
+  <!-- Title -->
+  <text x="400" y="30" class="title">From Isolated Agents to Coordinated Villages</text>
 
-  <!-- Soft glow behind the central hub -->
-  <ellipse cx="375" cy="230" rx="220" ry="200" fill="url(#hub-glow)"/>
+  <!-- Central divider -->
+  <line x1="400" y1="48" x2="400" y2="385" class="divider"/>
 
-  <!-- ===================== MIDGROUND: CONNECTIONS ===================== -->
-  <!--
-    5 agents at radial positions around center (375, 235), radius 175.
-    Angles at 72-degree intervals starting from top (-90 deg).
-    Agent positions (pre-calculated):
-      A0 top:          (375.0, 60.0)
-      A1 upper-right:  (541.4, 180.9)
-      A2 lower-right:  (477.9, 376.6)
-      A3 lower-left:   (272.1, 376.6)
-      A4 upper-left:   (208.6, 180.9)
-
-    Beads box center:  (330, 235)
-    Mail box center:   (420, 235)
-  -->
-
-  <!-- Agent 0 (top) connections -->
-  <path class="conn-beads" d="M 375.0,93 Q 350,160 330,200"/>
-  <path class="conn-mail"  d="M 375.0,93 Q 400,160 420,200"/>
-
-  <!-- Agent 1 (upper-right) connections -->
-  <path class="conn-beads" d="M 510.4,191.9 Q 430,200 365,215"/>
-  <path class="conn-mail"  d="M 510.4,191.9 Q 465,205 450,215"/>
-
-  <!-- Agent 2 (lower-right) connections -->
-  <path class="conn-beads" d="M 456.9,348.6 Q 390,300 350,262"/>
-  <path class="conn-mail"  d="M 456.9,348.6 Q 440,300 430,262"/>
-
-  <!-- Agent 3 (lower-left) connections -->
-  <path class="conn-beads" d="M 293.1,348.6 Q 310,300 320,262"/>
-  <path class="conn-mail"  d="M 293.1,348.6 Q 360,300 410,262"/>
-
-  <!-- Agent 4 (upper-left) connections -->
-  <path class="conn-beads" d="M 239.6,191.9 Q 285,205 305,215"/>
-  <path class="conn-mail"  d="M 239.6,191.9 Q 320,200 395,215"/>
-
-  <!-- ===================== FOREGROUND: CENTRAL SERVICES ===================== -->
-
-  <!-- Beads service box -->
-  <g filter="url(#shadow)">
-    <rect x="250" y="192" width="140" height="86" rx="14" fill="#0072B2"/>
-  </g>
-  <!-- Database icon -->
-  <g transform="translate(320, 218)">
-    <ellipse cx="0" cy="0" rx="12" ry="5" fill="none" stroke="#fff" stroke-width="1.5"/>
-    <line x1="-12" y1="0" x2="-12" y2="14" stroke="#fff" stroke-width="1.5"/>
-    <line x1="12" y1="0" x2="12" y2="14" stroke="#fff" stroke-width="1.5"/>
-    <ellipse cx="0" cy="14" rx="12" ry="5" fill="none" stroke="#fff" stroke-width="1.5"/>
-  </g>
-  <text x="320" y="250" class="svc-label">Beads</text>
-  <text x="320" y="266" class="svc-sub">Shared Memory</text>
-
-  <!-- Agent Mail service box -->
-  <g filter="url(#shadow)">
-    <rect x="360" y="192" width="140" height="86" rx="14" fill="#E69F00"/>
-  </g>
-  <!-- Envelope icon -->
-  <g transform="translate(430, 218)">
-    <rect x="-14" y="-7" width="28" height="18" rx="2"
-          fill="none" stroke="#fff" stroke-width="1.5"/>
-    <polyline points="-14,-7 0,5 14,-7"
-              fill="none" stroke="#fff" stroke-width="1.5"/>
-  </g>
-  <text x="430" y="250" class="svc-label">Agent Mail</text>
-  <text x="430" y="266" class="svc-sub">Messaging</text>
-
-  <!-- Overlap region -->
-  <rect x="360" y="192" width="30" height="86" rx="0" fill="rgba(255,255,255,0.1)"/>
-
-  <!-- ===================== FOREGROUND: AGENT NODES ===================== -->
-
-  <!-- Agent 0 (top) -->
-  <g transform="translate(375.0, 60.0)" filter="url(#shadow-light)">
-    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
-    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
-    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
-    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
-    <text x="0" y="16" class="agent-label">Agent 1</text>
+  <!-- Arrow in the divider -->
+  <g transform="translate(400, 200)">
+    <polygon points="-8,-10 8,0 -8,10" fill="#999" opacity="0.5"/>
   </g>
 
-  <!-- Agent 1 (upper-right) -->
-  <g transform="translate(541.4, 180.9)" filter="url(#shadow-light)">
-    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
-    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
-    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
-    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
-    <text x="0" y="16" class="agent-label">Agent 2</text>
+  <!-- ==================== LEFT PANEL: ISOLATED ==================== -->
+  <g aria-label="Left panel: Isolated agents with human bottleneck">
+
+    <text x="200" y="60" class="panel-title" fill="#D55E00">Isolated Agents</text>
+    <text x="200" y="76" class="annotation">Human relays context between sessions</text>
+
+    <!-- Agent A: top-left -->
+    <g transform="translate(80, 150)">
+      <rect x="-32" y="-24" width="64" height="48" rx="10"
+            fill="#37474F" stroke="#263238" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="0" y="0" class="agent-label">Agent A</text>
+      <!-- Scattered files below -->
+      <rect x="-24" y="34" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(-5, -15, 41)"/>
+      <rect x="-4" y="36" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(3, 5, 43)"/>
+      <rect x="12" y="33" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(-8, 21, 40)"/>
+      <text x="0" y="64" class="file-label">.md files</text>
+    </g>
+
+    <!-- Agent B: top-right -->
+    <g transform="translate(320, 150)">
+      <rect x="-32" y="-24" width="64" height="48" rx="10"
+            fill="#37474F" stroke="#263238" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="0" y="0" class="agent-label">Agent B</text>
+      <!-- Scattered files -->
+      <rect x="-24" y="34" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(4, -15, 41)"/>
+      <rect x="-4" y="36" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(-6, 5, 43)"/>
+      <rect x="12" y="33" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(2, 21, 40)"/>
+      <text x="0" y="64" class="file-label">.md files</text>
+    </g>
+
+    <!-- Agent C: bottom-center -->
+    <g transform="translate(200, 290)">
+      <rect x="-32" y="-24" width="64" height="48" rx="10"
+            fill="#37474F" stroke="#263238" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="0" y="0" class="agent-label">Agent C</text>
+      <!-- Scattered files -->
+      <rect x="-24" y="34" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(-3, -15, 41)"/>
+      <rect x="-4" y="36" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(5, 5, 43)"/>
+      <rect x="12" y="33" width="18" height="14" rx="2"
+            fill="#fff" stroke="#ccc" stroke-width="0.8" transform="rotate(-4, 21, 40)"/>
+      <text x="0" y="64" class="file-label">.md files</text>
+    </g>
+
+    <!-- Human in the middle -->
+    <g transform="translate(200, 210)">
+      <circle cx="0" cy="0" r="16" fill="#F5E6E0" stroke="#D55E00" stroke-width="1.5"/>
+      <text x="0" y="1" style="font: bold 10px sans-serif; fill: #D55E00;
+            text-anchor: middle; dominant-baseline: central;">you</text>
+      <!-- Frustration lines -->
+      <line x1="-12" y1="-20" x2="-16" y2="-28" stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.5"/>
+      <line x1="0" y1="-22" x2="0" y2="-30" stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.5"/>
+      <line x1="12" y1="-20" x2="16" y2="-28" stroke="#D55E00" stroke-width="1.2" stroke-opacity="0.5"/>
+    </g>
+
+    <!-- Stress lines from human to each agent (manual relay) -->
+    <line x1="185" y1="200" x2="112" y2="174" stroke="#D55E00" stroke-width="1.2"
+          stroke-dasharray="3,3" stroke-opacity="0.5"/>
+    <line x1="215" y1="200" x2="288" y2="174" stroke="#D55E00" stroke-width="1.2"
+          stroke-dasharray="3,3" stroke-opacity="0.5"/>
+    <line x1="200" y1="222" x2="200" y2="266" stroke="#D55E00" stroke-width="1.2"
+          stroke-dasharray="3,3" stroke-opacity="0.5"/>
+
+    <!-- No connection between agents -->
+    <text x="200" y="375" class="caption" fill="#D55E00">"Copy this context to the next session"</text>
+
   </g>
 
-  <!-- Agent 2 (lower-right) -->
-  <g transform="translate(477.9, 376.6)" filter="url(#shadow-light)">
-    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
-    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
-    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
-    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
-    <text x="0" y="16" class="agent-label">Agent 3</text>
+  <!-- ==================== RIGHT PANEL: VILLAGE ==================== -->
+  <g aria-label="Right panel: Agent village with shared primitives">
+
+    <text x="600" y="60" class="panel-title" fill="#009E73">Agent Village</text>
+    <text x="600" y="76" class="annotation">Two primitives, no orchestrator</text>
+
+    <!-- Two independent primitives, visually separated -->
+    <!-- Beads: left of center -->
+    <g transform="translate(530, 215)">
+      <rect x="-40" y="-28" width="80" height="56" rx="10"
+            fill="#0072B2" filter="url(#shadow)"/>
+      <text x="0" y="-6" class="svc-label">Beads</text>
+      <text x="0" y="10" class="svc-sub">shared state</text>
+    </g>
+
+    <!-- Agent Mail: right of center -->
+    <g transform="translate(670, 215)">
+      <rect x="-40" y="-28" width="80" height="56" rx="10"
+            fill="#E69F00" filter="url(#shadow)"/>
+      <text x="0" y="10" class="svc-sub">messaging</text>
+      <text x="0" y="-6" class="svc-label">Mail</text>
+    </g>
+
+    <!-- Agent A: top-left -->
+    <g transform="translate(480, 130)">
+      <rect x="-32" y="-24" width="64" height="48" rx="10"
+            fill="#37474F" stroke="#263238" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="0" y="0" class="agent-label">Agent A</text>
+    </g>
+
+    <!-- Agent B: top-right -->
+    <g transform="translate(720, 130)">
+      <rect x="-32" y="-24" width="64" height="48" rx="10"
+            fill="#37474F" stroke="#263238" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="0" y="0" class="agent-label">Agent B</text>
+    </g>
+
+    <!-- Agent C: bottom-center -->
+    <g transform="translate(600, 310)">
+      <rect x="-32" y="-24" width="64" height="48" rx="10"
+            fill="#37474F" stroke="#263238" stroke-width="1.5" filter="url(#shadow)"/>
+      <text x="0" y="0" class="agent-label">Agent C</text>
+    </g>
+
+    <!-- Connections: agents to Beads (blue, independent channel) -->
+    <line x1="495" y1="154" x2="510" y2="190" stroke="#0072B2" stroke-width="1.8"
+          stroke-dasharray="5,3" stroke-opacity="0.6"/>
+    <line x1="700" y1="154" x2="555" y2="190" stroke="#0072B2" stroke-width="1.8"
+          stroke-dasharray="5,3" stroke-opacity="0.6"/>
+    <line x1="585" y1="286" x2="540" y2="243" stroke="#0072B2" stroke-width="1.8"
+          stroke-dasharray="5,3" stroke-opacity="0.6"/>
+
+    <!-- Connections: agents to Mail (orange, independent channel) -->
+    <line x1="510" y1="148" x2="645" y2="190" stroke="#E69F00" stroke-width="1.8"
+          stroke-dasharray="5,3" stroke-opacity="0.6"/>
+    <line x1="705" y1="154" x2="690" y2="190" stroke="#E69F00" stroke-width="1.8"
+          stroke-dasharray="5,3" stroke-opacity="0.6"/>
+    <line x1="615" y1="286" x2="660" y2="243" stroke="#E69F00" stroke-width="1.8"
+          stroke-dasharray="5,3" stroke-opacity="0.6"/>
+
+    <!-- No scattered files — clean -->
+    <text x="600" y="375" class="caption" fill="#009E73">"Give them state and a channel, get out of the way"</text>
+
   </g>
 
-  <!-- Agent 3 (lower-left) -->
-  <g transform="translate(272.1, 376.6)" filter="url(#shadow-light)">
-    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
-    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
-    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
-    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
-    <text x="0" y="16" class="agent-label">Agent 4</text>
-  </g>
-
-  <!-- Agent 4 (upper-left) -->
-  <g transform="translate(208.6, 180.9)" filter="url(#shadow-light)">
-    <rect x="-38" y="-30" width="76" height="60" rx="12" fill="#37474F" stroke="#263238" stroke-width="1.5"/>
-    <rect x="-10" y="-18" width="20" height="14" rx="2" fill="none" stroke="#fff" stroke-width="1.3"/>
-    <line x1="0" y1="-22" x2="0" y2="-18" stroke="#fff" stroke-width="1.3"/>
-    <circle cx="0" cy="-24" r="2.5" fill="#fff"/>
-    <text x="0" y="16" class="agent-label">Agent 5</text>
-  </g>
-
-  <!-- ===================== FOREGROUND: TITLE & ANNOTATION ===================== -->
-
-  <!-- Diagram title -->
-  <text x="375" y="28" class="title">The Agent Village</text>
-
-  <!-- Annotation at bottom -->
-  <g transform="translate(375, 465)">
-    <!-- Dashed border annotation box -->
-    <rect x="-170" y="-16" width="340" height="32" rx="8"
-          fill="#F5F5F5" stroke="#999" stroke-width="1" stroke-dasharray="4,3"/>
-    <text x="0" y="0" class="annotation">No central orchestrator -- agents self-organize</text>
-  </g>
-
-  <!-- Small legend at bottom-left -->
-  <g transform="translate(60, 465)">
-    <line x1="0" y1="0" x2="24" y2="0" class="conn-beads" stroke-opacity="0.8"/>
-    <text x="30" y="1" font-size="10" font-family="sans-serif" fill="#666"
-          dominant-baseline="central">read/write</text>
-    <line x1="0" y1="14" x2="24" y2="14" class="conn-mail" stroke-opacity="0.8"/>
-    <text x="30" y="15" font-size="10" font-family="sans-serif" fill="#666"
-          dominant-baseline="central">send/receive</text>
-  </g>
+  <!-- Bottom annotation -->
+  <text x="400" y="408" class="annotation" fill="#333">
+    Structured state + messaging = the two primitives agent swarms need
+  </text>
 
 </svg>
