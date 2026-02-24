@@ -393,10 +393,21 @@ function enableFontSizeControls() {
   increase.addEventListener('click', () => changeFontSize(STEP));
 }
 
+function enableMobileScrollToTop() {
+  const btn = document.querySelector('#mob-top');
+  if (!btn) return;
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  window.addEventListener('scroll', () => {
+    const sy = window.scrollY || document.documentElement.scrollTop;
+    btn.classList.toggle('visible', sy > 300);
+  }, { passive: true });
+}
+
 enableThemeToggle();
 enablePrerender();
 enableRssMask();
 enableFontSizeControls();
+enableMobileScrollToTop();
 enableContextAwareBackButton();
 if (document.body.classList.contains('post')) {
   enableOutdateAlert();
