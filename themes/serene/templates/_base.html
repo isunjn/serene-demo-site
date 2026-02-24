@@ -28,9 +28,12 @@
       const hl = document.querySelector('link#hl');
       if (hl) hl.href = '{{ get_url(path="hl-dark.css") }}';
     }
+    const savedFontSize = sessionStorage.getItem('fontSize');
+    if (savedFontSize) document.body.style.setProperty('--font-size', savedFontSize + 'px');
   </script>
   {% endif %}
   {% block content %}{% endblock content %}
+  <div class="ftoast" id="ftoast"></div>
   {% block script %}{% endblock script %}
   <script src="{{ get_url(path='js/main.js') }}"></script>
 </body>
