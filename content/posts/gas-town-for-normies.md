@@ -12,15 +12,19 @@ toc = false
 +++
 An experiment in coaching software with the playbooks of sport coaches, Bill Belichick and Vince Lombardi. The former emphasises on standards and role clarity, the latter on the importance of having strong fundamentals.
 
-This is how I've been work distribution in my team, and am surprisingly impressed with the results I'm getting.
+This is how I've been doing work distribution within my team, and have been surprisingly impressed with the results I'm getting.
 
 ## Foreword: The Playbook and The Visual Model
 
-In complex software engineering, chaos is the default state. Unmanaged dependencies, untracked changes, and idle workers are how projects lose. Gas Town is our countermeasure. It is an orchestration layer for artificial intelligence coding agents. We treat agent work as structured data. We operate on accountability, precise routing, and strict measurement.
+In complex software engineering, chaos is the default state. Unmanaged dependencies, untracked changes, and idle workers are how projects lose. 
+
+Gas Town is our countermeasure. It is an orchestration layer for artificial intelligence coding agents. We treat agent work as structured data. We operate on accountability, precise routing, and strict measurement.
 
 The architects of this system used the cinematic universe of *Mad Max: Fury Road* as their mental model. That wasn't a joke; it was a structural decision to describe exact behaviors. You cannot execute the play if you do not understand the terminology on the whiteboard.
 
-For the corporate operators reading this who are used to standard enterprise jargon—the engineers who just want to know how the background jobs run—I am going to spell this out. I will give you the wasteland visual, and I will give you the technical reality. Bridge the gap in your mind, then execute the system as designed.
+For the corporate operators reading this who are used to standard enterprise jargon—the engineers who just want to know how the background jobs run—I am going to spell this out. 
+
+I will give you the wasteland visual, and I will give you the technical reality. Bridge the gap in your mind, then execute the system as designed.
 
 Do your job.
 
@@ -32,9 +36,9 @@ You cannot execute if you don't know where the boundaries are. Gas Town organize
 
 ### The Town
 
-**The Reality:** Your Organizational Workspace. The macro-environment encompassing all your overarching projects. 
+**The Reality:** Your Organizational Workspace. The macro-environment encompassing all your overarching projects.
 
-**The Visual:** Gas Town itself. The massive, smoke-belching industrial settlement that produces fuel for the entire wasteland. 
+**The Visual:** Gas Town itself. The massive, smoke-belching industrial settlement that produces fuel for the entire wasteland.
 
 **The Execution:** You operate inside the Town, but project work does not happen at the Town level. It is purely structural.
 
@@ -48,7 +52,9 @@ You cannot execute if you don't know where the boundaries are. Gas Town organize
 
 **The Execution:** A Rig (e.g., "Greenplace") is a specific micro-environment.
 
-**All actual project code is written strictly inside a Rig.** Rigs compartmentalize context so AI agents do not hallucinate across different codebases. Gas Town reads your current working directory to know which Rig you are in.
+**All actual project code is written strictly inside a Rig.** Rigs compartmentalize context so AI agents do not hallucinate across different codebases. 
+
+Gas Town reads your current working directory to know which Rig you are in.
 
 > `[ 📸 IMAGE PLACEHOLDER: A wide, dusty shot of the armored War Rig tearing across the desert wasteland in Fury Road. ]`
 
@@ -84,7 +90,9 @@ We maintain a strict separation between infrastructure and labor. Blurring these
 
 **The Visual:** A War Boy screaming "Witness me!" and spraying chrome on his teeth before executing a glorious, suicidal mission.
 
-**The Execution:** The Witness is the lifecycle manager for a single Rig. It monitors the ephemeral workers on the floor, nudges them when they stall, and verifies their cleanup. When a temporary worker finishes its job, it essentially asks to be "witnessed" before it terminates.
+**The Execution:** The Witness is the lifecycle manager for a single Rig. It monitors the ephemeral workers on the floor, nudges them when they stall, and verifies their cleanup. 
+
+When a temporary worker finishes its job, it essentially asks to be "witnessed" before it terminates.
 
 > `[ 📸 IMAGE PLACEHOLDER: Nux (or another War Boy) with chrome spray paint on his mouth, screaming "Witness me!" with a fanatic look in his eyes. ]`
 
@@ -110,7 +118,9 @@ These roles perform the actual project work. You must assign the right player to
 
 **The Visual:** Insane wasteland warriors swinging through the air on giant, bending metronomic poles attached to speeding vehicles. They drop in, do a single explosive job, and vanish.
 
-**The Execution:** Polecats are transient AI workers managed by the Witness. **There is no such thing as an idle polecat.** They are assigned a discrete task within a Rig, they spawn into an isolated workspace, execute the code, and systematically dismantle themselves upon completion.
+**The Execution:** Polecats are transient AI workers managed by the Witness. **There is no such thing as an idle polecat.** 
+
+They are assigned a discrete task within a Rig, they spawn into an isolated workspace, execute the code, and systematically dismantle themselves upon completion.
 
 > `[ 📸 IMAGE PLACEHOLDER: A War Boy polecat swinging down on a massive, bending pendulum pole during the high-speed chase scene in Fury Road. ]`
 
@@ -130,7 +140,9 @@ These roles perform the actual project work. You must assign the right player to
 
 **The Visual:** Max Rockatansky's loyal, highly trained Blue Heeler that scouts and guards his vehicle.
 
-**The Execution:** Dogs are short-lived background scripts used *exclusively* by the Deacon to check system health. **They are not project workers.** Do not assign a Dog to write feature code.
+**The Execution:** Dogs are short-lived background scripts used *exclusively* by the Deacon to check system health. 
+
+**They are not project workers.** Do not assign a Dog to write feature code.
 
 > `[ 📸 IMAGE PLACEHOLDER: Max's Blue Heeler dog sitting alert and guarding the V8 Interceptor in the wasteland. ]`
 
@@ -168,7 +180,9 @@ This is the core operational philosophy of Gas Town. Memorize it.
 
 > **If you find something on your hook, you run it.**
 
-We do not deal in hesitation. We do not wait for secondary authorization. The presence of work on an agent's hook is the absolute authorization to execute. Gas Town operates like a steam engine; the agents are the pistons. When pressure is applied via a work assignment, the piston fires. Execution must be immediate.
+We do not deal in hesitation. We do not wait for secondary authorization. The presence of work on an agent's hook is the absolute authorization to execute. 
+
+Gas Town operates like a steam engine; the agents are the pistons. When pressure is applied via a work assignment, the piston fires. Execution must be immediate.
 
 ---
 
