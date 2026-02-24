@@ -7,7 +7,7 @@ tags = []
 
 [extra]
 featured = false
-toc = true
+toc = false
 +++
 *An experiment in coaching software with the playbooks of sports coaches Bill Belichick and Vince Lombardi. The former emphasizes standards and role clarity; the latter, the importance of strong fundamentals.*
 
