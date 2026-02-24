@@ -2,6 +2,7 @@
 title = "Gas Town for Normies"
 date = "2025-02-25"
 description = "I take Bill Belichick's approach to explaining the ideas around Gas Town"
+draft = true
 
 [taxonomies]
 tags = [ "gas-town", "experiment" ]
