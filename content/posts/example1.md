@@ -15,8 +15,6 @@ toc = false
 
 ---
 
-# GAS TOWN: THE STANDARD OF EXECUTION
-
 ## Foreword: The Playbook and The Visual Model
 
 In complex software engineering, chaos is the default state. Unmanaged dependencies, untracked changes, and idle workers are how projects lose.
