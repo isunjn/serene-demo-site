@@ -10,6 +10,10 @@ tags = [ "gas-town", "experiment" ]
 featured = true
 toc = false
 +++
+An experiment in coaching software with the playbooks of sport coaches, Bill Belichick and Vince Lombardi. The former emphasises on standards and role clarity, the latter on the importance of having strong fundamentals.
+
+This is how I've been work distribution in my team, and am surprisingly impressed with the results I'm getting.
+
 ## Foreword: The Playbook and The Visual Model
 
 In complex software engineering, chaos is the default state. Unmanaged dependencies, untracked changes, and idle workers are how projects lose. Gas Town is our countermeasure. It is an orchestration layer for artificial intelligence coding agents. We treat agent work as structured data. We operate on accountability, precise routing, and strict measurement.
