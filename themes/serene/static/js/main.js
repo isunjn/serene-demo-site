@@ -357,9 +357,46 @@ function enableReaction() {
   init();
 }
 
+function enableFontSizeControls() {
+  const decrease = document.querySelector('#font-decrease');
+  const increase = document.querySelector('#font-increase');
+  const toast = document.querySelector('#ftoast');
+  if (!decrease || !increase || !toast) return;
+
+  const STEP = 1;
+  const MIN = 14;
+  const MAX = 26;
+
+  function getCurrentSize() {
+    const stored = sessionStorage.getItem('fontSize');
+    if (stored) return parseInt(stored, 10);
+    return Math.round(parseFloat(getComputedStyle(document.body).getPropertyValue('--font-size')));
+  }
+
+  function changeFontSize(delta) {
+    const size = Math.max(MIN, Math.min(MAX, getCurrentSize() + delta));
+    document.body.style.setProperty('--font-size', size + 'px');
+    sessionStorage.setItem('fontSize', size);
+    toast.textContent = size + 'px';
+    toast.classList.add('show');
+    clearTimeout(toast._t);
+    toast._t = setTimeout(() => toast.classList.remove('show'), 1200);
+  }
+
+  // Restore saved font size
+  const saved = sessionStorage.getItem('fontSize');
+  if (saved) {
+    document.body.style.setProperty('--font-size', saved + 'px');
+  }
+
+  decrease.addEventListener('click', () => changeFontSize(-STEP));
+  increase.addEventListener('click', () => changeFontSize(STEP));
+}
+
 enableThemeToggle();
 enablePrerender();
 enableRssMask();
+enableFontSizeControls();
 enableContextAwareBackButton();
 if (document.body.classList.contains('post')) {
   enableOutdateAlert();
