@@ -1308,6 +1308,35 @@ header {
   }
 }
 
+/* mobile scroll-to-top FAB
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.mob-top {
+  display: none;
+  position: fixed;
+  bottom: 24px;
+  right: 20px;
+  z-index: 99;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--text-decoration-color);
+  background: var(--bg-color);
+  color: var(--text-color);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  -webkit-tap-highlight-color: transparent;
+  line-height: 0;
+
+  @media (max-width: 767px) {
+    &.visible {
+      display: flex;
+    }
+  }
+}
+
 .section-title {
   padding: 0 15px;
   h1 {
