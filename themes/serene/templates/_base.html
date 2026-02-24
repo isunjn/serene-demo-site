@@ -34,6 +34,9 @@
   {% endif %}
   {% block content %}{% endblock content %}
   <div class="ftoast" id="ftoast"></div>
+  <button class="mob-top" id="mob-top" aria-label="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
   {% block script %}{% endblock script %}
   <script src="{{ get_url(path='js/main.js') }}"></script>
 </body>
