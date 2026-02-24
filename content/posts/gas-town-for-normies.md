@@ -2,7 +2,6 @@
 title = "Gas Town for Normies"
 date = "2026-02-25"
 description = "I take Bill Belichick's approach to explaining the ideas around Gas Town"
-draft = false
 
 [taxonomies]
 tags = [ "gas-town", "experiment" ]
@@ -37,7 +36,13 @@ You cannot execute if you don't know where the boundaries are. Gas Town organize
 
 ### The Rig
 
-**The Reality:** The Repository or Project Environment. **The Visual:** The War Rig. The massive, heavily armed 18-wheeler driven by Furiosa. It is a self-contained, mobile fortress. **The Execution:** A Rig (e.g., "Greenplace") is a specific micro-environment. **All actual project code is written strictly inside a Rig.** Rigs compartmentalize context so AI agents do not hallucinate across different codebases. Gas Town reads your current working directory to know which Rig you are in.
+**The Reality:** The Repository or Project Environment. 
+
+**The Visual:** The War Rig. The massive, heavily armed 18-wheeler driven by Furiosa. It is a self-contained, mobile fortress. 
+
+**The Execution:** A Rig (e.g., "Greenplace") is a specific micro-environment. 
+
+**All actual project code is written strictly inside a Rig.** Rigs compartmentalize context so AI agents do not hallucinate across different codebases. Gas Town reads your current working directory to know which Rig you are in.
 
 > `[ 📸 IMAGE PLACEHOLDER: A wide, dusty shot of the armored War Rig tearing across the desert wasteland in Fury Road. ]`
 
@@ -49,25 +54,41 @@ We maintain a strict separation between infrastructure and labor. Blurring these
 
 ### The Mayor
 
-**The Reality:** The Global Dispatcher and Master Router. **The Visual:** The People Eater. The grotesque, suit-wearing leader of Gas Town who manages the logistics and fuel trades. **The Execution:** There is only one Mayor per Town. It routes high-level traffic, coordinates cross-rig operations, and manages global state.
+**The Reality:** The Global Dispatcher and Master Router. 
+
+**The Visual:** The People Eater. The grotesque, suit-wearing leader of Gas Town who manages the logistics and fuel trades. 
+
+**The Execution:** There is only one Mayor per Town. It routes high-level traffic, coordinates cross-rig operations, and manages global state.
 
 > `[ 📸 IMAGE PLACEHOLDER: The People Eater from Fury Road, wearing his chaotic business suit and counting his ledgers. ]`
 
 ### The Deacon
 
-**The Reality:** The Health Monitor Daemon. **The Visual:** A mechanic-priest from the Cult of the V8, obsessively maintaining the machines. **The Execution:** The Deacon operates quietly in the background, maintaining system health across the entire Town through a relentless watchdog chain.
+**The Reality:** The Health Monitor Daemon. 
+
+**The Visual:** A mechanic-priest from the Cult of the V8, obsessively maintaining the machines. 
+
+**The Execution:** The Deacon operates quietly in the background, maintaining system health across the entire Town through a relentless watchdog chain.
 
 > `[ 📸 IMAGE PLACEHOLDER: A War Boy mechanic making the V8 hand sign in reverence to a massive, exposed car engine. ]`
 
 ### The Witness
 
-**The Reality:** The Task Supervisor / Agent Lifecycle Manager. **The Visual:** A War Boy screaming "Witness me!" and spraying chrome on his teeth before executing a glorious, suicidal mission. **The Execution:** The Witness is the lifecycle manager for a single Rig. It monitors the ephemeral workers on the floor, nudges them when they stall, and verifies their cleanup. When a temporary worker finishes its job, it essentially asks to be "witnessed" before it terminates.
+**The Reality:** The Task Supervisor / Agent Lifecycle Manager. 
+
+**The Visual:** A War Boy screaming "Witness me!" and spraying chrome on his teeth before executing a glorious, suicidal mission. 
+
+**The Execution:** The Witness is the lifecycle manager for a single Rig. It monitors the ephemeral workers on the floor, nudges them when they stall, and verifies their cleanup. When a temporary worker finishes its job, it essentially asks to be "witnessed" before it terminates.
 
 > `[ 📸 IMAGE PLACEHOLDER: Nux (or another War Boy) with chrome spray paint on his mouth, screaming "Witness me!" with a fanatic look in his eyes. ]`
 
 ### The Refinery
 
-**The Reality:** The Merge Queue Manager. **The Visual:** The literal industrial machinery inside Gas Town that processes raw crude into usable guzzoline. **The Execution:** The Refinery operates per-Rig. Once the Witness verifies a worker's code, the Refinery handles the strict integration of that work into the Rig's main branch.
+**The Reality:** The Merge Queue Manager. 
+
+**The Visual:** The literal industrial machinery inside Gas Town that processes raw crude into usable guzzoline. 
+
+**The Execution:** The Refinery operates per-Rig. Once the Witness verifies a worker's code, the Refinery handles the strict integration of that work into the Rig's main branch.
 
 > `[ 📸 IMAGE PLACEHOLDER: Close-up of the fiery, grinding industrial refining machines inside Gas Town. ]`
 
@@ -79,19 +100,31 @@ These roles perform the actual project work. You must assign the right player to
 
 ### The Polecat
 
-**The Reality:** The Serverless Ephemeral Agent. **The Visual:** Insane wasteland warriors swinging through the air on giant, bending metronomic poles attached to speeding vehicles. They drop in, do a single explosive job, and vanish. **The Execution:** Polecats are transient AI workers managed by the Witness. **There is no such thing as an idle polecat.** They are assigned a discrete task within a Rig, they spawn into an isolated workspace, execute the code, and systematically dismantle themselves upon completion.
+**The Reality:** The Serverless Ephemeral Agent. 
+
+**The Visual:** Insane wasteland warriors swinging through the air on giant, bending metronomic poles attached to speeding vehicles. They drop in, do a single explosive job, and vanish. 
+
+**The Execution:** Polecats are transient AI workers managed by the Witness. **There is no such thing as an idle polecat.** They are assigned a discrete task within a Rig, they spawn into an isolated workspace, execute the code, and systematically dismantle themselves upon completion.
 
 > `[ 📸 IMAGE PLACEHOLDER: A War Boy polecat swinging down on a massive, bending pendulum pole during the high-speed chase scene in Fury Road. ]`
 
 ### The Crew
 
-**The Reality:** The Persistent Workspace / Stateful Session. **The Visual:** Furiosa, Max, and the gang operating the War Rig together over a long journey. **The Execution:** These are long-lived workspaces managed by human operators or stateful agents. Use a Crew for exploratory work, architectural planning, and tasks requiring sustained context and judgment.
+**The Reality:** The Persistent Workspace / Stateful Session. 
+
+**The Visual:** Furiosa, Max, and the gang operating the War Rig together over a long journey. 
+
+**The Execution:** These are long-lived workspaces managed by human operators or stateful agents. Use a Crew for exploratory work, architectural planning, and tasks requiring sustained context and judgment.
 
 > `[ 📸 IMAGE PLACEHOLDER: Max and Furiosa working together intensely inside the cramped, gritty cab of the War Rig. ]`
 
 ### The Dog
 
-**The Reality:** The Infrastructure Probe. **The Visual:** Max Rockatansky's loyal, highly trained Blue Heeler that scouts and guards his vehicle. **The Execution:** Dogs are short-lived background scripts used *exclusively* by the Deacon to check system health. **They are not project workers.** Do not assign a Dog to write feature code.
+**The Reality:** The Infrastructure Probe. 
+
+**The Visual:** Max Rockatansky's loyal, highly trained Blue Heeler that scouts and guards his vehicle. 
+
+**The Execution:** Dogs are short-lived background scripts used *exclusively* by the Deacon to check system health. **They are not project workers.** Do not assign a Dog to write feature code.
 
 > `[ 📸 IMAGE PLACEHOLDER: Max's Blue Heeler dog sitting alert and guarding the V8 Interceptor in the wasteland. ]`
 
@@ -103,13 +136,21 @@ If you cannot measure it, you cannot manage it. We track work systematically.
 
 ### The Bead & The Hook
 
-**The Reality:** The Issue/Ticket (Bead) and the Assignment Queue (Hook). **The Visual:** Scavenged items used for tracking, or a heavy grappling hook slamming into a moving vehicle to initiate a boarding action. **The Execution:** The atomic unit of work is a Bead. Every Bead belongs strictly to one Rig (e.g., `gp-123` belongs to the Greenplace rig). When a Bead is placed on an agent's Hook, it is assigned.
+**The Reality:** The Issue/Ticket (Bead) and the Assignment Queue (Hook). 
+
+**The Visual:** Scavenged items used for tracking, or a heavy grappling hook slamming into a moving vehicle to initiate a boarding action. 
+
+**The Execution:** The atomic unit of work is a Bead. Every Bead belongs strictly to one Rig (e.g., `gp-123` belongs to the Greenplace rig). When a Bead is placed on an agent's Hook, it is assigned.
 
 > `[ 📸 IMAGE PLACEHOLDER: A heavy, rusted grappling hook slamming into the metal side of a speeding wasteland vehicle. ]`
 
 ### The Convoy
 
-**The Reality:** A Batch Job or Epic spanning multiple tasks. **The Visual:** A massive fleet of post-apocalyptic vehicles traveling together for defense. **The Execution:** When you initiate batched work (`gt convoy create`), you create a Convoy. It acts as your dashboard, eliminating blind spots and notifying you when the entire batch lands.
+**The Reality:** A Batch Job or Epic spanning multiple tasks. 
+
+**The Visual:** A massive fleet of post-apocalyptic vehicles traveling together for defense. 
+
+**The Execution:** When you initiate batched work (`gt convoy create`), you create a Convoy. It acts as your dashboard, eliminating blind spots and notifying you when the entire batch lands.
 
 > `[ 📸 IMAGE PLACEHOLDER: Immortan Joe's massive armada of heavily modified vehicles tearing across the desert in a wide formation, kicking up dust. ]`
 
