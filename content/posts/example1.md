@@ -59,7 +59,9 @@ Gas Town reads your current working directory to know which Rig you are in.
 
 > `[ 📸 FILM PLACEHOLDER: A wide, dusty shot of the armored War Rig tearing across the desert wasteland in Fury Road. ]`
 
-> `[ 📐 DIAGRAM 1: THE BOUNDARY MAP ]`**What to illustrate:** A large outer container representing "The Town". Outside of the sub-containers, place the Mayor and the Deacon. Inside the Town, draw distinct, isolated inner containers representing specific "Rigs" (Rig A, Rig B). Inside each Rig container, place its local managers (Witness, Refinery) at the top, and its laborers (Crew, Polecats) at the bottom. **The Objective:** Visually prove that infrastructure daemons manage the Town, but workers live, execute, and die strictly inside a designated Rig container. Cross-contamination is structurally impossible.
+> `[ 📐 DIAGRAM 1: THE BOUNDARY MAP ]`
+> ****What to illustrate:** A large outer container representing "The Town". Outside of the sub-containers, place the Mayor and the Deacon. Inside the Town, draw distinct, isolated inner containers representing specific "Rigs" (Rig A, Rig B). Inside each Rig container, place its local managers (Witness, Refinery) at the top, and its laborers (Crew, Polecats) at the bottom. 
+> ****The Objective:** Visually prove that infrastructure daemons manage the Town, but workers live, execute, and die strictly inside a designated Rig container. Cross-contamination is structurally impossible.
 
 ---
 
@@ -175,7 +177,9 @@ If you cannot measure it, you cannot manage it. We track work systematically.
 
 > `[ 📸 FILM PLACEHOLDER: Immortan Joe's massive armada of heavily modified vehicles tearing across the desert in a wide formation, kicking up dust. ]`
 
-> `[ 📐 DIAGRAM 2: THE ROUTING MATRIX ]`**What to illustrate:** A top-down flow. Start with a single "Convoy" block at the top. Show it breaking apart into three individual "Bead" blocks. Draw hard routing arrows from the Beads to specific Rigs based on a data prefix: e.g., Bead `gp-123` routes directly to the Greenplace Rig's Hook; Bead `hq-456` routes to the Town HQ Hook. **The Objective:** Show exactly how a batch job distributes work across the architecture automatically without losing track of a single ticket.
+> `[ 📐 DIAGRAM 2: THE ROUTING MATRIX ]`
+> ****What to illustrate:** A top-down flow. Start with a single "Convoy" block at the top. Show it breaking apart into three individual "Bead" blocks. Draw hard routing arrows from the Beads to specific Rigs based on a data prefix: e.g., Bead `gp-123` routes directly to the Greenplace Rig's Hook; Bead `hq-456` routes to the Town HQ Hook.
+> ****The Objective:** Show exactly how a batch job distributes work across the architecture automatically without losing track of a single ticket.
 
 ---
 
@@ -202,7 +206,9 @@ Understand the standard of execution for your transient labor.
    - *Failure state 1:* If it fails to clean up, it becomes a **Zombie** (Orphaned Process).
    - *Failure state 2:* If it stops working entirely, it is **Stalled**. Both are operational failures that the Witness will flag.
 
-> `[ 📐 DIAGRAM 3: THE SNAP-TO-MERGE PIPELINE ]`**What to illustrate:** A strict, linear state-machine flowchart. Sequence: Bead placed on Hook $\\rightarrow$ Polecat Spawns $\\rightarrow$ Code Executed $\\rightarrow$ Witness Verifies (Decision gate: CI/CD must be clean) $\\rightarrow$ Hand-off to Refinery $\\rightarrow$ Code Merged into Main $\\rightarrow$ Polecat Terminates. Add branch paths for "Zombie" and "Stalled" if verification or cleanup fails. **The Objective:** Prove to the operator that unverified work goes nowhere. The worker's job ends at the Witness; the codebase does not update until the Refinery merges it. Do not bypass the queue.
+> `[ 📐 DIAGRAM 3: THE SNAP-TO-MERGE PIPELINE ]`
+> ****What to illustrate:** A strict, linear state-machine flowchart. Sequence: Bead placed on Hook $\\rightarrow$ Polecat Spawns $\\rightarrow$ Code Executed $\\rightarrow$ Witness Verifies (Decision gate: CI/CD must be clean) $\\rightarrow$ Hand-off to Refinery $\\rightarrow$ Code Merged into Main $\\rightarrow$ Polecat Terminates. Add branch paths for "Zombie" and "Stalled" if verification or cleanup fails. 
+> ****The Objective:** Prove to the operator that unverified work goes nowhere. The worker's job ends at the Witness; the codebase does not update until the Refinery merges it. Do not bypass the queue.
 
 ---
 
@@ -215,7 +221,9 @@ Attribution is non-negotiable. If you are a Crew member in Rig A and need to fix
 
 **Crucial Warning:** Gas Town uses your current working directory to detect identity. Execute commands from the wrong directory, and you break the identity chain. Stay disciplined with your pathing.
 
-> `[ 📐 DIAGRAM 4: THE IDENTITY FORK ]`**What to illustrate:** A fork in the road originating from an operator in "Rig A". Path 1 (Top): Operator runs `gt worktree target` $\\rightarrow$ Works in local workspace $\\rightarrow$ Commit retains Original Operator Identity. Path 2 (Bottom): Operator runs `gt sling target` $\\rightarrow$ Bead moves to remote Rig's Hook $\\rightarrow$ Target Rig's agent executes $\\rightarrow$ Commit takes Target Rig Identity. **The Objective:** Solve the number one cause of attribution failure. Show that you either travel to the work properly, or you delegate the work properly.
+> `[ 📐 DIAGRAM 4: THE IDENTITY FORK ]`
+> ****What to illustrate:** A fork in the road originating from an operator in "Rig A". Path 1 (Top): Operator runs `gt worktree target` $\\rightarrow$ Works in local workspace $\\rightarrow$ Commit retains Original Operator Identity. Path 2 (Bottom): Operator runs `gt sling target` $\\rightarrow$ Bead moves to remote Rig's Hook $\\rightarrow$ Target Rig's agent executes $\\rightarrow$ Commit takes Target Rig Identity. 
+> ****The Objective:** Solve the number one cause of attribution failure. Show that you either travel to the work properly, or you delegate the work properly.
 
 ---
 
