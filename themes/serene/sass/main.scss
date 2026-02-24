@@ -1239,6 +1239,13 @@ body.homepage {
 header {
   font-size: 0.8em;
   padding: 0 0;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
   a {
     -webkit-tap-highlight-color: transparent;
     display: inline-block;
@@ -1249,6 +1256,55 @@ header {
     &:hover {
       color: var(--primary-color);
     }
+  }
+}
+
+/* font size controls (mobile only)
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+#font-size-controls {
+  display: none;
+  align-items: center;
+  gap: 0.25em;
+  margin-top: 1em;
+  padding-top: 1em;
+
+  button {
+    -webkit-tap-highlight-color: transparent;
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    color: var(--text-pale-color);
+    line-height: 0;
+
+    &:active {
+      color: var(--primary-color);
+    }
+  }
+
+  @media (max-width: 767px) {
+    display: flex;
+  }
+}
+
+.ftoast {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  z-index: 50;
+  pointer-events: none;
+
+  &.show {
+    opacity: 1;
   }
 }
 
