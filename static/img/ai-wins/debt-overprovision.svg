@@ -71,8 +71,4 @@
     <text x="318" y="4" class="legend" fill="#009E73">Income to cover it</text>
   </g>
 
-  <!-- Footer -->
-  <text x="350" y="295" font-family="sans-serif" font-size="10" fill="#999" text-anchor="middle">
-    The cost is locked in. The revenue that was supposed to cover it isn't coming.
-  </text>
 </svg>
