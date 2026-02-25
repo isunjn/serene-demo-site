@@ -11,7 +11,7 @@ featured = true
 toc = false
 +++
 
-*Adapted from [The 2028 Global Intelligence Crisis](https://open.substack.com/pub/alapshah1/p/the-global-intelligence-crisis) by CitriniResearch and Alap Shah. Written by Claude Opus 4.6, edited by Bharat.*
+*Adapted from [The 2028 Global Intelligence Crisis](https://open.substack.com/pub/alapshah1/p/the-global-intelligence-crisis) by Citrini Research and Alap Shah. Written by Claude Opus 4.6, edited by Bharat.*
 
 This is a retelling of that scenario, adapted for software engineers. The original is written for a finance audience; this version preserves the causal logic while translating financial concepts into engineering analogies and grounding AI capability claims in the current state of the art.
 

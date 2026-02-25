@@ -45,7 +45,6 @@
   </defs>
 
   <!-- Background -->
-  <rect width="800" height="420" fill="#fafafa"/>
 
   <!-- Title -->
   <text x="400" y="32" class="title">The Causal Chain</text>

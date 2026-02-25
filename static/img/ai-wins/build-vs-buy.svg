@@ -25,7 +25,6 @@
     </style>
   </defs>
 
-  <rect width="700" height="320" fill="#fafafa"/>
 
   <!-- Ground -->
   <line x1="50" y1="275" x2="650" y2="275" stroke="#ddd" stroke-width="1"/>

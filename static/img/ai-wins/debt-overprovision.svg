@@ -24,7 +24,6 @@
     </style>
   </defs>
 
-  <rect width="700" height="300" fill="#fafafa"/>
 
   <!-- Axes -->
   <line x1="90" y1="45" x2="90" y2="235" stroke="#ccc" stroke-width="1.5"/>

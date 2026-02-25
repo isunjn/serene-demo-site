@@ -26,7 +26,6 @@
     </style>
   </defs>
 
-  <rect width="700" height="300" fill="#fafafa"/>
 
   <!-- === LEFT SIDE: Healthy model === -->
   <text x="200" y="28" class="title">The model holds</text>

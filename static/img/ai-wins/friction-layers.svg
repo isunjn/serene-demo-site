@@ -34,7 +34,6 @@
     </style>
   </defs>
 
-  <rect width="700" height="320" fill="#fafafa"/>
 
   <!-- ═══ LEFT: Human consumer path (with friction) ═══ -->
   <text x="165" y="28" class="head" fill="#888">Human Consumer</text>

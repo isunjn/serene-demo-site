@@ -29,7 +29,6 @@
     </style>
   </defs>
 
-  <rect width="800" height="370" fill="#fafafa"/>
 
   <!-- Title -->
   <text x="400" y="32" class="title">The Contagion Cascade</text>

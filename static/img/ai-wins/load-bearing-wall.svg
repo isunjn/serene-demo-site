@@ -23,7 +23,6 @@
     </style>
   </defs>
 
-  <rect width="700" height="310" fill="#fafafa"/>
 
   <!-- Ground line -->
   <line x1="50" y1="270" x2="650" y2="270" stroke="#ddd" stroke-width="1"/>

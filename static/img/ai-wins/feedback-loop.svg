@@ -37,7 +37,6 @@
   </defs>
 
   <!-- Background -->
-  <rect width="700" height="400" fill="#fafafa"/>
 
   <!-- Title -->
   <text x="350" y="32" class="title">The Displacement Feedback Loop</text>

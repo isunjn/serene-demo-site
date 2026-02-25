@@ -37,7 +37,6 @@
     </style>
   </defs>
 
-  <rect width="700" height="330" fill="#fafafa"/>
 
   <!--
     Layout: 3 nodes across top, 2 across bottom, Compute below center.
