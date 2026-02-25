@@ -101,8 +101,4 @@
   <text x="350" y="240" class="center-sub">The loop sustains itself</text>
   <text x="350" y="255" class="center-sub">even as the economy weakens</text>
 
-  <!-- Footer -->
-  <text x="350" y="395" class="footer">
-    Each company's individual decision is rational. The collective result is a negative feedback loop.
-  </text>
 </svg>
