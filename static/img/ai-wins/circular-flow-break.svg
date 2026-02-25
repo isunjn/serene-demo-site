@@ -126,11 +126,4 @@
   <text x="170" y="240" class="gray-label">Tax Receipts</text>
   <text x="170" y="256" class="gray-sub">↓ falling</text>
 
-  <!-- Footer -->
-  <text x="350" y="295" class="footer">
-    The entire fiscal model assumes productivity flows through wages.
-  </text>
-  <text x="350" y="310" class="footer">
-    When it flows through compute instead, the loop breaks.
-  </text>
 </svg>

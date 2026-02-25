@@ -124,8 +124,4 @@
   <text x="620" y="296" class="dom-label" fill="#D55E00">Mortgage Market</text>
   <text x="620" y="308" class="dom-sub">$13T at risk</text>
 
-  <!-- Footer -->
-  <text x="400" y="360" class="footer">
-    The sophisticated risk was sitting on Main Street's balance sheet.
-  </text>
 </svg>
