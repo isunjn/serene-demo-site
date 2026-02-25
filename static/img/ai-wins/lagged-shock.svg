@@ -139,9 +139,4 @@
           stroke-dasharray="8,4"/>
     <text x="298" y="12" class="legend-text" fill="#D55E00">Actual spending power</text>
   </g>
-
-  <!-- Footer -->
-  <text x="400" y="393" class="footer">
-    High earners keep paying the mortgage for months after losing their jobs. The spending cut is lagged but deep.
-  </text>
 </svg>
