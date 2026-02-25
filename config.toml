@@ -49,7 +49,7 @@ blog_section_path = "/posts"
 force_theme = false
 back_link_text = "back"
 
-footer_copyright = "© 2025 bharat"
+footer_copyright = "© 2026 bharat"
 footer_credits = true
 
 not_found_error_text = "404 Not Found"
