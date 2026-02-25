@@ -14,7 +14,7 @@ title = "Posts"
 subtitle = "List of recent posts"
 
 categorized = false
-back_to_top = true
+back_to_top = false
 toc = true
 copy = true
 comment = false

@@ -1,0 +1,136 @@
+<svg viewBox="0 0 700 330" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="flow-title flow-desc">
+  <title id="flow-title">The Circular Flow Breaks</title>
+  <desc id="flow-desc">
+    The traditional fiscal circular flow: productivity gains flow through
+    wages to spending to tax receipts to government and back. When AI routes
+    gains through compute instead of labor, the wages link breaks and the
+    entire fiscal loop loses its funding source.
+  </desc>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="flow-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 11 6 L 0 11 Z" fill="#0072B2"/>
+    </marker>
+    <marker id="break-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 11 6 L 0 11 Z" fill="#D55E00"/>
+    </marker>
+    <marker id="bypass-arrow" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 1 L 11 6 L 0 11 Z" fill="#009E73"/>
+    </marker>
+    <style>
+      .title   { font: bold 16px sans-serif; fill: #222; text-anchor: middle; }
+      .label   { font: bold 11px sans-serif; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+      .sub     { font: 9px sans-serif; fill: rgba(255,255,255,0.8); text-anchor: middle; dominant-baseline: central; }
+      .gray-label { font: bold 11px sans-serif; fill: #999; text-anchor: middle; dominant-baseline: central; }
+      .gray-sub   { font: 9px sans-serif; fill: #aaa; text-anchor: middle; dominant-baseline: central; }
+      .edge    { font: 9px sans-serif; fill: #999; text-anchor: middle; }
+      .ann     { font: bold 10px sans-serif; fill: #D55E00; text-anchor: middle; }
+      .footer  { font: 10px sans-serif; fill: #999; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="700" height="330" fill="#fafafa"/>
+
+  <!--
+    Layout: 3 nodes across top, 2 across bottom, Compute below center.
+    Flow goes clockwise. Prod to Wages link is severed.
+    Bypass: Prod to Compute (green, dead end).
+  -->
+
+  <!-- === FLOW ARROWS (behind nodes) === -->
+
+  <!-- Government → Productivity (services) -->
+  <line x1="165" y1="55" x2="283" y2="55"
+        stroke="#0072B2" stroke-width="2" marker-end="url(#flow-arrow)" stroke-opacity="0.4"/>
+  <text x="224" y="45" class="edge">services</text>
+
+  <!-- Productivity → Wages (BROKEN — dashed red) -->
+  <line x1="415" y1="55" x2="533" y2="55"
+        stroke="#D55E00" stroke-width="2" stroke-dasharray="6,4" marker-end="url(#break-arrow)"/>
+  <!-- X mark -->
+  <line x1="468" y1="43" x2="488" y2="67" stroke="#D55E00" stroke-width="3" stroke-linecap="round" stroke-opacity="0.7"/>
+  <line x1="488" y1="43" x2="468" y2="67" stroke="#D55E00" stroke-width="3" stroke-linecap="round" stroke-opacity="0.7"/>
+
+  <!-- Wages → Spending (right side, down) -->
+  <path d="M 600,82 C 600,150 545,200 535,220"
+        stroke="#0072B2" stroke-width="2" fill="none" marker-end="url(#flow-arrow)" stroke-opacity="0.4"/>
+  <text x="590" y="148" class="edge">spend</text>
+
+  <!-- Spending → Tax (bottom, left) -->
+  <line x1="465" y1="245" x2="237" y2="245"
+        stroke="#0072B2" stroke-width="2" marker-end="url(#flow-arrow)" stroke-opacity="0.4"/>
+  <text x="350" y="262" class="edge">tax receipts</text>
+
+  <!-- Tax → Government (left side, up) -->
+  <path d="M 170,222 C 170,150 115,110 105,85"
+        stroke="#0072B2" stroke-width="2" fill="none" marker-end="url(#flow-arrow)" stroke-opacity="0.4"/>
+  <text x="118" y="148" class="edge">funds</text>
+
+  <!-- === AI BYPASS ARROW (green, to Compute dead end) === -->
+  <path d="M 350,82 L 350,138"
+        fill="none" stroke="#009E73" stroke-width="2.5" marker-end="url(#bypass-arrow)"/>
+
+  <!-- Compute dead end box -->
+  <g filter="url(#shadow)">
+    <rect x="305" y="143" width="90" height="36" rx="6" fill="#009E73" stroke="#007a59" stroke-width="1.5"/>
+  </g>
+  <text x="350" y="157" class="label" font-size="10">Compute</text>
+  <text x="350" y="172" class="sub">Capital, not labor</text>
+
+  <!-- Dead end annotation -->
+  <text x="350" y="196" class="ann">Gains stop here</text>
+  <text x="350" y="210" font-family="sans-serif" font-size="9" fill="#D55E00" text-anchor="middle">No wages → no spending → no taxes</text>
+
+  <!-- === NODES === -->
+
+  <!-- Productivity Gains (top center) -->
+  <g filter="url(#shadow)">
+    <rect x="290" y="33" width="120" height="46" rx="8" fill="#0072B2" stroke="#005a8e" stroke-width="1.5"/>
+  </g>
+  <text x="350" y="52" class="label">Productivity</text>
+  <text x="350" y="67" class="label" font-size="10">Gains</text>
+
+  <!-- Wages (top right, grayed out) -->
+  <g filter="url(#shadow)">
+    <rect x="540" y="33" width="120" height="46" rx="8" fill="#e0e0e0" stroke="#c0c0c0" stroke-width="1.5"/>
+  </g>
+  <text x="600" y="51" class="gray-label">Wages</text>
+  <text x="600" y="67" class="gray-sub">↓ declining</text>
+
+  <!-- Government (top left, grayed out) -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="33" width="120" height="46" rx="8" fill="#e0e0e0" stroke="#c0c0c0" stroke-width="1.5"/>
+  </g>
+  <text x="100" y="51" class="gray-label">Government</text>
+  <text x="100" y="67" class="gray-sub">↑ demand rising</text>
+
+  <!-- Spending (bottom right, grayed out) -->
+  <g filter="url(#shadow)">
+    <rect x="470" y="222" width="120" height="46" rx="8" fill="#e0e0e0" stroke="#c0c0c0" stroke-width="1.5"/>
+  </g>
+  <text x="530" y="240" class="gray-label">Spending</text>
+  <text x="530" y="256" class="gray-sub">↓ contracting</text>
+
+  <!-- Tax Receipts (bottom left, grayed out) -->
+  <g filter="url(#shadow)">
+    <rect x="110" y="222" width="120" height="46" rx="8" fill="#e0e0e0" stroke="#c0c0c0" stroke-width="1.5"/>
+  </g>
+  <text x="170" y="240" class="gray-label">Tax Receipts</text>
+  <text x="170" y="256" class="gray-sub">↓ falling</text>
+
+  <!-- Footer -->
+  <text x="350" y="295" class="footer">
+    The entire fiscal model assumes productivity flows through wages.
+  </text>
+  <text x="350" y="310" class="footer">
+    When it flows through compute instead, the loop breaks.
+  </text>
+</svg>

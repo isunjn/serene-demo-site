@@ -1,0 +1,127 @@
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="friction-title friction-desc">
+  <title id="friction-title">Friction as a Business Model</title>
+  <desc id="friction-desc">
+    Left side shows a human consumer navigating four layers of friction:
+    habitual loyalty, information asymmetry, price tolerance, and subscription
+    inertia. Right side shows an AI agent bypassing all friction layers,
+    going directly to optimal price and fit.
+  </desc>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.15" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#009E73"/>
+    </marker>
+    <marker id="arrow-slow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#999"/>
+    </marker>
+    <style>
+      .title   { font: bold 16px sans-serif; fill: #222; text-anchor: middle; }
+      .head    { font: bold 13px sans-serif; text-anchor: middle; }
+      .label   { font: bold 11px sans-serif; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+      .sub     { font: 9px sans-serif; fill: rgba(255,255,255,0.8); text-anchor: middle; dominant-baseline: central; }
+      .dim     { font: 10px sans-serif; fill: #888; text-anchor: middle; }
+      .outcome { font: bold 12px sans-serif; text-anchor: middle; dominant-baseline: central; }
+      .struck  { font: 10px sans-serif; fill: #aaa; text-decoration: line-through; }
+      .bypass  { font: 11px sans-serif; fill: #009E73; }
+    </style>
+  </defs>
+
+  <rect width="700" height="320" fill="#fafafa"/>
+
+  <!-- ═══ LEFT: Human consumer path (with friction) ═══ -->
+  <text x="165" y="28" class="head" fill="#888">Human Consumer</text>
+
+  <!-- Consumer icon -->
+  <circle cx="165" cy="55" r="11" fill="#999" stroke="#777" stroke-width="1.5"/>
+  <line x1="165" y1="66" x2="165" y2="80" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Arrow to first layer -->
+  <line x1="165" y1="80" x2="165" y2="93" stroke="#999" stroke-width="1.5" marker-end="url(#arrow-slow)"/>
+
+  <!-- Friction Layer 1: Habitual Loyalty (y=96-130, center=113) -->
+  <g filter="url(#shadow)">
+    <rect x="85" y="96" width="160" height="34" rx="4" fill="#c48a00" stroke="#a37300" stroke-width="1.5"/>
+  </g>
+  <text x="165" y="109" class="label" font-size="10">Habitual loyalty</text>
+  <text x="165" y="122" class="sub">"I always use this app"</text>
+
+  <line x1="165" y1="130" x2="165" y2="143" stroke="#999" stroke-width="1.5" marker-end="url(#arrow-slow)"/>
+
+  <!-- Friction Layer 2: Info Asymmetry (y=146-180, center=163) -->
+  <g filter="url(#shadow)">
+    <rect x="85" y="146" width="160" height="34" rx="4" fill="#b87800" stroke="#965f00" stroke-width="1.5"/>
+  </g>
+  <text x="165" y="159" class="label" font-size="10">Info asymmetry</text>
+  <text x="165" y="172" class="sub">"I don't know what's out there"</text>
+
+  <line x1="165" y1="180" x2="165" y2="193" stroke="#999" stroke-width="1.5" marker-end="url(#arrow-slow)"/>
+
+  <!-- Friction Layer 3: Price Tolerance (y=196-230, center=213) -->
+  <g filter="url(#shadow)">
+    <rect x="85" y="196" width="160" height="34" rx="4" fill="#a36600" stroke="#8a5500" stroke-width="1.5"/>
+  </g>
+  <text x="165" y="209" class="label" font-size="10">Price tolerance</text>
+  <text x="165" y="222" class="sub">"Good enough, not worth switching"</text>
+
+  <line x1="165" y1="230" x2="165" y2="243" stroke="#999" stroke-width="1.5" marker-end="url(#arrow-slow)"/>
+
+  <!-- Friction Layer 4: Subscription Inertia (y=246-280, center=263) -->
+  <g filter="url(#shadow)">
+    <rect x="85" y="246" width="160" height="34" rx="4" fill="#8a5500" stroke="#6e4400" stroke-width="1.5"/>
+  </g>
+  <text x="165" y="259" class="label" font-size="10">Subscription inertia</text>
+  <text x="165" y="272" class="sub">"Too much effort to cancel"</text>
+
+  <!-- Left outcome -->
+  <text x="165" y="302" class="outcome" fill="#999">Suboptimal price</text>
+
+  <!-- ═══ DIVIDER ═══ -->
+  <line x1="295" y1="38" x2="295" y2="288" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="295" y="308" class="dim">vs.</text>
+
+  <!-- ═══ RIGHT: AI Agent path (bypasses friction) ═══ -->
+  <text x="400" y="28" class="head" fill="#009E73">AI Agent</text>
+
+  <!-- AI icon -->
+  <rect x="389" y="44" width="22" height="22" rx="4" fill="#009E73" stroke="#007a59" stroke-width="1.5"/>
+  <text x="400" y="55" font-family="sans-serif" font-size="9" fill="#fff"
+        text-anchor="middle" dominant-baseline="central" font-weight="bold">AI</text>
+
+  <!-- Green arrow straight down -->
+  <path d="M 400,68 L 400,285" fill="none" stroke="#009E73" stroke-width="2.5"
+        marker-end="url(#arrow)"/>
+
+  <!--
+    Text pairs to the right of the arrow.
+    Each pair: struck-through friction word (what AI ignores)
+    below it: green action (what AI does instead).
+    Y-coordinates match the left-side friction layer centers.
+  -->
+
+  <!-- Row 1 (center=113): loyalty → Search all providers -->
+  <text x="425" y="108" class="struck">loyalty</text>
+  <text x="425" y="122" class="bypass">Search all providers</text>
+
+  <!-- Row 2 (center=163): asymmetry → Compare structured data -->
+  <text x="425" y="158" class="struck">asymmetry</text>
+  <text x="425" y="172" class="bypass">Compare structured data</text>
+
+  <!-- Row 3 (center=213): tolerance → Apply user preferences -->
+  <text x="425" y="208" class="struck">tolerance</text>
+  <text x="425" y="222" class="bypass">Apply user preferences</text>
+
+  <!-- Row 4 (center=263): inertia → Transact optimally -->
+  <text x="425" y="258" class="struck">inertia</text>
+  <text x="425" y="272" class="bypass">Transact optimally</text>
+
+  <!-- Right outcome -->
+  <text x="490" y="302" class="outcome" fill="#009E73">Optimal price &amp; fit</text>
+</svg>

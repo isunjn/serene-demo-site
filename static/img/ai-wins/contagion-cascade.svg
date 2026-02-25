@@ -1,0 +1,131 @@
+<svg viewBox="0 0 800 370" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="cascade-title cascade-desc">
+  <title id="cascade-title">The Contagion Cascade</title>
+  <desc id="cascade-desc">
+    Five thin domino pieces toppling from left to right on a shared ground
+    line. SaaS defaults push over private lenders, then insurers, triggering
+    credit tightening and threatening the mortgage market. Earlier dominoes
+    lean more heavily. Two weak links mark uncertain transmission steps.
+  </desc>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <style>
+      .title        { font: bold 18px sans-serif; fill: #222; text-anchor: middle; }
+      .subtitle     { font: 12px sans-serif; fill: #666; text-anchor: middle; }
+      .dom-label    { font: bold 10px sans-serif; text-anchor: middle; }
+      .dom-sub      { font: 9px sans-serif; fill: #777; text-anchor: middle; }
+      .weak-q       { font: bold 13px sans-serif; fill: #D55E00; text-anchor: middle;
+                      dominant-baseline: central; }
+      .weak-label   { font: bold 9px sans-serif; fill: #D55E00; text-anchor: middle; }
+      .footer       { font: 10px sans-serif; fill: #999; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="800" height="370" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="400" y="32" class="title">The Contagion Cascade</text>
+  <text x="400" y="50" class="subtitle">Five dominoes — each must fall for the cascade to continue</text>
+
+  <!-- Ground line -->
+  <line x1="50" y1="280" x2="750" y2="280" stroke="#bbb" stroke-width="2"/>
+
+  <!--
+    Thin dominoes (24w × 160h) toppling LEFT TO RIGHT.
+    Base centers: 180, 290, 400, 510, 620 (110px spacing).
+    Tilts: +32°, +22°, +14°, +6°, 0°
+  -->
+
+  <!-- ═══ DOMINO 1: SaaS Defaults (most tilted) ═══ -->
+  <g filter="url(#shadow)" aria-label="Domino 1: SaaS Defaults">
+    <g transform="rotate(32, 180, 280)">
+      <rect x="168" y="120" width="24" height="160" rx="3"
+            fill="#0072B2" stroke="#005a8e" stroke-width="1"/>
+      <circle cx="180" cy="180" r="2.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="180" cy="205" r="2.5" fill="rgba(255,255,255,0.45)"/>
+    </g>
+  </g>
+  <!-- Motion lines showing D1 was pushed -->
+  <line x1="138" y1="200" x2="152" y2="205" stroke="#0072B2" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="135" y1="215" x2="150" y2="218" stroke="#0072B2" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="140" y1="230" x2="153" y2="231" stroke="#0072B2" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- ═══ DOMINO 2: Private Lenders ═══ -->
+  <g filter="url(#shadow)" aria-label="Domino 2: Private Lenders">
+    <g transform="rotate(22, 290, 280)">
+      <rect x="278" y="120" width="24" height="160" rx="3"
+            fill="#2d7aaa" stroke="#1a5f88" stroke-width="1"/>
+      <circle cx="290" cy="175" r="2.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="290" cy="200" r="2.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="290" cy="225" r="2.5" fill="rgba(255,255,255,0.45)"/>
+    </g>
+  </g>
+
+  <!-- Weak link between D2 and D3 -->
+  <text x="345" y="100" font-family="sans-serif" font-size="10" fill="#D55E00"
+        text-anchor="middle" font-weight="bold">weak link?</text>
+
+  <!-- ═══ DOMINO 3: Insurers ═══ -->
+  <g filter="url(#shadow)" aria-label="Domino 3: Insurers">
+    <g transform="rotate(14, 400, 280)">
+      <rect x="388" y="120" width="24" height="160" rx="3"
+            fill="#8a6a20" stroke="#6e5418" stroke-width="1"/>
+      <circle cx="400" cy="185" r="2.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="400" cy="215" r="2.5" fill="rgba(255,255,255,0.45)"/>
+    </g>
+  </g>
+
+  <!-- Weak link between D3 and D4 -->
+  <text x="455" y="100" font-family="sans-serif" font-size="10" fill="#D55E00"
+        text-anchor="middle" font-weight="bold">weak link?</text>
+
+  <!-- ═══ DOMINO 4: Credit Tightens ═══ -->
+  <g filter="url(#shadow)" aria-label="Domino 4: Credit Tightening">
+    <g transform="rotate(6, 510, 280)">
+      <rect x="498" y="120" width="24" height="160" rx="3"
+            fill="#b85800" stroke="#963f00" stroke-width="1"/>
+      <circle cx="510" cy="190" r="2.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="510" cy="220" r="2.5" fill="rgba(255,255,255,0.45)"/>
+    </g>
+  </g>
+
+  <!-- ═══ DOMINO 5: Mortgage Market (still standing) ═══ -->
+  <g filter="url(#shadow)" aria-label="Domino 5: Mortgage Market">
+    <g transform="rotate(0, 620, 280)">
+      <rect x="608" y="120" width="24" height="160" rx="3"
+            fill="#D55E00" stroke="#b34d00" stroke-width="1"/>
+      <circle cx="620" cy="175" r="2.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="620" cy="200" r="2.5" fill="rgba(255,255,255,0.45)"/>
+      <circle cx="620" cy="225" r="2.5" fill="rgba(255,255,255,0.45)"/>
+    </g>
+  </g>
+
+  <!-- ═══ LABELS (below ground line, single row) ═══ -->
+  <text x="180" y="296" class="dom-label" fill="#0072B2">SaaS Defaults</text>
+  <text x="180" y="308" class="dom-sub">Revenue collapses</text>
+
+  <text x="290" y="296" class="dom-label" fill="#2d7aaa">Private Lenders</text>
+  <text x="290" y="308" class="dom-sub">LBO losses cascade</text>
+
+  <text x="400" y="296" class="dom-label" fill="#8a6a20">Insurers</text>
+  <text x="400" y="308" class="dom-sub">Exposed to debt</text>
+
+  <text x="510" y="296" class="dom-label" fill="#b85800">Credit Tightens</text>
+  <text x="510" y="308" class="dom-sub">Capital raises forced</text>
+
+  <text x="620" y="296" class="dom-label" fill="#D55E00">Mortgage Market</text>
+  <text x="620" y="308" class="dom-sub">$13T at risk</text>
+
+  <!-- Footer -->
+  <text x="400" y="360" class="footer">
+    The sophisticated risk was sitting on Main Street's balance sheet.
+  </text>
+</svg>

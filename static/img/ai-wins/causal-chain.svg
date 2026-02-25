@@ -1,0 +1,159 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="chain-title chain-desc">
+  <title id="chain-title">The Six-Link Causal Chain</title>
+  <desc id="chain-desc">
+    Six links from AI capability leap to systemic economic crisis, arranged in
+    two rows of three. Color shifts from blue (well-grounded) through yellow
+    (uncertain) to orange (speculative). Each link has an evidence bar showing
+    how grounded the claim is in current reality.
+  </desc>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.15" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#999"/>
+    </marker>
+
+    <marker id="arrow-down" viewBox="0 0 10 10" refX="5" refY="10"
+            markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#999"/>
+    </marker>
+
+    <style>
+      .title       { font: bold 18px sans-serif; fill: #222; text-anchor: middle; }
+      .subtitle    { font: 12px sans-serif; fill: #666; text-anchor: middle; }
+      .node-label  { font: bold 12px sans-serif; fill: #fff; text-anchor: middle;
+                     dominant-baseline: central; }
+      .node-sub    { font: 10px sans-serif; fill: rgba(255,255,255,0.85);
+                     text-anchor: middle; dominant-baseline: central; }
+      .evidence-bg { fill: #e0e0e0; }
+      .ev-label    { font: 9px sans-serif; fill: #888; text-anchor: middle; }
+      .legend-text { font: 10px sans-serif; fill: #777; }
+      .connector   { stroke: #bbb; stroke-width: 1.8; fill: none; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="420" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="400" y="32" class="title">The Causal Chain</text>
+  <text x="400" y="50" class="subtitle">Six links from "AI gets better" to "systemic economic crisis"</text>
+
+  <!-- === ROW 1: Links 1-3 === -->
+  <!-- Link 1: SaaS Disruption — most grounded (#0072B2) -->
+  <g filter="url(#shadow)" aria-label="Link 1: SaaS Disruption">
+    <rect x="60" y="80" width="200" height="70" rx="8" fill="#0072B2" stroke="#005a8e" stroke-width="1.5"/>
+  </g>
+  <text x="160" y="107" class="node-label">Link 1</text>
+  <text x="160" y="125" class="node-sub">SaaS Disruption</text>
+  <!-- Evidence bar -->
+  <rect x="95" y="158" width="130" height="6" rx="3" class="evidence-bg"/>
+  <rect x="95" y="158" width="117" height="6" rx="3" fill="#0072B2" opacity="0.8"/>
+  <text x="160" y="176" class="ev-label">strong evidence</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="260" y1="115" x2="290" y2="115" class="connector" marker-end="url(#arrow)"/>
+
+  <!-- Link 2: Intermediation Collapse — plausible (#0072B2 lighter) -->
+  <g filter="url(#shadow)" aria-label="Link 2: Intermediation Collapse">
+    <rect x="300" y="80" width="200" height="70" rx="8" fill="#2d8abf" stroke="#1a6fa0" stroke-width="1.5"/>
+  </g>
+  <text x="400" y="107" class="node-label">Link 2</text>
+  <text x="400" y="125" class="node-sub">Intermediation Collapse</text>
+  <!-- Evidence bar -->
+  <rect x="335" y="158" width="130" height="6" rx="3" class="evidence-bg"/>
+  <rect x="335" y="158" width="91" height="6" rx="3" fill="#2d8abf" opacity="0.8"/>
+  <text x="400" y="176" class="ev-label">plausible pattern</text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="500" y1="115" x2="530" y2="115" class="connector" marker-end="url(#arrow)"/>
+
+  <!-- Link 3: Labor Displacement — plausible but uncertain (#56B4E9 → #E69F00 transition) -->
+  <g filter="url(#shadow)" aria-label="Link 3: Labor Displacement">
+    <rect x="540" y="80" width="200" height="70" rx="8" fill="#56889e" stroke="#3d6e84" stroke-width="1.5"/>
+  </g>
+  <text x="640" y="107" class="node-label">Link 3</text>
+  <text x="640" y="125" class="node-sub">Labor Displacement</text>
+  <!-- Evidence bar -->
+  <rect x="575" y="158" width="130" height="6" rx="3" class="evidence-bg"/>
+  <rect x="575" y="158" width="78" height="6" rx="3" fill="#56889e" opacity="0.8"/>
+  <text x="640" y="176" class="ev-label">observable but early</text>
+
+  <!-- === VERTICAL CONNECTOR: Row 1 → Row 2 === -->
+  <path d="M 640,150 L 640,200 Q 640,215 625,215 L 175,215 Q 160,215 160,230 L 160,240"
+        class="connector" marker-end="url(#arrow-down)" stroke-dasharray="6,3"/>
+
+  <!-- === ROW 2: Links 4-6 === -->
+  <!-- Link 4: Consumption Crash — uncertain (#E69F00) -->
+  <g filter="url(#shadow)" aria-label="Link 4: Consumption Crash">
+    <rect x="60" y="245" width="200" height="70" rx="8" fill="#c48a00" stroke="#a37300" stroke-width="1.5"/>
+  </g>
+  <text x="160" y="272" class="node-label">Link 4</text>
+  <text x="160" y="290" class="node-sub">Consumption Crash</text>
+  <!-- Evidence bar -->
+  <rect x="95" y="323" width="130" height="6" rx="3" class="evidence-bg"/>
+  <rect x="95" y="323" width="52" height="6" rx="3" fill="#c48a00" opacity="0.8"/>
+  <text x="160" y="341" class="ev-label">depends on Link 3</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="260" y1="280" x2="290" y2="280" class="connector" marker-end="url(#arrow)"/>
+
+  <!-- Link 5: Financial Contagion — speculative (#D55E00) -->
+  <g filter="url(#shadow)" aria-label="Link 5: Financial Contagion">
+    <rect x="300" y="245" width="200" height="70" rx="8" fill="#c25500" stroke="#a34700" stroke-width="1.5"/>
+  </g>
+  <text x="400" y="272" class="node-label">Link 5</text>
+  <text x="400" y="290" class="node-sub">Financial Contagion</text>
+  <!-- Evidence bar -->
+  <rect x="335" y="323" width="130" height="6" rx="3" class="evidence-bg"/>
+  <rect x="335" y="323" width="39" height="6" rx="3" fill="#c25500" opacity="0.8"/>
+  <text x="400" y="341" class="ev-label">multiple dominoes</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="500" y1="280" x2="530" y2="280" class="connector" marker-end="url(#arrow)"/>
+
+  <!-- Link 6: Policy Failure — most speculative (#D55E00) -->
+  <g filter="url(#shadow)" aria-label="Link 6: Policy Failure">
+    <rect x="540" y="245" width="200" height="70" rx="8" fill="#D55E00" stroke="#b34d00" stroke-width="1.5"/>
+  </g>
+  <text x="640" y="272" class="node-label">Link 6</text>
+  <text x="640" y="290" class="node-sub">Policy Failure</text>
+  <!-- Evidence bar -->
+  <rect x="575" y="323" width="130" height="6" rx="3" class="evidence-bg"/>
+  <rect x="575" y="323" width="26" height="6" rx="3" fill="#D55E00" opacity="0.8"/>
+  <text x="640" y="341" class="ev-label">politically contingent</text>
+
+  <!-- === LEGEND === -->
+  <g aria-label="Legend showing color coding from grounded to speculative">
+    <!-- Gradient bar -->
+    <defs>
+      <linearGradient id="legend-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#0072B2"/>
+        <stop offset="50%" stop-color="#c48a00"/>
+        <stop offset="100%" stop-color="#D55E00"/>
+      </linearGradient>
+    </defs>
+    <rect x="250" y="370" width="300" height="8" rx="4" fill="url(#legend-grad)" opacity="0.7"/>
+    <text x="250" y="393" class="legend-text" text-anchor="start">Grounded</text>
+    <text x="400" y="393" class="legend-text" text-anchor="middle">Uncertain</text>
+    <text x="550" y="393" class="legend-text" text-anchor="end">Speculative</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="413" text-anchor="middle" font-family="sans-serif"
+        font-size="10" fill="#999">
+    Each link must hold for the next to fire. The chain is only as strong as its weakest link.
+  </text>
+</svg>

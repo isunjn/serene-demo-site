@@ -1,0 +1,147 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="shock-title shock-desc">
+  <title id="shock-title">The Lagged Demand Shock</title>
+  <desc id="shock-desc">
+    A chart showing two lines over time. The blue line represents visible macro
+    indicators which stay flat for 2-3 quarters before dropping sharply. The
+    red-orange dashed line represents actual spending power which drops
+    immediately. The gap between them — the savings buffer — masks the true
+    damage until the data catches up.
+  </desc>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      .title       { font: bold 18px sans-serif; fill: #222; text-anchor: middle; }
+      .subtitle    { font: 12px sans-serif; fill: #666; text-anchor: middle; }
+      .axis-label  { font: 10px sans-serif; fill: #888; }
+      .axis-tick   { font: 9px sans-serif; fill: #aaa; text-anchor: middle; }
+      .legend-text { font: 11px sans-serif; }
+      .callout     { font: bold 11px sans-serif; fill: #D55E00; text-anchor: middle; }
+      .callout-sub { font: 10px sans-serif; fill: #888; text-anchor: middle; }
+      .zone-label  { font: italic 10px sans-serif; fill: #777; text-anchor: middle; }
+      .footer      { font: 10px sans-serif; fill: #999; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#fafafa"/>
+
+  <!-- Title -->
+  <text x="400" y="32" class="title">The Lagged Demand Shock</text>
+  <text x="400" y="50" class="subtitle">Savings buffers mask the real damage for 2-3 quarters</text>
+
+  <!--
+    Chart area: x=100..720, y=80..310
+    Y-axis: spending power (top = high, bottom = low)
+    X-axis: time in quarters (Q0 = displacement begins)
+
+    Key points:
+    - Q0: Both lines start at same level (y=120, "normal")
+    - Q0-Q3: Visible line stays flat (savings buffer), actual drops steadily
+    - Q3-Q4: Visible line catches up, both drop sharply
+    - Q5+: Both converge at low level (y=280)
+  -->
+
+  <!-- === AXES === -->
+  <!-- Y-axis -->
+  <line x1="100" y1="75" x2="100" y2="315" stroke="#ccc" stroke-width="1.5"/>
+  <text x="30" y="120" class="axis-label" text-anchor="start">High</text>
+  <text x="30" y="285" class="axis-label" text-anchor="start">Low</text>
+  <text x="22" y="200" class="axis-label" text-anchor="start"
+        transform="rotate(-90, 22, 200)">Spending Power</text>
+
+  <!-- X-axis -->
+  <line x1="95" y1="310" x2="725" y2="310" stroke="#ccc" stroke-width="1.5"/>
+  <!-- Tick marks -->
+  <line x1="100" y1="310" x2="100" y2="316" stroke="#ccc" stroke-width="1"/>
+  <text x="100" y="328" class="axis-tick">Q0</text>
+  <line x1="204" y1="310" x2="204" y2="316" stroke="#ccc" stroke-width="1"/>
+  <text x="204" y="328" class="axis-tick">Q1</text>
+  <line x1="308" y1="310" x2="308" y2="316" stroke="#ccc" stroke-width="1"/>
+  <text x="308" y="328" class="axis-tick">Q2</text>
+  <line x1="412" y1="310" x2="412" y2="316" stroke="#ccc" stroke-width="1"/>
+  <text x="412" y="328" class="axis-tick">Q3</text>
+  <line x1="516" y1="310" x2="516" y2="316" stroke="#ccc" stroke-width="1"/>
+  <text x="516" y="328" class="axis-tick">Q4</text>
+  <line x1="620" y1="310" x2="620" y2="316" stroke="#ccc" stroke-width="1"/>
+  <text x="620" y="328" class="axis-tick">Q5</text>
+  <line x1="720" y1="310" x2="720" y2="316" stroke="#ccc" stroke-width="1"/>
+  <text x="720" y="328" class="axis-tick">Q6</text>
+
+  <text x="410" y="345" class="axis-label" text-anchor="middle">Quarters after displacement begins</text>
+
+  <!-- === DISPLACEMENT EVENT MARKER === -->
+  <line x1="100" y1="80" x2="100" y2="305" stroke="#D55E00" stroke-width="1"
+        stroke-dasharray="4,3" stroke-opacity="0.5"/>
+  <text x="110" y="88" font-size="9" font-family="sans-serif" fill="#D55E00"
+        font-style="italic">Displacement begins</text>
+
+  <!-- === GAP FILL: The savings buffer zone === -->
+  <!-- Shaded area between the two lines -->
+  <path d="M 100,120 L 204,122 L 308,125 L 412,128
+           L 412,258
+           C 375,240 340,220 308,205
+           C 275,190 240,178 204,165
+           C 170,155 130,135 100,120 Z"
+        fill="#E69F00" fill-opacity="0.15"/>
+
+  <!-- Zone label inside the gap -->
+  <text x="256" y="168" class="zone-label" fill="#c48a00">savings</text>
+  <text x="256" y="181" class="zone-label" fill="#c48a00">buffer</text>
+
+  <!-- === LINE 1: Visible Macro Indicators (blue, solid) === -->
+  <!-- Stays flat Q0-Q2, slight dip Q3, then drops sharply Q3-Q5, flattens Q5-Q6 -->
+  <path d="M 100,120 L 204,122 L 308,125 L 412,128
+           C 440,140 470,200 516,260
+           C 545,280 580,285 620,287 L 720,288"
+        fill="none" stroke="#0072B2" stroke-width="2.8" stroke-linecap="round"/>
+
+  <!-- === LINE 2: Actual Spending Power (orange, dashed) === -->
+  <!-- Drops immediately Q0-Q3, then converges with visible line Q4-Q6 -->
+  <path d="M 100,120
+           C 130,135 170,155 204,165
+           C 240,178 275,190 308,205
+           C 340,220 375,240 412,258
+           C 445,270 480,280 516,285
+           L 620,287 L 720,288"
+        fill="none" stroke="#D55E00" stroke-width="2.5" stroke-dasharray="8,4"
+        stroke-linecap="round"/>
+
+  <!-- === CONVERGENCE POINT CALLOUT === -->
+  <!-- Circle at convergence point (~Q4-Q5) -->
+  <circle cx="516" cy="272" r="5" fill="none" stroke="#D55E00" stroke-width="1.5"/>
+  <line x1="521" y1="267" x2="565" y2="238" stroke="#D55E00" stroke-width="1"
+        stroke-dasharray="3,2"/>
+  <text x="600" y="230" class="callout">Data catches up</text>
+  <text x="600" y="244" class="callout-sub">The hole is enormous</text>
+  <text x="600" y="256" class="callout-sub">and the pipeline to</text>
+  <text x="600" y="268" class="callout-sub">replace them doesn't exist</text>
+
+  <!-- === LEGEND === -->
+  <g aria-label="Legend" transform="translate(130, 355)">
+    <!-- Visible indicators -->
+    <line x1="0" y1="8" x2="30" y2="8" stroke="#0072B2" stroke-width="2.5"/>
+    <text x="38" y="12" class="legend-text" fill="#0072B2">Visible macro indicators</text>
+
+    <!-- Actual spending -->
+    <line x1="260" y1="8" x2="290" y2="8" stroke="#D55E00" stroke-width="2.5"
+          stroke-dasharray="8,4"/>
+    <text x="298" y="12" class="legend-text" fill="#D55E00">Actual spending power</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="400" y="393" class="footer">
+    High earners keep paying the mortgage for months after losing their jobs. The spending cut is lagged but deep.
+  </text>
+</svg>

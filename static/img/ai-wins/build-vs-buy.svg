@@ -1,0 +1,91 @@
+<svg viewBox="0 0 700 320" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="bvb-title bvb-desc">
+  <title id="bvb-title">The Build-vs-Buy Tipping Point</title>
+  <desc id="bvb-desc">
+    A balance scale tipping from "Buy SaaS" to "Build In-House." The left pan
+    holds a heavy SaaS contract ($500K/year). The right pan holds a small team
+    plus an AI agent, which now outweighs the SaaS option. The fulcrum is
+    labeled "agentic AI capability."
+  </desc>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.15" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .title   { font: bold 16px sans-serif; fill: #222; text-anchor: middle; }
+      .label   { font: bold 12px sans-serif; text-anchor: middle; dominant-baseline: central; }
+      .sub     { font: 10px sans-serif; text-anchor: middle; dominant-baseline: central; }
+      .dim     { font: 10px sans-serif; fill: #888; text-anchor: middle; }
+      .fulcrum { font: bold 11px sans-serif; fill: #555; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="700" height="320" fill="#fafafa"/>
+
+  <!-- Ground -->
+  <line x1="50" y1="275" x2="650" y2="275" stroke="#ddd" stroke-width="1"/>
+
+  <!-- === FULCRUM (triangle) === -->
+  <polygon points="350,275 330,245 370,245" fill="#888" stroke="#666" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="350" y="295" class="fulcrum">Agentic AI capability</text>
+
+  <!-- === BEAM (tilted — right side heavier/lower) === -->
+  <!-- The beam tilts: left side up (SaaS rising = less attractive), right side down (build = winning) -->
+  <!-- Tilt: ~8 degrees. Pivot at (350, 245). Left end at ~(130, 270), right end at ~(570, 220) -->
+  <line x1="130" y1="218" x2="570" y2="258" stroke="#555" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Left chain -->
+  <line x1="170" y1="222" x2="170" y2="140" stroke="#999" stroke-width="1.5"/>
+  <!-- Right chain -->
+  <line x1="530" y1="254" x2="530" y2="147" stroke="#999" stroke-width="1.5"/>
+
+  <!-- === LEFT PAN: SaaS Contract (lighter = rising) === -->
+  <g filter="url(#shadow)" aria-label="Buy: SaaS vendor contract">
+    <!-- Pan base -->
+    <path d="M 110,140 L 230,140 L 220,145 L 120,145 Z" fill="#ccc" stroke="#aaa" stroke-width="1"/>
+    <!-- Contract box -->
+    <rect x="125" y="85" width="90" height="50" rx="4" fill="#e8e4df" stroke="#ccc" stroke-width="1.5"/>
+    <text x="170" y="105" class="label" fill="#555" font-size="11">SaaS Vendor</text>
+    <text x="170" y="120" class="sub" fill="#888">$500K/year</text>
+  </g>
+  <rect x="155" y="152" width="30" height="14" rx="2" fill="#fafafa"/>
+  <text x="170" y="162" class="dim">Buy</text>
+  <!-- Rising arrow -->
+  <path d="M 90,175 L 90,155" fill="none" stroke="#D55E00" stroke-width="1.5" stroke-opacity="0.6"/>
+  <polygon points="87,157 90,148 93,157" fill="#D55E00" opacity="0.6"/>
+  <text x="90" y="188" font-family="sans-serif" font-size="9" fill="#D55E00" text-anchor="middle">harder to</text>
+  <text x="90" y="199" font-family="sans-serif" font-size="9" fill="#D55E00" text-anchor="middle">justify</text>
+
+  <!-- === RIGHT PAN: Build In-House (heavier = winning) === -->
+  <g filter="url(#shadow)" aria-label="Build: small team plus AI agent">
+    <!-- Pan base -->
+    <path d="M 470,147 L 590,147 L 580,152 L 480,152 Z" fill="#ccc" stroke="#aaa" stroke-width="1"/>
+    <!-- Team box -->
+    <rect x="478" y="60" width="45" height="82" rx="4" fill="#0072B2" stroke="#005a8e" stroke-width="1.5"/>
+    <text x="500" y="92" class="label" fill="#fff" font-size="9">Small</text>
+    <text x="500" y="105" class="label" fill="#fff" font-size="9">Team</text>
+    <!-- Plus sign -->
+    <text x="533" y="100" font-family="sans-serif" font-size="16" fill="#009E73" text-anchor="middle" dominant-baseline="central" font-weight="bold">+</text>
+    <!-- AI agent box -->
+    <rect x="545" y="60" width="45" height="82" rx="4" fill="#009E73" stroke="#007a59" stroke-width="1.5"/>
+    <text x="567" y="92" class="label" fill="#fff" font-size="9">AI</text>
+    <text x="567" y="105" class="label" fill="#fff" font-size="9">Agent</text>
+  </g>
+  <rect x="512" y="158" width="36" height="14" rx="2" fill="#fafafa"/>
+  <text x="530" y="168" class="dim">Build</text>
+  <!-- Falling arrow -->
+  <path d="M 620,120 L 620,140" fill="none" stroke="#009E73" stroke-width="1.5" stroke-opacity="0.7"/>
+  <polygon points="617,138 620,147 623,138" fill="#009E73" opacity="0.7"/>
+  <text x="620" y="160" font-family="sans-serif" font-size="9" fill="#009E73" text-anchor="middle">weeks, not</text>
+  <text x="620" y="171" font-family="sans-serif" font-size="9" fill="#009E73" text-anchor="middle">months</text>
+
+  <!-- Header labels -->
+  <text x="170" y="30" font-family="sans-serif" font-size="12" fill="#D55E00" text-anchor="middle" font-weight="bold">"How much more will you pay?"</text>
+  <text x="530" y="30" font-family="sans-serif" font-size="12" fill="#009E73" text-anchor="middle" font-weight="bold">"Convince me not to build this"</text>
+
+</svg>

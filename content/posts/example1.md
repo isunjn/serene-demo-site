@@ -1,5 +1,5 @@
 +++
-title = "Gas Town for Normies: alt"
+title = "Gas Town for Normies"
 date = "2026-02-24"
 
 [taxonomies]

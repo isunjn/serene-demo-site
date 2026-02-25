@@ -1,0 +1,87 @@
+<svg viewBox="0 0 700 300" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="saas-title saas-desc">
+  <title id="saas-title">The Revenue Multiplier</title>
+  <desc id="saas-desc">
+    A small revenue base is multiplied 10-20x into a large valuation tower.
+    The tower rests on a single assumption labeled "recurring." When that
+    assumption cracks, the entire valuation structure is unsupported.
+  </desc>
+
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.15" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge><feMergeNode in="shadow"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="crack-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#D55E00" stroke-width="0.8" stroke-opacity="0.3"/>
+    </pattern>
+    <style>
+      .label { font: bold 12px sans-serif; fill: #fff; text-anchor: middle; dominant-baseline: central; }
+      .dim   { font: 11px sans-serif; fill: #888; text-anchor: middle; }
+      .ann   { font: 10px sans-serif; fill: #D55E00; text-anchor: middle; }
+      .title { font: bold 16px sans-serif; fill: #222; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="700" height="300" fill="#fafafa"/>
+
+  <!-- === LEFT SIDE: Healthy model === -->
+  <text x="200" y="28" class="title">The model holds</text>
+
+  <!-- Revenue base -->
+  <g filter="url(#shadow)">
+    <rect x="150" y="230" width="100" height="30" rx="4" fill="#0072B2" stroke="#005a8e" stroke-width="1.5"/>
+  </g>
+  <text x="200" y="245" class="label" font-size="10">$100M revenue</text>
+
+  <!-- Multiplier arrow -->
+  <text x="200" y="218" font-family="sans-serif" font-size="10" fill="#009E73" text-anchor="middle" font-weight="bold">× 10-20</text>
+  <line x1="200" y1="208" x2="200" y2="195" stroke="#009E73" stroke-width="1.5"/>
+
+  <!-- Valuation tower -->
+  <g filter="url(#shadow)">
+    <rect x="140" y="55" width="120" height="140" rx="4" fill="#009E73" stroke="#007a59" stroke-width="1.5"/>
+  </g>
+  <text x="200" y="110" class="label" font-size="11">$1B - $2B</text>
+  <text x="200" y="128" class="label" font-size="10" fill="rgba(255,255,255,0.8)">valuation</text>
+
+  <!-- "recurring" keystone -->
+  <rect x="160" y="262" width="80" height="18" rx="3" fill="#56B4E9" stroke="#0072B2" stroke-width="1"/>
+  <text x="200" y="271" font-family="sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="central" font-weight="bold">recurring ✓</text>
+
+  <!-- === RIGHT SIDE: Broken model === -->
+  <text x="500" y="28" class="title">The assumption breaks</text>
+
+  <!-- Revenue base — same -->
+  <g filter="url(#shadow)">
+    <rect x="450" y="230" width="100" height="30" rx="4" fill="#0072B2" stroke="#005a8e" stroke-width="1.5" opacity="0.5"/>
+  </g>
+  <text x="500" y="245" class="label" font-size="10" opacity="0.6">$100M revenue</text>
+
+  <!-- Broken keystone -->
+  <rect x="460" y="262" width="80" height="18" rx="3" fill="#D55E00" stroke="#b34d00" stroke-width="1"/>
+  <text x="500" y="271" font-family="sans-serif" font-size="9" fill="#fff" text-anchor="middle" dominant-baseline="central" font-weight="bold">recurring ✗</text>
+
+  <!-- Crumbling valuation — tilted, cracked -->
+  <g filter="url(#shadow)" transform="rotate(8, 500, 140)">
+    <rect x="440" y="55" width="120" height="140" rx="4" fill="#e0e0e0" stroke="#c0c0c0" stroke-width="1.5"/>
+    <rect x="440" y="55" width="120" height="140" rx="4" fill="url(#crack-hatch)" opacity="0.5"/>
+  </g>
+  <!-- Crack lines -->
+  <path d="M 475,80 L 485,110 L 470,130 L 490,160" fill="none" stroke="#D55E00" stroke-width="2" stroke-opacity="0.6" stroke-linecap="round"/>
+  <path d="M 530,90 L 520,120 L 535,145" fill="none" stroke="#D55E00" stroke-width="1.5" stroke-opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Falling debris -->
+  <rect x="455" y="198" width="14" height="10" rx="1" fill="#e0e0e0" stroke="#ccc" stroke-width="0.8" transform="rotate(-18, 462, 203)" opacity="0.6"/>
+  <rect x="525" y="195" width="12" height="8" rx="1" fill="#e0e0e0" stroke="#ccc" stroke-width="0.8" transform="rotate(15, 531, 199)" opacity="0.5"/>
+  <rect x="480" y="205" width="10" height="7" rx="1" fill="#e0e0e0" stroke="#ccc" stroke-width="0.8" transform="rotate(-25, 485, 209)" opacity="0.4"/>
+
+  <!-- Annotation -->
+  <text x="500" y="218" class="ann">valuation collapses</text>
+
+  <!-- Divider -->
+  <line x1="350" y1="40" x2="350" y2="280" stroke="#ddd" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>
