@@ -79,13 +79,21 @@
     justify-content: center;
     background: rgba(43, 43, 43, 0.92);
     cursor: zoom-out;
+    overflow: hidden;
   }
 
   .svg-lightbox-overlay img {
     max-width: 88vw;
     max-height: 84vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     border-radius: 4px;
+    background: #f7f9fc;
+  }
+
+  body.dark .svg-lightbox-overlay img {
+    background: #2a2a2a;
   }
 
   .svg-lightbox-caption {

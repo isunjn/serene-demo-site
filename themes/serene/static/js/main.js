@@ -207,7 +207,14 @@ function enableImgLightense() {
     Lightense(".prose img:not(.no-lightense):not([src$='.svg'])", { background: 'rgba(43, 43, 43, 0.19)', padding: 40 });
 
     // Custom lightbox for SVGs: full viewport size with arrow key navigation
-    const svgImages = Array.from(document.querySelectorAll('.prose img[src$=".svg"]'));
+    // Collect both <img> SVGs and inlined SVGs (from figure_svg shortcode)
+    const svgEntries = [];
+    document.querySelectorAll('.prose img[src$=".svg"]').forEach(img => {
+      svgEntries.push({ type: 'img', el: img, src: img.src });
+    });
+    document.querySelectorAll('.prose figure.svg-animated[data-svg-src]').forEach(fig => {
+      svgEntries.push({ type: 'inline', el: fig, src: fig.dataset.svgSrc });
+    });
     let activeOverlay = null;
     let activeIndex = -1;
 
@@ -215,15 +222,16 @@ function enableImgLightense() {
       if (activeOverlay) activeOverlay.remove();
 
       activeIndex = index;
-      const img = svgImages[index];
+      const entry = svgEntries[index];
       const overlay = document.createElement('div');
       overlay.className = 'svg-lightbox-overlay';
 
       const clone = document.createElement('img');
-      clone.src = img.src;
+      clone.src = entry.src;
       overlay.append(clone);
 
-      const figcaption = img.closest('figure')?.querySelector('figcaption');
+      const figcaption = entry.el.closest('figure')?.querySelector('figcaption')
+        || entry.el.querySelector('figcaption');
       if (figcaption) {
         const caption = document.createElement('div');
         caption.className = 'svg-lightbox-caption';
@@ -245,7 +253,7 @@ function enableImgLightense() {
 
     function handleLightboxKeys(e) {
       if (!activeOverlay) return;
-      if (e.key === 'ArrowRight' && activeIndex < svgImages.length - 1) {
+      if (e.key === 'ArrowRight' && activeIndex < svgEntries.length - 1) {
         showSvgLightbox(activeIndex + 1);
       } else if (e.key === 'ArrowLeft' && activeIndex > 0) {
         showSvgLightbox(activeIndex - 1);
@@ -256,9 +264,10 @@ function enableImgLightense() {
 
     document.addEventListener('keydown', handleLightboxKeys);
 
-    svgImages.forEach((img, i) => {
-      img.style.cursor = 'zoom-in';
-      img.addEventListener('click', () => showSvgLightbox(i));
+    svgEntries.forEach((entry, i) => {
+      const target = entry.type === 'img' ? entry.el : entry.el;
+      target.style.cursor = 'zoom-in';
+      target.addEventListener('click', () => showSvgLightbox(i));
     });
   });
 }
