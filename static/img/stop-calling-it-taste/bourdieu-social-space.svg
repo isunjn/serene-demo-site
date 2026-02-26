@@ -1,0 +1,105 @@
+<svg viewBox="0 0 720 530" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="bs-title bs-desc">
+  <title id="bs-title">What "Taste" Actually Maps To</title>
+  <desc id="bs-desc">
+    Bourdieu's social space redrawn to show two types of sorting.
+    At the top: two positions at the same economic level but different
+    cultural capital — the gap between them is what people call "taste."
+    In the middle: the aspiration zone where taste is performed loudest.
+    Neither sorting is innate. Both run on cultural capital.
+  </desc>
+
+  <defs>
+    <linearGradient id="bs-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7f9fc"/>
+      <stop offset="100%" stop-color="#ebeef4"/>
+    </linearGradient>
+
+    <marker id="bs-arrow" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#bbb"/>
+    </marker>
+
+    <style>
+      .bs { font-family: sans-serif; }
+      .bs .title { font-size: 17px; font-weight: bold; text-anchor: middle; fill: #1a1a1a; }
+      .bs .subtitle { font-size: 10.5px; text-anchor: middle; fill: #888; font-style: italic; }
+      .bs .axis-end { font-size: 9px; text-anchor: middle; fill: #bbb; letter-spacing: 1px; }
+      .bs .axis-label { font-size: 9.5px; font-weight: bold; fill: #aaa; letter-spacing: 0.5px; }
+      .bs .card-title { font-size: 10.5px; font-weight: bold; text-anchor: middle; }
+      .bs .card-detail { font-size: 8.5px; text-anchor: middle; fill: #777; }
+      .bs .gap-label { font-size: 11px; font-weight: bold; text-anchor: middle; fill: #D55E00; }
+      .bs .gap-desc { font-size: 9px; text-anchor: middle; fill: #D55E00; opacity: 0.75; }
+      .bs .zone-label { font-size: 10.5px; font-style: italic; text-anchor: middle; fill: #D55E00; opacity: 0.7; }
+      .bs .zone-desc { font-size: 8.5px; text-anchor: middle; fill: #aaa; font-style: italic; }
+      .bs .ghost { font-size: 8.5px; text-anchor: middle; fill: #ccc; }
+      .bs .source { font-size: 8.5px; text-anchor: middle; fill: #ccc; }
+    </style>
+  </defs>
+
+  <g class="bs">
+    <rect width="720" height="530" fill="url(#bs-bg)"/>
+
+    <!-- ====== TITLE ====== -->
+    <text x="360" y="30" class="title">What "Taste" Actually Maps To</text>
+    <text x="360" y="48" class="subtitle">two types of capital, two types of sorting</text>
+
+    <!-- ====== AXES ====== -->
+    <!-- Vertical: total capital volume -->
+    <line x1="360" y1="74" x2="360" y2="468" stroke="#ddd" stroke-width="1"
+          marker-start="url(#bs-arrow)" marker-end="url(#bs-arrow)"/>
+    <text x="360" y="67" class="axis-end">MORE CAPITAL</text>
+    <text x="360" y="484" class="axis-end">LESS CAPITAL</text>
+
+    <!-- Horizontal: capital composition -->
+    <line x1="68" y1="275" x2="652" y2="275" stroke="#ddd" stroke-width="1"
+          marker-start="url(#bs-arrow)" marker-end="url(#bs-arrow)"/>
+    <text x="68" y="268" class="axis-label" text-anchor="start">CULTURAL +</text>
+    <text x="652" y="268" class="axis-label" text-anchor="end">ECONOMIC +</text>
+
+    <!-- ====== GHOST QUADRANT LABELS ====== -->
+    <text x="185" y="100" class="ghost">intellectuals, artists</text>
+    <text x="535" y="100" class="ghost">executives, owners</text>
+    <text x="185" y="440" class="ghost">teachers, nurses</text>
+    <text x="535" y="440" class="ghost">shopkeepers, artisans</text>
+
+    <!-- ====== THE ELITE SORTING (upper zone) ====== -->
+    <!-- Two cards at the SAME vertical level — same total capital, different composition -->
+
+    <!-- Left card: high cultural capital -->
+    <g transform="translate(185, 165)">
+      <rect x="-68" y="-30" width="136" height="60" rx="8"
+            fill="#fff" stroke="#0072B2" stroke-width="1.5"/>
+      <text x="0" y="-10" class="card-title" fill="#0072B2">cultural capital</text>
+      <text x="0" y="4" class="card-detail">lingo, references</text>
+      <text x="0" y="16" class="card-detail">codes, belonging</text>
+    </g>
+
+    <!-- Right card: high economic capital -->
+    <g transform="translate(535, 165)">
+      <rect x="-68" y="-30" width="136" height="60" rx="8"
+            fill="#fff" stroke="#E69F00" stroke-width="1.5"/>
+      <text x="0" y="-10" class="card-title" fill="#E69F00">economic capital</text>
+      <text x="0" y="4" class="card-detail">colony, car, school</text>
+      <text x="0" y="16" class="card-detail">accent, address</text>
+    </g>
+
+    <!-- Dashed line connecting them — the gap -->
+    <line x1="255" y1="165" x2="465" y2="165"
+          stroke="#D55E00" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.7"/>
+
+    <!-- Gap annotation -->
+    <text x="360" y="206" class="gap-label">they call this gap "taste"</text>
+    <text x="360" y="220" class="gap-desc">same bracket — cultural capital does the sorting</text>
+
+    <!-- ====== THE ASPIRATION ZONE (middle-lower) ====== -->
+    <!-- Bourdieu's bonne volonté culturelle — where taste performance peaks -->
+    <ellipse cx="360" cy="350" rx="165" ry="40" fill="none"
+             stroke="#D55E00" stroke-width="1.2" stroke-dasharray="5,3" opacity="0.35"/>
+    <text x="360" y="345" class="zone-label">bonne volonté culturelle</text>
+    <text x="360" y="360" class="zone-desc">taste performed loudest here</text>
+
+    <!-- ====== SOURCE ====== -->
+    <text x="360" y="516" class="source">After Pierre Bourdieu, Distinction (1979)</text>
+  </g>
+</svg>

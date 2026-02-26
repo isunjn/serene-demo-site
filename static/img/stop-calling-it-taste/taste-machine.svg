@@ -1,0 +1,132 @@
+<svg viewBox="0 0 700 440" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="tm-title tm-desc">
+  <title id="tm-title">The Taste Machine</title>
+  <desc id="tm-desc">
+    A circular feedback loop showing how "taste" functions as self-reinforcing
+    gatekeeping. Four stages connected by L-shaped arrows: insiders define
+    what counts as taste, taste becomes the filter, outsiders are excluded,
+    exclusion confirms insiders' status — and the cycle repeats.
+  </desc>
+
+  <defs>
+    <filter id="tm-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+      <feOffset in="blur" dx="1" dy="1.5" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.12" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="tm-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7f9fc"/>
+      <stop offset="100%" stop-color="#ebeef4"/>
+    </linearGradient>
+
+    <marker id="tm-arrow" viewBox="0 0 10 10" refX="10" refY="5"
+            markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 Z" fill="#D55E00"/>
+    </marker>
+
+    <style>
+      .tm .title { font-family: sans-serif; font-size: 19px; font-weight: bold; text-anchor: middle; fill: #1a1a1a; }
+      .tm .subtitle { font-family: sans-serif; font-size: 11px; text-anchor: middle; fill: #666; }
+      .tm .node-title { font-family: sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #fff; }
+      .tm .node-desc { font-family: sans-serif; font-size: 9.5px; text-anchor: middle; fill: #fff; opacity: 0.9; }
+      .tm .center-label { font-family: sans-serif; font-size: 12px; font-weight: bold; text-anchor: middle; fill: #D55E00; }
+      .tm .step-num { font-family: sans-serif; font-size: 10px; font-weight: bold; text-anchor: middle; fill: rgba(255,255,255,0.6); }
+    </style>
+  </defs>
+
+  <!--
+    Node positions:
+      N1 TOP:    (350, 100)  rect 190×60  edges x=[255,445] y=[70,130]
+      N2 RIGHT:  (540, 240)  rect 170×60  edges x=[455,625] y=[210,270]
+      N3 BOTTOM: (350, 370)  rect 190×60  edges x=[255,445] y=[340,400]
+      N4 LEFT:   (160, 240)  rect 170×60  edges x=[75,245]  y=[210,270]
+
+    L-shaped arrows route around the outside:
+      Top→Right:    right edge of N1 → horizontal right → vertical down → top edge of N2
+      Right→Bottom: bottom edge of N2 → vertical down → horizontal left → right edge of N3
+      Bottom→Left:  left edge of N3 → horizontal left → vertical up → bottom edge of N4
+      Left→Top:     top edge of N4 → vertical up → horizontal right → left edge of N1
+  -->
+
+  <g class="tm">
+    <rect width="700" height="440" fill="url(#tm-bg)"/>
+
+    <text x="350" y="32" class="title">The Taste Machine</text>
+    <text x="350" y="50" class="subtitle">How "taste" self-reinforces as gatekeeping</text>
+
+    <!-- ====== L-SHAPED ARROWS ====== -->
+    <g aria-label="L-shaped cycle arrows connecting the four stages">
+      <!-- Top → Right: from right of N1 (445,100), right to (540,100), down to top of N2 (540,210) -->
+      <polyline points="445,100 540,100 540,210"
+                fill="none" stroke="#D55E00" stroke-width="2.5"
+                marker-end="url(#tm-arrow)"/>
+
+      <!-- Right → Bottom: from bottom of N2 (540,270), down to (540,370), left to right of N3 (445,370) -->
+      <polyline points="540,270 540,370 445,370"
+                fill="none" stroke="#D55E00" stroke-width="2.5"
+                marker-end="url(#tm-arrow)"/>
+
+      <!-- Bottom → Left: from left of N3 (255,370), left to (160,370), up to bottom of N4 (160,270) -->
+      <polyline points="255,370 160,370 160,270"
+                fill="none" stroke="#D55E00" stroke-width="2.5"
+                marker-end="url(#tm-arrow)"/>
+
+      <!-- Left → Top: from top of N4 (160,210), up to (160,100), right to left of N1 (255,100) -->
+      <polyline points="160,210 160,100 255,100"
+                fill="none" stroke="#D55E00" stroke-width="2.5"
+                marker-end="url(#tm-arrow)"/>
+    </g>
+
+    <!-- ====== NODE 1 (TOP): Define taste ====== -->
+    <g transform="translate(350, 100)">
+      <rect x="-95" y="-30" width="190" height="60" rx="10" fill="#D55E00" filter="url(#tm-shadow)"/>
+      <text x="0" y="-8" class="step-num">1</text>
+      <text x="0" y="6" class="node-title">Insiders define</text>
+      <text x="0" y="20" class="node-desc">what counts as "taste"</text>
+    </g>
+
+    <!-- ====== NODE 2 (RIGHT): Taste becomes filter ====== -->
+    <g transform="translate(540, 240)">
+      <rect x="-85" y="-30" width="170" height="60" rx="10" fill="#E69F00" filter="url(#tm-shadow)"/>
+      <text x="0" y="-8" class="step-num">2</text>
+      <text x="0" y="6" class="node-title">Taste becomes</text>
+      <text x="0" y="20" class="node-desc">the filter for status</text>
+    </g>
+
+    <!-- ====== NODE 3 (BOTTOM): Outsiders excluded ====== -->
+    <g transform="translate(350, 370)">
+      <rect x="-95" y="-30" width="190" height="60" rx="10" fill="#CC79A7" filter="url(#tm-shadow)"/>
+      <text x="0" y="-8" class="step-num">3</text>
+      <text x="0" y="6" class="node-title">Outsiders excluded</text>
+      <text x="0" y="20" class="node-desc">wrong signals, wrong capital</text>
+    </g>
+
+    <!-- ====== NODE 4 (LEFT): Exclusion confirms status ====== -->
+    <g transform="translate(160, 240)">
+      <rect x="-85" y="-30" width="170" height="60" rx="10" fill="#0072B2" filter="url(#tm-shadow)"/>
+      <text x="0" y="-8" class="step-num">4</text>
+      <text x="0" y="6" class="node-title">Exclusion confirms</text>
+      <text x="0" y="20" class="node-desc">insiders' position</text>
+    </g>
+
+    <!-- ====== CENTER LABEL ====== -->
+    <g transform="translate(350, 235)">
+      <circle cx="0" cy="0" r="38" fill="#fff" stroke="#D55E00" stroke-width="1.5"
+              stroke-dasharray="4,3" opacity="0.9"/>
+      <text x="0" y="-5" class="center-label">cultural</text>
+      <text x="0" y="11" class="center-label">hegemony</text>
+    </g>
+
+    <!-- ====== BOTTOM ANNOTATION ====== -->
+    <text x="350" y="428" font-family="sans-serif" font-size="10.5" fill="#D55E00"
+          text-anchor="middle" font-style="italic">
+      The cycle only breaks when you name the mechanism
+    </text>
+  </g>
+</svg>

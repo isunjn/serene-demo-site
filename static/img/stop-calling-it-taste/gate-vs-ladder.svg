@@ -1,0 +1,126 @@
+<svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg"
+     role="img" aria-labelledby="gvl-title gvl-desc">
+  <title id="gvl-title">Gate vs Ladder</title>
+  <desc id="gvl-desc">
+    Two panels contrasted. Left: "Taste" represented as a locked gate —
+    innate, exclusive, a barrier. Right: "Judgement" represented as a ladder
+    with rungs labelled experience, failure, patterns, and domain depth —
+    earned, open, built through work.
+  </desc>
+
+  <defs>
+    <filter id="gvl-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2.5" result="blur"/>
+      <feOffset in="blur" dx="1.5" dy="2" result="offsetBlur"/>
+      <feFlood flood-color="#000" flood-opacity="0.15" result="color"/>
+      <feComposite in="color" in2="offsetBlur" operator="in" result="shadow"/>
+      <feMerge>
+        <feMergeNode in="shadow"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <linearGradient id="gvl-bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f7f9fc"/>
+      <stop offset="100%" stop-color="#ebeef4"/>
+    </linearGradient>
+
+    <linearGradient id="gvl-ladder-grad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#009E73"/>
+      <stop offset="100%" stop-color="#56B4E9"/>
+    </linearGradient>
+
+    <style>
+      .gvl .panel-title { font-family: sans-serif; font-size: 18px; font-weight: bold; text-anchor: middle; }
+      .gvl .panel-sub { font-family: sans-serif; font-size: 11px; text-anchor: middle; fill: #666; font-style: italic; }
+      .gvl .rung-label { font-family: sans-serif; font-size: 11.5px; text-anchor: middle; fill: #fff; font-weight: bold; }
+      .gvl .trait { font-family: sans-serif; font-size: 11px; text-anchor: middle; fill: #888; }
+      .gvl .trait-bold { font-family: sans-serif; font-size: 11px; text-anchor: middle; fill: #555; font-weight: bold; }
+    </style>
+  </defs>
+
+  <g class="gvl">
+    <rect width="880" height="380" fill="url(#gvl-bg)"/>
+
+    <!-- ====== LEFT PANEL: TASTE AS GATE ====== -->
+    <g aria-label="Left panel: Taste as a gate">
+      <rect x="30" y="20" width="390" height="340" rx="12"
+            fill="#fff" stroke="#e0e0e0" stroke-width="1" filter="url(#gvl-shadow)"/>
+
+      <text x="225" y="55" class="panel-title" fill="#D55E00">"TASTE"</text>
+      <text x="225" y="73" class="panel-sub">you either have it or you don't</text>
+
+      <!-- The Gate — centred, imposing -->
+      <g transform="translate(225, 195)">
+        <!-- Gate posts -->
+        <rect x="-70" y="-75" width="10" height="150" rx="2" fill="#D55E00" opacity="0.85"/>
+        <rect x="60" y="-75" width="10" height="150" rx="2" fill="#D55E00" opacity="0.85"/>
+        <!-- Gate top bar -->
+        <rect x="-70" y="-80" width="140" height="9" rx="3" fill="#D55E00" opacity="0.85"/>
+        <!-- Gate vertical bars -->
+        <line x1="-46" y1="-71" x2="-46" y2="71" stroke="#D55E00" stroke-width="3.5" opacity="0.55"/>
+        <line x1="-22" y1="-71" x2="-22" y2="71" stroke="#D55E00" stroke-width="3.5" opacity="0.55"/>
+        <line x1="2" y1="-71" x2="2" y2="71" stroke="#D55E00" stroke-width="3.5" opacity="0.55"/>
+        <line x1="26" y1="-71" x2="26" y2="71" stroke="#D55E00" stroke-width="3.5" opacity="0.55"/>
+        <line x1="50" y1="-71" x2="50" y2="71" stroke="#D55E00" stroke-width="3.5" opacity="0.55"/>
+        <!-- Crossbars -->
+        <line x1="-60" y1="-25" x2="60" y2="-25" stroke="#D55E00" stroke-width="2.5" opacity="0.45"/>
+        <line x1="-60" y1="25" x2="60" y2="25" stroke="#D55E00" stroke-width="2.5" opacity="0.45"/>
+        <!-- Lock -->
+        <g transform="translate(0, 0)">
+          <rect x="-9" y="-8" width="18" height="14" rx="3" fill="#a04000" stroke="#7a2e00" stroke-width="1"/>
+          <circle cx="0" cy="-12" r="6" fill="none" stroke="#a04000" stroke-width="2.5"/>
+          <circle cx="0" cy="-1" r="1.8" fill="#E69F00"/>
+        </g>
+      </g>
+
+      <!-- Trait labels below the gate -->
+      <text x="225" y="300" class="trait-bold" fill="#D55E00">innate</text>
+      <text x="150" y="322" class="trait">exclusive</text>
+      <text x="300" y="322" class="trait">mystified</text>
+      <text x="225" y="344" class="trait">a barrier</text>
+    </g>
+
+    <!-- ====== DIVIDER ====== -->
+    <line x1="440" y1="40" x2="440" y2="340" stroke="#ccc" stroke-width="1" stroke-dasharray="5,4"/>
+    <text x="440" y="195" font-family="sans-serif" font-size="12" text-anchor="middle"
+          fill="#999" font-weight="bold">vs</text>
+
+    <!-- ====== RIGHT PANEL: JUDGEMENT AS LADDER ====== -->
+    <g aria-label="Right panel: Judgement as a ladder">
+      <rect x="460" y="20" width="390" height="340" rx="12"
+            fill="#fff" stroke="#e0e0e0" stroke-width="1" filter="url(#gvl-shadow)"/>
+
+      <text x="655" y="55" class="panel-title" fill="#009E73">"JUDGEMENT"</text>
+      <text x="655" y="73" class="panel-sub">earned through work — open to anyone</text>
+
+      <!-- The Ladder — centred -->
+      <g transform="translate(655, 100)">
+        <!-- Ladder rails -->
+        <rect x="-72" y="0" width="8" height="200" rx="2" fill="url(#gvl-ladder-grad)" opacity="0.8"/>
+        <rect x="64" y="0" width="8" height="200" rx="2" fill="url(#gvl-ladder-grad)" opacity="0.8"/>
+
+        <!-- Rung 4 (top): Domain depth -->
+        <rect x="-64" y="16" width="128" height="26" rx="5" fill="#56B4E9" filter="url(#gvl-shadow)"/>
+        <text x="0" y="33" class="rung-label">domain depth</text>
+
+        <!-- Rung 3: Patterns -->
+        <rect x="-64" y="60" width="128" height="26" rx="5" fill="#E69F00" filter="url(#gvl-shadow)"/>
+        <text x="0" y="77" class="rung-label">patterns</text>
+
+        <!-- Rung 2: Failure -->
+        <rect x="-64" y="104" width="128" height="26" rx="5" fill="#0072B2" filter="url(#gvl-shadow)"/>
+        <text x="0" y="121" class="rung-label">failure</text>
+
+        <!-- Rung 1 (bottom): Experience -->
+        <rect x="-64" y="148" width="128" height="26" rx="5" fill="#009E73" filter="url(#gvl-shadow)"/>
+        <text x="0" y="165" class="rung-label">experience</text>
+      </g>
+
+      <!-- Trait labels below the ladder -->
+      <text x="655" y="322" class="trait-bold" fill="#009E73">earned</text>
+      <text x="580" y="344" class="trait">learnable</text>
+      <text x="730" y="344" class="trait">specific</text>
+    </g>
+  </g>
+</svg>
