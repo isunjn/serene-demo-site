@@ -44,6 +44,8 @@ blog_section_path = "/posts"
 force_theme = false
 back_link_text = "Back"
 
+og_image = "https://github.com/isunjn/serene/blob/main/screenshot.png?raw=true"
+
 footer_copyright = "© 2025 Serene"
 footer_credits = true
 
