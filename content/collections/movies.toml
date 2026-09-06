@@ -7,11 +7,6 @@ link = "https://example.com"
 title = "Anatomy of a Fall"
 
 [[item]]
-image = "/assets/movie-9.webp"
-link = "https://example.com"
-title = "Inception"
-
-[[item]]
 image = "/assets/movie-1.webp"
 link = "https://example.com"
 title = "一直游到海水变蓝"
@@ -40,11 +35,6 @@ title = "her"
 image = "/assets/movie-4.webp"
 link = "https://example.com"
 title = "Flipped"
-
-[[item]]
-image = "/assets/movie-12.webp"
-link = "https://example.com"
-title = "Léon"
 
 [[item]]
 image = "/assets/movie-2.webp"
