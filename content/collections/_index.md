@@ -11,50 +11,50 @@ subtitle = "Special blocks for showcasing your list"
 
 +++
 
-Special shortcodes for showcasing your collections, such as projects, publications, blogroll, bookmarks, etc.
+Special components for showcasing your collections, such as projects, publications, blogroll, bookmarks, etc.
 Here are some examples:
 
 ## Projects
 
-{{ collection(file="projects.toml") }}
+{{ <collection file="projects.toml" section /> }}
 
 ## Publications
 
-{{ collection(file="publications.toml") }}
+{{ <collection file="publications.toml" section /> }}
 
 ## Experiences
 
-{{ collection(file="experiences.toml") }}
+{{ <collection file="experiences.toml" section /> }}
 
 ## Projects (Simple)
 
-{{ collection(file="projects_simple.toml") }}
+{{ <collection file="projects_simple.toml" section /> }}
 
 ## Experiences (Simple)
 
-{{ collection(file="experiences_simple.toml") }}
+{{ <collection file="experiences_simple.toml" section /> }}
 
 ## Bookmarks
 
-{{ collection(file="bookmarks.toml") }}
+{{ <collection file="bookmarks.toml" section /> }}
 
 ## Bookmarks (Without icon)
 
-{{ collection(file="bookmarks_simple.toml") }}
+{{ <collection file="bookmarks_simple.toml" section /> }}
 
 ## Games
 
-{{ collection(file="games.toml") }}
+{{ <collection file="games.toml" section /> }}
 
 
 ## Blogroll
 
-{{ collection(file="blogroll.toml") }}
+{{ <collection file="blogroll.toml" section /> }}
 
 ## Books
 
-{{ collection(file="books.toml") }}
+{{ <collection file="books.toml" section /> }}
 
 ## Movies
 
-{{ collection(file="movies.toml") }}
+{{ <collection file="movies.toml" section /> }}

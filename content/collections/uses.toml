@@ -1,23 +1,22 @@
-[[collection]]
-type = "entry"
+layout = "row"
+flow = "inline"
+
+[[item]]
 title = "Follow"
 link = "https://example.com"
 icon = "/assets/icon-follow.svg"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "VSCode"
 link = "https://example.com"
 icon = "/assets/icon-vsc.png"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "IntelliJ IDEA"
 link = "https://example.com"
 icon = "/assets/icon-idea.svg"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "Zed"
 link = "https://example.com"
 icon = "/assets/icon-zed.svg"

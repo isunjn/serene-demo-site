@@ -1,20 +1,20 @@
-[[collection]]
-type = "card_simple"
+layout = "row"
+flow = "stack"
+
+[[item]]
 icon = "/assets/icon-deepseek.svg"
 title = "DeepSeek"
-content = "AI Researcher"
-date = "2025-present"
+subtitle = "AI Researcher"
+badge = "2025-present"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 icon = "/assets/icon-openai.png"
 title = "OpenAI"
-content = "Machine Learning Engineer"
-date = "2021-2025"
+subtitle = "Machine Learning Engineer"
+badge = "2021-2025"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 icon = "/assets/icon-google.webp"
 title = "Google"
-content = "Backend Engineer"
-date = "2018-2022"
+subtitle = "Backend Engineer"
+badge = "2018-2022"

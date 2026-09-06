@@ -1,41 +1,38 @@
-[[collection]]
-type = "card_simple"
+layout = "row"
+flow = "stack"
+
+[[item]]
 title = "Tokio"
 link = "https://example.com"
-content = "An asynchronous runtime for the Rust programming language"
-date = "2025"
+subtitle = "An asynchronous runtime for the Rust programming language"
+badge = "2025"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Kubernetes"
 link = "https://example.com"
-content = "Production-Grade Container Scheduling and Management"
-date = "2024"
+subtitle = "Production-Grade Container Scheduling and Management"
+badge = "2024"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Next.js"
 link = "https://example.com"
-content = "React framework for building full-stack web applications"
-date = "2022"
+subtitle = "React framework for building full-stack web applications"
+badge = "2022"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Deno"
 link = "https://example.com"
-content = "A modern runtime for JavaScript and TypeScript"
-date = "2022"
+subtitle = "A modern runtime for JavaScript and TypeScript"
+badge = "2022"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Grafana"
 link = "https://example.com"
-content = "The open and composable observability and data visualization platform"
-date = "2020"
+subtitle = "The open and composable observability and data visualization platform"
+badge = "2020"
 
-[[collection]]
-type = "card_simple"
+[[item]]
 title = "Zustand"
 link = "https://example.com"
-content = "Bear necessities for state management in React"
-date = "2021"
+subtitle = "Bear necessities for state management in React"
+badge = "2021"

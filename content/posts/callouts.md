@@ -8,44 +8,17 @@ tags = ["serene", "callout"]
 toc = true
 +++
 
-{% note(title="Note") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
-{% end %}
+> [!NOTE]
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-{% tip(title="Tip") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
-{% end %}
+> [!TIP]
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-{% important(title="Important") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
-{% end %}
+> [!IMPORTANT]
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-{% warning(title="Warning") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
-{% end %}
+> [!WARNING]
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
 
-{% caution(title="Caution") %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!
-{% end %}
-
----
-
-{% note() %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-{% end %}
-
-{% tip() %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-{% end %}
-
-{% important() %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-{% end %}
-
-{% warning() %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-{% end %}
-
-{% caution() %}
-Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-{% end %}
+> [!CAUTION]
+> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium, nisi saepe dolor unde iusto dolore nam, vero optio consequuntur repudiandae et! Atque libero expedita laudantium cupiditate, sit explicabo sequi ipsa!

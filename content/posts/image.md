@@ -15,4 +15,4 @@ Image can zoom in and out, try click it.
 
 ## With caption
 
-{{ figure(src="/assets/typical-app.webp", alt="alt text", caption="typical app arch") }}
+{{ <figure src="/assets/typical-app.webp" alt="alt text" caption="typical app arch" /> }}

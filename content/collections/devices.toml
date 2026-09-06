@@ -1,41 +1,37 @@
-[[collection]]
-type = "entry"
+layout = "row"
+flow = "inline"
+
+[[item]]
 title = "iPhone 19 Pro"
 link = "https://example.com"
 icon = "/assets/a1.svg"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "MacBook Pro 14"
 link = "https://example.com"
 icon = "/assets/a7.svg"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "iPad Air 15"
 link = "https://example.com"
 icon = "/assets/a8.svg"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "Apple TV"
 link = "https://example.com"
 icon = "/assets/a4.svg"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "Apple Watch Series 16"
 link = "https://example.com"
 icon = "/assets/a2.svg"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "Mac Mini"
 link = "https://example.com"
 icon = "/assets/a5.svg"
 
-[[collection]]
-type = "entry"
+[[item]]
 title = "iMac"
 link = "https://example.com"
 icon = "/assets/a6.svg"

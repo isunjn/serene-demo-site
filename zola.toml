@@ -33,15 +33,26 @@ anchors = "on"
 
 [extra]
 
-sections = [
-  { name = "posts", path = "/posts", is_external = false },
-  # { name = "tags", path = "/tags", is_external = false },
-  { name = "collections", path = "/collections", is_external = false },
-  { name = "about", path = "/about", is_external = false },
+nav = [
+  { name = "posts", path = "/posts" },
+  # { name = "tags", path = "/tags" },
+  { name = "collections", path = "/collections" },
+  { name = "about", path = "/about" },
 ]
+
+name = "Lorem Ipsum"
+handle = "lorem"
+bio = "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+# avatar = "img/avatar.webp"
+links = [
+  { name = "GitHub", icon = "github", url = "https://github.com/isunjn/serene" },
+  # { name = "Twitter", icon = "twitter", url = "https://twitter.com/<your-username>" },
+  { name = "Email", icon = "email", url = "mailto:<your-email-address>" },
+]
+
 blog_section_path = "/posts"
 
-force_theme = false
+color_scheme = "auto"
 back_link_text = "Back"
 
 og_image = "https://github.com/isunjn/serene/blob/main/screenshot.png?raw=true"

@@ -11,7 +11,7 @@ mermaid = true
 
 ---
 
-{% mermaid() %}
+{% <mermaid> %}
 sequenceDiagram
     participant web as Web Browser
     participant blog as Blog Service
@@ -40,21 +40,21 @@ sequenceDiagram
             blog-->>-web: Successfully posted
         end
     end
-{% end %}
+{% </mermaid> %}
 
 ---
 
-{% mermaid() %}
+{% <mermaid> %}
 graph LR
     A[Square Rect] -- Link text --> B((Circle))
     A --> C(Round Rect)
     B --> D{Rhombus}
     C --> D
-{% end %}
+{% </mermaid> %}
 
 ---
 
-{% mermaid() %}
+{% <mermaid> %}
 %%{init: { 'logLevel': 'debug', 'theme': 'base', 'gitGraph': {'rotateCommitLabel': false}} }%%
 gitGraph
   commit id: "feat(api): ..."
@@ -71,11 +71,11 @@ gitGraph
   commit
   branch b2
   commit
-{% end %}
+{% </mermaid> %}
 
 ---
 
-{% mermaid() %}
+{% <mermaid> %}
 quadrantChart
     title Reach and engagement of campaigns
     x-axis Low Reach --> High Reach
@@ -90,4 +90,4 @@ quadrantChart
     Campaign D: [0.78, 0.34]
     Campaign E: [0.40, 0.34]
     Campaign F: [0.35, 0.78]
-{% end %}
+{% </mermaid> %}

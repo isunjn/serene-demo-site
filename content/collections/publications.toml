@@ -1,6 +1,8 @@
-[[collection]]
-type = "card"
-feature = true
+layout = "card"
+flow = "stack"
+
+[[item]]
+featured = true
 link = "https://example.com"
 title = "Attention Is All You Need"
 subtitle = "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, ..."
@@ -10,8 +12,7 @@ The dominant sequence transduction models are based on complex recurrent or conv
 *arXiv:1706.03762v7 [cs.CL] 02 Aug 2023*
 """
 
-[[collection]]
-type = "card"
+[[item]]
 link = "https://example.com"
 title = "Deep Residual Learning for Image Recognition"
 subtitle = "Kaiming He, Xiangyu Zhang, Shaoqing Ren, Jian Sun"
@@ -21,8 +22,7 @@ Deeper neural networks are more difficult to train. We present a residual learni
 *arXiv:1512.03385v1 [cs.CV] 10 Dec 2015*
 """
 
-[[collection]]
-type = "card"
+[[item]]
 link = "https://example.com"
 title = "Generative Adversarial Networks"
 subtitle = "Ian J. Goodfellow, Jean Pouget-Abadie, Mehdi Mirza, Bing Xu, David Warde-Farley, Sherjil Ozair, Aaron Courville, Yoshua Bengio"
